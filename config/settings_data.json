@@ -139,6 +139,63 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
+      },
+      "9513407616245537438": {
+        "type": "shopify://apps/sami-wholesale/blocks/app-embed-block/799b9db0-2c2b-4b20-8675-98acd123fbb2",
+        "disabled": false,
+        "settings": {}
+      },
+      "6441254115607727225": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/automatic-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "quiz_id": "",
+          "quiz_timeout": 20,
+          "quiz_width": "100",
+          "quiz_height": "100",
+          "quiz_exit_intent": false
+        }
+      },
+      "2993056048391974366": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/chat-button/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "quiz_id": "",
+          "chat_color": "#1878B9",
+          "chat_hide": false,
+          "chat_dot": true,
+          "chat_greeting": "",
+          "quiz_width": "100",
+          "quiz_height": "100"
+        }
+      },
+      "1342486269105851359": {
+        "type": "shopify://apps/betterdocs/blocks/app-embed/c034554a-35ea-4075-93e4-50cbca95a696",
+        "disabled": false,
+        "settings": {}
+      },
+      "2209279550302034861": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/link-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "show_list": true
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
