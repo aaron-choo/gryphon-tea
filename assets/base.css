@@ -1480,7 +1480,7 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button:hover .svg-wrapper {
-  transform: scale(1.07);
+  /* transform: scale(1.07); */
 }
 
 .share-button__close:not(.hidden) + .share-button__copy {
@@ -2542,7 +2542,7 @@ input[type='checkbox'] {
 
 .header__icon:hover .icon,
 .modal__close-button:hover .icon {
-  transform: scale(1.07);
+  /* transform: scale(1.07); */
 }
 
 .header__icon .icon {
@@ -2735,7 +2735,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 .js details[open]:not(.menu-opening) > .header__icon--menu .icon-hamburger {
   visibility: visible;
   opacity: 1;
-  transform: scale(1.07);
+  /* transform: scale(1.07); */
 }
 
 .js details > .header__submenu {

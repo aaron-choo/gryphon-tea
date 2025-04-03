@@ -218,7 +218,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__account:hover account-icon > .svg-wrapper {
-  transform: scale(1.07);
+  /* transform: scale(1.07); */
 }
 
 .menu-drawer .list-social {

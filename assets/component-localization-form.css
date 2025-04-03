@@ -207,7 +207,7 @@
 }
 
 .country-filter__reset-button:hover .icon {
-  transform: scale(1.07);
+  /* transform: scale(1.07); */
 }
 
 .country-filter__reset-button .icon.icon-close,
