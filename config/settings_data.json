@@ -201,11 +201,11 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "text": "#5e6b47",
+          "button": "rgba(0,0,0,0)",
+          "button_label": "#5e6b47",
+          "secondary_button_label": "#5e6b47",
+          "shadow": "rgba(0,0,0,0)"
         }
       },
       "scheme-2": {
