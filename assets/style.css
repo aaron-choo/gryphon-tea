@@ -215,6 +215,9 @@
   .contents {
     display: contents;
   }
+  .flex {
+    display: flex;
+  }
   .grid {
     display: grid;
   }
@@ -230,6 +233,9 @@
   .w-4\/5 {
     width: calc(4/5 * 100%);
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -238,6 +244,9 @@
   }
   .auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
+  }
+  .\!grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -277,6 +286,21 @@
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+  .gap-15 {
+    gap: calc(var(--spacing) * 15);
+  }
+  .gap-24 {
+    gap: calc(var(--spacing) * 24);
+  }
+  .gap-y-12 {
+    row-gap: calc(var(--spacing) * 12);
+  }
+  .gap-y-24 {
+    row-gap: calc(var(--spacing) * 24);
+  }
+  .gap-y-124 {
+    row-gap: calc(var(--spacing) * 124);
   }
   .truncate {
     overflow: hidden;
@@ -395,6 +419,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .first\:col-span-2 {
+    &:first-child {
+      grid-column: span 2 / span 2;
+    }
+  }
   .sm\:order-0 {
     @media (width >= 40rem) {
       order: 0;
@@ -403,6 +432,16 @@
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .sm\:grid-cols-3 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .sm\:grid-cols-4 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .sm\:gap-8 {
@@ -422,10 +461,34 @@
       line-height: var(--tw-leading, var(--text-8xl--line-height)) !important;
     }
   }
+  .first\:sm\:col-span-2 {
+    &:first-child {
+      @media (width >= 40rem) {
+        grid-column: span 2 / span 2;
+      }
+    }
+  }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .md\:\!text-8xl {
     @media (width >= 48rem) {
       font-size: var(--text-8xl) !important;
       line-height: var(--tw-leading, var(--text-8xl--line-height)) !important;
+    }
+  }
+  .first\:md\:col-span-2 {
+    &:first-child {
+      @media (width >= 48rem) {
+        grid-column: span 2 / span 2;
+      }
+    }
+  }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
