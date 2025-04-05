@@ -14,6 +14,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<h6>GRYPHON® SINGAPORE</h6><p><a href=\"https://www.google.com/maps/place/Gryphon+Tea+Company/data=!4m2!3m1!1s0x0:0x69a3e106aebecc17?sa=X&ved=1t:2428&ictx=111\" target=\"_blank\" title=\"https://www.google.com/maps/place/Gryphon+Tea+Company/data=!4m2!3m1!1s0x0:0x69a3e106aebecc17?sa=X&ved=1t:2428&ictx=111\">251 Pandan Loop<br/>Singapore 128341</a></p><h6>Operating Hours</h6><p>Mondays to Fridays:<br/>9am to 5pm<br/>Closed on weekends and<br/>public holidays</p><h6>Contact Us</h6><p>+65 8888 8888<br/>hello@gryphontea.com</p>"
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -27,19 +34,12 @@
             "heading": "Info",
             "menu": "footer"
           }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
         }
       },
       "block_order": [
+        "footer-2",
         "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-1"
       ],
       "settings": {
         "color_scheme": "scheme-3",
