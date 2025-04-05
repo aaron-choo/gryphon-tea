@@ -44,7 +44,8 @@
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "<p>Crafted for<br/>Connection</p>",
+        "newsletter_legal": "<p>Subscribe to receive communications from Gryphon. By subscribing, you confirm you have read and understood our privacy policy.</p>",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
