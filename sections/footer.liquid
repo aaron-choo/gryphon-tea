@@ -25,6 +25,20 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .footer-block__details-content {
+    * {
+      line-height: 1.2;
+    }
+    h6 {
+      margin: 0;
+      margin-bottom: .5rem;
+      color: white;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
 {%- endstyle -%}
 
 <div class="footer-group">
@@ -179,7 +193,7 @@
       or section.settings.enable_follow_on_shop
     -%}
       {%- unless only_empty_brand -%}
-        <div class="footer__content-top page-width">
+        <div class="footer__content-top page-width !grid grid-cols-1 gap-12">
           {%- if section.blocks.size > 0 -%}
             {%- liquid
               if section.blocks.size == 9
@@ -213,7 +227,7 @@
                     {%- when '@app' -%}
                       {% render block %}
                     {%- when 'text' -%}
-                      <div class="footer-block__details-content rte">
+                      <div class="footer-block__details-content rte !grid grid-cols-1">
                         {{ block.settings.subtext }}
                       </div>
                     {%- when 'link_list' -%}
@@ -290,7 +304,7 @@
           {%- endif -%}
 
           <div
-            class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer-block--social{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -302,7 +316,9 @@
             {%- endif -%}
 
             {%- if section.settings.show_social and has_social_icons -%}
-              {%- render 'social-icons', class: 'footer__list-social' -%}
+              <div class="grid justify-items-start">
+                {%- render 'social-icons', class: 'footer__list-social' -%}
+              </div>
             {%- endif -%}
           </div>
         </div>
