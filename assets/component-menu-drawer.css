@@ -191,7 +191,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   }
 }
 
-.menu-drawer__account {
+.menu-drawer__account,
+.menu-drawer__wishlist {
   display: inline-flex;
   align-items: center;
   text-decoration: none;

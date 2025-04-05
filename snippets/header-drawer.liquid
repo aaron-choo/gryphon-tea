@@ -166,6 +166,17 @@
                 -%}
               </a>
             {%- endif -%}
+            {%- if settings['enable-wishlist'] -%}
+              <a
+                href="/pages/wishlist"
+                class="menu-drawer__wishlist link focus-inset medium-hide large-up-hide ml-8"
+              >
+                <span class="svg-wrapper mr-4">
+                  {{ 'icon-wishlist.svg' | inline_asset_content }}
+                </span>
+                Wishlist
+              </a>
+            {% endif %}
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}
@@ -283,6 +294,16 @@
                       {{- 'icon-vimeo.svg' | inline_asset_content -}}
                     </span>
                     <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_linkedin_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_linkedin_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-linkedin.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">LinkedIn</span>
                   </a>
                 </li>
               {%- endif -%}
