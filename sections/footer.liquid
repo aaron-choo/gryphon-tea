@@ -220,7 +220,12 @@
                   {% endif %}
                 >
                   {%- if block.settings.heading != blank -%}
-                    <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                    <h2
+                      class="footer-block__heading inline-richtext !text-white"
+                      style="font-family:var(--font-body-family);"
+                    >
+                      {{- block.settings.heading -}}
+                    </h2>
                   {%- endif -%}
 
                   {%- case block.type -%}

@@ -7,7 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
@@ -305,6 +308,12 @@
   .text-left {
     text-align: left;
   }
+  .\!font-\[taro\] {
+    font-family: taro !important;
+  }
+  .font-\[taro\] {
+    font-family: taro;
+  }
   .\!text-5xl {
     font-size: var(--text-5xl) !important;
     line-height: var(--tw-leading, var(--text-5xl--line-height)) !important;
@@ -325,9 +334,34 @@
     font-size: var(--text-9xl) !important;
     line-height: var(--tw-leading, var(--text-9xl--line-height)) !important;
   }
+  .\!text-sm {
+    font-size: var(--text-sm) !important;
+    line-height: var(--tw-leading, var(--text-sm--line-height)) !important;
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .\!font-\[var\(--font-body-family\)\] {
+    --tw-font-weight: var(--font-body-family) !important;
+    font-weight: var(--font-body-family) !important;
+  }
+  .font-\[var\(--font-body-family\)\] {
+    --tw-font-weight: var(--font-body-family);
+    font-weight: var(--font-body-family);
+  }
+  .\!text-\[var\(--font-body-family\)\] {
+    color: var(--font-body-family) !important;
+  }
+  .\!text-white {
+    color: var(--color-white) !important;
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .capitalize {
     text-transform: capitalize;
@@ -426,6 +460,10 @@
   initial-value: solid;
 }
 @property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -562,6 +600,7 @@
       --tw-skew-y: skewY(0);
       --tw-border-style: solid;
       --tw-leading: initial;
+      --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
