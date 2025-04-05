@@ -29,18 +29,17 @@
 
 <div class="footer-group">
   {%- if section.settings.newsletter_enable -%}
-    <div class="footer-block__newsletter color-scheme-5">
+    <div class="footer-block__newsletter color-scheme-5 overflow-hidden">
       <div
-        class="page-width section-{{ section.id }}-padding"
-        style="display:grid; grid-template-columns:1fr 1fr; align-items: center; justify-items: center;"
+        class="page-width section-{{ section.id }}-padding !grid sm:grid-cols-2 items-center justify-items-center"
       >
         <svg
+          class="footer-block__motif w-4/5 h-auto order-1 sm:order-0"
           width="392"
           height="393"
           viewBox="0 0 392 393"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style="width:80%; height: auto;"
         >
           <g filter="url(#filter0_f_151_2556)">
           <rect x="20" y="20.125" width="352" height="352" rx="176" fill="url(#paint0_radial_151_2556)"/>
@@ -58,9 +57,28 @@
           </defs>
         </svg>
 
-        <div>
+        <script>
+          // use a script tag or an external JS file
+          document.addEventListener('DOMContentLoaded', (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.set('.footer-block__motif', {
+              y: 500,
+            });
+            gsap.to('.footer-block__motif', {
+              scrollTrigger: {
+                trigger: '.footer-block__newsletter',
+                start: 'top bottom',
+                end: 'bottom bottom',
+                scrub: 4,
+              },
+              y: 0,
+            });
+          });
+        </script>
+
+        <div class="scroll-trigger animate--slide-in grid grid-cols-1 !gap-4 text-left">
           {%- if section.settings.newsletter_heading != blank -%}
-            <h2 class="inline-richtext scroll-trigger animate--slide-in h0">
+            <h2 class="inline-richtext !text-7xl md:!text-8xl text-left">
               {{ section.settings.newsletter_heading }}
             </h2>
           {%- endif -%}
@@ -130,7 +148,7 @@
           {%- endform -%}
 
           {%- if section.settings.newsletter_legal != blank -%}
-            <p class="footer-block__legal inline-richtext scroll-trigger animate--slide-in">
+            <p class="footer-block__legal inline-richtext">
               {{ section.settings.newsletter_legal }}
             </p>
           {%- endif -%}
