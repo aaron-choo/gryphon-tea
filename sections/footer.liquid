@@ -34,7 +34,7 @@
         class="page-width section-{{ section.id }}-padding !grid sm:grid-cols-2 items-center justify-items-center"
       >
         <svg
-          class="footer-block__motif w-4/5 h-auto order-1 sm:order-0"
+          class="footer-block__motif w-4/5 h-auto order-1 sm:order-0 -mt-[18%] sm:mt-0"
           width="392"
           height="393"
           viewBox="0 0 392 393"
@@ -63,7 +63,6 @@
             gsap.registerPlugin(ScrollTrigger);
             gsap.set('.footer-block__motif', {
               y: '100%',
-              scale: 2,
             });
             gsap.to('.footer-block__motif', {
               scrollTrigger: {
@@ -73,12 +72,11 @@
                 scrub: 4,
               },
               y: 0,
-              scale: 1,
             });
           });
         </script>
 
-        <div class="scroll-trigger animate--slide-in grid grid-cols-1 !gap-4 text-left !py-8">
+        <div class="scroll-trigger animate--slide-in grid grid-cols-1 !gap-4 text-left !py-8 z-1">
           {%- if section.settings.newsletter_heading != blank -%}
             <h2 class="inline-richtext !text-5xl lg:!text-6xl text-left">
               {{ section.settings.newsletter_heading }}
