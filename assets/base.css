@@ -2544,6 +2544,8 @@ input[type='checkbox'] {
 .header__icon:hover .icon,
 .modal__close-button:hover .icon {
   /* transform: scale(1.07); */
+  color: rgb(var(--color-highlight));
+  transition: color 0.3s ease;
 }
 
 .header__icon .icon {
@@ -2551,6 +2553,7 @@ input[type='checkbox'] {
   width: 2rem;
   fill: none;
   vertical-align: middle;
+  transition: color 0.3s ease;
 }
 
 .header__icon {
@@ -2794,11 +2797,12 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
+  transition: color 0.3s ease;
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-highlight));
 }
 
 .header__menu-item span {
@@ -2806,8 +2810,8 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 details[open] > .header__menu-item {

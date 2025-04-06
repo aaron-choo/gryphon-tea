@@ -349,10 +349,12 @@
   height: auto;
   min-height: initial;
   background: transparent;
+  transition: color 0.3s ease;
 }
 
 .header-localization .disclosure .localization-form__select:hover {
   /* text-decoration: underline; */
+  color: rgb(var(--color-highlight));
 }
 
 .header-localization .localization-form__select.link:after,
