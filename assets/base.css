@@ -659,7 +659,7 @@ summary .icon-caret {
   position: absolute;
   height: 0.6rem;
   right: 1.5rem;
-  top: calc(50% - 0.2rem);
+  /* top: calc(50% - 0.2rem); */
 }
 
 summary::-webkit-details-marker {
@@ -2412,7 +2412,7 @@ input[type='checkbox'] {
   }
 
   .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
+    /* margin-top: 1.05rem; */
   }
 }
 
@@ -2872,7 +2872,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__menu-item .icon-caret {
-  right: 0.8rem;
+  right: 1.2rem;
 }
 
 .header__submenu .icon-caret {

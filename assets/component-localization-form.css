@@ -81,7 +81,7 @@
   content: '';
   height: 0.6rem;
   right: calc(var(--inputs-border-width) + 1.5rem);
-  top: calc(50% - 0.2rem);
+  /* top: calc(50% - 0.2rem); */
 }
 
 .localization-selector.link {
@@ -352,7 +352,7 @@
 }
 
 .header-localization .disclosure .localization-form__select:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .header-localization .localization-form__select.link:after,
@@ -386,7 +386,7 @@
 }
 
 .js .header-localization:not(.menu-drawer__localization) .localization-form__select {
-  padding: 0 2.7rem 0 1.2rem;
+  padding: 0 2.2rem 0 1.2rem;
   width: max-content;
   height: 3.8rem;
 }
