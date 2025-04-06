@@ -205,7 +205,8 @@
           "button": "rgba(0,0,0,0)",
           "button_label": "#5e6b47",
           "secondary_button_label": "#5e6b47",
-          "shadow": "rgba(0,0,0,0)"
+          "shadow": "rgba(0,0,0,0)",
+          "highlight": "#9eb091"
         }
       },
       "scheme-2": {
@@ -216,7 +217,8 @@
           "button": "rgba(0,0,0,0)",
           "button_label": "#5e6b47",
           "secondary_button_label": "#5e6b47",
-          "shadow": "rgba(0,0,0,0)"
+          "shadow": "rgba(0,0,0,0)",
+          "highlight": "#121212"
         }
       },
       "scheme-3": {
@@ -227,7 +229,8 @@
           "button": "rgba(0,0,0,0)",
           "button_label": "#9eb091",
           "secondary_button_label": "#9eb091",
-          "shadow": "rgba(0,0,0,0)"
+          "shadow": "rgba(0,0,0,0)",
+          "highlight": "#121212"
         }
       },
       "scheme-4": {
@@ -238,7 +241,8 @@
           "button": "rgba(0,0,0,0)",
           "button_label": "#9eb091",
           "secondary_button_label": "#9eb091",
-          "shadow": "rgba(0,0,0,0)"
+          "shadow": "rgba(0,0,0,0)",
+          "highlight": "#121212"
         }
       },
       "scheme-5": {
@@ -249,7 +253,8 @@
           "button": "rgba(0,0,0,0)",
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "rgba(0,0,0,0)"
+          "shadow": "rgba(0,0,0,0)",
+          "highlight": "#121212"
         }
       }
     }
