@@ -48,8 +48,52 @@
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
   text-decoration: none;
-  transition: text-decoration var(--duration-short) ease;
+  /* transition: text-decoration var(--duration-short) ease; */
   word-wrap: break-word;
+  opacity:0;
+  transform: translateY(-1.5rem);
+  transition: all 0.3s ease 0s;
+}
+
+
+.mega-menu[open] .mega-menu__list {
+  --transition-delay-factor: 0.05s;
+  & > li:nth-child(1) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 1);
+   }
+   & > li:nth-child(2) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 2);
+   }
+   & > li:nth-child(3) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 3);
+   }
+   & > li:nth-child(4) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 4);
+   }
+   & > li:nth-child(5) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 5);
+   }
+   & > li:nth-child(6) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 6);
+   }
+   & > li:nth-child(7) .mega-menu__link {
+    transition-delay: calc(var(--transition-delay-factor) * 7);
+   }
+    & > li:nth-child(8) .mega-menu__link {
+      transition-delay: calc(var(--transition-delay-factor) * 8);
+    }
+    & > li:nth-child(9) .mega-menu__link {
+      transition-delay: calc(var(--transition-delay-factor) * 9);
+    }
+    & > li:nth-child(10) .mega-menu__link {
+      transition-delay: calc(var(--transition-delay-factor) * 10);
+    }
+}
+
+.mega-menu[open] .mega-menu__content .mega-menu__link  {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
 }
 
 .mega-menu__link--level-2 {
