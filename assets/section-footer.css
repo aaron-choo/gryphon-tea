@@ -459,16 +459,19 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin: 0 0.6rem;
 }
 
-.policies li::before {
+/* .policies li::before {
   content: '\00B7';
   padding: 0 0.8rem;
-}
+} */
 
 .policies li a {
-  padding: 0.6rem 0;
+  /* padding: 0.6rem 0; */
+  padding: 0.3rem 0;
   display: block;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 750px) {
