@@ -2865,8 +2865,29 @@ details[open] > .header__menu-item {
   /* text-decoration: underline; */
 }
 
-details.mega-menu__menu[open] > .mega__menu-item {
-  text-decoration: underline;
+details.mega-menu__menu > .mega__menu-item{
+  position:relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 2.7rem;
+    height: 1px;
+    background-color: rgb(var(--color-highlight));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+    /* -webkit-mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
+    mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
+    mask-repeat: reapeat-x;
+    mask-size: 20px 1px; */
+  }
+}
+
+details.mega-menu__menu[open] > .mega__menu-item:after {
+  transform: scaleX(1);
 }
 
 

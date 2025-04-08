@@ -7,6 +7,7 @@
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
+    {% assign menurows = section.settings.menu.links[1].links | size %}
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
@@ -31,8 +32,9 @@
                 tabindex="-1"
               >
                 <ul
-                  class="mega-menu__list page-width relative !gap-0{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list page-width relative !grid !gap-0{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
+                  style="grid-template-rows: repeat({{ menurows }}, 1fr);"
                 >
                   {%- for childlink in link.links -%}
                     <li class="!grid grid-cols-3 !w-full">
