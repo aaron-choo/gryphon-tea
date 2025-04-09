@@ -38,17 +38,17 @@
                 >
                   {%- for childlink in link.links -%}
                     <li class="!grid grid-cols-3 !w-full">
-                      <details
+                      <div
                         id="MegaMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link !flex gap-2 items-center !py-3 uppercase{% if childlink.current %} mega-menu__link--active{% endif %} {%- if childlink.links != blank -%}mega-menu__menu{% endif %} "
+                        class="mega-menu__link mega-menu__link--level-2 link !flex gap-2 items-center !py-3 w-fit uppercase{% if childlink.current %} mega-menu__link--active{% endif %} {%- if childlink.links != blank -%}mega-menu__menu{% endif %} "
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}
                       >
-                        <summary
+                        <span
                           id="MegaMenu-{{ link.handle }}"
-                          class="mega__menu-item list-menu__item focus-inset uppercase"
+                          class="mega__menu-item list-menu__item focus-inset uppercase relative pr-[2.7rem]"
                         >
                           {{ childlink.title | escape }}
                           {%- if childlink.links != blank -%}
@@ -56,10 +56,11 @@
                               {{- 'icon-caret-right.svg' | inline_asset_content -}}
                             </span>
                           {%- endif -%}
-                        </summary>
+                        </span>
 
                         {%- if childlink.links != blank -%}
                           <ul
+                            id="MegaMenu-submenu-{{ link.handle }}-{{ childlink.handle }}"
                             class="list-unstyled absolute left-1/3 right-1/3 top-2"
                             role="list"
                           >
@@ -79,40 +80,8 @@
                             {%- endfor -%}
                           </ul>
                         {%- endif -%}
-                      </details>
+                      </div>
                     </li>
-                    {% comment %}
-                      <li>
-                        <a
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          href="{{ childlink.url }}"
-                          class="mega-menu__link mega-menu__link--level-2 link uppercase{% if childlink.current %} mega-menu__link--active{% endif %}"
-                          {% if childlink.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          {{ childlink.title | escape }}
-                        </a>
-                        {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled" role="list">
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a
-                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                  href="{{ grandchildlink.url }}"
-                                  class="mega-menu__link link uppercase{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if grandchildlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        {%- endif -%}
-                      </li>
-                    {% endcomment %}
                   {%- endfor -%}
                 </ul>
               </div>

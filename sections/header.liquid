@@ -478,7 +478,8 @@
 
 <script>
   let items = document.querySelector('.header__inline-menu').querySelectorAll('details');
-  console.log(items);
+  let megamenuitems = document.querySelectorAll('.mega-menu__link--level-2.mega-menu__menu');
+
   items.forEach((item) => {
     item.addEventListener('mouseover', () => {
       item.setAttribute('open', true);
@@ -487,7 +488,19 @@
       });
       item.addEventListener('mouseleave', () => {
         item.removeAttribute('open');
+        megamenuitems.forEach((i) => {
+          i.removeAttribute('open');
+        });
       });
+    });
+  });
+
+  megamenuitems.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+      megamenuitems.forEach((i) => {
+        i.removeAttribute('open');
+      });
+      item.setAttribute('open', true);
     });
   });
 </script>

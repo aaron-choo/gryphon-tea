@@ -2865,7 +2865,7 @@ details[open] > .header__menu-item {
   /* text-decoration: underline; */
 }
 
-details.mega-menu__menu > .mega__menu-item{
+.mega-menu__menu > .mega__menu-item{
   position:relative;
   &:after {
     content: "";
@@ -2886,7 +2886,7 @@ details.mega-menu__menu > .mega__menu-item{
   }
 }
 
-details.mega-menu__menu[open] > .mega__menu-item:after {
+.mega-menu__menu[open] > .mega__menu-item:after {
   transform: scaleX(1);
 }
 
