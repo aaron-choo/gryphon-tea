@@ -50,7 +50,7 @@
         {{ block.shopify_attributes }}
       >
         <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
-          <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
+          <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item content-container color-{{ section.settings.row_color_scheme }}">
             <div
               class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
               {% if section.settings.image_height == 'adapt' and block.settings.image != blank %}
@@ -384,7 +384,7 @@
           "type": "text",
           "id": "button_label",
           "default": "t:sections.multirow.blocks.row.settings.button_label.default",
-          "label": "t:sections.multirow.blocks.row.settings.button_label.label", 
+          "label": "t:sections.multirow.blocks.row.settings.button_label.label",
           "info": "t:sections.multirow.blocks.row.settings.button_label.info"
         },
         {
