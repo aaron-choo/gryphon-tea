@@ -135,9 +135,10 @@
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} {% if section.settings.custom_positioning %} custom-{{ section.settings.button_custom_position }}{% endif %}"
               {{ block.shopify_attributes }}
             >
+              {% if section.settings.custom_positioning %}<div>{% endif %}
               {%- if block.settings.button_label_1 != blank -%}
                 <a
                   {% if block.settings.button_link_1 == blank %}
@@ -162,6 +163,7 @@
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
               {%- endif -%}
+              {% if section.settings.custom_positioning %}</div>{% endif %}
             </div>
         {%- endcase -%}
       {%- endfor -%}

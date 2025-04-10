@@ -506,15 +506,19 @@
 }
 
 
+
+.banner__heading, .banner__text, .banner__buttons .button {
+  margin: 0.25rem;
+}
+
 @media screen and (min-width: 750px) {
   .banner.custom-positioning {
     .banner__content {
       position: relative;
     }
-    .banner__heading, .banner__text {
+    .banner__heading, .banner__text, .banner__buttons {
       position: absolute;
       display: grid;
-      grid-template-columns: 1fr;
       margin: 0;
       &::after {
         display: none;
