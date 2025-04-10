@@ -141,6 +141,10 @@
     align-items: flex-end;
     justify-content: flex-end;
   }
+  .banner.custom-positioning {
+    align-items: initial;
+    justify-content: initial;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -458,6 +462,16 @@
     flex-grow: 1;
     min-width: 22rem;
   }
+
+  .banner--content-vertical-align-mobile-top .banner__box {
+    align-content: start;
+  }
+  .banner--content-vertical-align-mobile-middle .banner__box {
+    align-content: center;
+  }
+  .banner--content-vertical-align-mobile-bottom .banner__box {
+    align-content: end;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -488,5 +502,95 @@
   .banner--desktop-transparent .inline-richtext a:hover,
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
+  }
+}
+
+
+@media screen and (min-width: 750px) {
+  .banner.custom-positioning {
+    .banner__content {
+      position: relative;
+    }
+    .banner__heading, .banner__text {
+      position: absolute;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0;
+      &::after {
+        display: none;
+      }
+    }
+    .custom-top-left {
+      left: 0;
+      right: 70%;
+      top: 0;
+      bottom: 70%;
+      align-items: start;
+      text-align: left;
+    }
+    .custom-top-center {
+      left: 35%;
+      right: 35%;
+      top: 0;
+      bottom: 70%;
+      align-items: start;
+      text-align: center;
+    }
+    .custom-top-right {
+      left: 70%;
+      right: 0;
+      top: 0;
+      bottom: 70%;
+      align-items: start;
+      text-align: right;
+    }
+    .custom-middle-left {
+      left: 0;
+      right: 70%;
+      top: 35%;
+      bottom: 35%;
+      align-items: center;
+      text-align: left;
+    }
+    .custom-middle-center {
+      left: 35%;
+      right: 35%;
+      top: 35%;
+      bottom: 35%;
+      align-items: center;
+      text-align: center;
+    }
+    .custom-middle-right {
+      left: 70%;
+      right: 0;
+      top: 35%;
+      bottom: 35%;
+      align-items: center;
+      text-align: right;
+    }
+    .custom-bottom-left {
+      left: 0;
+      right: 70%;
+      top: 70%;
+      bottom: 0;
+      align-items: end;
+      text-align: left;
+    }
+    .custom-bottom-center {
+      left: 35%;
+      right: 35%;
+      top: 70%;
+      bottom: 0;
+      align-items: end;
+      text-align: center;
+    }
+    .custom-bottom-right {
+      left: 70%;
+      right: 0;
+      top: 70%;
+      bottom: 0;
+      align-items: end;
+      text-align: right;
+    }
   }
 }
