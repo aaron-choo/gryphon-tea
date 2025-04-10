@@ -123,11 +123,65 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "image_banner_mb4wNd": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_EUi3zc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Find Your Ideal Flavour",
+            "heading_size": "h1"
+          }
+        },
+        "text_kU3ypA": {
+          "type": "text",
+          "settings": {
+            "text": "Tempor ut tempor mollit. Ullamco eu commodo ex incididunt ad aliquip. Adipisicing esse eiusmod deserunt occaecat.",
+            "text_style": "body"
+          }
+        },
+        "buttons_bwmhiG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Discover Your Flavour",
+            "button_link_1": "",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_EUi3zc",
+        "text_kU3ypA",
+        "buttons_bwmhiG"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/chinese-tea-service.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "custom_positioning": false,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "image_banner",
     "multirow_LVgLV3",
-    "featured_collection"
+    "featured_collection",
+    "image_banner_mb4wNd"
   ]
 }
