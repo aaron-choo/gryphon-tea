@@ -1424,7 +1424,8 @@ shopify-accelerated-checkout-cart {
   stroke: rgb(var(--color-button-text));
 }
 
-.loading__spinner.hidden {
+.loading__spinner.hidden,
+.progress-bar-container.hidden {
   display: none;
 }
 

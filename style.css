@@ -19,4 +19,9 @@
   --text-8xl: 9.6rem;
   --text-9xl: 12.8rem;
   --spacing: 4px; 
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 750px;
+  --breakpoint-lg: 990px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1500px;
 }
