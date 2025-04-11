@@ -242,7 +242,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 .text-body {
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  line-height: calc(1 + 0.25 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
@@ -417,7 +417,7 @@ blockquote {
 .form__label,
 .select__select {
   font-size: 1.3rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  line-height: calc(1 + 0.25 / var(--font-body-scale));
   letter-spacing: 0.04rem;
 }
 
@@ -873,7 +873,7 @@ summary::-webkit-details-marker {
 
 .subtitle {
   font-size: 1.8rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  line-height: calc(1 + 0.25 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
 }
@@ -1718,7 +1718,7 @@ details[open] > .share-button__fallback {
   z-index: 1;
   -webkit-mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
   mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
-  mask-repeat: reapeat-x;
+  mask-repeat: repeat-x;
   mask-size: 40px 2px;
 }
 
@@ -2784,7 +2784,7 @@ details[open] .modal-overlay::after {
   width: 100%;
   height: 100%;
   padding: 0 5rem 0 1rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  line-height: calc(1 + 0.25 / var(--font-body-scale));
   position: relative;
 }
 
@@ -2944,7 +2944,7 @@ details[open] > .header__menu-item {
     z-index: -1;
     /* -webkit-mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
     mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
-    mask-repeat: reapeat-x;
+    mask-repeat: repeat-x;
     mask-size: 20px 1px; */
   }
 }
