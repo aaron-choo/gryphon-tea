@@ -226,8 +226,8 @@
 }
 
 .facets__summary:hover .facets__summary-label {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 .facets__and-helptext {
@@ -568,6 +568,7 @@
 
 .facets__price .field__label {
   left: 1.5rem;
+  font-size: 1.4rem;
 }
 
 button.facets__button {
