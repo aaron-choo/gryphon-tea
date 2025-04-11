@@ -163,8 +163,8 @@
         "buttons_BxGP4h": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "View All",
-            "button_link_1": "",
+            "button_label_1": "View Brand",
+            "button_link_1": "{{ product.metafields.custom.brand.value.system.url }}",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
