@@ -38,7 +38,7 @@
         "text_wbkft3": {
           "type": "text",
           "settings": {
-            "text": "<p>We are pledging 1% of our revenue towards environmental impact by giving to nonprofits working hard to protect our planet</p>",
+            "text": "<p>We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet</p>",
             "text_style": "body"
           }
         },
@@ -88,6 +88,20 @@
             "text_style": "body"
           }
         },
+        "text_6NCT99": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Pairing Information</strong></p><p>{{ product.metafields.custom.pairing_information | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
+        "text_9yE9tp": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Allergen Information</strong></p><p>{{ product.metafields.custom.allergen_information | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -109,6 +123,8 @@
         "text_qXzBUb",
         "text_LpceNQ",
         "text_phxNRf",
+        "text_6NCT99",
+        "text_9yE9tp",
         "share"
       ],
       "settings": {
