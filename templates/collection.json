@@ -32,7 +32,7 @@
         "text_KR8yhm"
       ],
       "settings": {
-        "image": "{{ collection.image }}",
+        "image": "shopify://shop_images/PearloftheOrientGreenTea.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
