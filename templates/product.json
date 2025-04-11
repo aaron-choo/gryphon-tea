@@ -39,7 +39,7 @@
           "type": "text",
           "settings": {
             "text": "<p>We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet</p>",
-            "text_style": "body"
+            "text_style": "uppercase"
           }
         },
         "variant_picker": {
