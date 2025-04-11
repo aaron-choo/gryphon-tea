@@ -62,6 +62,59 @@
         "show_text_below": false
       }
     },
+    "image_banner_LH6MFT": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_jHNyaD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet",
+            "heading_size": "h1"
+          }
+        },
+        "text_tBhW6B": {
+          "type": "text",
+          "settings": {
+            "text": "Tempor ut tempor mollit. Ullamco eu commodo ex incididunt ad aliquip. Adipisicing esse eiusmod deserunt occaecat.",
+            "text_style": "body"
+          }
+        },
+        "buttons_hkcrCk": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jHNyaD",
+        "text_tBhW6B",
+        "buttons_hkcrCk"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/WebsiteThumbnailPoto1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "custom_positioning": true,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
+      }
+    },
     "multirow_LVgLV3": {
       "type": "multirow",
       "blocks": {
@@ -294,6 +347,7 @@
   },
   "order": [
     "image_banner",
+    "image_banner_LH6MFT",
     "multirow_LVgLV3",
     "featured_collection",
     "rich_text_grTYjQ",
