@@ -81,6 +81,13 @@
             "text_style": "body"
           }
         },
+        "text_phxNRf": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tasting Notes</strong></p><p>{{ product.metafields.custom.tasting_notes | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -101,6 +108,7 @@
         "text_emQzJP",
         "text_qXzBUb",
         "text_LpceNQ",
+        "text_phxNRf",
         "share"
       ],
       "settings": {
