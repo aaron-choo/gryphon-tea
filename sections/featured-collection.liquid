@@ -95,7 +95,7 @@
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {% if show_desktop_slider or show_mobile_slider %}
         <!-- Slider main container -->
-        <div class="swiper {% if show_desktop_slider == false %} lg:!hidden{% endif %} {% if show_mobile_slider == false %} max-lg:!hidden{% endif %}">
+        <div class="swiper-{{ section.id }} {% if show_desktop_slider == false %} lg:!hidden{% endif %} {% if show_mobile_slider == false %} max-lg:!hidden{% endif %}">
           <!-- Additional required wrapper -->
           <div
             class="swiper-wrapper text-xl"
@@ -120,7 +120,7 @@
           </div>
         </div>
         <script>
-          const swiper = new Swiper('.swiper', {
+          const swiper = new Swiper('.swiper-{{ section.id }}', {
             // Optional parameters
             spaceBetween: 15,
             slidesPerGroup: 1,
@@ -146,51 +146,49 @@
             loop: true,
             centeredSlides: true,
             grabCursor: true,
-            initialSlide: {{ section.settings.columns_mobile }},
-
-            // If we need pagination
-            pagination: {
-              el: '.swiper-pagination',
+            mousewheel: {
+              enabled: true,
+              forceToAxis: true,
             },
+            initialSlide: {{ section.settings.columns_mobile }},
           });
         </script>
         <script>
           document.addEventListener('shopify:section:load', (e) => {
             // if (!e.detail.sectionId.includes({{section.id}})) return; // Adjust 'slider' to match your section name
             // initSwiper(); // Call your Swiper initialization function
-            const swiper = new Swiper('.swiper', {
-              // Optional parameters
-              spaceBetween: 15,
-              slidesPerGroup: 1,
-              slidesPerView: 1.5,
-              breakpoints: {
-                // when window width is >= 320px
-                320: {
-                  slidesPerView: 1.5,
-                  spaceBetween: 15,
-                },
-                // when window width is >= 480px
-                480: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 20,
-                },
-                // when window width is >= 640px
-                640: {
-                  slidesPerView: 3.5,
-                  spaceBetween: 30,
-                },
+              const swiper = new Swiper('.swiper-{{ section.id }}', {
+            // Optional parameters
+            spaceBetween: 15,
+            slidesPerGroup: 1,
+            slidesPerView: 1.5,
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 1.5,
+                spaceBetween: 15,
               },
-              direction: 'horizontal',
-              loop: true,
-              centeredSlides: true,
-              grabCursor: true,
-              initialSlide: {{ section.settings.columns_mobile }},
-
-              // If we need pagination
-              pagination: {
-                el: '.swiper-pagination',
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
               },
-            });
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 3.5,
+                spaceBetween: 30,
+              },
+            },
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+            grabCursor: true,
+            mousewheel: {
+              enabled: true,
+              forceToAxis: true,
+            },
+            initialSlide: {{ section.settings.columns_mobile }},
+          });
           });
         </script>
       {% endif %}
