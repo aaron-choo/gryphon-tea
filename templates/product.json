@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "{{ product.metafields.custom.brand.value }}",
             "text_style": "uppercase"
           }
         },
