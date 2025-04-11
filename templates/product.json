@@ -156,7 +156,7 @@
         "text_mNecA9": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.brand.value.name.value }}",
+            "text": "{{ product.metafields.custom.brand.value.description.value }}",
             "text_style": "body"
           }
         },
@@ -178,7 +178,7 @@
         "buttons_BxGP4h"
       ],
       "settings": {
-        "image": "{{ product.featured_image }}",
+        "image": "{{ product.metafields.custom.brand.value.image.value }}",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
