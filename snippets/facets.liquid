@@ -123,13 +123,15 @@
                 endif
               %}
 
+              <div class="w-full h-[2px] bg-[currentColor] !block dotted"></div>
+
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
                     id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
-                    {% if filter_type == 'vertical' and forloop.index == 1 %}
+                    {% if filter_type == 'vertical' and forloop.index == 0 %}
                       open
                     {% endif %}
                   >
@@ -263,10 +265,10 @@
                                       {%- endif -%}
                                     </div>
                                   {%- else -%}
-                                    {{- 'square.svg' | inline_asset_content -}}
+                                    {{- 'circle.svg' | inline_asset_content -}}
 
                                     <div class="svg-wrapper">
-                                      {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                                      {{- 'circle-filled.svg' | inline_asset_content -}}
                                     </div>
                                   {%- endif -%}
 
@@ -334,6 +336,7 @@
                   </details>
               {% endcase %}
             {%- endfor -%}
+            <div class="w-full h-[2px] bg-[currentColor] !block dotted"></div>
           </div>
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
@@ -634,7 +637,7 @@
                                       </div>
                                     {%- else -%}
                                       <span class="mobile-facets__highlight"></span>
-                                      {{- 'square.svg' | inline_asset_content -}}
+                                      {{- 'circle.svg' | inline_asset_content -}}
                                       {{- 'icon-checkmark.svg' | inline_asset_content -}}
                                     {%- endif %}
 

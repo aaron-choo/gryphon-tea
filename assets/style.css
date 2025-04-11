@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 4px;
     --text-xs: 1.2rem;
@@ -263,6 +265,9 @@
   .ml-8 {
     margin-left: calc(var(--spacing) * 8);
   }
+  .\!block {
+    display: block !important;
+  }
   .\!flex {
     display: flex !important;
   }
@@ -293,6 +298,15 @@
   .\!h-full {
     height: 100% !important;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-\[2px\] {
+    height: 2px;
+  }
   .h-auto {
     height: auto;
   }
@@ -307,6 +321,9 @@
   }
   .w-fit {
     width: fit-content;
+  }
+  .w-full {
+    width: 100%;
   }
   .\!max-w-\[none\] {
     max-width: none !important;
@@ -385,6 +402,15 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .bg-\[currentColor\] {
+    background-color: currentColor;
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
   }
   .mask-repeat {
     mask-repeat: repeat;
