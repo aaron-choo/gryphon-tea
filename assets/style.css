@@ -528,6 +528,10 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .\!leading-none {
+    --tw-leading: 1 !important;
+    line-height: 1 !important;
+  }
   .leading-\[1\] {
     --tw-leading: 1;
     line-height: 1;
@@ -566,6 +570,9 @@
   }
   .opacity-50 {
     opacity: 50%;
+  }
+  .opacity-75 {
+    opacity: 75%;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
