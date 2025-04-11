@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.brand.value }}",
+            "text": "<p>{{ product.metafields.custom.brand.value }}</p>",
             "text_style": "uppercase"
           }
         },
@@ -38,7 +38,7 @@
         "text_wbkft3": {
           "type": "text",
           "settings": {
-            "text": "We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet",
+            "text": "<p>We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet</p>",
             "text_style": "body"
           }
         },
@@ -63,7 +63,7 @@
         "text_emQzJP": {
           "type": "text",
           "settings": {
-            "text": "Ingredients {{ product.metafields.custom.ingredients | metafield_text }}",
+            "text": "<p><strong>Ingredients</strong> </p><p>{{ product.metafields.custom.ingredients | metafield_text }}</p>",
             "text_style": "body"
           }
         },
