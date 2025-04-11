@@ -210,6 +210,40 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multirow_7AbrGq": {
+      "type": "multirow",
+      "blocks": {
+        "row_PpMB8c": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/EGL1.jpg",
+            "caption": "Locate Us",
+            "heading": "Lorem Ipsum",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Locate Us",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_PpMB8c"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-2",
+        "row_color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -217,6 +251,7 @@
     "multirow_LVgLV3",
     "featured_collection",
     "image_banner_mb4wNd",
-    "multirow_GjhJwB"
+    "multirow_GjhJwB",
+    "multirow_7AbrGq"
   ]
 }
