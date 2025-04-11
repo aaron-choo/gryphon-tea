@@ -74,6 +74,13 @@
             "text_style": "body"
           }
         },
+        "text_LpceNQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Serving Suggestion</strong></p><p>{{ product.metafields.custom.serving_suggestion | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -93,6 +100,7 @@
         "buy_buttons",
         "text_emQzJP",
         "text_qXzBUb",
+        "text_LpceNQ",
         "share"
       ],
       "settings": {
