@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Lorem ipsum dolor sit amet",
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Tempor ut tempor mollit. Ullamco eu commodo ex incididunt ad aliquip. Adipisicing esse eiusmod deserunt occaecat.",
             "text_style": "body"
           }
         },
