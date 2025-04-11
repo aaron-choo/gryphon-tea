@@ -23,16 +23,24 @@
           "type": "title",
           "settings": {}
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "rating_kdCQTq": {
+          "type": "rating",
+          "settings": {}
+        },
+        "text_wbkft3": {
+          "type": "text",
+          "settings": {
+            "text": "We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet",
+            "text_style": "body"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -51,10 +59,6 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -102,12 +106,13 @@
       "block_order": [
         "vendor",
         "title",
-        "caption",
+        "description",
         "price",
+        "rating_kdCQTq",
+        "text_wbkft3",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
