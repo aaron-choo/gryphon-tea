@@ -8,6 +8,50 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "image_banner_cpWQJ6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_LQcQY4": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ metaobject.name.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_fVDrjb": {
+          "type": "text",
+          "settings": {
+            "text": "{{ metaobject.description.value }}",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LQcQY4",
+        "text_fVDrjb"
+      ],
+      "settings": {
+        "image": "{{ metaobject.image.value }}",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "custom_positioning": true,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "image_banner_cpWQJ6"
+  ]
 }
