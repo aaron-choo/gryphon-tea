@@ -262,6 +262,9 @@
   .mb-\[2rem\] {
     margin-bottom: 2rem;
   }
+  .\!ml-0 {
+    margin-left: calc(var(--spacing) * 0) !important;
+  }
   .ml-8 {
     margin-left: calc(var(--spacing) * 8);
   }
@@ -355,8 +358,14 @@
   .items-center {
     align-items: center;
   }
+  .\!justify-between {
+    justify-content: space-between !important;
+  }
   .\!justify-center {
     justify-content: center !important;
+  }
+  .justify-between {
+    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
@@ -415,6 +424,9 @@
   .mask-repeat {
     mask-repeat: repeat;
   }
+  .\!px-0 {
+    padding-inline: calc(var(--spacing) * 0) !important;
+  }
   .\!py-1 {
     padding-block: calc(var(--spacing) * 1) !important;
   }
@@ -429,6 +441,9 @@
   }
   .pr-\[2\.7rem\] {
     padding-right: 2.7rem;
+  }
+  .\!pl-0 {
+    padding-left: calc(var(--spacing) * 0) !important;
   }
   .text-center {
     text-align: center;

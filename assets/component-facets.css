@@ -3,6 +3,7 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .active-facets-mobile {
@@ -639,13 +640,14 @@ span.active-facets__button-inner:after {
 
 @media screen and (max-width: 989px) {
   .active-facets {
-    margin: 0 -1.2rem -1.2rem;
+    margin: 0 -0.5rem -0.5rem;
   }
 
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1.2rem;
+    /* padding: 1.2rem; */
+    padding: 0.5rem;
   }
 
   span.active-facets__button-inner {
@@ -1050,10 +1052,21 @@ input.mobile-facets__checkbox {
   visibility: hidden;
   width: 11px;
   height: 9px;
+  opacity: 0;
 }
 
-.mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
+.mobile-facets__label .icon-circle-filled {
+  position: absolute;
+  visibility: hidden;
+  width: 16px;
+  height: 16px;
+}
+
+.mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark,
+.mobile-facets__label > input[type='checkbox']:checked ~ .icon-circle-filled
+ {
   visibility: visible;
+  opacity: 0.3;
 }
 
 .mobile-facets__arrow,
