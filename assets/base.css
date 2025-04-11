@@ -671,7 +671,10 @@ summary .icon-caret {
   position: absolute;
   height: 0.6rem;
   right: 1.5rem;
-  /* top: calc(50% - 0.2rem); */
+}
+
+summary:not(.header__menu-item) .icon-caret {
+  top: calc(50% - 0.2rem);
 }
 
 summary::-webkit-details-marker {
