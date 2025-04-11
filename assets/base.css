@@ -1441,7 +1441,7 @@ shopify-accelerated-checkout-cart {
 
 .loading__spinner.hidden,
 .progress-bar-container.hidden {
-  display: none;
+  display: none!important;
 }
 
 /* Button - social share */
