@@ -143,41 +143,57 @@
         "padding_bottom": 72
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "image_banner_YnXPU3": {
+      "type": "image-banner",
       "blocks": {
-        "image-with-text-0": {
+        "heading_aqfwxi": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "{{ product.metafields.custom.brand.value }}",
             "heading_size": "h1"
           }
         },
-        "image-with-text-1": {
+        "text_mNecA9": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
+          }
+        },
+        "buttons_BxGP4h": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "View All",
+            "button_link_1": "{{ product.url }}",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "heading_aqfwxi",
+        "text_mNecA9",
+        "buttons_BxGP4h"
       ],
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
+        "image": "{{ product.featured_image }}",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "custom_positioning": false,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
       }
     },
     "multicolumn": {
@@ -244,7 +260,7 @@
   },
   "order": [
     "main",
-    "image-with-text",
+    "image_banner_YnXPU3",
     "multicolumn",
     "related-products"
   ]
