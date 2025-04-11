@@ -241,7 +241,7 @@
     "featured_blog_JqB7Pa": {
       "type": "featured-blog",
       "settings": {
-        "blog": "",
+        "blog": "news",
         "post_limit": 4,
         "heading": "Blog posts",
         "heading_size": "h1",
