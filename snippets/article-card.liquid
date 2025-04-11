@@ -7,6 +7,7 @@
   - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
   - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
   - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+  - show_blog_title: {String} The setting either show the blog title or not. If it's not included it will not show the blog title by default
   - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
   - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
   - show_badge: {String} The setting either show the blog badge or not.
@@ -113,23 +114,26 @@
         </div>
       </div>
       <div class="card__content">
-        <div class="card__information">
+        <div class="card__information text-center">
+          {%- if show_blog_title -%}
+            <span class="blog-title caption-with-letter-spacing">{{ blog.title }}</span>
+          {%- endif -%}
           <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
-            <a href="{{ article.url }}" class="full-unstyled-link">
+            <a href="{{ article.url }}" class="full-unstyled-link text-base font-body">
               {{ article.title | truncate: 50 | escape }}
             </a>
           </h3>
           <div class="article-card__info caption-with-letter-spacing h5">
             {%- if show_date -%}
-              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+              <span class="circle-divider font-body ">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
             {%- if show_author -%}
-              <span>{{ article.author }}</span>
+              <span class="font-body">{{ article.author }}</span>
             {%- endif -%}
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
+              <p class="article-card__excerpt rte-width text-sm">
                 {%- if article.excerpt.size > 0 -%}
                   {{ article.excerpt | strip_html | truncatewords: 30 }}
                 {%- else -%}

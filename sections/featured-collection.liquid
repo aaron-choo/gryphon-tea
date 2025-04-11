@@ -120,7 +120,7 @@
           </div>
         </div>
         <script>
-          const swiper = new Swiper('.swiper-{{ section.id }}', {
+          new Swiper('.swiper-{{ section.id }}', {
             // Optional parameters
             spaceBetween: 15,
             slidesPerGroup: 1,
@@ -145,6 +145,10 @@
                 slidesPerView: 4.5,
                 spaceBetween: 30,
               },
+              1500: {
+                slidesPerView: 5.5,
+                spaceBetween: 30,
+              },
             },
             direction: 'horizontal',
             loop: true,
@@ -154,36 +158,39 @@
               enabled: true,
               forceToAxis: true,
             },
-            initialSlide: 2,
           });
         </script>
         <script>
           document.addEventListener('shopify:section:load', (e) => {
             // if (!e.detail.sectionId.includes({{section.id}})) return; // Adjust 'slider' to match your section name
             // initSwiper(); // Call your Swiper initialization function
-            const swiper = new Swiper('.swiper-{{ section.id }}', {
+            new Swiper('.swiper-{{ section.id }}', {
               // Optional parameters
               spaceBetween: 15,
               slidesPerGroup: 1,
               slidesPerView: 1.5,
               breakpoints: {
                 // when window width is >= 320px
-                320: {
+                480: {
                   slidesPerView: 1.5,
                   spaceBetween: 15,
                 },
                 // when window width is >= 480px
-                480: {
+                750: {
                   slidesPerView: 2.5,
                   spaceBetween: 20,
                 },
                 // when window width is >= 640px
-                750: {
+                990: {
                   slidesPerView: 3.5,
                   spaceBetween: 30,
                 },
-                990: {
+                1200: {
                   slidesPerView: 4.5,
+                  spaceBetween: 30,
+                },
+                1500: {
+                  slidesPerView: 5.5,
                   spaceBetween: 30,
                 },
               },
@@ -195,7 +202,6 @@
                 enabled: true,
                 forceToAxis: true,
               },
-              initialSlide: 2,
             });
           });
         </script>
