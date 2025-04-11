@@ -15,7 +15,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.brand.value }}</p>",
+            "text": "<p>{{ product.metafields.custom.brand.value.name.value }}</p>",
             "text_style": "uppercase"
           }
         },
@@ -149,14 +149,14 @@
         "heading_aqfwxi": {
           "type": "heading",
           "settings": {
-            "heading": "{{ product.metafields.custom.brand.value }}",
+            "heading": "{{ product.metafields.custom.brand.value.name.value }}",
             "heading_size": "h1"
           }
         },
         "text_mNecA9": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "{{ product.metafields.custom.brand.value.name.value }}",
             "text_style": "body"
           }
         },
