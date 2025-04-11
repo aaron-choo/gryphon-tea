@@ -23,6 +23,7 @@
     --text-5xl--line-height: 1;
     --text-6xl: 6.0rem;
     --text-6xl--line-height: 1;
+    --font-weight-light: 300;
     --font-weight-bold: 700;
     --leading-tight: 1.25;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -463,6 +464,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .\!text-white {
     color: var(--color-white) !important;
