@@ -127,18 +127,22 @@
             slidesPerView: 1.5,
             breakpoints: {
               // when window width is >= 320px
-              320: {
+              480: {
                 slidesPerView: 1.5,
                 spaceBetween: 15,
               },
               // when window width is >= 480px
-              480: {
+              750: {
                 slidesPerView: 2.5,
                 spaceBetween: 20,
               },
               // when window width is >= 640px
-              640: {
+              990: {
                 slidesPerView: 3.5,
+                spaceBetween: 30,
+              },
+              1200: {
+                slidesPerView: 4.5,
                 spaceBetween: 30,
               },
             },
@@ -150,45 +154,49 @@
               enabled: true,
               forceToAxis: true,
             },
-            initialSlide: {{ section.settings.columns_mobile }},
+            initialSlide: 2,
           });
         </script>
         <script>
           document.addEventListener('shopify:section:load', (e) => {
             // if (!e.detail.sectionId.includes({{section.id}})) return; // Adjust 'slider' to match your section name
             // initSwiper(); // Call your Swiper initialization function
-              const swiper = new Swiper('.swiper-{{ section.id }}', {
-            // Optional parameters
-            spaceBetween: 15,
-            slidesPerGroup: 1,
-            slidesPerView: 1.5,
-            breakpoints: {
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1.5,
-                spaceBetween: 15,
+            const swiper = new Swiper('.swiper-{{ section.id }}', {
+              // Optional parameters
+              spaceBetween: 15,
+              slidesPerGroup: 1,
+              slidesPerView: 1.5,
+              breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 15,
+                },
+                // when window width is >= 480px
+                480: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 20,
+                },
+                // when window width is >= 640px
+                750: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 30,
+                },
+                990: {
+                  slidesPerView: 4.5,
+                  spaceBetween: 30,
+                },
               },
-              // when window width is >= 480px
-              480: {
-                slidesPerView: 2.5,
-                spaceBetween: 20,
+              direction: 'horizontal',
+              loop: true,
+              centeredSlides: true,
+              grabCursor: true,
+              mousewheel: {
+                enabled: true,
+                forceToAxis: true,
               },
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 3.5,
-                spaceBetween: 30,
-              },
-            },
-            direction: 'horizontal',
-            loop: true,
-            centeredSlides: true,
-            grabCursor: true,
-            mousewheel: {
-              enabled: true,
-              forceToAxis: true,
-            },
-            initialSlide: {{ section.settings.columns_mobile }},
-          });
+              initialSlide: 2,
+            });
           });
         </script>
       {% endif %}
