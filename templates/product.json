@@ -60,40 +60,11 @@
             "show_gift_card_recipient": true
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
+        "text_emQzJP": {
+          "type": "text",
           "settings": {
-            "heading": "Ingredients",
-            "icon": "none",
-            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
+            "text": "Ingredients {{ product.metafields.custom.ingredients | metafield_text }}",
+            "text_style": "body"
           }
         },
         "share": {
@@ -113,10 +84,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
+        "text_emQzJP",
         "share"
       ],
       "settings": {
