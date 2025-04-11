@@ -211,6 +211,23 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_JqB7Pa": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "",
+        "post_limit": 4,
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multirow_7AbrGq": {
       "type": "multirow",
       "blocks": {
@@ -252,6 +269,7 @@
     "featured_collection",
     "image_banner_mb4wNd",
     "multirow_GjhJwB",
+    "featured_blog_JqB7Pa",
     "multirow_7AbrGq"
   ]
 }
