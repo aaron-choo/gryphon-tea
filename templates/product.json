@@ -63,9 +63,9 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
             "page": ""
           }
         },
