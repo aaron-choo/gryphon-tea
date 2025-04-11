@@ -67,6 +67,13 @@
             "text_style": "body"
           }
         },
+        "text_qXzBUb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tea Category</strong></p>{{ product.metafields.custom.tea_category | metafield_tag }}",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -85,6 +92,7 @@
         "quantity_selector",
         "buy_buttons",
         "text_emQzJP",
+        "text_qXzBUb",
         "share"
       ],
       "settings": {
