@@ -162,11 +162,9 @@
             "text_style": "body"
           }
         },
-        "custom_liquid_myaeQ4": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": ""
-          }
+        "wishlist_krBCag": {
+          "type": "wishlist",
+          "settings": {}
         },
         "share": {
           "type": "share",
@@ -197,7 +195,7 @@
         "text_phxNRf",
         "text_6NCT99",
         "text_9yE9tp",
-        "custom_liquid_myaeQ4",
+        "wishlist_krBCag",
         "share"
       ],
       "settings": {
