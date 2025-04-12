@@ -875,7 +875,8 @@ summary::-webkit-details-marker {
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 1.6rem;
   line-height: calc(1 + 0.25 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
@@ -1697,11 +1698,14 @@ details[open] > .share-button__fallback {
   mask-repeat: repeat-x;
   mask-size: 40px 2px;
 }
+
+
 .dotted-field:before {
   pointer-events: none;
   content: '';
   position: absolute;
   top:0;
+  bottom: auto;
   height: 2px;
   width: 100%;
   background-color: currentColor; 
@@ -1719,6 +1723,7 @@ details[open] > .share-button__fallback {
   content: '';
   position: absolute;
   bottom:0;
+  top: auto;
   height: 2px;
   width: 100%;
   background-color: currentColor; 
