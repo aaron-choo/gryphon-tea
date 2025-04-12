@@ -163,12 +163,12 @@
         "buttons_BxGP4h": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "All {{ product.metafields.custom.brand.value.name.value }} Products",
+            "button_label_1": "Shop {{ product.metafields.custom.brand.value.name.value }}",
             "button_link_1": "{{ product.metafields.custom.brand.value.link.value }}",
             "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label_2": "Learn more",
+            "button_link_2": "{{ product.metafields.custom.brand.value.system.url }}",
+            "button_style_secondary_2": true
           }
         }
       },
