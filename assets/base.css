@@ -1219,6 +1219,9 @@ button.shopify-payment-button__button--unbranded {
 
 .shopify-payment-button{
   margin-top: -1rem;
+  & .shopify-payment-button__button {
+    height: clamp(25px,var(--shopify-accelerated-checkout-button-block-size, 42px),55px)
+  }
 }
 
 .button,
