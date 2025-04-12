@@ -47,7 +47,7 @@
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
-        "show_text_below": true
+        "show_text_below": false
       }
     }
   },
