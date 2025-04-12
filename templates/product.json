@@ -63,9 +63,18 @@
         "collapsible_tab_36EpY3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Ingredient",
+            "heading": "Ingredients",
             "icon": "none",
             "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_hJKTwa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Tea Category",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.tea_category | metafield_tag }}",
             "page": ""
           }
         },
@@ -135,6 +144,7 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible_tab_36EpY3",
+        "collapsible_tab_hJKTwa",
         "text_emQzJP",
         "text_qXzBUb",
         "text_LpceNQ",
