@@ -60,6 +60,15 @@
             "show_gift_card_recipient": true
           }
         },
+        "collapsible_tab_36EpY3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredient",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
+            "page": ""
+          }
+        },
         "text_emQzJP": {
           "type": "text",
           "settings": {
@@ -125,6 +134,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "collapsible_tab_36EpY3",
         "text_emQzJP",
         "text_qXzBUb",
         "text_LpceNQ",
