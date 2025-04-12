@@ -208,8 +208,8 @@
               </p>
             {%- endif -%}
 
-            <p class="text-sm font-light">
-              {{ card_product.description | strip_html | truncatewords: 20 }}
+            <p class="text-sm font-light line-clamp-3">
+              {{ card_product.description | strip_html | truncatewords: 100 }}
             </p>
 
             {%- if card_product.quantity_price_breaks_configured? -%}
