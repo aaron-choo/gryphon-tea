@@ -1217,6 +1217,10 @@ button.shopify-payment-button__button--unbranded {
   position: relative;
 }
 
+.shopify-payment-button{
+  margin-top: -1rem;
+}
+
 .button,
 .shopify-challenge__button,
 .customer button,
