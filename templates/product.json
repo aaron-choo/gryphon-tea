@@ -163,7 +163,7 @@
         "buttons_BxGP4h": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop {{ product.metafields.custom.brand.value.name.value }}",
+            "button_label_1": "All {{ product.metafields.custom.brand.value.name.value }} Products",
             "button_link_1": "{{ product.metafields.custom.brand.value.link.value }}",
             "button_style_secondary_1": true,
             "button_label_2": "",
