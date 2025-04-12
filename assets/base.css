@@ -1718,7 +1718,8 @@ details[open] > .share-button__fallback {
   mask-size: 40px 2px;
 }
 
-.dotted-field:after {
+.dotted-field:after,
+.shopify-payment-button__button:after {
   pointer-events: none;
   content: '';
   position: absolute;
