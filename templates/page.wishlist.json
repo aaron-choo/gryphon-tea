@@ -38,6 +38,7 @@
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
+        "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
         "custom_positioning": true,
@@ -52,162 +53,17 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 72,
         "padding_bottom": 72
       }
     },
-    "multicolumn_rrEMyr": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_3GkjQB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_hC9T6R": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_A3g6Np": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_A8BdAx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Vk89CE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_dXBcTT": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GbGYYz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_k4zfcN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_jVRrR3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_WxnX8U": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_gRBCAH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_n4ByDr": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_3GkjQB",
-        "column_hC9T6R",
-        "column_A3g6Np",
-        "column_A8BdAx",
-        "column_Vk89CE",
-        "column_dXBcTT",
-        "column_GbGYYz",
-        "column_k4zfcN",
-        "column_jVRrR3",
-        "column_WxnX8U",
-        "column_gRBCAH",
-        "column_n4ByDr"
-      ],
+    "custom_liquid_ByQt8P": {
+      "type": "custom-liquid",
       "settings": {
-        "title": "Our Partners",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 6,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-4",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "custom_liquid": "<div class=\"page-width\">\n{% render 'wishlist' %}\n</div>",
+        "color_scheme": "",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -216,6 +72,6 @@
   "order": [
     "image_banner_Uemy8z",
     "main",
-    "multicolumn_rrEMyr"
+    "custom_liquid_ByQt8P"
   ]
 }
