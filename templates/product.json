@@ -70,8 +70,23 @@
             "share_label": "Share"
           }
         },
+        "text_emQzJP": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Ingredients</strong> </p><p>{{ product.metafields.custom.ingredients | metafield_text }}</p>",
+            "text_style": "body"
+          }
+        },
+        "text_qXzBUb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tea Category</strong></p>{{ product.metafields.custom.tea_category | metafield_tag }}",
+            "text_style": "body"
+          }
+        },
         "collapsible_tab_36EpY3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
@@ -81,6 +96,7 @@
         },
         "collapsible_tab_hJKTwa": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Tea Category",
             "icon": "none",
@@ -122,22 +138,6 @@
             "icon": "none",
             "content": "<p>{{ product.metafields.custom.allergen_information | metafield_tag }}</p>",
             "page": ""
-          }
-        },
-        "text_emQzJP": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>Ingredients</strong> </p><p>{{ product.metafields.custom.ingredients | metafield_text }}</p>",
-            "text_style": "body"
-          }
-        },
-        "text_qXzBUb": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>Tea Category</strong></p>{{ product.metafields.custom.tea_category | metafield_tag }}",
-            "text_style": "body"
           }
         },
         "text_LpceNQ": {
@@ -185,14 +185,14 @@
         "buy_buttons",
         "wishlist_krBCag",
         "share",
+        "text_emQzJP",
+        "text_qXzBUb",
         "collapsible_tab_36EpY3",
         "collapsible_tab_hJKTwa",
         "collapsible_tab_VAtLak",
         "collapsible_tab_hbM8rt",
         "collapsible_tab_RJQRNP",
         "collapsible_tab_cqDnR4",
-        "text_emQzJP",
-        "text_qXzBUb",
         "text_LpceNQ",
         "text_phxNRf",
         "text_6NCT99",
