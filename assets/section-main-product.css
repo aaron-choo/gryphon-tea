@@ -174,9 +174,13 @@ product-info {
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 1.2rem 0;
-  max-width: 44rem;
+  /* max-width: 44rem; */
   min-width: fit-content;
   border: none;
+ 
+  &.product-form__quantity {
+    margin-bottom: -3rem;
+  }
 }
 
 .product-form__input .form__label {
@@ -188,7 +192,7 @@ product-info {
 }
 
 .product-form__input .svg-wrapper {
-  right: 1.5rem;
+  /* right: 1.5rem; */
 }
 
 .product-form__submit {
@@ -268,7 +272,7 @@ a.product__text {
 }
 
 .product__text.caption-with-letter-spacing + .product__title {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 .product__accordion .accordion__content {
@@ -369,7 +373,7 @@ a.product__text {
 }
 
 .product-form__buttons {
-  max-width: 44rem;
+  /* max-width: 44rem; */
 }
 
 .product--no-media .product__info-container > modal-opener {

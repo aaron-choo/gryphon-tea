@@ -1420,7 +1420,7 @@ shopify-accelerated-checkout-cart {
 }
 
 .button.loading {
-  color: transparent;
+  /* color: transparent; */
   position: relative;
 }
 
@@ -1707,8 +1707,13 @@ details[open] > .share-button__fallback {
   mask-size: 40px 2px;
 }
 
+.dotted-field {
+  border-radius: 0;
+}
 
-.dotted-field:before {
+
+.dotted-field:before,
+.dotted-field.loading:before {
   pointer-events: none;
   content: '';
   position: absolute;
@@ -1724,9 +1729,11 @@ details[open] > .share-button__fallback {
   mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
   mask-repeat: repeat-x;
   mask-size: 40px 2px;
+  border-radius: 0;
 }
 
 .dotted-field:after,
+.dotted-field.loading:after,
 .shopify-payment-button__button:after {
   pointer-events: none;
   content: '';
@@ -1743,6 +1750,7 @@ details[open] > .share-button__fallback {
   mask-image: url('data:image/svg+xml,<svg width="101" height="5" viewBox="0 0 101 5" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_172_3770)"><circle cx="3.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="28.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="53.1586" cy="2.55371" r="2.5" fill="white"/><circle cx="78.1586" cy="2.55371" r="2.5" fill="white"/></g><defs><clipPath id="clip0_172_3770"><rect width="100" height="5" fill="white" transform="translate(0.6586)"/></clipPath></defs></svg>');
   mask-repeat: repeat-x;
   mask-size: 40px 2px;
+  border-radius: 0;
 }
 
 .select__select {
@@ -2003,7 +2011,8 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  /* width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2); */
+  width: 100%;
   display: flex;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
@@ -2082,6 +2091,22 @@ input[type='checkbox'] {
 .quantity__button .svg-wrapper {
   width: 1rem;
   pointer-events: none;
+  position:relative;
+  color: rgb(var(--color-background));
+
+
+  &:after {
+    content: '';
+    background-color: rgb(var(--color-foreground));
+    position:absolute;
+    top:0;
+    left:0;
+    width:2rem;
+    height:2rem;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translateX(-25%);
+  }
 }
 
 .quantity__button:focus-visible,
