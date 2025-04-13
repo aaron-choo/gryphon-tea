@@ -1123,7 +1123,8 @@ summary::-webkit-details-marker {
 /* component-media */
 .media {
   display: block;
-  background-color: rgba(var(--color-foreground), 0.1);
+  /* background-color: rgba(var(--color-foreground), 0.1); */
+  background-color: rgb(var(--color-foreground));
   position: relative;
   overflow: hidden;
 }
