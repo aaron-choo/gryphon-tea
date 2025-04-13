@@ -37,22 +37,9 @@
         },
         "text_wbkft3": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet</p>",
             "text_style": "subtitle"
-          }
-        },
-        "icon_with_text_mhq486": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "leaf",
-            "heading_1": "We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet",
-            "icon_2": "none",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
           }
         },
         "variant_picker": {
@@ -193,7 +180,6 @@
         "price",
         "rating_kdCQTq",
         "text_wbkft3",
-        "icon_with_text_mhq486",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
