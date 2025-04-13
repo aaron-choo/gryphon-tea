@@ -31,6 +31,7 @@
         "heading_JGMGex",
         "text_MrcqfT"
       ],
+      "disabled": true,
       "settings": {
         "image": "{{ page.metafields.custom.hero_image.value }}",
         "image_overlay_opacity": 0,
