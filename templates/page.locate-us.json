@@ -71,50 +71,110 @@
             "link": ""
           }
         },
-        "column_4b3AFQ": {
+        "column_hC9T6R": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_NReAaa": {
+        "column_A3g6Np": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_e9kBYt": {
+        "column_A8BdAx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_8LB9QU": {
+        "column_Vk89CE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_LJRgKx": {
+        "column_dXBcTT": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GbGYYz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_k4zfcN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jVRrR3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WxnX8U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gRBCAH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n4ByDr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -124,11 +184,17 @@
       },
       "block_order": [
         "column_3GkjQB",
-        "column_4b3AFQ",
-        "column_NReAaa",
-        "column_e9kBYt",
-        "column_8LB9QU",
-        "column_LJRgKx"
+        "column_hC9T6R",
+        "column_A3g6Np",
+        "column_A8BdAx",
+        "column_Vk89CE",
+        "column_dXBcTT",
+        "column_GbGYYz",
+        "column_k4zfcN",
+        "column_jVRrR3",
+        "column_WxnX8U",
+        "column_gRBCAH",
+        "column_n4ByDr"
       ],
       "settings": {
         "title": "Our Partners",
