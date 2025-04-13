@@ -34,7 +34,7 @@
       "settings": {
         "image": "{{ page.metafields.custom.hero_image.value }}",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
