@@ -57,10 +57,64 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "multicolumn_rrEMyr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3GkjQB": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4b3AFQ": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NReAaa": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3GkjQB",
+        "column_4b3AFQ",
+        "column_NReAaa"
+      ],
+      "settings": {
+        "title": "Our Partners",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_Uemy8z",
-    "main"
+    "main",
+    "multicolumn_rrEMyr"
   ]
 }
