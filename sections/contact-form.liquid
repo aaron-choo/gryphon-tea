@@ -126,6 +126,13 @@
           {{- 'templates.contact.form.comment' | t -}}
         </label>
       </div>
+
+      {%- if section.settings.disclaimer != blank -%}
+        <p class="disclaimer inline-richtext {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ section.settings.disclaimer }}
+        </p>
+      {%- endif -%}
+
       <div class="contact__button">
         <button type="submit" class="button button--secondary">
           {{ 'templates.contact.form.send' | t }}
@@ -183,6 +190,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "disclaimer",
+      "default": "Disclaimer",
+      "label": "Disclaimer"
     },
     {
       "type": "header",
