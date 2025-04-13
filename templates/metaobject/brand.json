@@ -34,10 +34,11 @@
       "settings": {
         "image": "{{ metaobject.image.value }}",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
+        "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
         "custom_positioning": true,
