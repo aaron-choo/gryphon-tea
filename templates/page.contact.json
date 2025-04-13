@@ -60,9 +60,10 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "We’d Love To Hear From You",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
+        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
         "padding_top": 36,
         "padding_bottom": 36
       }
