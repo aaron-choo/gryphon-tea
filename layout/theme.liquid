@@ -643,7 +643,8 @@
         wishlistData = wishlistData.filter((item) => item.productTitle !== productTitle);
         localStorage.setItem('wishlist', JSON.stringify(wishlistData));
         // Update the display after removing from the wishlist
-        displayWishlist(pdpData);
+        displayWishlist();
+        window.location.reload();
       }
 
       // Display wishlist items
@@ -652,22 +653,36 @@
 
         if (wishlistData.length === 0) {
           console.log('Wishlist is empty');
+          const wishlistBlock = document.querySelector('.js-wishlistBlock');
+
+          // Add a check to ensure the element is not null before setting innerHTML
+          if (wishlistBlock) {
+            wishlistBlock.innerHTML = `
+            <div class="text-center !grid grid-cols-1 gap-4 justify-center col-span-4">
+            <p>Your wishlist is currently empty.<br/>
+            Start shopping and add your favourites to this wishlist.</p>
+            
+            <div><a href="/collections/all" class="button button--secondary">Shop all</a></div>
+            </div>`;
+          } else {
+            console.error('Element with class "js-wishlistBlock" not found');
+          }
           return;
         }
 
         const wishlistHtml = wishlistData
           .map(
             (item) => `
-               <div class="wishlist-product__list">
+               <div class="wishlist-product__list text-center">
                    <div class="c-product">
                    <a href="${item.productUrl}">
-                       <img src="${item.productImg}" alt="${item.productTitle}">
+                       <img src="${item.productImg}" alt="${item.productTitle}" style="border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));">
                        </a>
                        <h3 class="c-product__title card__heading h5">
-                           <a class="full-unstyled-link" href="${item.productUrl}">${item.productTitle}</a>
+                           <a class="full-unstyled-link text-base font-body" href="${item.productUrl}">${item.productTitle}</a>
                        </h3>
-                       <p>${item.productPrice}</p>
-         {% comment %}<button onclick="removeFromWishlist('${item.productTitle}')">Remove</button> {% endcomment %}
+                       <p class="price !text-sm">${item.productPrice}</p>
+                      <button class="cursor-pointer" onclick="removeFromWishlist('${item.productTitle}')">Remove from wishlist</button>
                    </div>
                </div>
            `
