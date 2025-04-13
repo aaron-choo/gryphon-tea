@@ -9,6 +9,48 @@
  */
 {
   "sections": {
+    "image_banner_tz7UeA": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_TipXBJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ blog.title }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_GYBhr6": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TipXBJ",
+        "text_GYBhr6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/EGL1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "custom_positioning": true,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -23,6 +65,7 @@
     }
   },
   "order": [
+    "image_banner_tz7UeA",
     "main"
   ]
 }
