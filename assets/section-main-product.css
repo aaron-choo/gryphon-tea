@@ -239,8 +239,13 @@ product-info {
 
 .product__text {
   margin-bottom: 0;
-  strong {
-    font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(var(--color-foreground));
+  & * {
+    font-weight: 300;
+  }
+  & strong {
+    font-weight: 500;
   }
 }
 
@@ -279,6 +284,8 @@ a.product__text {
 .product__accordion .accordion__content {
   /* padding: 0 1rem; */
   font-weight: 300;
+  font-size: 1.5rem;
+  color: rgb(var(--color-foreground));
 }
 
 .product .price .badge {
