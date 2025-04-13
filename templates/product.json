@@ -62,7 +62,6 @@
         },
         "collapsible_tab_36EpY3": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
@@ -72,7 +71,6 @@
         },
         "collapsible_tab_hJKTwa": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Tea Category",
             "icon": "none",
@@ -82,7 +80,6 @@
         },
         "collapsible_tab_VAtLak": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Serving Suggestion",
             "icon": "none",
@@ -92,7 +89,6 @@
         },
         "collapsible_tab_hbM8rt": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Tasting Notes",
             "icon": "none",
@@ -102,7 +98,6 @@
         },
         "collapsible_tab_RJQRNP": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Pairing Information",
             "icon": "none",
@@ -112,7 +107,6 @@
         },
         "collapsible_tab_cqDnR4": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Allergen Information",
             "icon": "none",
@@ -122,6 +116,7 @@
         },
         "text_emQzJP": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Ingredients</strong> </p><p>{{ product.metafields.custom.ingredients | metafield_text }}</p>",
             "text_style": "body"
@@ -129,6 +124,7 @@
         },
         "text_qXzBUb": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Tea Category</strong></p>{{ product.metafields.custom.tea_category | metafield_tag }}",
             "text_style": "body"
@@ -136,6 +132,7 @@
         },
         "text_LpceNQ": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Serving Suggestion</strong></p><p>{{ product.metafields.custom.serving_suggestion | metafield_tag }}</p>",
             "text_style": "body"
@@ -143,6 +140,7 @@
         },
         "text_phxNRf": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Tasting Notes</strong></p><p>{{ product.metafields.custom.tasting_notes | metafield_tag }}</p>",
             "text_style": "body"
@@ -150,6 +148,7 @@
         },
         "text_6NCT99": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Pairing Information</strong></p><p>{{ product.metafields.custom.pairing_information | metafield_tag }}</p>",
             "text_style": "body"
@@ -157,6 +156,7 @@
         },
         "text_9yE9tp": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Allergen Information</strong></p><p>{{ product.metafields.custom.allergen_information | metafield_tag }}</p>",
             "text_style": "body"
