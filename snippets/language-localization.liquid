@@ -33,6 +33,8 @@
             <span
               {% if language.iso_code != localization.language.iso_code %}
                 class="visibility-hidden"
+              {% else %}
+                class="flex"
               {% endif %}
             >
               {{- 'icon-checkmark.svg' | inline_asset_content -}}

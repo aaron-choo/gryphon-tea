@@ -3794,3 +3794,8 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+.shopify-policy__title,
+.shopify-policy__body {
+  margin: 3rem auto;
+}
