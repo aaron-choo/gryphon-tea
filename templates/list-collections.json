@@ -32,8 +32,9 @@
         "text_LGM4Qn"
       ],
       "settings": {
+        "image": "shopify://shop_images/WebsiteThumbnailPoto1.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "extra-small",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
