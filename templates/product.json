@@ -60,6 +60,16 @@
             "show_gift_card_recipient": true
           }
         },
+        "wishlist_krBCag": {
+          "type": "wishlist",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
         "collapsible_tab_36EpY3": {
           "type": "collapsible_tab",
           "settings": {
@@ -161,16 +171,6 @@
             "text": "<p><strong>Allergen Information</strong></p><p>{{ product.metafields.custom.allergen_information | metafield_tag }}</p>",
             "text_style": "body"
           }
-        },
-        "wishlist_krBCag": {
-          "type": "wishlist",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -183,6 +183,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "wishlist_krBCag",
+        "share",
         "collapsible_tab_36EpY3",
         "collapsible_tab_hJKTwa",
         "collapsible_tab_VAtLak",
@@ -194,9 +196,7 @@
         "text_LpceNQ",
         "text_phxNRf",
         "text_6NCT99",
-        "text_9yE9tp",
-        "wishlist_krBCag",
-        "share"
+        "text_9yE9tp"
       ],
       "settings": {
         "enable_sticky_info": false,
