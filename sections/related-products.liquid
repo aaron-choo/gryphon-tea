@@ -53,7 +53,13 @@
       >
         {% assign skip_card_product_styles = false %}
         {% for recommendation in recommendations.products %}
-          <li class="grid__item">
+          <li
+            class="grid__item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
             {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,

@@ -273,6 +273,7 @@ a.product__text {
 
 .product__text.caption-with-letter-spacing + .product__title {
   /* margin-top: 0; */
+  margin-top: 0.5rem;
 }
 
 .product__accordion .accordion__content {
