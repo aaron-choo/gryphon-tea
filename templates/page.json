@@ -34,11 +34,11 @@
       "settings": {
         "image": "{{ page.metafields.custom.hero_image.value }}",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "extra-small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "is_hero_banner": false,
+        "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
         "custom_positioning": true,
