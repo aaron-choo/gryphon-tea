@@ -340,6 +340,95 @@
         "include_margins": true
       }
     },
+    "multicolumn_wNUTzQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_b3FCnc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jbEPme": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6PBMVU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jkDFxm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GqBncq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yFmcbb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_b3FCnc",
+        "column_jbEPme",
+        "column_6PBMVU",
+        "column_jkDFxm",
+        "column_GqBncq",
+        "column_yFmcbb"
+      ],
+      "settings": {
+        "title": "Our Partners",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_JqB7Pa": {
       "type": "featured-blog",
       "settings": {
@@ -404,6 +493,7 @@
     "multirow_GjhJwB",
     "rich_text_FKFVfB",
     "1744644337f30e543e",
+    "multicolumn_wNUTzQ",
     "featured_blog_JqB7Pa",
     "multirow_7AbrGq"
   ]
