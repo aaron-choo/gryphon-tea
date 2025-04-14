@@ -299,7 +299,7 @@
       "settings": {
         "blog": "journal",
         "post_limit": 4,
-        "heading": "Gryphon Tea Creations",
+        "heading": "{{ section.settings.blog.title }}",
         "heading_size": "h1",
         "show_slides": true,
         "columns_desktop": 3,
