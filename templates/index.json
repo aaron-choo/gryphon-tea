@@ -48,7 +48,7 @@
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "is_hero_banner": false,
         "show_text_box": false,
