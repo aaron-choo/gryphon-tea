@@ -46,6 +46,17 @@
   transform: translateX(0);
   pointer-events: auto;
   transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    bottom: -3rem;
+    left: -3rem;
+    width: 100vw;
+    background-color: #E9E9EF;
+    z-index: -1;
+  }
  }
 
 .mega-menu__list {

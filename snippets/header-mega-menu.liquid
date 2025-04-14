@@ -28,11 +28,11 @@
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width overflow-hidden"
                 tabindex="-1"
               >
                 <ul
-                  class="mega-menu__list page-width relative !grid !gap-0{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list relative !grid !gap-0{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                   style="grid-template-rows: repeat({{ menurows }}, 1fr);"
                 >
@@ -62,15 +62,16 @@
                           {%- if childlink.links != blank -%}
                             <ul
                               id="MegaMenu-submenu-{{ link.handle }}-{{ childlink.handle }}"
-                              class="list-unstyled absolute left-1/3 right-1/3 top-2"
+                              class="list-unstyled absolute left-1/3 right-0 top-0 !grid grid-cols-2"
                               role="list"
+                              style="grid-template-rows: repeat({{ menurows }}, 1fr);"
                             >
                               {%- for grandchildlink in childlink.links -%}
                                 <li>
                                   <a
                                     id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
                                     href="{{ grandchildlink.url }}"
-                                    class="mega-menu__link link !py-1 uppercase{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    class="mega-menu__link link !py-3 uppercase{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
                                     {% if grandchildlink.current %}
                                       aria-current="page"
                                     {% endif %}
