@@ -154,18 +154,7 @@
 
           <span class="visually-hidden">Brand:</span>
           <div class="caption-with-letter-spacing">
-            {%- liquid
-              if card_product.metafields.custom.brand.value.name == 'Roji'
-                assign brand_link = '/collections/all?filter.p.m.custom.brand=gid%3A%2F%2Fshopify%2FMetaobject%2F97139982370'
-              endif
-              if card_product.metafields.custom.brand.value.name == 'Monogram'
-                assign brand_link = '/collections/all?filter.p.m.custom.brand=gid%3A%2F%2Fshopify%2FMetaobject%2F97139949602'
-              endif
-              if card_product.metafields.custom.brand.value.name == 'Gryphon Tea Co.'
-                assign brand_link = '/collections/all?filter.p.m.custom.brand=gid%3A%2F%2Fshopify%2FMetaobject%2F97139884066'
-              endif
-            -%}
-            <a href="{{brand_link}}">
+            <a href="{{ card_product.metafields.custom.brand.value.link }}">
               {{ card_product.metafields.custom.brand.value.name }}
             </a>
           </div>
