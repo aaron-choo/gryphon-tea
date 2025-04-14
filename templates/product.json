@@ -244,9 +244,7 @@
       "block_order": [
         "stamped_reviews_main_widget_BwCYEr"
       ],
-      "custom_css": [
-        "* {background: #f4f4f7;}"
-      ],
+      "custom_css": [],
       "settings": {
         "include_margins": true
       }
