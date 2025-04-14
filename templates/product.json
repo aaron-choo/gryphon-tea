@@ -12,8 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "custom_liquid_7Ei3DA": {
+          "type": "custom_liquid",
+          "source": "{{ product.metafields.custom.brand.value }}",
+          "settings": {
+            "custom_liquid": "<a href=\"{{product.metafields.custom.brand.value.link}}\"><div class=\"product__text inline-richtext caption-with-letter-spacing\"><p>{{product.metafields.custom.brand.value.name}}</p></div></a>"
+          }
+        },
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>{{ product.metafields.custom.brand.value.name.value }}</p>",
             "text_style": "uppercase"
@@ -183,6 +191,7 @@
         }
       },
       "block_order": [
+        "custom_liquid_7Ei3DA",
         "vendor",
         "title",
         "description",
