@@ -45,6 +45,15 @@
             "height": ""
           }
         },
+        "stamped_reviews_star_rating_badge_RUy7Re": {
+          "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "use_metafields": false,
+            "sku_tagtype": "sku",
+            "is_featured_product": false,
+            "featured_product_handle": ""
+          }
+        },
         "text_wbkft3": {
           "type": "text",
           "settings": {
@@ -190,6 +199,7 @@
         "price",
         "rating_kdCQTq",
         "stamped_reviews_product_rating_image_ptzFq9",
+        "stamped_reviews_star_rating_badge_RUy7Re",
         "text_wbkft3",
         "variant_picker",
         "quantity_selector",
