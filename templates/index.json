@@ -420,10 +420,10 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 6,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-4",
-        "columns_mobile": "2",
+        "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 72,
         "padding_bottom": 72
