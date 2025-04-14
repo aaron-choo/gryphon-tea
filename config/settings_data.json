@@ -260,7 +260,7 @@
           "button_label": "#9eb091",
           "secondary_button_label": "#9eb091",
           "shadow": "rgba(0,0,0,0)",
-          "highlight": "#121212"
+          "highlight": "#ffffff"
         }
       },
       "scheme-4": {
@@ -272,7 +272,7 @@
           "button_label": "#9eb091",
           "secondary_button_label": "#9eb091",
           "shadow": "rgba(0,0,0,0)",
-          "highlight": "#121212"
+          "highlight": "#ffffff"
         }
       },
       "scheme-5": {
@@ -284,7 +284,7 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "rgba(0,0,0,0)",
-          "highlight": "#121212"
+          "highlight": "#5e6b47"
         }
       }
     }
