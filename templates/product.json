@@ -334,7 +334,7 @@
     "featured_blog_ar37ri": {
       "type": "featured-blog",
       "settings": {
-        "blog": "news",
+        "blog": "journal",
         "post_limit": 3,
         "heading": "Gryphon Tea Creations",
         "heading_size": "h1",
