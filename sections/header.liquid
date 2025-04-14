@@ -162,7 +162,7 @@
             {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
             {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
             {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-            <div class="main_logo_container{% if section.settings.hover_logo != blank %} translate-y-full opacity-0{% endif %}">
+            <div class="main_logo_container">
               {{
                 settings.logo
                 | image_url: width: 600
@@ -177,7 +177,7 @@
               }}
             </div>
             {% if section.settings.hover_logo != blank %}
-              <div class="hover_logo_container absolute top-0 right-0 w-full h-full p-[1rem]">
+              <div class="hover_logo_container absolute top-0 right-0 w-full h-full p-[1rem] -translate-y-full opacity-0">
                 {{
                   section.settings.hover_logo
                   | image_url: width: 600
@@ -529,29 +529,29 @@
     var firstLoad = localStorage.getItem('first_load');
     const hoverLogoContainer = document.querySelector('.hover_logo_container');
     const mainLogoContainer = document.querySelector('.main_logo_container');
-    if (firstLoad === 'true') {
-      mainLogoContainer.classList.remove('opacity-0');
-      mainLogoContainer.classList.remove('translate-y-full');
+    if (firstLoad == 'true') {
       mainLogoContainer.classList.add('group-hover:opacity-0');
       mainLogoContainer.classList.add('group-hover:translate-y-full');
-      hoverLogoContainer.classList.add('opacity-0');
-      hoverLogoContainer.classList.add('-translate-y-full');
       hoverLogoContainer.classList.add('group-hover:opacity-100');
       hoverLogoContainer.classList.add('group-hover:translate-y-0');
-      const logoAnimation = setTimeout(() => {
-        mainLogoContainer.classList.add('transition');
-        mainLogoContainer.classList.add('duration-500');
-        hoverLogoContainer.classList.add('transition');
-        hoverLogoContainer.classList.add('duration-500');
-      }, 1000);
+
+      mainLogoContainer.classList.add('transition');
+      mainLogoContainer.classList.add('duration-500');
+      hoverLogoContainer.classList.add('transition');
+      hoverLogoContainer.classList.add('duration-500');
+
       return;
     } else {
       if (hoverLogoContainer && mainLogoContainer) {
-        mainLogoContainer.classList.add('transition');
-        mainLogoContainer.classList.add('duration-500');
-        hoverLogoContainer.classList.add('transition');
-        hoverLogoContainer.classList.add('duration-500');
+        hoverLogoContainer.classList.remove('opacity-0');
+        hoverLogoContainer.classList.remove('-translate-y-full');
+        mainLogoContainer.classList.add('opacity-0');
+        mainLogoContainer.classList.add('translate-y-full');
         const logoAnimation = setTimeout(() => {
+          mainLogoContainer.classList.add('transition');
+          mainLogoContainer.classList.add('duration-500');
+          hoverLogoContainer.classList.add('transition');
+          hoverLogoContainer.classList.add('duration-500');
           mainLogoContainer.classList.remove('opacity-0');
           mainLogoContainer.classList.remove('translate-y-full');
           mainLogoContainer.classList.add('group-hover:opacity-0');
@@ -561,7 +561,7 @@
           hoverLogoContainer.classList.add('group-hover:opacity-100');
           hoverLogoContainer.classList.add('group-hover:translate-y-0');
         }, 1000);
-        localStorage.setItem('first_load', true);
+        localStorage.setItem('first_load', 'true');
       }
     }
   });
