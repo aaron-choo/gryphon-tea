@@ -47,7 +47,7 @@
         "image": "shopify://shop_images/EGL2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "image_behavior": "ambient",
+        "image_behavior": "zoom-in",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "is_hero_banner": false,
