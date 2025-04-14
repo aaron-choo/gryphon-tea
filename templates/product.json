@@ -285,7 +285,7 @@
       ],
       "settings": {
         "image": "{{ product.metafields.custom.brand.value.image.value }}",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 50,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
