@@ -126,7 +126,7 @@
           </div>
         </div>
         <script>
-          new Swiper('.swiper-{{ section.id }}', {
+          const featuredcollectionswiper = new Swiper('.swiper-{{ section.id }}', {
             // Optional parameters
             spaceBetween: 15,
             slidesPerGroup: 1,
@@ -152,7 +152,7 @@
                 spaceBetween: 30,
               },
               1500: {
-                slidesPerView: 5.5,
+                slidesPerView: 4.5,
                 spaceBetween: 30,
               },
             },
@@ -164,6 +164,13 @@
               enabled: true,
               forceToAxis: true,
             },
+          });
+
+          featuredcollectionswiper.on('slideChangeTransitionStart', function () {
+            console.log('update');
+            document.querySelectorAll('.swiper-{{ section.id }} .swiper-slide').forEach((slide) => {
+              slide.classList.add('reset-animation-delay');
+            });
           });
         </script>
         <script>
@@ -196,7 +203,7 @@
                   spaceBetween: 30,
                 },
                 1500: {
-                  slidesPerView: 5.5,
+                  slidesPerView: 4.5,
                   spaceBetween: 30,
                 },
               },
