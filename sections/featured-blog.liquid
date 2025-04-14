@@ -129,7 +129,6 @@
           });
 
           featuredblogswiper.on('slideChangeTransitionStart', function () {
-            console.log('update');
             document.querySelectorAll('.swiper-{{ section.id }} .swiper-slide').forEach((slide) => {
               slide.classList.add('reset-animation-delay');
             });
