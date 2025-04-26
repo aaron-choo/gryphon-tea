@@ -322,6 +322,9 @@
   .\!max-w-\[none\] {
     max-width: none !important;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .-translate-y-full {
     --tw-translate-y: -100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
