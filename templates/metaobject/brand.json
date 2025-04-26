@@ -61,6 +61,7 @@
             "caption": "",
             "heading": "",
             "text": "<p>{{ metaobject.brand_text_1 | metafield_tag }}</p>",
+            "button_label": "",
             "button_link": ""
           }
         }
