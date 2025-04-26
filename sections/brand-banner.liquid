@@ -1,0 +1,199 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+  {%- style -%}
+    @media screen and (max-width: 749px) {
+      #Banner-{{ section.id }}::before,
+      #Banner-{{ section.id }} .banner__media::before,
+      #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-{{ section.id }}::before,
+      #Banner-{{ section.id }} .banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- liquid
+  assign full_width = '100vw'
+  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+
+  if section.settings.image_behavior == 'ambient'
+    assign half_width = '60vw'
+    assign full_width = '120vw'
+    assign stacked_sizes = '(min-width: 750px) 60vw, 120vw'
+    assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+  elsif section.settings.image_behavior == 'fixed' or section.settings.image_behavior == 'zoom-in'
+    assign half_width = '100vw'
+    assign stacked_sizes = '100vw'
+  else
+    assign half_width = '50vw'
+    assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
+  endif
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden">
+  <div class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+    <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <!-- Slider main container -->
+      <div class="swiper-{{ section.id }}">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper relative">
+          <!-- Slides -->
+          {%- for product in collections.brands.products -%}
+            <div
+              class="swiper-slide scroll-trigger animate--slide-in"
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            >
+              <div class="relative w-full">
+                {%- liquid
+                  assign image_class = 'opacity-0 transition-opacity w-full aspect-video object-cover'
+                  assign sizes = full_width
+                -%}
+                {{
+                  product.metafields.custom.brand.value.image
+                  | image_url: width: 3840
+                  | image_tag:
+                    width: product.metafields.custom.brand.value.image.width,
+                    height: product.metafields.custom.brand.value.image.height,
+                    class: image_class,
+                    sizes: sizes,
+                    widths: widths,
+                    onload: 'this.style.opacity=1'
+                }}
+              </div>
+
+              <div class="absolute top-0 left-0 right-0 bottom-0 !py-4 page-width scroll-trigger animate--slide-in">
+                {%- liquid
+                  if product.metafields.custom.brand.value.text_color
+                    assign text_color = product.metafields.custom.brand.value.text_color
+                  else
+                    assign text_color = '#ffffff'
+                  endif
+                -%}
+                <div class="!grid grid-cols-2" style="color:{{ text_color }}">
+                  <div class="brand__description lg:w-3/4">
+                    <p>
+                      {{ product.metafields.custom.brand.value.description }}
+                    </p>
+                  </div>
+                  {% comment %}
+                    <div class="brand__links justify-self-end lg:w-3/4">
+                      {%- for product in collections.brands.products -%}
+                        <h1
+                          class=""
+                          style="color:{{ text_color }}"
+                        >
+                          {{ product.metafields.custom.brand.value.name }}
+                        </h1>
+                      {%- endfor %}
+                    </div>
+                  {% endcomment %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div
+          class="brand-swiper-pagination z-1 !top-4 !right-0 !grid grid-cols-1 self-start page-width !mr-0"
+        ></div>
+        <style>
+          .brand-swiper-pagination {
+            position: absolute;
+            width: auto !important;
+            left: auto !important;
+          }
+          .swiper-pagination-bullet {
+            border-radius: 0;
+            width: auto;
+            color: #fff;
+            opacity: 0.8;
+            background: transparent;
+            height: fit-content;
+          }
+          .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: transparent;
+          }
+        </style>
+      </div>
+      <script>
+        {% assign all_brands = collections.brands.products | map: 'metafields' | map: 'custom' | map: 'brand' | map: 'value' | map: 'name' %}
+        const brands = {{ all_brands | json }};
+        const brandSwiper = new Swiper('.swiper-{{ section.id }}', {
+          // Optional parameters
+          spaceBetween: 0,
+          slidesPerGroup: 1,
+          slidesPerView: 1,
+          direction: 'horizontal',
+          pagination: {
+            el: '.brand-swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return `<span class="${className} h1">${brands[index]}</span>`;
+            },
+          },
+          loop: true,
+          mousewheel: {
+            enabled: true,
+            forceToAxis: true,
+          },
+        });
+
+        brandSwiper.on('slideChangeTransitionStart', function () {
+          document.querySelectorAll('.swiper-{{ section.id }} .swiper-slide').forEach((slide) => {
+            slide.classList.add('reset-animation-delay');
+          });
+        });
+      </script>
+      <script>
+        document.addEventListener('shopify:section:load', (e) => {
+          // if (!e.detail.sectionId.includes({{section.id}})) return; // Adjust 'slider' to match your section name
+          // initSwiper(); // Call your Swiper initialization function
+          new Swiper('.swiper-{{ section.id }}', {
+            // Optional parameters
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            slidesPerView: 1,
+            direction: 'horizontal',
+            loop: true,
+            mousewheel: {
+              enabled: true,
+              forceToAxis: true,
+            },
+          });
+        });
+      </script>
+    </slider-component>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "presets": [
+    {
+      "name": "Brand Banner"
+    }
+  ]
+}
+{% endschema %}
