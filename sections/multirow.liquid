@@ -69,7 +69,11 @@
                 {{
                   block.settings.image
                   | image_url: width: 1500
-                  | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                  | image_tag:
+                    sizes: sizes,
+                    widths: '165, 360, 535, 750, 1070, 1500',
+                    onload: 'this.style.opacity=1',
+                    class: 'opacity-0 transition-opacity'
                 }}
               {%- else -%}
                 {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}

@@ -96,7 +96,9 @@
       {%- liquid
         assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio
         if section.settings.image != blank
-          assign image_class_2 = 'banner__media-image-half'
+          assign image_class_2 = 'banner__media-image-half opacity-0 transition-opacity'
+        else
+          assign image_class_2 = 'opacity-0 transition-opacity'
         endif
         if section.settings.image != blank and section.settings.stack_images_on_mobile
           assign sizes = stacked_sizes
@@ -116,7 +118,8 @@
           sizes: sizes,
           widths: widths,
           fetchpriority: fetch_priority,
-          preload: section.settings.is_hero_banner
+          preload: section.settings.is_hero_banner,
+          onload: 'this.style.opacity=1'
       }}
     </div>
   {%- endif -%}

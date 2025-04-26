@@ -389,24 +389,6 @@
 }
 
 
-.banner::before,
-.banner__media::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  background: #9EB091;
-  opacity: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
-}
-
-@keyframes pulse {
-  50% {
-      opacity: .25;
-  } 
-}
 
 .banner::after,
 .banner__media::after {

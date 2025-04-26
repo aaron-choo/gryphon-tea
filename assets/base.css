@@ -3233,6 +3233,7 @@ details-disclosure > details {
     rgba(var(--color-shadow), var(--media-shadow-opacity));
   z-index: -1;
   pointer-events: none;
+  background: rgba(var(--color-highlight), 0.15);
 }
 
 .global-media-settings--no-shadow {
