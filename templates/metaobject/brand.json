@@ -64,10 +64,22 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "row_bVdtHY": {
+          "type": "row",
+          "settings": {
+            "image": "{{ metaobject.brand_image_2.value }}",
+            "caption": "",
+            "heading": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.{{ metaobject.brand_text_2 | metafield_tag }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "row_z4hDwN"
+        "row_z4hDwN",
+        "row_bVdtHY"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
