@@ -50,9 +50,44 @@
         "mobile_content_vertical_alignment": "middle",
         "show_text_below": false
       }
+    },
+    "multirow_UFGczh": {
+      "type": "multirow",
+      "blocks": {
+        "row_z4hDwN": {
+          "type": "row",
+          "settings": {
+            "image": "{{ metaobject.brand_image_1.value }}",
+            "caption": "",
+            "heading": "",
+            "text": "<p>{{ metaobject.brand_text_1 | metafield_tag }}</p>",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_z4hDwN"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
-    "image_banner_cpWQJ6"
+    "image_banner_cpWQJ6",
+    "multirow_UFGczh"
   ]
 }
