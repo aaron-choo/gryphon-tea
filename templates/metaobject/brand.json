@@ -41,6 +41,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
+        "text_color_override": "transparent",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -155,12 +156,18 @@
         "padding_top": 0,
         "padding_bottom": 72
       }
+    },
+    "brand_banner_KCHtJR": {
+      "type": "brand-banner",
+      "name": "Brand Banner",
+      "settings": {}
     }
   },
   "order": [
     "image_banner_cpWQJ6",
     "multirow_UFGczh",
     "featured_collection_cp9G6f",
-    "rich_text_YtxBqj"
+    "rich_text_YtxBqj",
+    "brand_banner_KCHtJR"
   ]
 }
