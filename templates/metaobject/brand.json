@@ -41,7 +41,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -51,6 +51,11 @@
         "mobile_content_vertical_alignment": "middle",
         "show_text_below": false
       }
+    },
+    "brand_story_banner_RyppJ4": {
+      "type": "brand-story-banner",
+      "name": "Brand Story Banner",
+      "settings": {}
     },
     "multirow_UFGczh": {
       "type": "multirow",
@@ -165,6 +170,7 @@
   },
   "order": [
     "image_banner_cpWQJ6",
+    "brand_story_banner_RyppJ4",
     "multirow_UFGczh",
     "featured_collection_cp9G6f",
     "rich_text_YtxBqj",
