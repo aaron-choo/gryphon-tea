@@ -1,0 +1,221 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_Uemy8z": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_JGMGex": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_MrcqfT": {
+          "type": "text",
+          "settings": {
+            "text": "{{ page.metafields.custom.excerpt.value }}",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JGMGex",
+        "text_MrcqfT"
+      ],
+      "settings": {
+        "image": "{{ page.metafields.custom.hero_image.value }}",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "text_color_override": "rgba(0,0,0,0)",
+        "custom_positioning": true,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
+      }
+    },
+    "multirow_ECcXCd": {
+      "type": "multirow",
+      "blocks": {
+        "row_Yb73AA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/WebsiteThumbnailPoto1.jpg",
+            "caption": "",
+            "heading": "",
+            "text": "<p>Aliquip tempor fugiat dolore magna labore in dolor minim ad cupidatat. Ut laborum cupidatat laborum voluptate esse pariatur culpa incididunt deserunt consequat incididunt et laborum excepteur labore. Reprehenderit cillum ipsum commodo consectetur proident excepteur cupidatat fugiat enim ex aliqua fugiat deserunt pariatur non. Deserunt aliquip tempor occaecat aute amet aute deserunt commodo cupidatat nostrud.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_QrYQYk": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/chinese-tea-service.jpg",
+            "caption": "",
+            "heading": "",
+            "text": "<p>Aliquip tempor fugiat dolore magna labore in dolor minim ad cupidatat. Ut laborum cupidatat laborum voluptate esse pariatur culpa incididunt deserunt consequat incididunt et laborum excepteur labore. Reprehenderit cillum ipsum commodo consectetur proident excepteur cupidatat fugiat enim ex aliqua fugiat deserunt pariatur non. Deserunt aliquip tempor occaecat aute amet aute deserunt commodo cupidatat nostrud.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_Yb73AA",
+        "row_QrYQYk"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "overlap": 48,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "multicolumn_MkA4KP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BhyamD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JtVDH6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_D9PDNW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_33MCjB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3ygeaX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XiBQAg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BhyamD",
+        "column_JtVDH6",
+        "column_D9PDNW",
+        "column_33MCjB",
+        "column_3ygeaX",
+        "column_XiBQAg"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Our Partners",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "contact_form_cC8nHe": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Craft Your Own Experience",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_Uemy8z",
+    "multirow_ECcXCd",
+    "multicolumn_MkA4KP",
+    "contact_form_cC8nHe",
+    "main"
+  ]
+}
