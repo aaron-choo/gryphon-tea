@@ -65,6 +65,9 @@
             <!-- Slides -->
             {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
               {%- for article in section.settings.blog.articles -%}
+                {% if section.settings.filter_tag != 'All' %}
+                  {% unless article.tags contains section.settings.filter_tag %}{% continue %}{% endunless %}
+                {% endif %}
                 <div
                   class="swiper-slide {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
@@ -335,6 +338,12 @@
       "type": "blog",
       "id": "blog",
       "label": "t:sections.featured-blog.settings.blog.label"
+    },
+    {
+      "type": "text",
+      "id": "filter_tag",
+      "default": "All",
+      "label": "Filter Tag"
     },
     {
       "type": "range",
