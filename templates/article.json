@@ -22,7 +22,7 @@
         "text_PMpkBA": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "{{ article.metafields.custom.excerpt.value }}",
             "text_style": "body"
           }
         }
@@ -42,7 +42,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
