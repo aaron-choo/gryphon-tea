@@ -9,6 +9,50 @@
  */
 {
   "sections": {
+    "image_banner_QVwBPh": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_KBJXLL": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ article.title }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_PMpkBA": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KBJXLL",
+        "text_PMpkBA"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "{{ article.image }}",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "text_color_override": "transparent",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "text_custom_position": "top-right",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -46,6 +90,7 @@
     }
   },
   "order": [
+    "image_banner_QVwBPh",
     "main"
   ]
 }
