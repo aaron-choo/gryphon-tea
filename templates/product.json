@@ -302,7 +302,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": false,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -336,6 +336,7 @@
       "type": "featured-blog",
       "settings": {
         "blog": "journal",
+        "filter_tag": "Recipes",
         "post_limit": 3,
         "heading": "{{ section.settings.blog.title }}",
         "heading_size": "h1",
