@@ -100,104 +100,23 @@
         "padding_bottom": 72
       }
     },
-    "multicolumn_MkA4KP": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_BhyamD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_JtVDH6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_D9PDNW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_33MCjB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_3ygeaX": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_XiBQAg": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_BhyamD",
-        "column_JtVDH6",
-        "column_D9PDNW",
-        "column_33MCjB",
-        "column_3ygeaX",
-        "column_XiBQAg"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
+    "featured_blog_8XCtAk": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "title": "Our Partners",
+        "blog": "journal",
+        "filter_tag": "All",
+        "post_limit": 4,
+        "heading": "Journal",
         "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 6,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-4",
-        "columns_mobile": "3",
-        "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "contact_form_cC8nHe": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Craft Your Own Bespoke Tea",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
+        "show_slides": true,
+        "columns_desktop": 4,
+        "show_view_all": false,
+        "show_image": true,
+        "show_blog_title": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-2",
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -214,8 +133,7 @@
   "order": [
     "image_banner_Uemy8z",
     "multirow_ECcXCd",
-    "multicolumn_MkA4KP",
-    "contact_form_cC8nHe",
+    "featured_blog_8XCtAk",
     "main"
   ]
 }
