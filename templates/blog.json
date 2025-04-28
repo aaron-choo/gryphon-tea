@@ -63,10 +63,21 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "custom_liquid_axtFyK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if blog.tags.size > 0 %}\n      <div class=\"blog-filter\">\n        <div class=\"list-group\">\n          <ul id=\"BlogTagFilter\" class=\"tag-list\">\n            <li>Filter by:</li>\n          <li>\n            <a href=\"{{ blog.url }}\" class=\"button\">\n              {{ 'All Topics' }}\n            </a>\n          </li>\n            {% for tag in blog.all_tags %}\n            <li>\n              <a href=\"{{ blog.url }}/tagged/{{ tag | handleize }}\" class=\"button\">\n              {{ tag }}\n              </a>\n            </li>\n            {% endfor %}\n          </ul>\n        </div>\n      </div>\n    {% endif %}",
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "image_banner_tz7UeA",
+    "custom_liquid_axtFyK",
     "main"
   ]
 }
