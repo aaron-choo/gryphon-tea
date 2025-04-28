@@ -202,6 +202,27 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
+      {% if blog.tags.size > 0 %}
+        <div class="blog-filter banner__buttons !max-w-none banner__buttons--multiple {% if section.settings.custom_positioning %} custom-bottom-left !right-0{% endif %} !mt-12">
+          <div>
+            <a
+              href="{{ blog.url }}"
+              class="button button--secondary {% if request.path == '/blogs/journal' %} before:bg-[#333A2E] {% endif %} !min-w-0 !ml-0"
+            >
+              All
+            </a>
+            {% for tag in blog.all_tags %}
+              {% assign tag_handle = tag | handleize %}
+              <a
+                href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+                class="button {% if request.path contains tag_handle %} before:bg-[#333A2E] {% endif %} button--secondary !min-w-0 !ml-0"
+              >
+                {{ tag }}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
