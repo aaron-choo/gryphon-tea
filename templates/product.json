@@ -338,7 +338,7 @@
         "blog": "journal",
         "filter_tag": "Recipes",
         "post_limit": 3,
-        "heading": "{{ section.settings.blog.title }}",
+        "heading": "Recipes",
         "heading_size": "h1",
         "show_slides": true,
         "columns_desktop": 3,
