@@ -115,8 +115,15 @@
       </div>
       <div class="card__content">
         <div class="card__information">
+          {% comment %}
+            {%- if show_blog_title -%}
+              <span class="blog-title caption-with-letter-spacing">{{ blog.title }}</span>
+            {%- endif -%}
+          {% endcomment %}
           {%- if show_blog_title -%}
-            <span class="blog-title caption-with-letter-spacing">{{ blog.title }}</span>
+            <a href="/blogs/journal/tagged/{{ article.tags  | first | downcase }}"
+              ><span class="article-tag caption-with-letter-spacing">{{ article.tags | first }}</span></a
+            >
           {%- endif -%}
           <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
             <a href="{{ article.url }}" class="full-unstyled-link text-base font-body">
