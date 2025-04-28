@@ -106,57 +106,57 @@
         "column_BhyamD": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_VfXULz": {
+        "column_JtVDH6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_7eTrHi": {
+        "column_D9PDNW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_rG7Maa": {
+        "column_33MCjB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_46JzJQ": {
+        "column_3ygeaX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_TJ4kT3": {
+        "column_XiBQAg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/favicon_e48310e6-da60-4669-b03e-3d18e46d0cd1.png",
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -166,11 +166,11 @@
       },
       "block_order": [
         "column_BhyamD",
-        "column_VfXULz",
-        "column_7eTrHi",
-        "column_rG7Maa",
-        "column_46JzJQ",
-        "column_TJ4kT3"
+        "column_JtVDH6",
+        "column_D9PDNW",
+        "column_33MCjB",
+        "column_3ygeaX",
+        "column_XiBQAg"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
