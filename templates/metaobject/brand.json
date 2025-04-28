@@ -41,7 +41,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "rgba(0,0,0,0)",
+        "text_color_override": "{{ metaobject.text_color.value }}",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
