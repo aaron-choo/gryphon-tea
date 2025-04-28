@@ -37,11 +37,11 @@
   endif
 -%}
 
-<div class="brand-story color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden">
-  <div
+<div class="brand-story-banner aspect-[1.73] color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden">
+  <img
     class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding"
   >
-    Brand Story Here
+    <img src="{{ 'Lily_Of_The_Field_240220.jpg' | asset_url }}"></img>
   </div>
 </div>
 
