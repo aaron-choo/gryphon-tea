@@ -9,6 +9,50 @@
  */
 {
   "sections": {
+    "blog_banner_TJ8N7W": {
+      "type": "blog-banner",
+      "blocks": {
+        "heading_mk7GhP": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ blog.title }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_cP8ty3": {
+          "type": "text",
+          "settings": {
+            "text": "Dolore fugiat elit eiusmod anim aute proident non cillum dolore ex incididunt sunt proident. In ea id sunt tempor sint sit tempor tempor ex Lorem mollit ad occaecat amet occaecat.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mk7GhP",
+        "text_cP8ty3"
+      ],
+      "name": "Blog Banner",
+      "settings": {
+        "image": "shopify://shop_images/EGL1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "text_color_override": "#ffffff",
+        "custom_positioning": true,
+        "heading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
+    },
     "image_banner_tz7UeA": {
       "type": "image-banner",
       "blocks": {
@@ -52,6 +96,16 @@
         "show_text_below": false
       }
     },
+    "custom_liquid_axtFyK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if blog.tags.size > 0 %}\n      <div class=\"blog-filter\">\n        <div class=\"list-group\">\n          <ul id=\"BlogTagFilter\" class=\"tag-list\">\n            <li>Filter by:</li>\n          <li>\n            <a href=\"{{ blog.url }}\" class=\"button\">\n              {{ 'All Topics' }}\n            </a>\n          </li>\n            {% for tag in blog.all_tags %}\n            <li>\n              <a href=\"{{ blog.url }}/tagged/{{ tag | handleize }}\" class=\"button\">\n              {{ tag }}\n              </a>\n            </li>\n            {% endfor %}\n          </ul>\n        </div>\n      </div>\n    {% endif %}",
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -63,19 +117,10 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
-    },
-    "custom_liquid_axtFyK": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "{% if blog.tags.size > 0 %}\n      <div class=\"blog-filter\">\n        <div class=\"list-group\">\n          <ul id=\"BlogTagFilter\" class=\"tag-list\">\n            <li>Filter by:</li>\n          <li>\n            <a href=\"{{ blog.url }}\" class=\"button\">\n              {{ 'All Topics' }}\n            </a>\n          </li>\n            {% for tag in blog.all_tags %}\n            <li>\n              <a href=\"{{ blog.url }}/tagged/{{ tag | handleize }}\" class=\"button\">\n              {{ tag }}\n              </a>\n            </li>\n            {% endfor %}\n          </ul>\n        </div>\n      </div>\n    {% endif %}",
-        "color_scheme": "",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
     }
   },
   "order": [
+    "blog_banner_TJ8N7W",
     "image_banner_tz7UeA",
     "custom_liquid_axtFyK",
     "main"
