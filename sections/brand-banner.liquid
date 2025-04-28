@@ -73,7 +73,7 @@
             >
               <div class="relative w-full">
                 {%- liquid
-                  assign image_class = 'opacity-0 transition-opacity w-full aspect-[2.5] object-cover'
+                  assign image_class = 'opacity-0 transition-opacity w-full aspect-[0.8] sm:aspect-square md:aspect-[2] lg:aspect-[2.5] object-cover'
                   assign sizes = full_width
                   assign current_brand = request.path | remove_first: '/pages/brand/'
                   assign looped_brand = product.metafields.custom.brand.value.name | downcase | replace: ' ', '-' | replace: '.', ''
@@ -91,8 +91,8 @@
                 }}
               </div>
 
-              <div class="absolute top-0 left-0 right-0 bottom-0 !py-4 page-width scroll-trigger animate--slide-in">
-                <div class="!grid grid-cols-2" style="color:{{ text_color }}">
+              <div class="absolute top-40 md:top-0 left-0 right-0 bottom-0 !py-4 page-width">
+                <div class="!grid md:grid-cols-2" style="color:{{ text_color }}">
                   <div class="brand__description lg:w-3/4 !grid grid-cols-1 gap-4">
                     <p>
                       {{ product.metafields.custom.brand.value.description }}
@@ -112,6 +112,10 @@
                         >Shop Brand</a
                       >
                     {% endif %}
+
+                    <div class="absolute top-auto left-0 right-0 bottom-0 !py-4 page-width z-1">
+                      <h2 class="h1 !text-inherit">Our Brands</h2>
+                    </div>
                   </div>
                   {% comment %}
                     <div class="brand__links justify-self-end lg:w-3/4">
@@ -130,14 +134,31 @@
             </div>
           {% endfor %}
         </div>
+        {% assign first_text_color = collections.brands.products
+          | map: 'metafields'
+          | map: 'custom'
+          | map: 'brand'
+          | map: 'value'
+          | map: 'text_color'
+          | first
+        %}
+        {% if first_text_color %}
+          {% assign default_text_color = first_text_color %}
+        {% else %}
+          {% assign default_text_color = 'white' %}
+        {% endif %}
         <div
           class="brand-swiper-pagination z-1 !top-4 !right-0 !grid grid-cols-1 self-start page-width !mr-0 transition-colors"
+          style="color: {{ default_text_color }}"
         ></div>
         <style>
           .brand-swiper-pagination {
             position: absolute;
             width: auto !important;
-            left: auto !important;
+            left: 0 !important;
+            @media screen and (min-width: 750px) {
+              left: auto !important;
+            }
           }
           .swiper-pagination-bullet {
             border-radius: 0;
@@ -158,7 +179,6 @@
         const brands = {{ all_brands | json }};
         const brandSwiper = new Swiper('.swiper-{{ section.id }}', {
           // Optional parameters
-          initialSlide: brands.findIndex((item => item.replace(/\s+/g, '-').replace('.','').toLowerCase() === '{{current_brand}}')),
           effect: 'fade',
           fadeEffect: {
             crossFade: true,
@@ -170,16 +190,13 @@
               return `<span class="${className} h1 ${brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == '{{current_brand}}' ? 'order-0' : 'order-1'}">${brands[index]}</span>`;
             },
           },
-          loop: true,
-          
         });
-
         brandSwiper.on('slideChange', function () {
-          console.log('changed');
           setTimeout(() => {
             document.querySelector('.brand-swiper-pagination').style.color = document.querySelector('.swiper-slide-active').getAttribute('data-text-color');
           }, 100);
         });
+        brandSwiper.slideTo(brands.findIndex((item => item.replace(/\s+/g, '-').replace('.','').toLowerCase() === '{{current_brand}}')), 0 , true)
       </script>
       <script>
         document.addEventListener('shopify:section:load', (e) => {
@@ -193,10 +210,13 @@
               el: '.brand-swiper-pagination',
               clickable: true,
               renderBullet: function (index, className) {
-                return `<span class="${className} h1">${brands[index]}</span>`;
+                return `<span class="${className} h1 ${
+                  brands[index].replace(/\s+/g, '-').replace('.', '').toLowerCase() == '{{current_brand}}'
+                    ? 'order-0'
+                    : 'order-1'
+                }">${brands[index]}</span>`;
               },
             },
-            loop: true,
           });
         });
       </script>
