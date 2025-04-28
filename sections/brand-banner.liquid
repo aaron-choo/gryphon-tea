@@ -37,7 +37,7 @@
   endif
 -%}
 
-<div class="brand-banner color-{{ section.settings.color_scheme }} overflow-hidden">
+<div id="brand-banner" class="brand-banner color-{{ section.settings.color_scheme }} overflow-hidden">
   <div class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     <slider-component class="slider-mobile-gutter scroll-trigger animate--slide-in">
       <!-- Slider main container -->

@@ -38,10 +38,10 @@
 -%}
 
 <div class="brand-story-banner aspect-[1.73] color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden">
-  <img
+  <div
     class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding"
   >
-    <img src="{{ 'Lily_Of_The_Field_240220.jpg' | asset_url }}"></img>
+    <img src="{{ 'Lily_Of_The_Field_240220.jpg' | asset_url }}">
   </div>
 </div>
 
