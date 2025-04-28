@@ -3877,3 +3877,11 @@ section#shopify-section-template--23461853167650__1744644337f30e543e {
 .reset-animation-delay {
   --animation-order: 0 !important;
 }
+
+
+body.\/pages\/brand\/gryphon-singapore {
+  div#Banner-template--23521131233314__image_banner_cpWQJ6,
+  div#Banner-template--23590636159010__image_banner_cpWQJ6 {
+    display: none;
+  }
+}
