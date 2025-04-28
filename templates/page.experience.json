@@ -41,7 +41,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -58,10 +58,23 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "contact_form_cC8nHe": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Craft Your Own Experience",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "image_banner_Uemy8z",
-    "main"
+    "main",
+    "contact_form_cC8nHe"
   ]
 }
