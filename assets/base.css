@@ -3885,3 +3885,9 @@ body.\/pages\/brand\/gryphon-singapore {
     display: none;
   }
 }
+
+body:not(.\/pages\/brand\/gryphon-singapore) {
+  section#shopify-section-template--23590636159010__brand_story_banner_RyppJ4 {
+    display: none;
+  }
+}
