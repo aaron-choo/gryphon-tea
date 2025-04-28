@@ -131,10 +131,11 @@
             {%- if section.settings.is_hero_banner -%}
               <h1
                 class="main-page-title page-title banner__heading inline-richtext {{ block.settings.heading_size }}{% if section.settings.custom_positioning %} custom-{{ section.settings.heading_custom_position }}{% endif %}"
-                {%- if section.settings.text_color_override != 'rgba(0,0,0,0)' -%}
-                  style="color: {{ section.settings.text_color_override }}"
+                {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
+                  or section.settings.text_color_override == 'transparent'
+                -%}
                 {% else %}
-                  style="color: #ffffff"
+                  style="color: {{ section.settings.text_color_override }}"
                 {%- endif -%}
                 {{ block.shopify_attributes }}
               >
@@ -143,10 +144,11 @@
             {%- else -%}
               <h2
                 class="banner__heading inline-richtext {{ block.settings.heading_size }}{% if section.settings.custom_positioning %} custom-{{ section.settings.heading_custom_position }}{% endif %}"
-                {%- if section.settings.text_color_override != 'rgba(0,0,0,0)' -%}
-                  style="color: {{ section.settings.text_color_override }}"
+                {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
+                  or section.settings.text_color_override == 'transparent'
+                -%}
                 {% else %}
-                  style="color: #ffffff"
+                  style="color: {{ section.settings.text_color_override }}"
                 {%- endif -%}
                 {{ block.shopify_attributes }}
               >
@@ -156,10 +158,11 @@
           {%- when 'text' -%}
             <div
               class="banner__text rte {{ block.settings.text_style }}{% if section.settings.custom_positioning %} custom-{{ section.settings.text_custom_position }}{% endif %}"
-              {%- if section.settings.text_color_override != 'rgba(0,0,0,0)' -%}
-                style="color: {{ section.settings.text_color_override }}"
+              {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
+                or section.settings.text_color_override == 'transparent'
+              -%}
               {% else %}
-                style="color: #ffffff"
+                style="color: {{ section.settings.text_color_override }}"
               {%- endif -%}
               {{ block.shopify_attributes }}
             >
