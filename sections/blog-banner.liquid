@@ -207,7 +207,7 @@
           <div>
             <a
               href="{{ blog.url }}"
-              class="button button--secondary {% if request.path == '/blogs/journal' %} before:bg-[#333A2E] {% endif %} !min-w-0 !ml-0"
+              class="button button--secondary {% if request.path == '/blogs/journal' %} before:bg-[#F4F4F7] !text-[#333A2E]{% endif %} !min-w-0 !ml-0"
             >
               All
             </a>
@@ -215,7 +215,7 @@
               {% assign tag_handle = tag | handleize %}
               <a
                 href="{{ blog.url }}/tagged/{{ tag | handleize }}"
-                class="button {% if request.path contains tag_handle %} before:bg-[#333A2E] {% endif %} button--secondary !min-w-0 !ml-0"
+                class="button {% if request.path contains tag_handle %} before:bg-[#F4F4F7] !text-[#333A2E]{% endif %} button--secondary !min-w-0 !ml-0"
               >
                 {{ tag }}
               </a>
