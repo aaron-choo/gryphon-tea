@@ -23,18 +23,91 @@
         "button_CHF3xm": {
           "type": "button",
           "settings": {
-            "button_label": "View our the latest promotions",
+            "button_label": "View our latest promotions",
+            "button_link": "/",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "https://shopee.sg/gryphonteacompany",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "button_CHF3xm"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_jE7JxD": {
+      "type": "rich-text",
+      "blocks": {
+        "button_94HL9x": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
             "button_link": "/",
             "button_style_secondary": true,
             "button_label_2": "Shop our teas on Shopee",
             "button_link_2": "https://shopee.sg/gryphonteacompany",
             "button_style_secondary_2": true
           }
-        },
-        "button_KCC8ze": {
+        }
+      },
+      "block_order": [
+        "button_94HL9x"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_9CGjiF": {
+      "type": "rich-text",
+      "blocks": {
+        "button_J8biHW": {
           "type": "button",
           "settings": {
             "button_label": "Find our products on Lazada",
+            "button_link": "https://www.lazada.sg/shop/gryphon-tea-company",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/contact",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "button_J8biHW"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_k6mJFf": {
+      "type": "rich-text",
+      "blocks": {
+        "button_RydX3M": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
             "button_link": "https://www.lazada.sg/shop/gryphon-tea-company",
             "button_style_secondary": true,
             "button_label_2": "Contact Us",
@@ -44,8 +117,7 @@
         }
       },
       "block_order": [
-        "button_CHF3xm",
-        "button_KCC8ze"
+        "button_RydX3M"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -53,13 +125,16 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "main",
-    "rich_text_6VCGhc"
+    "rich_text_6VCGhc",
+    "rich_text_jE7JxD",
+    "rich_text_9CGjiF",
+    "rich_text_k6mJFf"
   ]
 }
