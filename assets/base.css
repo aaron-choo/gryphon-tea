@@ -3897,3 +3897,13 @@ body:not(.\/pages\/brand\/gryphon-singapore) {
 .bdl2-main {
   display: none;
 }
+
+.shopify-policy__body .rte{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+
+  h2, h3 {
+    margin-top: 2rem;
+  }
+}
