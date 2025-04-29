@@ -22,7 +22,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% style %}\n#MainContent {\nbackground-image: url('/cdn/shop/files/Lily_Of_The_Field_240220.jpg');\n}\n{% endstyle %}",
+        "custom_liquid": "{% style %}\n\n{% endstyle %}",
         "color_scheme": "",
         "padding_top": 72,
         "padding_bottom": 0
