@@ -23,7 +23,7 @@
         "button_CHF3xm": {
           "type": "button",
           "settings": {
-            "button_label": "Visit our site for the latest promotions",
+            "button_label": "View our the latest promotions",
             "button_link": "/",
             "button_style_secondary": true,
             "button_label_2": "Shop our teas on Shopee",
