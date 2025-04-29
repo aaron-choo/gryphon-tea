@@ -11,13 +11,70 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "multicolumn_wRGM7L": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_XFLqUU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Logomark-Dark_cropped.png",
+            "title": "",
+            "text": "<p>Visit our site for the latest promotions</p>",
+            "link_label": "",
+            "link": "/"
+          }
+        },
+        "column_xdz4Be": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hJEBdP": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XFLqUU",
+        "column_xdz4Be",
+        "column_hJEBdP"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 72,
         "padding_bottom": 72
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multicolumn_wRGM7L"
   ]
 }
