@@ -18,11 +18,6 @@
         "padding_bottom": 72
       }
     },
-    "brand_banner_HTXfxM": {
-      "type": "brand-banner",
-      "name": "Brand Banner",
-      "settings": {}
-    },
     "rich_text_6VCGhc": {
       "type": "rich-text",
       "blocks": {
@@ -149,7 +144,6 @@
   },
   "order": [
     "main",
-    "brand_banner_HTXfxM",
     "rich_text_6VCGhc",
     "rich_text_jE7JxD",
     "rich_text_9CGjiF",
