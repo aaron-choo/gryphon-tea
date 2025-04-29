@@ -18,6 +18,16 @@
         "padding_bottom": 72
       }
     },
+    "custom_liquid_keMyjd": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% style %}\n#MainContent {\nbackground-image: url('/cdn/shop/files/Lily_Of_The_Field_240220.jpg');\n}\n{% endstyle %}",
+        "color_scheme": "",
+        "padding_top": 72,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_6VCGhc": {
       "type": "rich-text",
       "blocks": {
@@ -131,7 +141,7 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_keMyjd": {
+    "custom_liquid_nXjywe": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -144,10 +154,11 @@
   },
   "order": [
     "main",
+    "custom_liquid_keMyjd",
     "rich_text_6VCGhc",
     "rich_text_jE7JxD",
     "rich_text_9CGjiF",
     "rich_text_k6mJFf",
-    "custom_liquid_keMyjd"
+    "custom_liquid_nXjywe"
   ]
 }
