@@ -53,6 +53,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
+        "text_color_override": "transparent",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -107,6 +108,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
+        "text_color_override": "transparent",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -147,6 +149,7 @@
         "mobile_content_alignment": "center",
         "section_color_scheme": "",
         "row_color_scheme": "scheme-3",
+        "overlap": 0,
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -250,6 +253,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
+        "text_color_override": "transparent",
         "custom_positioning": false,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -290,6 +294,7 @@
         "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-3",
         "row_color_scheme": "scheme-3",
+        "overlap": 0,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -433,6 +438,7 @@
       "type": "featured-blog",
       "settings": {
         "blog": "journal",
+        "filter_tag": "All",
         "post_limit": 4,
         "heading": "{{ section.settings.blog.title }}",
         "heading_size": "h1",
@@ -478,8 +484,24 @@
         "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-2",
         "row_color_scheme": "scheme-2",
+        "overlap": 0,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "1745905550df265803": {
+      "type": "apps",
+      "blocks": {
+        "betterdocs_app_documentation_block_LiRPxW": {
+          "type": "shopify://apps/betterdocs/blocks/app-documentation-block/c034554a-35ea-4075-93e4-50cbca95a696",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "betterdocs_app_documentation_block_LiRPxW"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -495,6 +517,7 @@
     "1744644337f30e543e",
     "multicolumn_wNUTzQ",
     "featured_blog_JqB7Pa",
-    "multirow_7AbrGq"
+    "multirow_7AbrGq",
+    "1745905550df265803"
   ]
 }
