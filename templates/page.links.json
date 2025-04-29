@@ -17,64 +17,49 @@
         "padding_bottom": 72
       }
     },
-    "multicolumn_wRGM7L": {
-      "type": "multicolumn",
+    "rich_text_6VCGhc": {
+      "type": "rich-text",
       "blocks": {
-        "column_XFLqUU": {
-          "type": "column",
+        "button_CHF3xm": {
+          "type": "button",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Logomark-Dark_cropped.png",
-            "title": "",
-            "text": "",
-            "link_label": "Visit our site for the latest promotions",
-            "link": "/"
+            "button_label": "Visit our site for the latest promotions",
+            "button_link": "/",
+            "button_style_secondary": true,
+            "button_label_2": "Shop our teas on Shopee",
+            "button_link_2": "https://shopee.sg/gryphonteacompany",
+            "button_style_secondary_2": true
           }
         },
-        "column_xdz4Be": {
-          "type": "column",
+        "button_KCC8ze": {
+          "type": "button",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_hJEBdP": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "column_XFLqUU",
-        "column_xdz4Be",
-        "column_hJEBdP"
+        "button_CHF3xm",
+        "button_KCC8ze"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "center",
-        "background_style": "primary",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 72
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "multicolumn_wRGM7L"
+    "rich_text_6VCGhc"
   ]
 }
