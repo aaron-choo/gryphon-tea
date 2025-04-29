@@ -488,21 +488,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1745905550df265803": {
-      "type": "apps",
-      "blocks": {
-        "betterdocs_app_documentation_block_LiRPxW": {
-          "type": "shopify://apps/betterdocs/blocks/app-documentation-block/c034554a-35ea-4075-93e4-50cbca95a696",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "betterdocs_app_documentation_block_LiRPxW"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -517,7 +502,6 @@
     "1744644337f30e543e",
     "multicolumn_wNUTzQ",
     "featured_blog_JqB7Pa",
-    "multirow_7AbrGq",
-    "1745905550df265803"
+    "multirow_7AbrGq"
   ]
 }
