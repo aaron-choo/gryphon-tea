@@ -12,9 +12,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "custom_css": [
-        "a.button.button--secondary {width: 100%;}"
-      ],
+      "custom_css": [],
       "settings": {
         "padding_top": 72,
         "padding_bottom": 72
@@ -132,6 +130,16 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_liquid_keMyjd": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% style %}\na.button.button--secondary {\n  width: 100%;\n}\n{% endstyle %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -139,6 +147,7 @@
     "rich_text_6VCGhc",
     "rich_text_jE7JxD",
     "rich_text_9CGjiF",
-    "rich_text_k6mJFf"
+    "rich_text_k6mJFf",
+    "custom_liquid_keMyjd"
   ]
 }
