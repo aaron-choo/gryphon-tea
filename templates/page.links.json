@@ -12,6 +12,9 @@
     "main": {
       "type": "main-page",
       "disabled": true,
+      "custom_css": [
+        "a.button.button--secondary {width: 100%;}"
+      ],
       "settings": {
         "padding_top": 72,
         "padding_bottom": 72
@@ -35,6 +38,7 @@
       "block_order": [
         "button_CHF3xm"
       ],
+      "custom_css": [],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
