@@ -34,12 +34,12 @@
         "button_KCC8ze": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label": "Find our products on Lazada",
+            "button_link": "https://www.lazada.sg/shop/gryphon-tea-company",
+            "button_style_secondary": true,
+            "button_label_2": "Contact Us",
+            "button_link_2": "shopify://pages/contact",
+            "button_style_secondary_2": true
           }
         }
       },
