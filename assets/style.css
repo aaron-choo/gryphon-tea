@@ -664,6 +664,9 @@
   .object-fill {
     object-fit: fill;
   }
+  .object-top {
+    object-position: top;
+  }
   .p-\[1rem\] {
     padding: 1rem;
   }
@@ -800,6 +803,12 @@
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-white {
+    --tw-shadow-color: #fff;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-white) var(--tw-shadow-alpha), transparent);
+    }
   }
   .shadow-white\/20 {
     --tw-shadow-color: color-mix(in srgb, #fff 20%, transparent);
