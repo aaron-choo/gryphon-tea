@@ -43,10 +43,28 @@
   <div
     class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding bg-[#F3F4F5] "
   >
-    <img
-      src="{{ 'Straits_Chai.png' | asset_url }}"
-      class="transform rotate-[calc(var(--mouse-x)_*_10deg)] transition-transform duration-[6s] ease-out origin-bottom opacity-25 aspect-square sm:aspect-[1.5] object-cover"
-    >
+    <div class="relative transform rotate-[calc(var(--mouse-x)_*_10deg)] transition-transform duration-[6s] ease-out origin-bottom opacity-25 ">
+      <img
+        src="{{ 'Straits_Chai5.png' | asset_url }}"
+        class="aspect-square sm:aspect-[1.3] object-cover"
+      >
+      <img
+        src="{{ 'Straits_Chai4.png' | asset_url }}"
+        class="aspect-square sm:aspect-[1.3] object-cover absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_94%]"
+      >
+      <img
+        src="{{ 'Straits_Chai3.png' | asset_url }}"
+        class="aspect-square sm:aspect-[1.3] object-cover absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[55%_40%]"
+      >
+      <img
+        src="{{ 'Straits_Chai2.png' | asset_url }}"
+        class="aspect-square sm:aspect-[1.3] object-cover absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_25deg)] transition-transform duration-[6s] ease-out origin-[46%_69%]"
+      >
+      <img
+        src="{{ 'Straits_Chai1.png' | asset_url }}"
+        class="aspect-square sm:aspect-[1.3] object-cover absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_80%]"
+      >
+    </div>
   </div>
   <div
     class="absolute top-0 left-0 right-0 bottom-0 !grid grid-cols-1 justify-self-center content-center text-center !font-[Piloti]"

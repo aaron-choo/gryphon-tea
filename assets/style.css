@@ -407,6 +407,51 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .origin-\[5\%_94\%\] {
+    transform-origin: 5% 94%;
+  }
+  .origin-\[44\%_69\%\] {
+    transform-origin: 44% 69%;
+  }
+  .origin-\[44\%_71\%\] {
+    transform-origin: 44% 71%;
+  }
+  .origin-\[44\%_72\%\] {
+    transform-origin: 44% 72%;
+  }
+  .origin-\[44\%_76\%\] {
+    transform-origin: 44% 76%;
+  }
+  .origin-\[44\%_77\%\] {
+    transform-origin: 44% 77%;
+  }
+  .origin-\[44\%_78\%\] {
+    transform-origin: 44% 78%;
+  }
+  .origin-\[44\%_80\%\] {
+    transform-origin: 44% 80%;
+  }
+  .origin-\[44\%_90\%\] {
+    transform-origin: 44% 90%;
+  }
+  .origin-\[44\%_94\%\] {
+    transform-origin: 44% 94%;
+  }
+  .origin-\[45\%_72\%\] {
+    transform-origin: 45% 72%;
+  }
+  .origin-\[46\%_69\%\] {
+    transform-origin: 46% 69%;
+  }
+  .origin-\[47\%_72\%\] {
+    transform-origin: 47% 72%;
+  }
+  .origin-\[50\%_50\%\] {
+    transform-origin: 50% 50%;
+  }
+  .origin-\[55\%_40\%\] {
+    transform-origin: 55% 40%;
+  }
   .origin-bottom {
     transform-origin: bottom;
   }
@@ -538,11 +583,20 @@
   .rotate-\[calc\(\(var\(--mouse-x\)_-0\.5\)_\*_30deg\)\)\] {
     rotate: calc((var(--mouse-x) - 0.5) * 30deg);
   }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_-10deg\)\] {
+    rotate: calc(var(--mouse-x) * -10deg);
+  }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_5deg\)\] {
+    rotate: calc(var(--mouse-x) * 5deg);
+  }
   .rotate-\[calc\(var\(--mouse-x\)_\*_10deg\)\)\] {
     rotate: calc(var(--mouse-x) * 10deg);
   }
   .rotate-\[calc\(var\(--mouse-x\)_\*_10deg\)\] {
     rotate: calc(var(--mouse-x) * 10deg);
+  }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_15deg\)\] {
+    rotate: calc(var(--mouse-x) * 15deg);
   }
   .rotate-\[calc\(var\(--mouse-x\)_\*_20deg\)\)\] {
     rotate: calc(var(--mouse-x) * 20deg);
@@ -550,8 +604,20 @@
   .rotate-\[calc\(var\(--mouse-x\)_\*_20deg\)\] {
     rotate: calc(var(--mouse-x) * 20deg);
   }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_25deg\)\] {
+    rotate: calc(var(--mouse-x) * 25deg);
+  }
   .rotate-\[calc\(var\(--mouse-x\)_\*_30deg\)\] {
     rotate: calc(var(--mouse-x) * 30deg);
+  }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_35deg\)\] {
+    rotate: calc(var(--mouse-x) * 35deg);
+  }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_38deg\)\] {
+    rotate: calc(var(--mouse-x) * 38deg);
+  }
+  .rotate-\[calc\(var\(--mouse-x\)_\*_45deg\)\] {
+    rotate: calc(var(--mouse-x) * 45deg);
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -991,6 +1057,10 @@
     --tw-duration: 6s;
     transition-duration: 6s;
   }
+  .duration-\[16s\] {
+    --tw-duration: 16s;
+    transition-duration: 16s;
+  }
   .duration-\[50s\] {
     --tw-duration: 50s;
     transition-duration: 50s;
@@ -1082,6 +1152,16 @@
   .sm\:mt-0 {
     @media (width >= 600px) {
       margin-top: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:aspect-\[1\.3\] {
+    @media (width >= 600px) {
+      aspect-ratio: 1.3;
+    }
+  }
+  .sm\:aspect-\[1\.4\] {
+    @media (width >= 600px) {
+      aspect-ratio: 1.4;
     }
   }
   .sm\:aspect-\[1\.5\] {
