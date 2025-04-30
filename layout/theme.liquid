@@ -796,6 +796,21 @@
       };
     </script>
 
+    <script>
+      const pos = { x: 0, y: 0 };
+
+      const saveCursorPosition = function (x, y) {
+        pos.x = ((x / window.innerWidth) * 2 - 1).toFixed(2);
+        pos.y = ((y / window.innerHeight) * 2 - 1).toFixed(2);
+        document.documentElement.style.setProperty('--mouse-x', pos.x);
+        document.documentElement.style.setProperty('--mouse-y', pos.y);
+      };
+
+      document.addEventListener('mousemove', (e) => {
+        saveCursorPosition(e.clientX, e.clientY);
+      });
+    </script>
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}

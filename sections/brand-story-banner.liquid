@@ -20,11 +20,13 @@
     }
   } */
   .brand-banner-button::after {
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor, 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor,
+      0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
   }
 
   .brand-banner-button:not([disabled]):hover::after {
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor, 0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor,
+      0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
   }
 {%- endstyle -%}
 
@@ -37,11 +39,52 @@
   endif
 -%}
 
-<div class="brand-story-banner aspect-[1.73] color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden">
+<div class="brand-story-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden relative">
   <div
-    class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding"
+    class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding bg-[#F3F4F5] "
   >
-    <img src="{{ 'Lily_Of_The_Field_240220.jpg' | asset_url }}">
+    <img
+      src="{{ 'Straits_Chai.png' | asset_url }}"
+      class="transform rotate-[calc(var(--mouse-x)_*_10deg)] transition-transform duration-[6s] ease-out origin-bottom opacity-25 aspect-square sm:aspect-[1.5] object-cover"
+    >
+  </div>
+  <div
+    class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-self-center self-center text-center !font-[Piloti]"
+  >
+    <span
+      class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-x)_*_1vw)] translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-y)_*_-3px)]"
+      style="--animation-order: 2;"
+      >THE</span
+    >
+    <span class="flex items-start justify-center gap-2">
+      <span
+        class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-x)_*_3vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-x)_*_-3px)]"
+        style="--animation-order: 4;"
+        >ART</span
+      >
+      <span
+        class="text-4xl sm:text-6xl lg:text-7xl transform translate-x-[calc(var(--mouse-x)_*_1vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out  scroll-trigger animate--slide-in blur-[calc(var(--mouse-y)_*_-6px)]"
+        style="--animation-order: 6;"
+        >AND</span
+      ></span
+    >
+    <span
+      class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-x)_*_1vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-y)_*_3px)]"
+      style="--animation-order: 8;"
+      >SCIENCE</span
+    >
+    <span class="flex items-start justify-center gap-2"
+      ><span
+        class="text-4xl sm:text-6xl lg:text-7xl transform translate-x-[calc(var(--mouse-x)_*_2vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-x)_*_6px)]"
+        style="--animation-order: 10;"
+        >OF</span
+      >
+      <span
+        class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-y)_*_2vw)] translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-x)_*_3px)]"
+        style="--animation-order: 12;"
+        >TEA</span
+      >
+    </span>
   </div>
 </div>
 
