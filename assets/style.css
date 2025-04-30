@@ -239,6 +239,18 @@
   .isolate {
     isolation: isolate;
   }
+  .-z-1 {
+    z-index: calc(1 * -1);
+  }
+  .-z-10 {
+    z-index: calc(10 * -1);
+  }
+  .-z-\[1\[\]\] {
+    z-index: calc(1[] * -1);
+  }
+  .-z-\[1\] {
+    z-index: calc(1 * -1);
+  }
   .z-1 {
     z-index: 1;
   }
@@ -430,6 +442,10 @@
     --tw-translate-x: calc((var(--mouse-x) - 0.5) * 20px);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .translate-x-\[calc\(var\(--mouse-x\)_\*_-2vw\)\] {
+    --tw-translate-x: calc(var(--mouse-x) * -2vw);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .translate-x-\[calc\(var\(--mouse-x\)_\*_1vw\)\] {
     --tw-translate-x: calc(var(--mouse-x) * 1vw);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -492,6 +508,10 @@
   }
   .translate-y-\[calc\(var\(--mouse-y\)_\*_2vw\)\] {
     --tw-translate-y: calc(var(--mouse-y) * 2vw);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[calc\(var\(--mouse-y\)_\*_3vw\)\] {
+    --tw-translate-y: calc(var(--mouse-y) * 3vw);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-\[calc\(var\(--mouse-y\)_\*_4vw\)\] {
@@ -942,6 +962,10 @@
   .duration-\[1s\] {
     --tw-duration: 1s;
     transition-duration: 1s;
+  }
+  .duration-\[2s\] {
+    --tw-duration: 2s;
+    transition-duration: 2s;
   }
   .duration-\[3s\] {
     --tw-duration: 3s;
