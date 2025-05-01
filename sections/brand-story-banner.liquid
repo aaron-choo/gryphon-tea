@@ -43,7 +43,7 @@
   <div
     class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding bg-[#F3F4F5] "
   >
-    <div class="relative transform rotate-[calc(var(--mouse-x)_*_10deg)] transition-transform duration-[6s] ease-out origin-bottom opacity-25 ">
+    <div class="relative transform rotate-[calc(var(--mouse-x)_*_-10deg)] transition-transform duration-[6s] ease-out origin-bottom opacity-25 ">
       <img
         src="{{ 'Straits_Chai5.png' | asset_url }}"
         class="aspect-square sm:aspect-[1.3] object-cover"
