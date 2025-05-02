@@ -79,7 +79,7 @@
         "columns_desktop": 1,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "border": true,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -100,7 +100,7 @@
       "settings": {
         "heading": "We’d love to hear from you",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
         "padding_top": 72,
         "padding_bottom": 72
