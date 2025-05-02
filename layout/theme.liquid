@@ -804,6 +804,7 @@
         pos.y = ((y / window.innerHeight) * 2 - 1).toFixed(2);
         document.documentElement.style.setProperty('--mouse-x', pos.x);
         document.documentElement.style.setProperty('--mouse-y', pos.y);
+        document.documentElement.style.setProperty('--mouse-xy', Math.abs(pos.x) * Math.abs(pos.y));
       };
 
       document.addEventListener('mousemove', (e) => {
