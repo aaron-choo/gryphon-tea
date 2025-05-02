@@ -39,30 +39,37 @@
   endif
 -%}
 
-<div class="brand-story-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden relative">
+<div class="brand-story-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden relative aspect-square sm:aspect-[1.3] md:aspect-[1.5] lg:aspect-[2] !bg-[#F3F4F5] !grid grid-cols-1 content-end md:content-start">
   <div
-    class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding bg-[#F3F4F5] "
+    class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding bg-[#F3F4F5]"
   >
-    <div class="relative transform rotate-[calc(var(--mouse-x)_*_-10deg)] transition-transform duration-[6s] ease-out origin-bottom opacity-[calc(var(--mouse-xy)_*_0.5_+_0.5)] aspect-square sm:aspect-[1.3] md:aspect-[1.5] lg:aspect-[2] overflow-visible">
+    <div
+      class="relative transform rotate-[calc(var(--mouse-x)_*_-10deg)] transition-transform duration-[6s] ease-out origin-bottom blur-[calc(var(--mouse-xy)_*_-3px_+_3px)]  !grid grid-cols-1 justify-self-center opacity-30"
+    >
       <img
         src="{{ 'Straits_Chai5.png' | asset_url }}"
-        class="w-full h-full object-cover overflow-visible"
+        class="w-auto h-full object-cover overflow-visible scroll-trigger animate--slide-in"
+        style="--animation-order: 8;"
       >
       <img
         src="{{ 'Straits_Chai4.png' | asset_url }}"
-        class="w-full h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_94%]"
+        class="w-auto h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_94%] scroll-trigger animate--slide-in"
+        style="--animation-order: 8;"
       >
       <img
         src="{{ 'Straits_Chai3.png' | asset_url }}"
-        class="w-full h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[55%_40%]"
+        class="w-auto h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[55%_40%] scroll-trigger animate--slide-in"
+        style="--animation-order: 8;"
       >
       <img
         src="{{ 'Straits_Chai2.png' | asset_url }}"
-        class="w-full h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_25deg)] transition-transform duration-[6s] ease-out origin-[46%_69%]"
+        class="w-auto h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_25deg)] transition-transform duration-[6s] ease-out origin-[46%_69%] scroll-trigger animate--slide-in"
+        style="--animation-order: 8;"
       >
       <img
         src="{{ 'Straits_Chai1.png' | asset_url }}"
-        class="w-full h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_80%]"
+        class="w-auto h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_80%] scroll-trigger animate--slide-in"
+        style="--animation-order: 8;"
       >
     </div>
   </div>
@@ -71,35 +78,35 @@
   >
     <span
       class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-x)_*_1vw)] translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-xy)_*_6px)]"
-      style="--animation-order: 2;"
+      style="--animation-order: 1;"
       >THE</span
     >
     <span class="flex items-start justify-center gap-2">
       <span
         class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-x)_*_2vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[2s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-xy)_*_3px)]"
-        style="--animation-order: 4;"
+        style="--animation-order: 2;"
         >ART</span
       >
       <span
         class="text-4xl sm:text-6xl lg:text-7xl transform translate-x-[calc(var(--mouse-x)_*_1vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out  scroll-trigger animate--slide-in blur-[calc(var(--mouse-xy)_*_6px)]"
-        style="--animation-order: 6;"
+        style="--animation-order: 3;"
         >AND</span
       ></span
     >
     <span
       class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-x)_*_-2vw)] translate-y-[calc(var(--mouse-y)_*_3vw)] transition-transform duration-[1s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-xy)_*_3px)]"
-      style="--animation-order: 8;"
+      style="--animation-order: 4;"
       >SCIENCE</span
     >
     <span class="flex items-start justify-center gap-2"
       ><span
         class="text-4xl sm:text-6xl lg:text-7xl transform translate-x-[calc(var(--mouse-x)_*_2vw)] translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-xy)_*_6px)]"
-        style="--animation-order: 10;"
+        style="--animation-order: 5;"
         >OF</span
       >
       <span
         class="text-6xl sm:text-8xl lg:text-9xl leading-[0.9] transform translate-x-[calc(var(--mouse-y)_*_2vw)] translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in blur-[calc(var(--mouse-xy)_*_3px)]"
-        style="--animation-order: 12;"
+        style="--animation-order: 6;"
         >TEA</span
       >
     </span>
