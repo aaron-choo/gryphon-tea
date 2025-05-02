@@ -54,7 +54,7 @@
     "multicolumn_aeiJXt": {
       "type": "multicolumn",
       "blocks": {
-        "column_NdjYHH": {
+        "column_LNfkyz": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/wa_c26b29d2-1da5-469a-b3ef-66d0e2fe0b41.svg",
@@ -63,9 +63,20 @@
             "link_label": "Send message",
             "link": "#"
           }
+        },
+        "column_NdjYHH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mail.svg",
+            "title": "Submit an enquiry",
+            "text": "<p>You will receive a response within 5 business days</p>",
+            "link_label": "Submit enquiry",
+            "link": "#"
+          }
         }
       },
       "block_order": [
+        "column_LNfkyz",
         "column_NdjYHH"
       ],
       "name": "t:sections.multicolumn.presets.name",
