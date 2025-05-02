@@ -75,6 +75,11 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
+            {%- if section.settings.full_button == true -%}
+              <a
+                href="{{ block.settings.link }}"
+              >
+            {% endif %}
             <div class="multicolumn-card content-container{% if section.settings.image_width == 'icon' %} flex{% endif %}">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
@@ -127,7 +132,7 @@
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
+                {%- if block.settings.link_label != blank and section.settings.full_button != true -%}
                   <a
                     class="link animate-arrow"
                     {% if block.settings.link == blank %}
@@ -144,6 +149,9 @@
                 {%- endif -%}
               </div>
             </div>
+            {%- if section.settings.full_button == true -%}
+              </a>
+            {% endif %}
           </li>
         {%- endfor -%}
       </ul>
@@ -359,6 +367,12 @@
       "id": "border",
       "default": false,
       "label": "Border"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_button",
+      "default": false,
+      "label": "Full Button"
     },
     {
       "type": "header",
