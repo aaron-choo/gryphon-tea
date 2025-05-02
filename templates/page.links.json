@@ -47,6 +47,8 @@
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-4",
+        "border": false,
+        "full_button": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
@@ -71,6 +73,7 @@
       "block_order": [
         "button_CHF3xm"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -100,6 +103,7 @@
       "block_order": [
         "button_94HL9x"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -128,6 +132,7 @@
       "block_order": [
         "button_J8biHW"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -156,6 +161,7 @@
       "block_order": [
         "button_RydX3M"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -168,12 +174,79 @@
     },
     "custom_liquid_nXjywe": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "{% style %}\na.button.button--secondary {\n  width: 100%;\n}\n{% endstyle %}",
         "color_scheme": "",
         "padding_top": 72,
         "padding_bottom": 0
+      }
+    },
+    "multicolumn_x4KRHG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_39diNy": {
+          "type": "column",
+          "settings": {
+            "title": "View our latest promotions",
+            "text": "",
+            "link_label": "",
+            "link": "/"
+          }
+        },
+        "column_L8qXxq": {
+          "type": "column",
+          "settings": {
+            "title": "Find our teas on Shopee",
+            "text": "",
+            "link_label": "",
+            "link": "https://shopee.sg/gryphonteacompany"
+          }
+        },
+        "column_bPfUzQ": {
+          "type": "column",
+          "settings": {
+            "title": "Find our products on Lazada",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lazada.sg/shop/gryphon-tea-company"
+          }
+        },
+        "column_MLkfGX": {
+          "type": "column",
+          "settings": {
+            "title": "Contact us",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "column_39diNy",
+        "column_L8qXxq",
+        "column_bPfUzQ",
+        "column_MLkfGX"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "border": true,
+        "full_button": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     }
   },
@@ -184,6 +257,7 @@
     "rich_text_jE7JxD",
     "rich_text_9CGjiF",
     "rich_text_k6mJFf",
-    "custom_liquid_nXjywe"
+    "custom_liquid_nXjywe",
+    "multicolumn_x4KRHG"
   ]
 }
