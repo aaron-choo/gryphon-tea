@@ -92,6 +92,7 @@
         "background_style": "primary",
         "color_scheme": "scheme-1",
         "border": true,
+        "full_button": true,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 72,
