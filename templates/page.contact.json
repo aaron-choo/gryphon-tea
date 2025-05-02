@@ -40,6 +40,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
+        "text_color_override": "transparent",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -48,6 +49,41 @@
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
         "show_text_below": false
+      }
+    },
+    "multicolumn_aeiJXt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NdjYHH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/wa.svg",
+            "title": "Send us a message on Whatsapp",
+            "text": "<p>Hours of operation: Monday–Sunday, 10AM - 6PM.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NdjYHH"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "main": {
@@ -72,6 +108,7 @@
   },
   "order": [
     "image_banner_A8TLtW",
+    "multicolumn_aeiJXt",
     "main",
     "form"
   ]
