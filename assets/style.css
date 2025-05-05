@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 4px;
     --text-xs: 1.2rem;
@@ -368,6 +367,9 @@
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .\!max-w-\[none\] {
     max-width: none !important;
   }
@@ -377,47 +379,11 @@
   .\!min-w-0 {
     min-width: calc(var(--spacing) * 0) !important;
   }
-  .origin-\[40\%_85\%\] {
-    transform-origin: 40% 85%;
-  }
-  .origin-\[40\%_86\%\] {
-    transform-origin: 40% 86%;
-  }
-  .origin-\[40\%_88\%\] {
-    transform-origin: 40% 88%;
-  }
-  .origin-\[41\%_86\%\] {
-    transform-origin: 41% 86%;
-  }
-  .origin-\[42\%_86\%\] {
-    transform-origin: 42% 86%;
-  }
-  .origin-\[43\%_80\%\] {
-    transform-origin: 43% 80%;
-  }
-  .origin-\[43\%_81\%\] {
-    transform-origin: 43% 81%;
-  }
-  .origin-\[43\%_84\%\] {
-    transform-origin: 43% 84%;
-  }
-  .origin-\[43\%_86\%\] {
-    transform-origin: 43% 86%;
-  }
-  .origin-\[44\%_79\%\] {
-    transform-origin: 44% 79%;
-  }
   .origin-\[44\%_80\%\] {
     transform-origin: 44% 80%;
   }
-  .origin-\[44\%_82\%\] {
-    transform-origin: 44% 82%;
-  }
   .origin-\[44\%_94\%\] {
     transform-origin: 44% 94%;
-  }
-  .origin-\[45\%_80\%\] {
-    transform-origin: 45% 80%;
   }
   .origin-\[46\%_69\%\] {
     transform-origin: 46% 69%;
@@ -686,23 +652,11 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-3 {
-    opacity: 3%;
-  }
-  .opacity-25 {
-    opacity: 25%;
-  }
   .opacity-30 {
     opacity: 30%;
   }
   .opacity-50 {
     opacity: 50%;
-  }
-  .opacity-\[0\.3\] {
-    opacity: 0.3;
-  }
-  .opacity-\[calc\(var\(--mouse-xy\)_\*_0\.5_\+_0\.5\)\] {
-    opacity: calc(var(--mouse-xy) * 0.5 + 0.5);
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -720,16 +674,8 @@
     --tw-blur: blur(calc(var(--mouse-xy) * -3px + 3px));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .blur-\[calc\(var\(--mouse-xy\)_\*_-5px_\+_5px\)\] {
-    --tw-blur: blur(calc(var(--mouse-xy) * -5px + 5px));
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
   .blur-\[calc\(var\(--mouse-xy\)_\*_3px\)\] {
     --tw-blur: blur(calc(var(--mouse-xy) * 3px));
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .blur-\[calc\(var\(--mouse-xy\)_\*_5px\)\] {
-    --tw-blur: blur(calc(var(--mouse-xy) * 5px));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .blur-\[calc\(var\(--mouse-xy\)_\*_6px\)\] {
@@ -934,24 +880,6 @@
     @media (width >= 990px) {
       font-size: var(--text-6xl) !important;
       line-height: var(--tw-leading, var(--text-6xl--line-height)) !important;
-    }
-  }
-  .lg\:text-7xl {
-    @media (width >= 990px) {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
-  }
-  .lg\:text-9xl {
-    @media (width >= 990px) {
-      font-size: var(--text-9xl);
-      line-height: var(--tw-leading, var(--text-9xl--line-height));
-    }
-  }
-  .xl\:text-9xl {
-    @media (width >= 1200px) {
-      font-size: var(--text-9xl);
-      line-height: var(--tw-leading, var(--text-9xl--line-height));
     }
   }
   .\32 xl\:text-7xl {
