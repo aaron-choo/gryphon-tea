@@ -118,27 +118,12 @@
       gsap.set('.flower-base', {
         rotation: '10deg',
       });
-      gsap.set('.flower-1', {
-        rotation: '15deg',
-      });
-      gsap.set('.flower-2', {
-        rotation: '15deg',
-      });
-      gsap.set('.flower-3', {
-        rotation: '15deg',
-      });
-      gsap.set('.flower-4', {
-        rotation: '25deg',
-      });
-      gsap.set('.flower-4', {
-        rotation: '15deg',
-      });
       gsap.to('.flower-base', {
         scrollTrigger: {
           trigger: '.brand-story-banner',
           start: 'top top',
           end: 'bottom top',
-          scrub: 4,
+          scrub: true,
         },
         rotation: '-10deg',
       });
