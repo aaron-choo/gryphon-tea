@@ -973,6 +973,21 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  .md\:\!rotate-\[calc\(var\(--mouse-x\)_\*_-10deg\)\] {
+    @media (width >= 750px) {
+      rotate: calc(var(--mouse-x) * -10deg) !important;
+    }
+  }
+  .md\:\!rotate-\[calc\(var\(--mouse-x\)_\*_15deg\)\] {
+    @media (width >= 750px) {
+      rotate: calc(var(--mouse-x) * 15deg) !important;
+    }
+  }
+  .md\:\!rotate-\[calc\(var\(--mouse-x\)_\*_25deg\)\] {
+    @media (width >= 750px) {
+      rotate: calc(var(--mouse-x) * 25deg) !important;
+    }
+  }
   .md\:rotate-\[calc\(var\(--mouse-x\)_\*_-10deg\)\] {
     @media (width >= 750px) {
       rotate: calc(var(--mouse-x) * -10deg);
