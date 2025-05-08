@@ -184,27 +184,16 @@
         "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-4",
+        "border": false,
+        "full_button": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 72,
         "padding_bottom": 72
       }
     },
-    "contact_form_cC8nHe": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Craft Your Own Bespoke Tea",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
@@ -215,7 +204,6 @@
     "image_banner_Uemy8z",
     "multirow_ECcXCd",
     "multicolumn_MkA4KP",
-    "contact_form_cC8nHe",
     "main"
   ]
 }
