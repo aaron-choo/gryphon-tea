@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Lorem ipsum dolor sit amet",
+            "heading": "A new chapter begins.",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Tempor ut tempor mollit. Ullamco eu commodo ex incididunt ad aliquip. Adipisicing esse eiusmod deserunt occaecat.",
+            "text": "For the first time, explore Gryphon, Roji, and Monogram under one roof.",
             "text_style": "body"
           }
         },
@@ -53,7 +53,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -108,7 +108,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -253,7 +253,7 @@
         "is_hero_banner": false,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": false,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
@@ -428,6 +428,8 @@
         "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-4",
+        "border": false,
+        "full_button": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 72,
