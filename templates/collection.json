@@ -22,7 +22,7 @@
         "text_KR8yhm": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Explore our full collection of teas, all in one place.",
             "text_style": "body"
           }
         }
@@ -41,7 +41,7 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
