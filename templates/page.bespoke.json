@@ -61,7 +61,7 @@
             "image": "shopify://shop_images/WebsiteThumbnailPoto1.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Aliquip tempor fugiat dolore magna labore in dolor minim ad cupidatat. Ut laborum cupidatat laborum voluptate esse pariatur culpa incididunt deserunt consequat incididunt et laborum excepteur labore. Reprehenderit cillum ipsum commodo consectetur proident excepteur cupidatat fugiat enim ex aliqua fugiat deserunt pariatur non. Deserunt aliquip tempor occaecat aute amet aute deserunt commodo cupidatat nostrud.</p>",
+            "text": "<p>Our bespoke service allows you to co-create a blend that reflects your taste, intention, and identity.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -72,7 +72,7 @@
             "image": "shopify://shop_images/chinese-tea-service.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Aliquip tempor fugiat dolore magna labore in dolor minim ad cupidatat. Ut laborum cupidatat laborum voluptate esse pariatur culpa incididunt deserunt consequat incididunt et laborum excepteur labore. Reprehenderit cillum ipsum commodo consectetur proident excepteur cupidatat fugiat enim ex aliqua fugiat deserunt pariatur non. Deserunt aliquip tempor occaecat aute amet aute deserunt commodo cupidatat nostrud.</p>",
+            "text": "<p>From selecting botanicals to refining the balance of flavours, we guide you through a custom blending process rooted in our heritage of craft and experimentation. One blend. One story. Yours to craft.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -184,6 +184,8 @@
         "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-4",
+        "border": false,
+        "full_button": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 72,
