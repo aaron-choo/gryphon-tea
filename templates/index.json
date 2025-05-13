@@ -216,14 +216,15 @@
         "heading_EUi3zc": {
           "type": "heading",
           "settings": {
-            "heading": "Find Your Ideal Flavour",
+            "heading": "Let your instincts guide you to your perfect cup of tea.",
             "heading_size": "h1"
           }
         },
         "text_kU3ypA": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "Tempor ut tempor mollit. Ullamco eu commodo ex incididunt ad aliquip. Adipisicing esse eiusmod deserunt occaecat.",
+            "text": "Let your instincts guide you to your perfect cup of tea.",
             "text_style": "body"
           }
         },
