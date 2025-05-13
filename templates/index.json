@@ -127,9 +127,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/WebsiteThumbnailEGL.jpg",
-            "caption": "Themed Campaign",
-            "heading": "Campaign",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "caption": "REINTRODUCING OUR ARTISAN SELECTION",
+            "heading": "CRAFTED FOR 19 YEARS, REIMAGINED FOR TODAY.",
+            "text": "",
             "button_label": "Shop Now",
             "button_link": ""
           }
