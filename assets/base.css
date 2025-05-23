@@ -3911,3 +3911,8 @@ body:not(.\/pages\/brand\/gryphon-singapore) {
 div#PBarNextFrameWrapper {
   display: none !important;
 }
+
+
+.product-form__submit[disabled], dynamic-checkout[disabled] {
+  display: none;
+}
