@@ -819,5 +819,19 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {% if product.available != true %}
+      <style>
+        quantity-input.quantity {
+          display: none;
+        }
+        .shopify-payment-button {
+          display: none;
+        }
+        .product-form__quantity {
+          display: none;
+        }
+      </style>
+    {% endif %}
   </body>
 </html>
