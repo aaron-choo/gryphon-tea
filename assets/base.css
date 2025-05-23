@@ -3913,6 +3913,8 @@ div#PBarNextFrameWrapper {
 }
 
 
-.product-form__submit[disabled], dynamic-checkout[disabled] {
+.product-form__submit[disabled],
+ dynamic-checkout[disabled],
+ .product-form__submit[disabled] + .shopify-payment-button {
   display: none;
 }
