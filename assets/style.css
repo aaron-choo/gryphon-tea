@@ -380,15 +380,6 @@
   .\!min-w-0 {
     min-width: calc(var(--spacing) * 0) !important;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
-  .flex-grow {
-    flex-grow: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .origin-\[44\%_80\%\] {
     transform-origin: 44% 80%;
   }
@@ -523,9 +514,6 @@
   .bg-\[currentColor\] {
     background-color: currentColor;
   }
-  .mask-repeat {
-    mask-repeat: repeat;
-  }
   .object-cover {
     object-fit: cover;
   }
@@ -585,6 +573,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[1\.5em\] {
+    font-size: 1.5em;
+  }
   .leading-\[0\.9\] {
     --tw-leading: 0.9;
     line-height: 0.9;
@@ -633,10 +624,6 @@
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .ring {
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .outline {
@@ -689,10 +676,6 @@
   .duration-\[6s\] {
     --tw-duration: 6s;
     transition-duration: 6s;
-  }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
   }
   .ease-out {
     --tw-ease: var(--ease-out);
@@ -788,6 +771,11 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .sm\:text-\[2em\] {
+    @media (width >= 600px) {
+      font-size: 2em;
+    }
+  }
   .first\:sm\:col-span-2 {
     &:first-child {
       @media (width >= 600px) {
@@ -880,6 +868,11 @@
   .md\:content-start {
     @media (width >= 750px) {
       align-content: flex-start;
+    }
+  }
+  .md\:text-\[2em\] {
+    @media (width >= 750px) {
+      font-size: 2em;
     }
   }
   .md\:blur-\[calc\(var\(--mouse-xy\)_\*_-3px_\+_3px\)\] {

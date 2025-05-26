@@ -157,7 +157,7 @@
             {%- endif -%}
           {%- when 'text' -%}
             <div
-              class="banner__text rte {{ block.settings.text_style }}{% if section.settings.custom_positioning %} custom-{{ section.settings.text_custom_position }}{% endif %}"
+              class="banner__text rte {{ block.settings.text_style }}{% if section.settings.custom_positioning %} custom-{{ section.settings.text_custom_position }}{% endif %} "
               {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
                 or section.settings.text_color_override == 'transparent'
               -%}
@@ -166,7 +166,7 @@
               {%- endif -%}
               {{ block.shopify_attributes }}
             >
-              <p>{{ block.settings.text }}</p>
+              <p class="text-[1.5em] md:text-[2em]">{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
