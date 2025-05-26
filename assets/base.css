@@ -3913,3 +3913,11 @@ div#PBarNextFrameWrapper {
 }
 
 
+.article-template__content ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  ol {
+    list-style: number;
+  }
+}
