@@ -51,6 +51,24 @@
           </li>
         </ul>
       {%- endif -%}
+      {% if request.path contains 'experience' %}
+        <div class="field">
+          <select
+            class="field__input"
+            type="text"
+            id="ContactForm-experience"
+            name="contact[experience]"
+            required
+          >
+            <option value="*" selected disabled>Select Type of Experience</option>
+            <option value="cocktail">Cocktail Events</option>
+            <option value="teablending">Tea Blending Workshop</option>
+            <option value="general">General Workshop</option>
+            <option value="others">Others</option>
+          </select>
+          <label class="field__label" for="ContactForm-experience">Experience</label>
+        </div>
+      {% endif %}
       <div class="contact__fields">
         <div class="field">
           <input
