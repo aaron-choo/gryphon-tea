@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "brand_story_banner_jUXnaG": {
+      "type": "brand-story-banner",
+      "name": "Brand Story Banner",
+      "settings": {}
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -495,6 +500,7 @@
     }
   },
   "order": [
+    "brand_story_banner_jUXnaG",
     "image_banner",
     "image_banner_LH6MFT",
     "multirow_LVgLV3",
