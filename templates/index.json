@@ -127,9 +127,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/themed.jpg",
-            "caption": "A classic, renewed",
-            "heading": "THE NEXT CHAPTER OF OUR ARTISAN SELECTION",
-            "text": "<p>19 years ago, Gryphon began with a simple vision: To craft teas that balance artistry, heritage, and innovation. That vision took shape in Artisan Selection, a collection that introduced the world to our approach to fine tea.</p><p>Today, we honour that beginning with a refreshed identity—one that reflects how far we’ve come, while preserving the essence of what has always made these teas special. The same thoughtfully crafted blends, continuously refined over the years, refreshed in a way that speaks to both past and present.</p><p>A classic, renewed. This is the next chapter of our Artisan Selection.</p>",
+            "caption": "",
+            "heading": "A new chapter begins.",
+            "text": "<p>For the first time, explore Gryphon, Roji, and Monogram under one roof.</p>",
             "button_label": "Shop Now",
             "button_link": ""
           }
