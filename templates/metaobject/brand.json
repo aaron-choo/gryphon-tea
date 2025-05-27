@@ -33,7 +33,7 @@
       ],
       "settings": {
         "image": "{{ metaobject.image.value }}",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 20,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
