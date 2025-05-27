@@ -3944,3 +3944,16 @@ div#PBarNextFrameWrapper {
    position: relative;
   }
 }
+
+.share-button {
+  margin: 0 auto;
+  border-color: transparent!important;
+  font-family: var(--font-body-family);
+  font-size: 1.5rem!important;
+  color: inherit!important;
+  padding: 0!important;
+  gap: 1rem!important;
+  &:hover {
+    background: transparent!important;
+  }
+}
