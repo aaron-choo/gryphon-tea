@@ -89,6 +89,8 @@
               {% endfor %}
             {%- endif -%}
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
         <script>
           const featuredblogswiper = new Swiper('.swiper-{{ section.id }}', {
@@ -128,6 +130,10 @@
             mousewheel: {
               enabled: true,
               forceToAxis: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
             },
           });
 
@@ -177,6 +183,10 @@
               mousewheel: {
                 enabled: true,
                 forceToAxis: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
               },
             });
           });

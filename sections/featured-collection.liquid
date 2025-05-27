@@ -124,6 +124,8 @@
               </div>
             {% endfor %}
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
         <script>
           const featuredcollectionswiper = new Swiper('.swiper-{{ section.id }}', {
@@ -163,6 +165,10 @@
             mousewheel: {
               enabled: true,
               forceToAxis: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
             },
           });
 
@@ -213,6 +219,10 @@
               mousewheel: {
                 enabled: true,
                 forceToAxis: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
               },
             });
           });

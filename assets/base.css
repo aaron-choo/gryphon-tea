@@ -3931,3 +3931,16 @@ div#PBarNextFrameWrapper {
     list-style: number;
   }
 }
+
+.swiper-button-next, .swiper-button-prev {
+  --swiper-theme-color: rgb(var(--color-foreground));
+  --swiper-navigation-size: 1.5rem;
+  display: flex!important;
+  background: rgba(var(--color-background), 0.9);
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  padding: 1.5rem;
+  border-radius: 50%;
+  &:after {
+   position: relative;
+  }
+}
