@@ -40,16 +40,16 @@
         "desktop_content_alignment": "center",
         "is_hero_banner": true,
         "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-5",
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
         "text_custom_position": "top-left",
         "button_custom_position": "bottom-left",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "main": {
