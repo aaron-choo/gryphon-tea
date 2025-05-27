@@ -40,7 +40,7 @@
         "desktop_content_alignment": "center",
         "is_hero_banner": true,
         "show_text_box": false,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-3",
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
