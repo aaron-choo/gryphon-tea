@@ -3945,6 +3945,7 @@ div#PBarNextFrameWrapper {
   }
 }
 
+
 .share-button {
   margin: 0 auto;
   border-color: transparent!important;
@@ -3956,4 +3957,27 @@ div#PBarNextFrameWrapper {
   &:hover {
     background: transparent!important;
   }
+}
+.share-modal{
+  h2.modal-title {
+    display: none;
+  }
+  .modal-thumbnail {
+    /* align-items: start; */
+  }
+  h2.modal-product-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+  }
+  p.modal-subtitle {
+    font-size: inherit;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+  }
+
+  .share-option span {
+    font-size: 1.4rem;  }
 }
