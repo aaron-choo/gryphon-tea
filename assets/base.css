@@ -2742,8 +2742,10 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  height: 4.4rem;
-  width: 4.4rem;
+  /* height: 4.4rem;
+  width: 4.4rem; */
+  height: 3.6rem;
+  width: 3.6rem;
   padding: 0;
 }
 
