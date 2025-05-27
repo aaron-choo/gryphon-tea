@@ -3882,19 +3882,19 @@ section#shopify-section-template--23590635929634__1744644337f30e543e {
 }
 
 
-body.\/pages\/brand\/gryphon-singapore {
+/* body.\/pages\/brand\/gryphon-singapore {
   div#Banner-template--23521131233314__image_banner_cpWQJ6,
   div#Banner-template--23590636159010__image_banner_cpWQJ6 {
     display: none;
   }
-}
+} */
 
-body:not(.\/pages\/brand\/gryphon-singapore) {
+/* body:not(.\/pages\/brand\/gryphon-singapore) {
   section#shopify-section-template--23590636159010__brand_story_banner_RyppJ4,
   section#shopify-section-template--23521131233314__brand_story_banner_RyppJ4 {
     display: none;
   }
-}
+} */
 
 .bdl2-main {
   display: none;
