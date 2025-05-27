@@ -263,6 +263,12 @@
       max-width: 1500px;
     }
   }
+  .\!m-0 {
+    margin: calc(var(--spacing) * 0) !important;
+  }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
   .\!mt-12 {
     margin-top: calc(var(--spacing) * 12) !important;
   }
@@ -487,6 +493,9 @@
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
   .gap-y-12 {
     row-gap: calc(var(--spacing) * 12);
   }
@@ -537,6 +546,9 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
   }
   .p-\[1rem\] {
     padding: 1rem;
@@ -645,6 +657,9 @@
   }
   .opacity-0 {
     opacity: 0%;
+  }
+  .opacity-10 {
+    opacity: 10%;
   }
   .opacity-30 {
     opacity: 30%;
@@ -763,6 +778,16 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .not-first\:justify-items-center {
+    &:not(*:first-child) {
+      justify-items: center;
+    }
+  }
+  .not-first\:justify-items-end {
+    &:not(*:first-child) {
+      justify-items: end;
+    }
+  }
   .group-hover\:translate-y-0 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -829,6 +854,11 @@
       opacity: 0%;
     }
   }
+  .first\:col-span-2 {
+    &:first-child {
+      grid-column: span 2 / span 2;
+    }
+  }
   .max-lg\:\!hidden {
     @media (width < 990px) {
       display: none !important;
@@ -882,6 +912,41 @@
       color: #333A2E !important;
     }
   }
+  .not-first\:sm\:col-span-2 {
+    &:not(*:first-child) {
+      @media (width >= 600px) {
+        grid-column: span 2 / span 2;
+      }
+    }
+  }
+  .not-first\:sm\:justify-items-center {
+    &:not(*:first-child) {
+      @media (width >= 600px) {
+        justify-items: center;
+      }
+    }
+  }
+  .not-first\:sm\:justify-self-center {
+    &:not(*:first-child) {
+      @media (width >= 600px) {
+        justify-self: center;
+      }
+    }
+  }
+  .not-first\:sm\:text-center {
+    &:not(*:first-child) {
+      @media (width >= 600px) {
+        text-align: center;
+      }
+    }
+  }
+  .not-first\:sm\:text-right {
+    &:not(*:first-child) {
+      @media (width >= 600px) {
+        text-align: right;
+      }
+    }
+  }
   .sm\:before\:bg-\[\#F4F4F7\] {
     @media (width >= 600px) {
       &::before {
@@ -910,6 +975,13 @@
     &:first-child {
       @media (width >= 600px) {
         grid-column: span 2 / span 2;
+      }
+    }
+  }
+  .first\:sm\:row-span-2 {
+    &:first-child {
+      @media (width >= 600px) {
+        grid-row: span 2 / span 2;
       }
     }
   }
@@ -995,6 +1067,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .md\:grid-cols-5 {
+    @media (width >= 750px) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
   .md\:content-start {
     @media (width >= 750px) {
       align-content: flex-start;
@@ -1043,6 +1120,20 @@
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
     }
   }
+  .not-first\:md\:justify-items-center {
+    &:not(*:first-child) {
+      @media (width >= 750px) {
+        justify-items: center;
+      }
+    }
+  }
+  .not-first\:md\:text-center {
+    &:not(*:first-child) {
+      @media (width >= 750px) {
+        text-align: center;
+      }
+    }
+  }
   .md\:before\:bg-\[\#F4F4F7\] {
     @media (width >= 750px) {
       &::before {
@@ -1071,10 +1162,41 @@
       width: calc(3/4 * 100%);
     }
   }
+  .lg\:grid-cols-4 {
+    @media (width >= 990px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .lg\:\!text-6xl {
     @media (width >= 990px) {
       font-size: var(--text-6xl) !important;
       line-height: var(--tw-leading, var(--text-6xl--line-height)) !important;
+    }
+  }
+  .not-first\:lg\:justify-items-center {
+    &:not(*:first-child) {
+      @media (width >= 990px) {
+        justify-items: center;
+      }
+    }
+  }
+  .not-first\:lg\:text-center {
+    &:not(*:first-child) {
+      @media (width >= 990px) {
+        text-align: center;
+      }
+    }
+  }
+  .lg\:first\:col-span-1 {
+    @media (width >= 990px) {
+      &:first-child {
+        grid-column: span 1 / span 1;
+      }
+    }
+  }
+  .xl\:grid-cols-4 {
+    @media (width >= 1200px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .\32 xl\:text-7xl {
