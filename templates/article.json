@@ -62,14 +62,20 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
+        },
+        "sleek_social_sharing_share_button_dQWhrU": {
+          "type": "shopify://apps/sleek-social-sharing/blocks/share_button/5db01bc3-c590-40f6-be34-5072c106e3f4",
+          "settings": {}
         }
       },
       "block_order": [
         "content",
-        "share"
+        "share",
+        "sleek_social_sharing_share_button_dQWhrU"
       ],
       "settings": {}
     }
