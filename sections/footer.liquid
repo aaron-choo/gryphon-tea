@@ -319,7 +319,12 @@
               {%- endif -%}
             </div>
 
-            <div class="footer__column footer__column--info">
+            <div
+              class="footer__column footer__column--info mix-blend-luminosity{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+              {% endif %}
+            >
               {%- if section.settings.payment_enable -%}
                 <div class="footer__payment">
                   <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
