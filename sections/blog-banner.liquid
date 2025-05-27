@@ -163,7 +163,9 @@
               {%- endif -%}
               {{ block.shopify_attributes }}
             >
-              <p>{{ block.settings.text }}</p>
+              <p class="text-[1.15em] md:text-[1.35em] text-[rgb(var(--color-foreground))]">
+                {{ block.settings.text }}
+              </p>
             </div>
           {%- when 'buttons' -%}
             <div
