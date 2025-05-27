@@ -54,6 +54,7 @@
     },
     "brand_story_banner_RyppJ4": {
       "type": "brand-story-banner",
+      "disabled": true,
       "name": "Brand Story Banner",
       "settings": {}
     },
