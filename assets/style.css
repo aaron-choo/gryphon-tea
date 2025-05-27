@@ -612,6 +612,9 @@
   .\!text-white {
     color: var(--color-white) !important;
   }
+  .text-\[rgb\(var\(--color-foreground\)\)\] {
+    color: rgb(var(--color-foreground));
+  }
   .capitalize {
     text-transform: capitalize;
   }
