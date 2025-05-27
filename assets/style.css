@@ -872,6 +872,16 @@
       font-size: 1.5em;
     }
   }
+  .md\:text-\[1\.25em\] {
+    @media (width >= 750px) {
+      font-size: 1.25em;
+    }
+  }
+  .md\:text-\[1\.35em\] {
+    @media (width >= 750px) {
+      font-size: 1.35em;
+    }
+  }
   .md\:text-\[2em\] {
     @media (width >= 750px) {
       font-size: 2em;
