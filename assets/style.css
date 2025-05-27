@@ -575,6 +575,9 @@
   .text-\[1\.5em\] {
     font-size: 1.5em;
   }
+  .text-\[1\.25em\] {
+    font-size: 1.25em;
+  }
   .leading-\[0\.9\] {
     --tw-leading: 0.9;
     line-height: 0.9;
@@ -862,6 +865,11 @@
   .md\:content-start {
     @media (width >= 750px) {
       align-content: flex-start;
+    }
+  }
+  .md\:text-\[1\.5em\] {
+    @media (width >= 750px) {
+      font-size: 1.5em;
     }
   }
   .md\:text-\[2em\] {
