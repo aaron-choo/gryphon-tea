@@ -18,5 +18,8 @@
 .list-payment__item {
   align-items: center;
   display: flex;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
+  padding: 0.25rem;
+  filter: grayscale(100%);
+  mix-blend-mode: luminosity;
 }
