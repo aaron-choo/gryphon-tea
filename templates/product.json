@@ -188,6 +188,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "sleek_social_sharing_share_button_9DW3WL": {
+          "type": "shopify://apps/sleek-social-sharing/blocks/share_button/5db01bc3-c590-40f6-be34-5072c106e3f4",
+          "settings": {}
         }
       },
       "block_order": [
@@ -215,7 +219,8 @@
         "text_6NCT99",
         "text_9yE9tp",
         "wishlist_krBCag",
-        "share"
+        "share",
+        "sleek_social_sharing_share_button_9DW3WL"
       ],
       "settings": {
         "enable_sticky_info": true,
