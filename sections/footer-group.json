@@ -21,18 +21,18 @@
             "subtext": "<h6>GRYPHON® SINGAPORE</h6><p><a href=\"https://www.google.com/maps/place/Gryphon+Tea+Company/data=!4m2!3m1!1s0x0:0x69a3e106aebecc17?sa=X&ved=1t:2428&ictx=111\" target=\"_blank\" title=\"https://www.google.com/maps/place/Gryphon+Tea+Company/data=!4m2!3m1!1s0x0:0x69a3e106aebecc17?sa=X&ved=1t:2428&ictx=111\">251 Pandan Loop<br/>Singapore 128341</a></p><h6>Operating Hours</h6><p>Mondays to Fridays:<br/>9am to 5pm<br/>Closed on weekends and<br/>public holidays</p><h6>Contact Us</h6><p>+65 8888 8888<br/>hello@gryphontea.com</p><h6>Our Brands</h6><p><a href=\"/pages/brand/gryphon-singapore\" title=\"Gryphon Singapore\">Gryphon Singapore</a><br/><a href=\"/pages/brand/gryphon-tea-co\" title=\"Gryphon Tea Co\">Gryphon Tea Co.</a><br/><a href=\"/pages/brand/roji\" title=\"Roji\">Roji</a><br/><a href=\"/pages/brand/monogram\" title=\"Monogram\">Monogram</a></p><h6></h6>"
           }
         },
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "About Us",
-            "menu": "about-us-footer"
-          }
-        },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "Orders and Support",
             "menu": "orders-and-support-footer"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About Us",
+            "menu": "about-us-footer"
           }
         },
         "link_list_GiNK9c": {
@@ -45,8 +45,8 @@
       },
       "block_order": [
         "footer-2",
-        "footer-0",
         "footer-1",
+        "footer-0",
         "link_list_GiNK9c"
       ],
       "settings": {
