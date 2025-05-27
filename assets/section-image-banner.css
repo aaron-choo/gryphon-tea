@@ -529,72 +529,72 @@
     }
     .custom-top-left {
       left: 0;
-      right: 70%;
+      right: 60%;
       top: 0;
-      bottom: 70%;
+      bottom: 60%;
       align-items: start;
       text-align: left;
     }
     .custom-top-center {
-      left: 35%;
-      right: 35%;
+      left: 20%;
+      right: 20%;
       top: 0;
-      bottom: 70%;
+      bottom: 60%;
       align-items: start;
       text-align: center;
     }
     .custom-top-right {
-      left: 70%;
+      left: 60%;
       right: 0;
       top: 0;
-      bottom: 70%;
+      bottom: 60%;
       align-items: start;
       text-align: right;
     }
     .custom-middle-left {
       left: 0;
-      right: 70%;
-      top: 35%;
-      bottom: 35%;
+      right: 60%;
+      top: 20%;
+      bottom: 20%;
       align-items: center;
       text-align: left;
     }
     .custom-middle-center {
-      left: 35%;
-      right: 35%;
-      top: 35%;
-      bottom: 35%;
+      left: 20%;
+      right: 20%;
+      top: 20%;
+      bottom: 20%;
       align-items: center;
       text-align: center;
     }
     .custom-middle-right {
-      left: 70%;
+      left: 60%;
       right: 0;
-      top: 35%;
-      bottom: 35%;
+      top: 20%;
+      bottom: 20%;
       align-items: center;
       text-align: right;
     }
     .custom-bottom-left {
       left: 0;
-      right: 70%;
-      top: 70%;
+      right: 60%;
+      top: 60%;
       bottom: 0;
       align-items: end;
       text-align: left;
     }
     .custom-bottom-center {
-      left: 35%;
-      right: 35%;
-      top: 70%;
+      left: 20%;
+      right: 20%;
+      top: 60%;
       bottom: 0;
       align-items: end;
       text-align: center;
     }
     .custom-bottom-right {
-      left: 70%;
+      left: 60%;
       right: 0;
-      top: 70%;
+      top: 60%;
       bottom: 0;
       align-items: end;
       text-align: right;
