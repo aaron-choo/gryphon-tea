@@ -33,7 +33,7 @@
       ],
       "settings": {
         "image": "{{ metaobject.image.value }}",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -49,7 +49,7 @@
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "brand_story_banner_RyppJ4": {
