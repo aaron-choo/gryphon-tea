@@ -799,6 +799,30 @@
       background-color: #F4F4F7;
     }
   }
+  .before\:bg-\[\#fff\] {
+    &::before {
+      content: var(--tw-content);
+      background-color: #fff;
+    }
+  }
+  .before\:bg-\[rgb\(var\(--color-background\)\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-color: rgb(var(--color-background));
+    }
+  }
+  .before\:bg-\[rgb\(var\(--color-foreground\)\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-color: rgb(var(--color-foreground));
+    }
+  }
+  .before\:bg-\[rgb\(var\(--color-text\)\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-color: rgb(var(--color-text));
+    }
+  }
   .before\:opacity-0 {
     &::before {
       content: var(--tw-content);
@@ -851,6 +875,35 @@
     @media (width >= 600px) {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .sm\:\!text-\[\#333A2E\] {
+    @media (width >= 600px) {
+      color: #333A2E !important;
+    }
+  }
+  .sm\:before\:bg-\[\#F4F4F7\] {
+    @media (width >= 600px) {
+      &::before {
+        content: var(--tw-content);
+        background-color: #F4F4F7;
+      }
+    }
+  }
+  .sm\:before\:bg-\[rgb\(var\(--color-background\)\)\] {
+    @media (width >= 600px) {
+      &::before {
+        content: var(--tw-content);
+        background-color: rgb(var(--color-background));
+      }
+    }
+  }
+  .sm\:before\:bg-\[var\(--\)\] {
+    @media (width >= 600px) {
+      &::before {
+        content: var(--tw-content);
+        background-color: var(--);
+      }
     }
   }
   .first\:sm\:col-span-2 {
@@ -967,6 +1020,11 @@
       font-size: 2em;
     }
   }
+  .md\:\!text-\[\#333A2E\] {
+    @media (width >= 750px) {
+      color: #333A2E !important;
+    }
+  }
   .md\:blur-\[calc\(var\(--mouse-xy\)_\*_-3px_\+_3px\)\] {
     @media (width >= 750px) {
       --tw-blur: blur(calc(var(--mouse-xy) * -3px + 3px));
@@ -983,6 +1041,14 @@
     @media (width >= 750px) {
       --tw-blur: blur(calc(var(--mouse-xy) * 6px));
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    }
+  }
+  .md\:before\:bg-\[\#F4F4F7\] {
+    @media (width >= 750px) {
+      &::before {
+        content: var(--tw-content);
+        background-color: #F4F4F7;
+      }
     }
   }
   .lg\:\!hidden {
