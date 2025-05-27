@@ -379,6 +379,9 @@
   .\!min-w-0 {
     min-width: calc(var(--spacing) * 0) !important;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .origin-\[44\%_80\%\] {
     transform-origin: 44% 80%;
   }
@@ -574,6 +577,9 @@
   }
   .text-\[1\.5em\] {
     font-size: 1.5em;
+  }
+  .text-\[1\.15em\] {
+    font-size: 1.15em;
   }
   .text-\[1\.25em\] {
     font-size: 1.25em;
