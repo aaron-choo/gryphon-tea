@@ -299,7 +299,7 @@
             </div>
           {%- endif -%}
 
-          <div class="!grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="!grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4">
             <div
               class="footer-block--social{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {% if settings.animations_reveal_on_scroll %}
@@ -313,7 +313,7 @@
               {%- endif -%}
 
               {%- if section.settings.show_social and has_social_icons -%}
-                <div class="grid justify-items-start">
+                <div class="grid justify-items-center md:justify-items-start">
                   {%- render 'social-icons', class: 'footer__list-social' -%}
                 </div>
               {%- endif -%}
