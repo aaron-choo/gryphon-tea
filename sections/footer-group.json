@@ -28,26 +28,26 @@
             "menu": "about-us-footer"
           }
         },
-        "link_list_GiNK9c": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Corporate",
-            "menu": "corporate"
-          }
-        },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "Orders and Support",
             "menu": "orders-and-support-footer"
           }
+        },
+        "link_list_GiNK9c": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Corporate",
+            "menu": "corporate"
+          }
         }
       },
       "block_order": [
         "footer-2",
         "footer-0",
-        "link_list_GiNK9c",
-        "footer-1"
+        "footer-1",
+        "link_list_GiNK9c"
       ],
       "settings": {
         "color_scheme": "scheme-3",
