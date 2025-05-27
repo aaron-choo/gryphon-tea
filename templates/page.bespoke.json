@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "h1"
+            "heading_size": "hxl"
           }
         },
         "text_MrcqfT": {
