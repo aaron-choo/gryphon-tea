@@ -537,7 +537,7 @@
   "shopify": {
     "checkout": {
       "shop_policies": {
-        "refund_policy": "Return and Refund Policy"
+        "refund_policy": "Return and Exchange Policy"
       }
     }
   }
