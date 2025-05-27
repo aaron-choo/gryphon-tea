@@ -39,13 +39,16 @@
   endif
 -%}
 
-<div class="brand-story-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden relative aspect-square sm:aspect-[1.3] md:aspect-[1.5] lg:aspect-[2] !bg-[#F3F4F5] !grid grid-cols-1 content-end md:content-start">
+<div
+  class="brand-story-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} overflow-hidden relative aspect-square sm:aspect-[1.3] md:aspect-[1.5] lg:aspect-[2] !bg-[#F3F4F5] !grid grid-cols-1 content-end md:content-start"
+  style="--timing-unit: 2s;"
+>
   <div
     class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding bg-[#F3F4F5]"
   >
     <div
       id="flower-base"
-      class="flower-base relative transform md:!rotate-[calc(var(--mouse-x)_*_-10deg)] transition-transform duration-[6s] ease-out origin-bottom md:blur-[calc(var(--mouse-xy)_*_-3px_+_3px)]  !grid grid-cols-1 justify-self-center opacity-30 -mb-4"
+      class="flower-base relative transform md:!rotate-[calc(var(--mouse-x)_*_-10deg)] transition-transform duration-[calc(var(--timing-unit)_*_6)] ease-out origin-bottom md:blur-[calc(var(--mouse-xy)_*_-3px_+_3px)]  !grid grid-cols-1 justify-self-center opacity-30 -mb-4"
     >
       <img
         id="flower-1"
@@ -55,22 +58,22 @@
       <img
         id="flower-2"
         src="{{ 'Straits_Chai4.png' | asset_url }}"
-        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_94%]"
+        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[calc(var(--timing-unit)_*_6)] ease-out origin-[44%_94%]"
       >
       <img
         id="flower-3"
         src="{{ 'Straits_Chai3.png' | asset_url }}"
-        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[55%_40%]"
+        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[calc(var(--timing-unit)_*_6)] ease-out origin-[55%_40%]"
       >
       <img
         id="flower-4"
         src="{{ 'Straits_Chai2.png' | asset_url }}"
-        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_25deg)] transition-transform duration-[6s] ease-out origin-[46%_69%]"
+        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_25deg)] transition-transform duration-[calc(var(--timing-unit)_*_6)] ease-out origin-[46%_69%]"
       >
       <img
         id="flower-5"
         src="{{ 'Straits_Chai1.png' | asset_url }}"
-        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[6s] ease-out origin-[44%_80%]"
+        class="w-screen h-full object-cover overflow-visible absolute top-0 left-0 right-0 bottom-0 transform md:!rotate-[calc(var(--mouse-x)_*_15deg)] transition-transform duration-[calc(var(--timing-unit)_*_6)] ease-out origin-[44%_80%]"
       >
     </div>
   </div>
@@ -78,35 +81,35 @@
     class="absolute top-0 left-0 right-0 bottom-0 !grid grid-cols-1 justify-self-center content-center text-center !font-[Piloti]"
   >
     <span
-      class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-x)_*_1vw)] md:translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_6px)]"
+      class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-x)_*_1vw)] md:translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[calc(var(--timing-unit)_*_3)] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_6px)]"
       style="--animation-order: 1;"
       >THE</span
     >
     <span class="flex items-start justify-center gap-2">
       <span
-        class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-x)_*_2vw)] md:translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[2s] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_3px)]"
+        class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-x)_*_2vw)] md:translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[calc(var(--timing-unit)_*_2)] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_3px)]"
         style="--animation-order: 2;"
         >ART</span
       >
       <span
-        class="text-4xl sm:text-6xl 2xl:text-7xl transform md:translate-x-[calc(var(--mouse-x)_*_1vw)] md:translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out  scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_6px)]"
+        class="text-4xl sm:text-6xl 2xl:text-7xl transform md:translate-x-[calc(var(--mouse-x)_*_1vw)] md:translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[calc(var(--timing-unit)_*_3)] ease-out  scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_6px)]"
         style="--animation-order: 3;"
         >AND</span
       ></span
     >
     <span
-      class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-x)_*_-2vw)] md:translate-y-[calc(var(--mouse-y)_*_3vw)] transition-transform duration-[1s] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_3px)]"
+      class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-x)_*_-2vw)] md:translate-y-[calc(var(--mouse-y)_*_3vw)] transition-transform duration-[calc(var(--timing-unit)_*_1)] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_3px)]"
       style="--animation-order: 4;"
       >SCIENCE</span
     >
     <span class="flex items-start justify-center gap-2"
       ><span
-        class="text-4xl sm:text-6xl 2xl:text-7xl transform md:translate-x-[calc(var(--mouse-x)_*_2vw)] md:translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_6px)]"
+        class="text-4xl sm:text-6xl 2xl:text-7xl transform md:translate-x-[calc(var(--mouse-x)_*_2vw)] md:translate-y-[calc(var(--mouse-y)_*_1vw)] transition-transform duration-[calc(var(--timing-unit)_*_3)] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_6px)]"
         style="--animation-order: 5;"
         >OF</span
       >
       <span
-        class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-y)_*_2vw)] md:translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[3s] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_3px)]"
+        class="text-6xl sm:text-8xl 2xl:text-9xl leading-[0.9] transform md:translate-x-[calc(var(--mouse-y)_*_2vw)] md:translate-y-[calc(var(--mouse-y)_*_2vw)] transition-transform duration-[calc(var(--timing-unit)_*_3)] ease-out scroll-trigger animate--slide-in md:blur-[calc(var(--mouse-xy)_*_3px)]"
         style="--animation-order: 6;"
         >TEA</span
       >

@@ -293,6 +293,12 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
   }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
   .line-clamp-3 {
     overflow: hidden;
     display: -webkit-box;
@@ -686,6 +692,10 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
+  .duration-\[0s\] {
+    --tw-duration: 0s;
+    transition-duration: 0s;
+  }
   .duration-\[1s\] {
     --tw-duration: 1s;
     transition-duration: 1s;
@@ -698,9 +708,49 @@
     --tw-duration: 3s;
     transition-duration: 3s;
   }
+  .duration-\[06s\] {
+    --tw-duration: 06s;
+    transition-duration: 06s;
+  }
   .duration-\[6s\] {
     --tw-duration: 6s;
     transition-duration: 6s;
+  }
+  .duration-\[10s\] {
+    --tw-duration: 10s;
+    transition-duration: 10s;
+  }
+  .duration-\[12s\] {
+    --tw-duration: 12s;
+    transition-duration: 12s;
+  }
+  .duration-\[20s\] {
+    --tw-duration: 20s;
+    transition-duration: 20s;
+  }
+  .duration-\[30s\] {
+    --tw-duration: 30s;
+    transition-duration: 30s;
+  }
+  .duration-\[60s\] {
+    --tw-duration: 60s;
+    transition-duration: 60s;
+  }
+  .duration-\[calc\(var\(--timing-unit\)_\*_1\)\] {
+    --tw-duration: calc(var(--timing-unit) * 1);
+    transition-duration: calc(var(--timing-unit) * 1);
+  }
+  .duration-\[calc\(var\(--timing-unit\)_\*_2\)\] {
+    --tw-duration: calc(var(--timing-unit) * 2);
+    transition-duration: calc(var(--timing-unit) * 2);
+  }
+  .duration-\[calc\(var\(--timing-unit\)_\*_3\)\] {
+    --tw-duration: calc(var(--timing-unit) * 3);
+    transition-duration: calc(var(--timing-unit) * 3);
+  }
+  .duration-\[calc\(var\(--timing-unit\)_\*_6\)\] {
+    --tw-duration: calc(var(--timing-unit) * 6);
+    transition-duration: calc(var(--timing-unit) * 6);
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
