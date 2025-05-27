@@ -91,7 +91,9 @@
   padding: 3rem calc(4rem / var(--font-body-scale)) 3rem;
   position: relative;
   z-index: 1;
-
+  @media (max-width: 750px) {
+    padding: calc(3rem - calc(2 * var(--text-boxes-border-width))) calc(4rem / var(--font-body-scale)) 3rem;
+  }
 }
 
 .image-with-text .grid__item::after {
