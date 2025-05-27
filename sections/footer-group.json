@@ -48,7 +48,7 @@
         "newsletter_legal": "<p>Subscribe to receive communications from Gryphon. By subscribing, you confirm you have read and understood our privacy policy.</p>",
         "copyright_text": "<p>© 2025 GRYPHON® SINGAPORE</p>",
         "copyright_disclaimer": "<p>All material on this site is copyrighted by Gryphon® Tea Company. Gryphon® Tea Company is a registered trademark.</p><p>No images or copy on this site may be used without written permission by Gryphon® Tea Company.</p>",
-        "enable_follow_on_shop": true,
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
