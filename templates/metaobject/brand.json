@@ -55,7 +55,6 @@
     "brand_story_banner_RyppJ4": {
       "type": "brand-story-banner",
       "disabled": true,
-      "name": "Brand Story Banner",
       "settings": {}
     },
     "multirow_UFGczh": {
@@ -88,7 +87,6 @@
         "row_z4hDwN",
         "row_bVdtHY"
       ],
-      "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "adapt",
         "desktop_image_width": "medium",
@@ -108,7 +106,6 @@
     },
     "featured_collection_cp9G6f": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "{{ metaobject.collection.value }}",
         "products_to_show": 25,
@@ -153,7 +150,6 @@
       "block_order": [
         "button_bajGQd"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -165,7 +161,12 @@
     },
     "brand_banner_KCHtJR": {
       "type": "brand-banner",
-      "name": "Brand Banner",
+      "disabled": true,
+      "settings": {}
+    },
+    "brand_banner_2_J6A99G": {
+      "type": "brand-banner-2",
+      "name": "Brand Banner 2",
       "settings": {}
     }
   },
@@ -175,6 +176,7 @@
     "multirow_UFGczh",
     "featured_collection_cp9G6f",
     "rich_text_YtxBqj",
-    "brand_banner_KCHtJR"
+    "brand_banner_KCHtJR",
+    "brand_banner_2_J6A99G"
   ]
 }
