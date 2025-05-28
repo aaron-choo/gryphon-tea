@@ -123,14 +123,14 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient {% if section.settings.custom_positioning %} !w-full !h-full !max-w-[none]{% endif %}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
             {%- if section.settings.is_hero_banner -%}
               <h1
-                class="main-page-title page-title banner__heading inline-richtext {{ block.settings.heading_size }}{% if section.settings.custom_positioning %} custom-{{ section.settings.heading_custom_position }}{% endif %}"
+                class="main-page-title page-title banner__heading inline-richtext {{ block.settings.heading_size }}{% if section.settings.custom_positioning %} custom-{{ section.settings.heading_custom_position }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
                   or section.settings.text_color_override == 'transparent'
                 -%}
@@ -143,7 +143,7 @@
               </h1>
             {%- else -%}
               <h2
-                class="banner__heading inline-richtext {{ block.settings.heading_size }}{% if section.settings.custom_positioning %} custom-{{ section.settings.heading_custom_position }}{% endif %}"
+                class="banner__heading inline-richtext {{ block.settings.heading_size }}{% if section.settings.custom_positioning %} custom-{{ section.settings.heading_custom_position }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
                   or section.settings.text_color_override == 'transparent'
                 -%}
@@ -157,7 +157,7 @@
             {%- endif -%}
           {%- when 'text' -%}
             <div
-              class="banner__text rte {{ block.settings.text_style }}{% if section.settings.custom_positioning %} custom-{{ section.settings.text_custom_position }}{% endif %} "
+              class="banner__text rte {{ block.settings.text_style }}{% if section.settings.custom_positioning %} custom-{{ section.settings.text_custom_position }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {%- if section.settings.text_color_override == 'rgba(0,0,0,0)'
                 or section.settings.text_color_override == 'transparent'
               -%}
@@ -172,7 +172,7 @@
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} {% if section.settings.custom_positioning %} custom-{{ section.settings.button_custom_position }}{% endif %}"
+              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} {% if section.settings.custom_positioning %} custom-{{ section.settings.button_custom_position }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {%- if section.settings.text_color_override != 'transparent' -%}
                 style="color: {{ section.settings.text_color_override }}"
               {%- endif -%}
