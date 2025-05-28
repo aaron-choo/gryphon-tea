@@ -3981,3 +3981,7 @@ div#PBarNextFrameWrapper {
   .share-option span {
     font-size: 1.4rem;  }
 }
+
+.wishlist-product__list a:after {
+  display: none;
+}
