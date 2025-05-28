@@ -32,7 +32,6 @@
     --font-weight-light: 300;
     --tracking-normal: 0em;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -242,6 +241,18 @@
   .order-1 {
     order: 1;
   }
+  .order-2 {
+    order: 2;
+  }
+  .order-3 {
+    order: 3;
+  }
+  .order-4 {
+    order: 4;
+  }
+  .order-5 {
+    order: 5;
+  }
   .col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -380,9 +391,6 @@
   .\!min-w-0 {
     min-width: calc(var(--spacing) * 0) !important;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .origin-\[44\%_80\%\] {
     transform-origin: 44% 80%;
   }
@@ -453,9 +461,6 @@
   }
   .justify-items-center {
     justify-items: center;
-  }
-  .justify-items-start {
-    justify-items: start;
   }
   .\!gap-0 {
     gap: calc(var(--spacing) * 0) !important;
@@ -932,11 +937,6 @@
   .lg\:w-3\/4 {
     @media (width >= 990px) {
       width: calc(3/4 * 100%);
-    }
-  }
-  .lg\:grid-cols-2 {
-    @media (width >= 990px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .lg\:\!text-6xl {

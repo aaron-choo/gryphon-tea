@@ -174,7 +174,7 @@
             el: '.brand-swiper-pagination',
             clickable: true,
             renderBullet: function (index, className) {
-              return `<span class="${className} h1 ${brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == '{{current_brand}}' ? 'order-1' : 'order-1'}">${brands[index]}</span>`;
+              return `<span class="${className} h1 ${brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'gryphon-singapore' ? 'order-1' : brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'gryphon-tea-co' ? 'order-2' : brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'roji' ? 'order-3' : brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'monogram' ? 'order-4' : 'order-5'}">${brands[index]}</span>`;
             },
           },
         });
