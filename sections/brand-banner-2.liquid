@@ -20,11 +20,13 @@
     }
   } */
   .brand-banner-button::after {
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor, 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor,
+      0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
   }
 
   .brand-banner-button:not([disabled]):hover::after {
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor, 0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) currentColor,
+      0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
   }
 {%- endstyle -%}
 
@@ -37,179 +39,158 @@
   endif
 -%}
 
-<div id="brand-banner" class="brand-banner color-{{ section.settings.color_scheme }} overflow-hidden">
-  <div class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
-    <slider-component class="slider-mobile-gutter scroll-trigger animate--slide-in">
-      <!-- Slider main container -->
-      <div class="swiper-{{ section.id }}">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper relative">
-          <!-- Slides -->
-          {%- for product in collections.brands.products -%}
-            {%- liquid
-              if product.metafields.custom.brand.value.text_color
-                assign text_color = product.metafields.custom.brand.value.text_color
-              else
-                assign text_color = '#ffffff'
-              endif
-            -%}
-            <div
-              class="swiper-slide"
-              data-cascade
-              data-text-color="{{ text_color }}"
-            >
-              <div class="relative w-full">
-                {%- liquid
-                  assign image_class = 'opacity-0 transition-opacity w-full aspect-[0.8] sm:aspect-square md:aspect-[2] lg:aspect-[2.5] object-cover'
-                  assign sizes = full_width
-                  assign current_brand = request.path | remove_first: '/pages/brand/'
-                  assign looped_brand = product.metafields.custom.brand.value.name | downcase | replace: ' ', '-' | replace: '.', ''
-                -%}
-                {{
-                  product.metafields.custom.brand.value.image
-                  | image_url: width: 3840
-                  | image_tag:
-                    width: product.metafields.custom.brand.value.image.width,
-                    height: product.metafields.custom.brand.value.image.height,
-                    class: image_class,
-                    sizes: sizes,
-                    widths: widths,
-                    onload: 'this.style.opacity=1'
-                }}
-              </div>
+<div id="brand-banner" class="brand-banner color-scheme-3 overflow-hidden">
+  <div class="{% if section.settings.show_slides == false %}page-width-desktop {% endif %}isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding scroll-trigger animate--slide-in py-12 px-3 md:px-0">
+    <div class="page-width !grid grid-cols-1 gap-8">
+      <h2 class="h1 !text-white">Our Brands</h2>
 
-              <div class="absolute top-40 md:top-0 left-0 right-0 bottom-0 !py-4 page-width">
-                <div class="!grid md:grid-cols-2" style="color:{{ text_color }}">
-                  <div class="brand__description lg:w-3/4 !grid grid-cols-1 gap-4">
-                    <p>
-                      {{ product.metafields.custom.brand.value.description }}
-                    </p>
-                    {% if current_brand != looped_brand %}
-                      <a
-                        href="/pages/brand/{{ product.metafields.custom.brand.value.name | downcase | replace: ' ', '-' | replace: '.', '' }}"
-                        class="button button--secondary brand-banner-button justify-self-start !bg-transparent"
-                        style="color: currentColor; --color-button-text: currentColor; --color-shadow: currentColor;"
-                        >View Brand</a
-                      >
-                    {% else %}
-                      <a
-                        href="{{ product.metafields.custom.brand.value.link}}"
-                        class="button button--secondary brand-banner-button justify-self-start !bg-transparent"
-                        style="color: currentColor; --color-button-text: currentColor; --color-shadow: currentColor;"
-                        >Shop Brand</a
-                      >
-                    {% endif %}
-
-                    <div class="absolute top-auto left-0 right-0 bottom-0 !py-4 page-width z-1">
-                      <h2 class="h1 !text-inherit">Our Brands</h2>
-                    </div>
+      <slider-component class="slider-mobile-gutter ">
+        <!-- Slider main container -->
+        <div class="swiper-{{ section.id }}">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper relative">
+            <!-- Slides -->
+            {%- for product in collections.brands.products -%}
+              {%- liquid
+                if product.metafields.custom.brand.value.text_color
+                  assign text_color = product.metafields.custom.brand.value.text_color
+                else
+                  assign text_color = '#ffffff'
+                endif
+              -%}
+              <div
+                class="swiper-slide"
+                data-cascade
+                data-text-color="{{ text_color }}"
+              >
+                <div class="!grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                  <div class="!grid grid-cols-1 items-center">
+                    {%- liquid
+                      assign image_class = 'opacity-0 transition-opacity w-full aspect-square sm:aspect-[4/3] object-cover '
+                      assign sizes = full_width
+                      assign current_brand = request.path | remove_first: '/pages/brand/'
+                      assign looped_brand = product.metafields.custom.brand.value.name | downcase | replace: ' ', '-' | replace: '.', ''
+                    -%}
+                    {{
+                      product.metafields.custom.brand.value.image
+                      | image_url: width: 3840
+                      | image_tag:
+                        width: product.metafields.custom.brand.value.image.width,
+                        height: product.metafields.custom.brand.value.image.height,
+                        class: image_class,
+                        sizes: sizes,
+                        widths: widths,
+                        onload: 'this.style.opacity=1'
+                    }}
                   </div>
-                  {% comment %}
-                    <div class="brand__links justify-self-end lg:w-3/4">
-                      {%- for product in collections.brands.products -%}
-                        <h1
-                          class=""
-                          style="color:{{ text_color }}"
+
+                  <div class="!grid grid-cols-1 items-center justify-center">
+                    <div class="brand__description lg:w-3/4 !grid grid-cols-1 items-center content-center justify-self-center justify-items-center image-with-text__content">
+                      <h2 class="image-with-text__heading h1 rte text-center">
+                        {{ product.metafields.custom.brand.value.name }}
+                      </h2>
+                      <div class="image-with-text__text rte body">
+                        <p class="text-center">
+                          {{ product.metafields.custom.brand.value.description }}
+                        </p>
+                      </div>
+
+                      {% if current_brand != looped_brand %}
+                        <a
+                          href="/pages/brand/{{ product.metafields.custom.brand.value.name | downcase | replace: ' ', '-' | replace: '.', '' }}"
+                          class="button button--secondary brand-banner-button justify-self-start !bg-transparent mx-auto"
+                          >View Brand</a
                         >
-                          {{ product.metafields.custom.brand.value.name }}
-                        </h1>
-                      {%- endfor %}
+                      {% else %}
+                        <a
+                          href="{{ product.metafields.custom.brand.value.link}}"
+                          class="button button--secondary brand-banner-button justify-self-start !bg-transparent mx-auto"
+                          >Shop Brand</a
+                        >
+                      {% endif %}
                     </div>
-                  {% endcomment %}
+                    {% comment %}
+                      <div class="brand__links justify-self-end lg:w-3/4">
+                        {%- for product in collections.brands.products -%}
+                          <h1
+                            class=""
+                            style="color:{{ text_color }}"
+                          >
+                            {{ product.metafields.custom.brand.value.name }}
+                          </h1>
+                        {%- endfor %}
+                      </div>
+                    {% endcomment %}
+                  </div>
                 </div>
               </div>
+            {% endfor %}
+          </div>
+          <div class="absolute left-0 md:left-1/2 right-0 top-auto md:top-0 bottom-0">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          {% assign first_text_color = collections.brands.products
+            | map: 'metafields'
+            | map: 'custom'
+            | map: 'brand'
+            | map: 'value'
+            | map: 'text_color'
+            | first
+          %}
+          {% if first_text_color %}
+            {% assign default_text_color = first_text_color %}
+          {% else %}
+            {% assign default_text_color = 'white' %}
+          {% endif %}
+          {% comment %}
+            <div style="color: {{default_text_color}}">
+              <div
+                class="brand-swiper-pagination z-1 !top-4 !right-0 !grid grid-cols-1 content-start page-width !mr-0 transition-colors"
+              ></div>
             </div>
-          {% endfor %}
+          {% endcomment %}
         </div>
-        {% assign first_text_color = collections.brands.products
-          | map: 'metafields'
-          | map: 'custom'
-          | map: 'brand'
-          | map: 'value'
-          | map: 'text_color'
-          | first
-        %}
-        {% if first_text_color %}
-          {% assign default_text_color = first_text_color %}
-        {% else %}
-          {% assign default_text_color = 'white' %}
-        {% endif %}
-        <div style="color: {{default_text_color}}">
-          <div
-            class="brand-swiper-pagination z-1 !top-4 !right-0 !grid grid-cols-1 content-start page-width !mr-0 transition-colors"
-          ></div>
-        </div>
-
-        <style>
-          .brand-swiper-pagination {
-            position: absolute;
-            width: auto !important;
-            left: 0 !important;
-            @media screen and (min-width: 750px) {
-              left: auto !important;
-            }
-          }
-          .swiper-pagination-bullet {
-            border-radius: 0;
-            width: auto;
-            color: inherit;
-            opacity: 0.8;
-            background: transparent;
-            height: fit-content;
-          }
-          .swiper-pagination-bullet-active {
-            opacity: 1;
-            background: transparent;
-          }
-        </style>
-      </div>
-      <script>     
-        {% assign all_brands = collections.brands.products | map: 'metafields' | map: 'custom' | map: 'brand' | map: 'value' | map: 'name' %}
-        const brands = {{ all_brands | json }};
-        const brandSwiper = new Swiper('.swiper-{{ section.id }}', {
-          // Optional parameters
-          effect: 'fade',
-          fadeEffect: {
-            crossFade: true,
-          },
-          pagination: {
-            el: '.brand-swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-              return `<span class="${className} h1 ${brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'gryphon-singapore' ? 'order-1' : brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'gryphon-tea-co' ? 'order-2' : brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'roji' ? 'order-3' : brands[index].replace(/\s+/g, '-').replace('.','').toLowerCase() == 'monogram' ? 'order-4' : 'order-5'}">${brands[index]}</span>`;
-            },
-          },
-        });
-        brandSwiper.on('slideChange', function () {
-          setTimeout(() => {
-            document.querySelector('.brand-swiper-pagination').style.color = document.querySelector('.swiper-slide-active').getAttribute('data-text-color');
-          }, 100);
-        });
-        brandSwiper.slideTo(brands.findIndex((item => item.replace(/\s+/g, '-').replace('.','').toLowerCase() === '{{current_brand}}')), 0 , true)
-      </script>
-      <script>
-        document.addEventListener('shopify:section:load', (e) => {
-          new Swiper('.swiper-{{ section.id }}', {
+        <script>
+          {% assign all_brands = collections.brands.products | map: 'metafields' | map: 'custom' | map: 'brand' | map: 'value' | map: 'name' %}
+          const brands = {{ all_brands | json }};
+          const brandSwiper = new Swiper('.swiper-{{ section.id }}', {
             // Optional parameters
             effect: 'fade',
             fadeEffect: {
               crossFade: true,
             },
-            pagination: {
-              el: '.brand-swiper-pagination',
-              clickable: true,
-              renderBullet: function (index, className) {
-                return `<span class="${className} h1 ${
-                  brands[index].replace(/\s+/g, '-').replace('.', '').toLowerCase() == '{{current_brand}}'
-                    ? 'order-0'
-                    : 'order-1'
-                }">${brands[index]}</span>`;
-              },
+            loop: true,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
             },
           });
-        });
-      </script>
-    </slider-component>
+          brandSwiper.on('slideChange', function () {
+            setTimeout(() => {
+              document.querySelector('.brand-swiper-pagination').style.color = document.querySelector('.swiper-slide-active').getAttribute('data-text-color');
+            }, 100);
+          });
+          brandSwiper.slideTo(brands.findIndex((item => item.replace(/\s+/g, '-').replace('.','').toLowerCase() === '{{current_brand}}')), 0 , true)
+        </script>
+        <script>
+          document.addEventListener('shopify:section:load', (e) => {
+            new Swiper('.swiper-{{ section.id }}', {
+              // Optional parameters
+              effect: 'fade',
+              fadeEffect: {
+                crossFade: true,
+              },
+              loop: true,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          });
+        </script>
+      </slider-component>
+    </div>
   </div>
 </div>
 
