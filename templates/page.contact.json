@@ -61,7 +61,7 @@
             "title": "Send us a message on Whatsapp",
             "text": "<p>Hours of operation: Monday–Sunday, 10AM - 6PM.</p>",
             "link_label": "Send message",
-            "link": "#"
+            "link": "https://wa.me/6588927475"
           }
         },
         "column_NdjYHH": {
@@ -79,7 +79,6 @@
         "column_LNfkyz",
         "column_NdjYHH"
       ],
-      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
         "heading_size": "h1",
