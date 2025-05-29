@@ -61,7 +61,7 @@
             "image": "shopify://shop_images/b2b1.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Gryphon partners with hotels, restaurants, and retailers across Asia to deliver a refined tea experience. With a strong presence in over 500 F&B and hospitality outlets, our teas are trusted by leading names for their consistency, quality, and craft.</p>",
+            "text": "<p>From boutique cafés to luxury hotels, Gryphon is partnered with leading brands across Asia to deliver consistently exceptional tea. With a presence in over 500 food and hospitality partners, our teas are trusted for their quality, consistency, and craftsmanship. We work closely with:<br/><strong><br/>• Hotels & Resorts: </strong>Provide guests with a luxurious tea experience, from in-room amenities to lounge services<br/><br/><strong>• Restaurants and Cafés: </strong>Enhance your menu with a curated selection of teas that complement your culinary offerings<br/><strong><br/>• Corporate Offices: </strong>Offer employees a refined selection of quality teas right at your pantry</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -72,7 +72,7 @@
             "image": "shopify://shop_images/b2b2.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Whether you’re building a new menu, sprucing up your pantry, or enhancing your guest experience, we’re here to partner with you.</p>",
+            "text": "<p>Whether you’re refreshing your tea programme, setting up a corporate pantry, or seeking a wholesale tea supplier in Singapore, we’re here to help. Our teas are blended with the same principles we apply to everything: quality ingredients, sustainable sourcing, and great taste. We also support our partners with:<br/><strong><br/>• Curated Tea Menus: </strong>Collaborate with our experts to develop a tea menu that aligns with your concept and clientele<br/><strong><br/>• Marketing Materials: </strong>Access branded assets that enhance your tea offerings and engage customers<br/><strong><br/>• Staff Training & Service Guidance: </strong>Ensure your team serves each cup with knowledge and careElevate your brand's experience with a refined tea selection, and let new connections bloom with us. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -82,7 +82,6 @@
         "row_Yb73AA",
         "row_QrYQYk"
       ],
-      "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "adapt",
         "desktop_image_width": "medium",
@@ -172,7 +171,6 @@
         "column_3ygeaX",
         "column_XiBQAg"
       ],
-      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Our Partners",
         "heading_size": "h1",
