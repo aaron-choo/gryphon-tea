@@ -222,7 +222,7 @@
           "type": "heading",
           "settings": {
             "heading": "Let your instincts guide you to your perfect cup of tea.",
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "text_kU3ypA": {
@@ -250,7 +250,7 @@
         "buttons_bwmhiG"
       ],
       "settings": {
-        "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-1357.jpg",
+        "image": "shopify://shop_images/b2b-hero.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
