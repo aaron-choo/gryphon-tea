@@ -61,19 +61,18 @@
             "image": "shopify://shop_images/bespoke1.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Our bespoke service allows you to co-create a blend that reflects your taste, intention, and identity.</p><p>From selecting botanicals to refining the balance of flavours, we guide you through a custom blending process rooted in our heritage of craft and experimentation. One blend. One story. Yours to craft.</p>",
+            "text": "<p>At Gryphon, we believe that tea is an expression of individuality and artistry. Our bespoke blending service invites you to co-create a tea that’s crafted with precision, personality, and purpose. Whether you’re designing a signature blend for your brand, occasion, or gifting, we bring nearly a century of tea expertise to guide you.<br/><br/>Your journey begins with a consultation with our tea specialists, where we understand your preferences and intentions. From there, we work with you to explore a curated palette of premium teas, florals, herbs, and botanicals — all carefully pieced for a blend that tells your story.</p>",
             "button_label": "",
             "button_link": ""
           }
         },
         "row_QrYQYk": {
           "type": "row",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bespoke2.jpg",
             "caption": "",
             "heading": "",
-            "text": "",
+            "text": "<p>Our bespoke offerings are ideal for:<br/><br/>• <strong>Brand Collaborations & Private Label Commissions</strong>: Co-create exclusive blends that speak to your audience.<br/>• <strong>Events & Weddings</strong>: Give your guests a thoughtful memento, blended with meaning.<br/>• <strong>Corporate Gifting</strong>: Impress clients and partners with personalized tea blends that embody your brand’s values<br/><br/>Each bespoke creation is a testament to Gryphon’s heritage of craftsmanship and innovation. From the initial consultation to the final packaging, we ensure that every detail resonates with quality and sophistication. Begin your tea journey with us.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -83,7 +82,6 @@
         "row_Yb73AA",
         "row_QrYQYk"
       ],
-      "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "adapt",
         "desktop_image_width": "medium",
@@ -173,7 +171,6 @@
         "column_3ygeaX",
         "column_XiBQAg"
       ],
-      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Our Partners",
         "heading_size": "h1",
@@ -195,7 +192,6 @@
     },
     "contact_form_cC8nHe": {
       "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
       "settings": {
         "heading": "Craft Your Own Bespoke Tea",
         "heading_size": "h1",
