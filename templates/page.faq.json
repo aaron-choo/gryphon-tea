@@ -332,6 +332,33 @@
             "row_content": "<p>You can submit your enquiry through our contact form <a href=\"/pages/contact\" title=\"Contact Us\"><span style=\"text-decoration:underline\">here</span></a>, or you can email us at <a href=\"mailto:teabits@gryphontea.com\" target=\"_blank\" title=\"mailto:teabits@gryphontea.com\">teabits@gryphontea.com</a>.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_fUcii3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How are Gourmet teas packaged?",
+            "icon": "none",
+            "row_content": "<p>Each tea is packed in aroma-tight, resealable pouches to preserve freshness.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Vmbrip": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer samples?",
+            "icon": "none",
+            "row_content": "<p>We provide free samples are included with orders placed through Gryphon Singapore accounts. Requests for specific flavours may be accommodated at our discretion.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8bUXhJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you provide gift wrapping?",
+            "icon": "none",
+            "row_content": "<p>At this time, we do not offer gift wrapping services.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -347,7 +374,10 @@
         "collapsible_row_zPW3Cb",
         "collapsible_row_iDC6xD",
         "collapsible_row_gDBfmU",
-        "collapsible_row_6mYaGi"
+        "collapsible_row_6mYaGi",
+        "collapsible_row_fUcii3",
+        "collapsible_row_Vmbrip",
+        "collapsible_row_8bUXhJ"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
