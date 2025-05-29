@@ -196,7 +196,7 @@
               endif
             -%}
             <div
-              class="footer__blocks-wrapper !grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12{{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              class="footer__blocks-wrapper !grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 lg:gap-y-2{{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {% if settings.animations_reveal_on_scroll %}
                 data-cascade
               {% endif %}
@@ -223,7 +223,7 @@
                     {%- when '@app' -%}
                       {% render block %}
                     {%- when 'text' -%}
-                      <div class="footer-block__details-content rte !grid grid-cols-1">
+                      <div class="footer-block__details-content rte !grid grid-cols-1 gap-3">
                         {{ block.settings.subtext }}
                       </div>
                     {%- when 'link_list' -%}

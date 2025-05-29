@@ -3985,3 +3985,33 @@ div#PBarNextFrameWrapper {
 .wishlist-product__list a:after {
   display: none;
 }
+
+.footer-block__details-content.rte {
+  ul {
+    padding: 0;
+  }
+  h6 a {
+    color: inherit;
+  }
+  li {
+    padding: 0.8rem 0;
+
+    @media screen and (min-width: 750px) {
+    padding: 0.25rem 0;
+    }
+  }
+}
+
+.footer-block:nth-child(4) {
+  @media screen and (min-width: 600px) {
+    margin-top: -12rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    margin-top: -9rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    margin-top: -6rem;
+  }
+}
