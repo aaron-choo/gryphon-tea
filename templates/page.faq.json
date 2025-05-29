@@ -59,10 +59,10 @@
         "padding_bottom": 36
       }
     },
-    "collapsible_content_GrQqnz": {
+    "collapsible_content_m6geea": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_E3kxFP": {
+        "collapsible_row_JG7bth": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Where are your teas blended?",
@@ -71,7 +71,7 @@
             "page": ""
           }
         },
-        "collapsible_row_qE7Umr": {
+        "collapsible_row_gx6aYh": {
           "type": "collapsible_row",
           "settings": {
             "heading": "What sets Gryphon Singapore apart from other brands?",
@@ -80,7 +80,7 @@
             "page": ""
           }
         },
-        "collapsible_row_yDHKXG": {
+        "collapsible_row_bTH3g3": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I re-steep my tea?",
@@ -89,7 +89,7 @@
             "page": ""
           }
         },
-        "collapsible_row_cNiBJy": {
+        "collapsible_row_LXYpC7": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Why do your teas contain flavourings?",
@@ -98,7 +98,7 @@
             "page": ""
           }
         },
-        "collapsible_row_Cc9GjW": {
+        "collapsible_row_8jYgGt": {
           "type": "collapsible_row",
           "settings": {
             "heading": "How long will my tea stay fresh?",
@@ -107,7 +107,7 @@
             "page": ""
           }
         },
-        "collapsible_row_QTREHi": {
+        "collapsible_row_Bb4DhC": {
           "type": "collapsible_row",
           "settings": {
             "heading": "How should I store loose tea?",
@@ -118,12 +118,12 @@
         }
       },
       "block_order": [
-        "collapsible_row_E3kxFP",
-        "collapsible_row_qE7Umr",
-        "collapsible_row_yDHKXG",
-        "collapsible_row_cNiBJy",
-        "collapsible_row_Cc9GjW",
-        "collapsible_row_QTREHi"
+        "collapsible_row_JG7bth",
+        "collapsible_row_gx6aYh",
+        "collapsible_row_bTH3g3",
+        "collapsible_row_LXYpC7",
+        "collapsible_row_8jYgGt",
+        "collapsible_row_Bb4DhC"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -212,12 +212,95 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_GrQqnz": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_E3kxFP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I purchase directly from your office?",
+            "icon": "none",
+            "row_content": "<p>We do not support purchase at our office, nor do we offer self-collection. Please visit our website or authorised retailers for in-person purchases.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qE7Umr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use a voucher code?",
+            "icon": "none",
+            "row_content": "<p>Enter your voucher code at the cart page before checkout. The discount will apply automatically.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yDHKXG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What payment methods do you accept?",
+            "icon": "none",
+            "row_content": "<p>We accept major debit and credit cards, as well as PayPal.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cNiBJy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What delivery services do you use?",
+            "icon": "none",
+            "row_content": "<p>Local orders are delivered via J&T Express. International orders are fulfilled by courier partners and vary by region. Tracking information will be emailed once your parcel is dispatched.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Cc9GjW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the shipping fees?",
+            "icon": "none",
+            "row_content": "<p>We offer complimentary shipping within Singapore for orders above SGD 60. For orders below this amount, a flat fee of SGD 6 applies.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QTREHi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship internationally?",
+            "icon": "none",
+            "row_content": "<p>International shipping is currently unavailable until further notice.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_E3kxFP",
+        "collapsible_row_qE7Umr",
+        "collapsible_row_yDHKXG",
+        "collapsible_row_cNiBJy",
+        "collapsible_row_Cc9GjW",
+        "collapsible_row_QTREHi"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "SHOPPING FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_A8TLtW",
     "main",
-    "collapsible_content_GrQqnz",
-    "collapsible_content_qcgTyN"
+    "collapsible_content_m6geea",
+    "collapsible_content_qcgTyN",
+    "collapsible_content_GrQqnz"
   ]
 }
