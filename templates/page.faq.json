@@ -305,6 +305,15 @@
             "row_content": "<p>Sign in to your account to view your order history.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_iDC6xD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your returns policy?",
+            "icon": "none",
+            "row_content": "<p>Returns are accepted for damaged, defective, or incorrect items not caused by shipping. Returns must be approved by Gryphon Singapore due to food and hygiene reasons. Shipping costs are borne by the customer unless otherwise stated. You may find out more about our returns policies <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><span style=\"text-decoration:underline\">here</span></a>. </p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -317,7 +326,8 @@
         "collapsible_row_fWc9GK",
         "collapsible_row_x3rP4N",
         "collapsible_row_hFyWWF",
-        "collapsible_row_zPW3Cb"
+        "collapsible_row_zPW3Cb",
+        "collapsible_row_iDC6xD"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
