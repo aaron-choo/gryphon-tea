@@ -59,10 +59,10 @@
         "padding_bottom": 36
       }
     },
-    "collapsible_content_qcgTyN": {
+    "collapsible_content_GrQqnz": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_FqjN7M": {
+        "collapsible_row_E3kxFP": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Where are your teas blended?",
@@ -71,7 +71,7 @@
             "page": ""
           }
         },
-        "collapsible_row_wq3mVp": {
+        "collapsible_row_qE7Umr": {
           "type": "collapsible_row",
           "settings": {
             "heading": "What sets Gryphon Singapore apart from other brands?",
@@ -80,7 +80,7 @@
             "page": ""
           }
         },
-        "collapsible_row_qEjr8U": {
+        "collapsible_row_yDHKXG": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I re-steep my tea?",
@@ -89,7 +89,7 @@
             "page": ""
           }
         },
-        "collapsible_row_99WkJj": {
+        "collapsible_row_cNiBJy": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Why do your teas contain flavourings?",
@@ -98,7 +98,7 @@
             "page": ""
           }
         },
-        "collapsible_row_yzpyhR": {
+        "collapsible_row_Cc9GjW": {
           "type": "collapsible_row",
           "settings": {
             "heading": "How long will my tea stay fresh?",
@@ -107,7 +107,7 @@
             "page": ""
           }
         },
-        "collapsible_row_3BwTVq": {
+        "collapsible_row_QTREHi": {
           "type": "collapsible_row",
           "settings": {
             "heading": "How should I store loose tea?",
@@ -118,12 +118,12 @@
         }
       },
       "block_order": [
-        "collapsible_row_FqjN7M",
-        "collapsible_row_wq3mVp",
-        "collapsible_row_qEjr8U",
-        "collapsible_row_99WkJj",
-        "collapsible_row_yzpyhR",
-        "collapsible_row_3BwTVq"
+        "collapsible_row_E3kxFP",
+        "collapsible_row_qE7Umr",
+        "collapsible_row_yDHKXG",
+        "collapsible_row_cNiBJy",
+        "collapsible_row_Cc9GjW",
+        "collapsible_row_QTREHi"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -140,11 +140,84 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_qcgTyN": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_FqjN7M": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are there any teas I should avoid during pregnancy or breastfeeding?",
+            "icon": "none",
+            "row_content": "<p>For personal health matters, we recommend consulting with your doctor or healthcare provider. A complete list of ingredients for each tea can be found at<a href=\"http://www.gryphontea.com\"> <span style=\"text-decoration:underline\">www.gryphontea.com</span></a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wq3mVp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I find the full list of ingredients?",
+            "icon": "none",
+            "row_content": "<p>Each tea's ingredient list is available on our website. Simply search by name or browse by category at<a href=\"http://www.gryphontea.com\"> <span style=\"text-decoration:underline\">www.gryphontea.com</span></a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qEjr8U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I find more information regarding allergies?",
+            "icon": "none",
+            "row_content": "<p>Please consult your healthcare provider before enjoying our teas if you have any allergy concerns.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_99WkJj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do your teas contain sugar or calories?",
+            "icon": "none",
+            "row_content": "<p>Most of our teas contain no added sugar, and are virtually free from calories and carbohydrates. However, as tea is a natural product, nutritional values may vary and are not always quantifiable.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yzpyhR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much caffeine do your teas contain?",
+            "icon": "none",
+            "row_content": "<p>Our teas are labelled with a general guide:<br/> ♣ Caffeine-Free<br/> ♣ Medium Caffeine<br/> ♣ High Caffeine<br/> Actual caffeine levels may also vary depending on brewing time, water temperature, and steeping method.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_FqjN7M",
+        "collapsible_row_wq3mVp",
+        "collapsible_row_qEjr8U",
+        "collapsible_row_99WkJj",
+        "collapsible_row_yzpyhR"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "HEALTH FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_A8TLtW",
     "main",
+    "collapsible_content_GrQqnz",
     "collapsible_content_qcgTyN"
   ]
 }
