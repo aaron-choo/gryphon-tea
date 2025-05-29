@@ -269,6 +269,33 @@
             "row_content": "<p>International shipping is currently unavailable until further notice.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_fWc9GK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When can I expect my order?",
+            "icon": "none",
+            "row_content": "<p>All teas are packed to order and require 2–3 business days for processing before shipping.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_x3rP4N": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I track my shipment?",
+            "icon": "none",
+            "row_content": "<p>Yes. You will receive an email with tracking details once your order has been shipped.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hFyWWF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I modify or cancel an order after payment?",
+            "icon": "none",
+            "row_content": "<p>Once payment is confirmed, orders cannot be modified or cancelled. For urgent issues, please contact us promptly.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -277,7 +304,10 @@
         "collapsible_row_yDHKXG",
         "collapsible_row_cNiBJy",
         "collapsible_row_Cc9GjW",
-        "collapsible_row_QTREHi"
+        "collapsible_row_QTREHi",
+        "collapsible_row_fWc9GK",
+        "collapsible_row_x3rP4N",
+        "collapsible_row_hFyWWF"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
