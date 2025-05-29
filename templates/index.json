@@ -11,7 +11,6 @@
   "sections": {
     "brand_story_banner_jUXnaG": {
       "type": "brand-story-banner",
-      "name": "Brand Story Banner",
       "settings": {}
     },
     "image_banner": {
@@ -135,7 +134,7 @@
             "image": "shopify://shop_images/themed.jpg",
             "caption": "",
             "heading": "A new chapter begins.",
-            "text": "<p>For the first time, explore Gryphon, Roji, and Monogram under one roof.</p>",
+            "text": "<p>For the first time, explore Gryphon, Roji, and Monogram under one roof. Explore our full curated collection and discover the art and science of tea with us.</p>",
             "button_label": "Shop Now",
             "button_link": ""
           }
