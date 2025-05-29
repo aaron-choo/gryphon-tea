@@ -227,9 +227,8 @@
         },
         "text_kU3ypA": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Let your instincts guide you to your perfect cup of tea.",
+            "text": "Delve into our interactive quiz designed to uncover your unique preferences.",
             "text_style": "body"
           }
         },
