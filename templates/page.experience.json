@@ -61,7 +61,7 @@
             "image": "shopify://shop_images/experience1.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Invite your guests into a world of flavour through curated tea experiences.</p><p>Led by our team of experts, these sessions introduce the art and science of tea, offering a guided journey through brewing techniques, pairings, and tasting rituals.</p>",
+            "text": "<p>Immerse your guests in the rich tapestry of tea culture through Gryphon’s curated experiences. We offer thoughtfully curated tea experiences designed to bring people together, whether you’re planning a corporate event, team retreat, or intimate gathering.<br/><br/>Led by our tea specialists, each experience is tailored to your audience’s interests and your event’s objectives, where you can:<br/><br/>• <strong>Discover</strong> the origins and nuances of various tea types<br/>• <strong>Engage</strong> in hands-on tea blending and brewing sessions<br/>• <strong>Savour</strong> curated pairings that highlight the harmony between tea and food</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -72,7 +72,7 @@
             "image": "shopify://shop_images/experience2.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>Ideal for hospitality, corporate, or lifestyle events that seek something thoughtful and refined.</p>",
+            "text": "<p>We design each experience to match your setting, audience, and goals. Whether it’s an immersive tea appreciation session for executives, a sensory-led wellness workshop, or a hospitality activation, we tailor our programmes to leave a lasting impression. Our experiences are perfect for:<br/><br/>• <strong>Team Bonding</strong>: Foster collaboration through shared sensory discovery<br/>• <strong>Lifestyle & Wellness Events</strong>: Promote mindful living with sessions focused on the wellness aspects of tea<br/>• <strong>Brand Activations</strong>: Enhance guest experiences with memorable tea tastings<br/><br/>Each session is crafted to leave a lasting impression, blending education with enjoyment.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -82,7 +82,6 @@
         "row_Yb73AA",
         "row_QrYQYk"
       ],
-      "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "adapt",
         "desktop_image_width": "medium",
@@ -172,7 +171,6 @@
         "column_3ygeaX",
         "column_XiBQAg"
       ],
-      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Our Partners",
         "heading_size": "h1",
@@ -194,7 +192,6 @@
     },
     "contact_form_cC8nHe": {
       "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
       "settings": {
         "heading": "Craft Your Own Experience",
         "heading_size": "h1",
