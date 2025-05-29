@@ -394,6 +394,48 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_7HgnDm": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_M3LiRm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need an account to shop online?",
+            "icon": "none",
+            "row_content": "<p>No, you may check out as a guest. However, creating an account enables faster checkout, order tracking, and access to exclusive promotions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jLew6B": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why should I register for an account?",
+            "icon": "none",
+            "row_content": "<p>Account holders are automatically enrolled in our Rewards Program and can accumulate points toward future purchases.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_M3LiRm",
+        "collapsible_row_jLew6B"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "ACCOUNT FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -401,6 +443,7 @@
     "main",
     "collapsible_content_m6geea",
     "collapsible_content_qcgTyN",
-    "collapsible_content_GrQqnz"
+    "collapsible_content_GrQqnz",
+    "collapsible_content_7HgnDm"
   ]
 }
