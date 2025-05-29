@@ -488,99 +488,9 @@
         "collapsible_row_fckCPX": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you ship internationally?",
+            "heading": "What event services does Gryphon Singapore offer? ",
             "icon": "none",
-            "row_content": "<p>International shipping is currently unavailable until further notice.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_YmLiEf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "When can I expect my order?",
-            "icon": "none",
-            "row_content": "<p>All teas are packed to order and require 2–3 business days for processing before shipping.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_4JMWP9": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I track my shipment?",
-            "icon": "none",
-            "row_content": "<p>Yes. You will receive an email with tracking details once your order has been shipped.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Wa8jky": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I modify or cancel an order after payment?",
-            "icon": "none",
-            "row_content": "<p>Once payment is confirmed, orders cannot be modified or cancelled. For urgent issues, please contact us promptly.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_cT4m4C": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Where can I view my order history?",
-            "icon": "none",
-            "row_content": "<p>Sign in to your account to view your order history.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_CqLdj9": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is your returns policy?",
-            "icon": "none",
-            "row_content": "<p>Returns are accepted for damaged, defective, or incorrect items not caused by shipping. Returns must be approved by Gryphon Singapore due to food and hygiene reasons. Shipping costs are borne by the customer unless otherwise stated. You may find out more about our returns policies <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><span style=\"text-decoration:underline\">here</span></a>. </p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_4biKXU": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Are your teaware products under warranty?",
-            "icon": "none",
-            "row_content": "<p>All teaware products are carefully inspected before dispatch. Warranty is not available for these items, but they are covered within our returns and exchanges policy should you face any issues with your product(s). You may find out more about our returns and exchanges policy <a href=\"/policies/refund-policy\" title=\"Refund Policy\">here</a>. </p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_ziVMfb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do I reach customer service?",
-            "icon": "none",
-            "row_content": "<p>You can submit your enquiry through our contact form <a href=\"/pages/contact\" title=\"Contact Us\"><span style=\"text-decoration:underline\">here</span></a>, or you can email us at <a href=\"mailto:teabits@gryphontea.com\" target=\"_blank\" title=\"mailto:teabits@gryphontea.com\">teabits@gryphontea.com</a>.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_RQMQ7r": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How are Gourmet teas packaged?",
-            "icon": "none",
-            "row_content": "<p>Each tea is packed in aroma-tight, resealable pouches to preserve freshness.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_kxTQEk": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do you offer samples?",
-            "icon": "none",
-            "row_content": "<p>We provide free samples are included with orders placed through Gryphon Singapore accounts. Requests for specific flavours may be accommodated at our discretion.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_QpeBGF": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do you provide gift wrapping?",
-            "icon": "none",
-            "row_content": "<p>At this time, we do not offer gift wrapping services.</p>",
+            "row_content": "<p>Led by our team of experts, these sessions introduce the art and science of tea, offering a guided journey through brewing techniques, pairings, and tasting rituals. For more information, please visit our Experience page <a href=\"/pages/experience\" title=\"Experience\"><span style=\"text-decoration:underline\">here</span></a>.</p>",
             "page": ""
           }
         }
@@ -591,17 +501,7 @@
         "collapsible_row_YH8987",
         "collapsible_row_bwQmWQ",
         "collapsible_row_CxBqdF",
-        "collapsible_row_fckCPX",
-        "collapsible_row_YmLiEf",
-        "collapsible_row_4JMWP9",
-        "collapsible_row_Wa8jky",
-        "collapsible_row_cT4m4C",
-        "collapsible_row_CqLdj9",
-        "collapsible_row_4biKXU",
-        "collapsible_row_ziVMfb",
-        "collapsible_row_RQMQ7r",
-        "collapsible_row_kxTQEk",
-        "collapsible_row_QpeBGF"
+        "collapsible_row_fckCPX"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
