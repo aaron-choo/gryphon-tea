@@ -51,53 +51,6 @@
         "show_text_below": false
       }
     },
-    "multicolumn_aeiJXt": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_LNfkyz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/wa_c26b29d2-1da5-469a-b3ef-66d0e2fe0b41.svg",
-            "title": "Send us a message on Whatsapp",
-            "text": "<p>Hours of operation: Monday–Sunday, 10AM - 6PM.</p>",
-            "link_label": "Send message",
-            "link": "https://wa.me/6588927475"
-          }
-        },
-        "column_NdjYHH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mail.svg",
-            "title": "Submit an enquiry",
-            "text": "<p>You will receive a response within 5 business days</p>",
-            "link_label": "Submit enquiry",
-            "link": "#shopify-section-template--23461853331490__form"
-          }
-        }
-      },
-      "block_order": [
-        "column_LNfkyz",
-        "column_NdjYHH"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "icon",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-1",
-        "border": true,
-        "full_button": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -106,22 +59,92 @@
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "collapsible_content_qcgTyN": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_FqjN7M": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where are your teas blended?",
+            "icon": "none",
+            "row_content": "<p>All our blends are hand-crafted in small batches in Singapore.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wq3mVp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What sets Gryphon Singapore apart from other brands?",
+            "icon": "none",
+            "row_content": "<p>Gryphon is an Asian artisanal tea brand built on nearly a century of family-owned heritage. Our blends are inspired by rich Asian cultures, crafted with the finest ingredients to deliver a sophisticated tea experience, and continuously improved upon for the last two decades.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qEjr8U": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I re-steep my tea?",
+            "icon": "none",
+            "row_content": "<p>Re-steeping is suitable for many teas, though flavour profiles may differ with each infusion. Tisanes are not recommended for re-steeping.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_99WkJj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why do your teas contain flavourings?",
+            "icon": "none",
+            "row_content": "<p>We use only natural flavourings to enhance the unique character of our blends. A wide range of unflavoured teas is also available.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yzpyhR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long will my tea stay fresh?",
+            "icon": "none",
+            "row_content": "<p>For the best flavour, we recommend consuming our teas within 2 years of purchase or before the date indicated.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3BwTVq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I store loose tea?",
+            "icon": "none",
+            "row_content": "<p>Store your teas in an airtight container, away from light, moisture, and heat.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_FqjN7M",
+        "collapsible_row_wq3mVp",
+        "collapsible_row_qEjr8U",
+        "collapsible_row_99WkJj",
+        "collapsible_row_yzpyhR",
+        "collapsible_row_3BwTVq"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "heading": "We’d love to hear from you",
+        "caption": "",
+        "heading": "Collapsible content",
         "heading_size": "h1",
-        "color_scheme": "scheme-2",
-        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner_A8TLtW",
-    "multicolumn_aeiJXt",
     "main",
-    "form"
+    "collapsible_content_qcgTyN"
   ]
 }
