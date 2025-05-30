@@ -357,7 +357,7 @@
         "column_b3FCnc": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-38.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -367,7 +367,7 @@
         "column_jbEPme": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-17.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -377,7 +377,7 @@
         "column_6PBMVU": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-37.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -387,7 +387,7 @@
         "column_jkDFxm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-13.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -397,7 +397,7 @@
         "column_GqBncq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-35.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -407,7 +407,67 @@
         "column_yFmcbb": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-24.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3RWmUY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-33.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8mcXmW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-36.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jLHTNG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-15.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fCwmrd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-21.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Dbkrre": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-19.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JbAzmp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-34.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -421,7 +481,13 @@
         "column_6PBMVU",
         "column_jkDFxm",
         "column_GqBncq",
-        "column_yFmcbb"
+        "column_yFmcbb",
+        "column_3RWmUY",
+        "column_8mcXmW",
+        "column_jLHTNG",
+        "column_fCwmrd",
+        "column_Dbkrre",
+        "column_JbAzmp"
       ],
       "settings": {
         "title": "Our Partners",
@@ -432,7 +498,7 @@
         "button_link": "",
         "columns_desktop": 6,
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-4",
         "border": false,
         "full_button": false,
