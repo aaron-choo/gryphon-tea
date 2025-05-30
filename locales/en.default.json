@@ -538,7 +538,15 @@
     "checkout": {
       "shop_policies": {
         "refund_policy": "Return and Exchange Policy"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Be included in the mailing list and receive 10% off your next order."
       }
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "marketing_checkbox_label": "Be included in the mailing list and receive 10% off your next order."
     }
   }
 }
