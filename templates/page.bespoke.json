@@ -151,6 +151,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_KqritL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-13_afe17ebd-c4fd-4ed8-b887-2330b03dc796.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -158,7 +168,8 @@
         "column_JtVDH6",
         "column_D9PDNW",
         "column_33MCjB",
-        "column_3ygeaX"
+        "column_3ygeaX",
+        "column_KqritL"
       ],
       "settings": {
         "title": "Our Partners",
@@ -167,7 +178,7 @@
         "image_ratio": "square",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-4",
