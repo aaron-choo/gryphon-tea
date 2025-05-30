@@ -105,7 +105,7 @@
         "column_BhyamD": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-21_ebba5f73-408d-4030-86e5-652b001e1e46.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -115,7 +115,7 @@
         "column_JtVDH6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-22.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -125,7 +125,7 @@
         "column_D9PDNW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-18.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -135,7 +135,7 @@
         "column_33MCjB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-23.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -145,7 +145,7 @@
         "column_3ygeaX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-20.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -155,7 +155,7 @@
         "column_XiBQAg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-19_54da70bc-0d1c-4636-ba50-6bf9a80cfb0f.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -180,7 +180,7 @@
         "button_link": "",
         "columns_desktop": 6,
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-4",
         "border": false,
         "full_button": false,
