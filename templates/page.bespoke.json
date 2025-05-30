@@ -105,7 +105,7 @@
         "column_BhyamD": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-17_67f49c2e-616d-438b-82ab-a4db37bb6596.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -115,7 +115,7 @@
         "column_JtVDH6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-14.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -125,7 +125,7 @@
         "column_D9PDNW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-15_f026364d-e71f-4ac9-918c-6cfd4dd9a922.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -135,7 +135,7 @@
         "column_33MCjB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-16.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -145,17 +145,7 @@
         "column_3ygeaX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_XiBQAg": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-13_afe17ebd-c4fd-4ed8-b887-2330b03dc796.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -168,8 +158,7 @@
         "column_JtVDH6",
         "column_D9PDNW",
         "column_33MCjB",
-        "column_3ygeaX",
-        "column_XiBQAg"
+        "column_3ygeaX"
       ],
       "settings": {
         "title": "Our Partners",
@@ -178,9 +167,9 @@
         "image_ratio": "square",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 6,
+        "columns_desktop": 5,
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-4",
         "border": false,
         "full_button": false,
