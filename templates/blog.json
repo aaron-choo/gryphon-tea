@@ -33,7 +33,7 @@
       ],
       "name": "Blog Banner",
       "settings": {
-        "image": "shopify://shop_images/EGL1.jpg",
+        "image": "shopify://shop_images/experience1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
