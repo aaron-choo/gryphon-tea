@@ -4015,3 +4015,14 @@ div#PBarNextFrameWrapper {
     margin-top: -6rem;
   }
 }
+
+.Rise__widget-panel::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(244, 244, 247);
+  height: 46px;
+}
