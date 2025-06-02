@@ -105,7 +105,7 @@
         "column_BhyamD": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-30.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -115,7 +115,7 @@
         "column_JtVDH6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-29.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -125,17 +125,7 @@
         "column_D9PDNW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_33MCjB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-26.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -145,7 +135,7 @@
         "column_3ygeaX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-24_905a4a58-6bab-471c-a7b3-1ae25b44e655.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -155,7 +145,17 @@
         "column_XiBQAg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-34_dfe2421d-e5e9-4c18-a675-c66887cc5755.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_33MCjB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-31.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -167,9 +167,9 @@
         "column_BhyamD",
         "column_JtVDH6",
         "column_D9PDNW",
-        "column_33MCjB",
         "column_3ygeaX",
-        "column_XiBQAg"
+        "column_XiBQAg",
+        "column_33MCjB"
       ],
       "custom_css": [
         "img {width: 80%; height: 80%; margin: 10%; object-fit: contain;}"
