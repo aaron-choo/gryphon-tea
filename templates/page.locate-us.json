@@ -65,7 +65,7 @@
         "column_3GkjQB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-06.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -75,7 +75,7 @@
         "column_hC9T6R": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-03.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -85,7 +85,7 @@
         "column_A3g6Np": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-10.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -95,7 +95,7 @@
         "column_A8BdAx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-02.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -105,7 +105,7 @@
         "column_Vk89CE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-01.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -115,7 +115,7 @@
         "column_dXBcTT": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-09.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -125,7 +125,7 @@
         "column_GbGYYz": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-07.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -135,7 +135,7 @@
         "column_k4zfcN": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-05.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -145,7 +145,7 @@
         "column_jVRrR3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-12.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -155,7 +155,7 @@
         "column_WxnX8U": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-04.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -165,7 +165,7 @@
         "column_gRBCAH": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-08.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -175,7 +175,7 @@
         "column_n4ByDr": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/GRYPHON_Logo-FA-RGB_Emblem-Dark.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-11.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -196,6 +196,9 @@
         "column_WxnX8U",
         "column_gRBCAH",
         "column_n4ByDr"
+      ],
+      "custom_css": [
+        "img {width: 80%; height: 80%; margin: 10%; object-fit: contain;}"
       ],
       "settings": {
         "title": "Our Partners",
