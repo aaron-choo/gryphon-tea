@@ -489,6 +489,9 @@
         "column_Dbkrre",
         "column_JbAzmp"
       ],
+      "custom_css": [
+        "img {width: 80%; height: 80%; object-fit: contain;}"
+      ],
       "settings": {
         "title": "Our Partners",
         "heading_size": "h1",
