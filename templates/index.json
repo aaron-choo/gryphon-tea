@@ -387,6 +387,7 @@
         "column_6PBMVU": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-40.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -396,6 +397,7 @@
         "column_8mcXmW": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-41.png",
             "title": "",
             "text": "",
             "link_label": "",
