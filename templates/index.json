@@ -490,7 +490,7 @@
         "column_JbAzmp"
       ],
       "custom_css": [
-        "img {width: 80%; height: 80%; object-fit: contain;}"
+        "img {width: 80%; height: 80%; margin: 10%; object-fit: contain;}"
       ],
       "settings": {
         "title": "Our Partners",
