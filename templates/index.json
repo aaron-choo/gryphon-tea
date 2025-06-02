@@ -354,10 +354,20 @@
     "multicolumn_wNUTzQ": {
       "type": "multicolumn",
       "blocks": {
+        "column_JbAzmp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-26_05c30b3c-ac5c-4db3-beba-c598de769c10.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_b3FCnc": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-38.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-30_9f12eeb9-f0c5-4d4e-8135-c2ccf5e604b3.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -367,7 +377,7 @@
         "column_jbEPme": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-17.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-29_514ee6e4-4d9e-4b10-9623-849dfd039301.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -384,20 +394,10 @@
             "link": ""
           }
         },
-        "column_jkDFxm": {
+        "column_8mcXmW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-13.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GqBncq": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-35.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-36.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -414,20 +414,20 @@
             "link": ""
           }
         },
-        "column_3RWmUY": {
+        "column_GqBncq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-33.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-20_df19592d-81a3-4085-8466-d7bb18c4fa5b.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_8mcXmW": {
+        "column_3RWmUY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-36.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-28_f67c0b32-ad6d-4f5f-b0cb-0b4a5b7fc5bf.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -444,10 +444,20 @@
             "link": ""
           }
         },
+        "column_jkDFxm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-13.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_fCwmrd": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-21.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-32_583bd88d-e550-4be0-84b8-616a886ff6a4.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -457,17 +467,7 @@
         "column_Dbkrre": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-19.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_JbAzmp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-34.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-16_f5a76dc0-234c-4c30-a3c3-45fbb9bf9d5e.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -476,18 +476,18 @@
         }
       },
       "block_order": [
+        "column_JbAzmp",
         "column_b3FCnc",
         "column_jbEPme",
         "column_6PBMVU",
-        "column_jkDFxm",
-        "column_GqBncq",
-        "column_yFmcbb",
-        "column_3RWmUY",
         "column_8mcXmW",
+        "column_yFmcbb",
+        "column_GqBncq",
+        "column_3RWmUY",
         "column_jLHTNG",
+        "column_jkDFxm",
         "column_fCwmrd",
-        "column_Dbkrre",
-        "column_JbAzmp"
+        "column_Dbkrre"
       ],
       "custom_css": [
         "img {width: 80%; height: 80%; margin: 10%; object-fit: contain;}"
