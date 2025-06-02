@@ -112,20 +112,20 @@
             "link": ""
           }
         },
-        "column_JtVDH6": {
+        "column_KqritL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-14.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-39.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_D9PDNW": {
+        "column_JtVDH6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-15_f026364d-e71f-4ac9-918c-6cfd4dd9a922.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-14.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -142,17 +142,17 @@
             "link": ""
           }
         },
-        "column_3ygeaX": {
+        "column_D9PDNW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-13_afe17ebd-c4fd-4ed8-b887-2330b03dc796.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-15_f026364d-e71f-4ac9-918c-6cfd4dd9a922.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_KqritL": {
+        "column_3ygeaX": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/LOGO_CLEAN_UP-13_afe17ebd-c4fd-4ed8-b887-2330b03dc796.png",
@@ -165,11 +165,11 @@
       },
       "block_order": [
         "column_BhyamD",
+        "column_KqritL",
         "column_JtVDH6",
-        "column_D9PDNW",
         "column_33MCjB",
-        "column_3ygeaX",
-        "column_KqritL"
+        "column_D9PDNW",
+        "column_3ygeaX"
       ],
       "custom_css": [
         "img {width: 80%; height: 80%; margin: 10%; object-fit: contain;}"
