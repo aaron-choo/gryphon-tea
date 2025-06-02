@@ -102,30 +102,20 @@
     "multicolumn_MkA4KP": {
       "type": "multicolumn",
       "blocks": {
-        "column_BhyamD": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-21_ebba5f73-408d-4030-86e5-652b001e1e46.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_JtVDH6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-22.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_D9PDNW": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/LOGO_CLEAN_UP-18.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BhyamD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-21_ebba5f73-408d-4030-86e5-652b001e1e46.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -142,6 +132,16 @@
             "link": ""
           }
         },
+        "column_XiBQAg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-19_54da70bc-0d1c-4636-ba50-6bf9a80cfb0f.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_3ygeaX": {
           "type": "column",
           "settings": {
@@ -152,10 +152,10 @@
             "link": ""
           }
         },
-        "column_XiBQAg": {
+        "column_JtVDH6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-19_54da70bc-0d1c-4636-ba50-6bf9a80cfb0f.png",
+            "image": "shopify://shop_images/LOGO_CLEAN_UP-22.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -164,12 +164,12 @@
         }
       },
       "block_order": [
-        "column_BhyamD",
-        "column_JtVDH6",
         "column_D9PDNW",
+        "column_BhyamD",
         "column_33MCjB",
+        "column_XiBQAg",
         "column_3ygeaX",
-        "column_XiBQAg"
+        "column_JtVDH6"
       ],
       "custom_css": [
         "img {width: 80%; height: 80%; margin: 10%; object-fit: contain;}"
