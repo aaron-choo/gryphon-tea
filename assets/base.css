@@ -2123,7 +2123,7 @@ input[type='checkbox'] {
     content: '';
     background-color: rgb(var(--color-foreground));
     position:absolute;
-    top:0;
+    top:-2px;
     left:0;
     width:2rem;
     height:2rem;

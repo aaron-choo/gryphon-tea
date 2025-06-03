@@ -34,7 +34,7 @@
           </span>
         </button>
       </div>
-      <div id="cart-notification-product" class="cart-notification-product"></div>
+      <div id="cart-notification-product" class="cart-notification-product !items-center"></div>
       <div class="cart-notification__links">
         <a
           href="{{ routes.cart_url }}"
@@ -44,7 +44,10 @@
           {{- 'general.cart.view_empty_cart' | t -}}
         </a>
         <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
-          <button class="button button--primary button--full-width" name="checkout">
+          <button
+            class="button button--primary button--full-width !bg-[rgb(var(--color-button-text))] !text-white"
+            name="checkout"
+          >
             {{ 'sections.cart.checkout' | t }}
           </button>
         </form>

@@ -102,6 +102,7 @@
             }
 
             :root {
+              --font-sans: Taro, {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
               --font-body-family: Taro, {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
               --font-body-style: {{ settings.type_body_font.style }};
               --font-body-weight: {{ settings.type_body_font.weight }};
@@ -823,7 +824,7 @@
 
     {% if product.available != true %}
       <style>
-        quantity-input.quantity {
+        body:not(.\/cart) quantity-input.quantity {
           display: none;
         }
         .shopify-payment-button {

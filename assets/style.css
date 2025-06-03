@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 4px;
     --text-xs: 1.2rem;
@@ -405,6 +406,15 @@
   .\!min-w-0 {
     min-width: calc(var(--spacing) * 0) !important;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .origin-\[44\%_80\%\] {
     transform-origin: 44% 80%;
   }
@@ -460,6 +470,9 @@
   }
   .content-start {
     align-content: flex-start;
+  }
+  .\!items-center {
+    align-items: center !important;
   }
   .items-center {
     align-items: center;
@@ -526,6 +539,9 @@
   .rounded-\[var\(--inputs-radius\)\] {
     border-radius: var(--inputs-radius);
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -536,6 +552,15 @@
   .\!bg-\[\#F3F4F5\] {
     background-color: #F3F4F5 !important;
   }
+  .\!bg-\[rgb\(var\(--color-button-text\)\)\] {
+    background-color: rgb(var(--color-button-text)) !important;
+  }
+  .\!bg-\[var\(rgb\(var\(--color-button-text\)\)\)\] {
+    background-color: var(rgb(var(--color-button-text))) !important;
+  }
+  .\!bg-black {
+    background-color: var(--color-black) !important;
+  }
   .\!bg-transparent {
     background-color: transparent !important;
   }
@@ -544,6 +569,15 @@
   }
   .bg-\[currentColor\] {
     background-color: currentColor;
+  }
+  .bg-\[var\(rgb\(var\(--color-button-text\)\)\)\] {
+    background-color: var(rgb(var(--color-button-text)));
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .mask-repeat {
+    mask-repeat: repeat;
   }
   .object-cover {
     object-fit: cover;
@@ -577,6 +611,15 @@
   }
   .\!font-\[Piloti\] {
     font-family: Piloti !important;
+  }
+  .\!font-sans {
+    font-family: var(--font-sans) !important;
+  }
+  .font-\[taro\] {
+    font-family: taro;
+  }
+  .font-sans {
+    font-family: var(--font-sans);
   }
   .\!text-5xl {
     font-size: var(--text-5xl) !important;
@@ -620,6 +663,10 @@
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .\!font-\[var\(--font-body-family\)\] {
+    --tw-font-weight: var(--font-body-family) !important;
+    font-weight: var(--font-body-family) !important;
   }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
@@ -672,6 +719,10 @@
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .ring {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -722,6 +773,10 @@
   .duration-\[calc\(var\(--timing-unit\)_\*_6\)\] {
     --tw-duration: calc(var(--timing-unit) * 6);
     transition-duration: calc(var(--timing-unit) * 6);
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
   }
   .ease-out {
     --tw-ease: var(--ease-out);
