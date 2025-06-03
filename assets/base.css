@@ -3923,12 +3923,24 @@ div#PBarNextFrameWrapper {
 }
 
 
-.article-template__content ul {
+.article-template__content{ 
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  ol {
-    list-style: number;
+  grid-gap: 2rem;
+
+  p {
+    img {
+      margin-top: 2rem;
+    }
+  }
+  
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    ol {
+      list-style: number;
+    }
   }
 }
 
