@@ -41,6 +41,7 @@
         },
         "rivo_loyalty_rewards_referrals_potential_points_tfBDBM": {
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+          "disabled": true,
           "settings": {
             "panel_color": "#FFFFFF",
             "panel_padding": 0,
@@ -48,7 +49,7 @@
             "subtext": "Earn points by signing up for our rewards program",
             "show_icon": false,
             "logged_out_only": false,
-            "custom_css": "#potential-points-text h3,\n#potential-points-text p {\nfont-family: Taro, sans-serif;\nfont-size: 1.2rem;\ncolor: rgba(var(--color-foreground), 0.75);\n}"
+            "custom_css": "#potential-points-text h3,\n#potential-points-text p {\nfont-family: Taro, sans-serif;\nfont-size: 1.2rem;\ncolor: #C17B46;\nopacity: 0.5;\n}"
           }
         },
         "rating_kdCQTq": {
