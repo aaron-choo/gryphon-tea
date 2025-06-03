@@ -43,12 +43,12 @@
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
           "settings": {
             "panel_color": "#FFFFFF",
-            "panel_padding": 10,
+            "panel_padding": 0,
             "title": "Order and get [potential_points] reward points",
             "subtext": "Earn points by signing up for our rewards program",
             "show_icon": false,
             "logged_out_only": false,
-            "custom_css": ""
+            "custom_css": "#potential-points-text h3,\n#potential-points-text p {\nfont-family: Taro, sans-serif;\nfont-size: inherit;\nfont-weight: normal;\n}"
           }
         },
         "rating_kdCQTq": {
