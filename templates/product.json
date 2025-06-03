@@ -48,7 +48,7 @@
             "subtext": "Earn points by signing up for our rewards program",
             "show_icon": false,
             "logged_out_only": false,
-            "custom_css": "#potential-points-text h3,\n#potential-points-text p {\nfont-family: Taro, sans-serif;\nfont-size: inherit;\nfont-weight: normal;\n}"
+            "custom_css": "#potential-points-text h3,\n#potential-points-text p {\nfont-family: Taro, sans-serif;\nfont-size: 1.2rem;\ncolor: rgba(var(--color-foreground), 0.75);\n}"
           }
         },
         "rating_kdCQTq": {
