@@ -56,8 +56,13 @@
           "type": "rating",
           "settings": {}
         },
+        "judge_me_reviews_preview_badge_Neci44": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "stamped_reviews_star_rating_badge_RUy7Re": {
           "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
           "settings": {
             "use_metafields": false,
             "sku_tagtype": "sku",
@@ -216,6 +221,7 @@
         "price",
         "rivo_loyalty_rewards_referrals_potential_points_tfBDBM",
         "rating_kdCQTq",
+        "judge_me_reviews_preview_badge_Neci44",
         "stamped_reviews_star_rating_badge_RUy7Re",
         "text_wbkft3",
         "variant_picker",
