@@ -59,7 +59,7 @@
           "settings": {
             "image": "shopify://shop_images/wa_c26b29d2-1da5-469a-b3ef-66d0e2fe0b41.svg",
             "title": "Send us a message on Whatsapp",
-            "text": "<p>Hours of operation: Monday–Sunday, 10AM - 6PM.</p>",
+            "text": "<p>Hours of operation: Monday–Sunday, 10AM - 5PM.</p>",
             "link_label": "Send message",
             "link": "https://wa.me/6588927475"
           }
