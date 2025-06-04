@@ -4038,3 +4038,16 @@ div#PBarNextFrameWrapper {
   background: #F6BD9D;
   height: 46px;
 }
+
+/* .jdgm-star {
+    padding: 0!important;
+}
+.jdgm-star.jdgm--on:before,
+.jdgm-star.jdgm--off:before {
+    content: "★"!important;
+    font-family: Times, serif;
+}
+
+.jdgm-star.jdgm--off:before {
+  opacity: 0.5!important;
+} */

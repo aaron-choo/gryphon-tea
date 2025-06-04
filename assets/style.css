@@ -539,9 +539,6 @@
   .rounded-\[var\(--inputs-radius\)\] {
     border-radius: var(--inputs-radius);
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -555,12 +552,6 @@
   .\!bg-\[rgb\(var\(--color-button-text\)\)\] {
     background-color: rgb(var(--color-button-text)) !important;
   }
-  .\!bg-\[var\(rgb\(var\(--color-button-text\)\)\)\] {
-    background-color: var(rgb(var(--color-button-text))) !important;
-  }
-  .\!bg-black {
-    background-color: var(--color-black) !important;
-  }
   .\!bg-transparent {
     background-color: transparent !important;
   }
@@ -569,12 +560,6 @@
   }
   .bg-\[currentColor\] {
     background-color: currentColor;
-  }
-  .bg-\[var\(rgb\(var\(--color-button-text\)\)\)\] {
-    background-color: var(rgb(var(--color-button-text)));
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .mask-repeat {
     mask-repeat: repeat;
@@ -614,12 +599,6 @@
   }
   .\!font-sans {
     font-family: var(--font-sans) !important;
-  }
-  .font-\[taro\] {
-    font-family: taro;
-  }
-  .font-sans {
-    font-family: var(--font-sans);
   }
   .\!text-5xl {
     font-size: var(--text-5xl) !important;
@@ -663,10 +642,6 @@
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
-  }
-  .\!font-\[var\(--font-body-family\)\] {
-    --tw-font-weight: var(--font-body-family) !important;
-    font-weight: var(--font-body-family) !important;
   }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
