@@ -43,7 +43,7 @@
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
           "disabled": true,
           "settings": {
-            "panel_color": "#FFFFFF",
+            "panel_color": "#ffffff",
             "panel_padding": 0,
             "title": "Order and get [potential_points] reward points",
             "subtext": "Earn points by signing up for our rewards program",
@@ -258,6 +258,7 @@
       "blocks": {
         "stamped_reviews_main_widget_BwCYEr": {
           "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
           "settings": {
             "take_questions": 0,
             "animation": true,
@@ -268,10 +269,15 @@
             "use_metafields": false,
             "sku_tagtype": "sku"
           }
+        },
+        "judge_me_reviews_review_widget_9wrKC8": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
-        "stamped_reviews_main_widget_BwCYEr"
+        "stamped_reviews_main_widget_BwCYEr",
+        "judge_me_reviews_review_widget_9wrKC8"
       ],
       "custom_css": [],
       "settings": {
