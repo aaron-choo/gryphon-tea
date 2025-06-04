@@ -42,8 +42,8 @@
         "color_scheme": "scheme-5",
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
-        "heading_custom_position": "top-right",
-        "text_custom_position": "top-left",
+        "heading_custom_position": "top-left",
+        "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
@@ -126,7 +126,7 @@
         "collapsible_row_Bb4DhC"
       ],
       "custom_css": [
-        ".color-scheme-2 {background: #A7D4EE;}"
+        ".color-scheme-2 {background: #a7d4ee;}"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
