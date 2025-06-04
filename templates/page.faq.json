@@ -125,15 +125,18 @@
         "collapsible_row_8jYgGt",
         "collapsible_row_Bb4DhC"
       ],
+      "custom_css": [
+        ".color-scheme-2 {background: #A7D4EE;}"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "TEA FAQ",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
+        "layout": "section",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
@@ -197,14 +200,17 @@
         "collapsible_row_99WkJj",
         "collapsible_row_yzpyhR"
       ],
+      "custom_css": [
+        ".color-scheme-2 {background: #f6bd9d;}"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "HEALTH FAQ",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
+        "layout": "section",
+        "container_color_scheme": "scheme-1",
         "color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
@@ -379,15 +385,18 @@
         "collapsible_row_Vmbrip",
         "collapsible_row_8bUXhJ"
       ],
+      "custom_css": [
+        ".color-scheme-2 {background: #edcfd0;}"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "SHOPPING FAQ",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
+        "layout": "section",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
@@ -421,14 +430,17 @@
         "collapsible_row_M3LiRm",
         "collapsible_row_jLew6B"
       ],
+      "custom_css": [
+        ".color-scheme-2 {background: #efda8f;}"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "ACCOUNT FAQ",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
+        "layout": "section",
+        "container_color_scheme": "scheme-1",
         "color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
@@ -503,15 +515,18 @@
         "collapsible_row_CxBqdF",
         "collapsible_row_fckCPX"
       ],
+      "custom_css": [
+        ".color-scheme-2 {background: #b9b6e9;}"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "TRADE FAQ",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
+        "layout": "section",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
