@@ -319,6 +319,7 @@
       "block_order": [
         "heading_PhjPAr"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -348,6 +349,7 @@
         },
         "judge_me_reviews_all_reviews_text_a4hMPi": {
           "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {}
         },
         "judge_me_reviews_featured_carousel_YCxwjD": {
