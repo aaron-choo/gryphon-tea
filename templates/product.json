@@ -54,6 +54,7 @@
         },
         "rating_kdCQTq": {
           "type": "rating",
+          "disabled": true,
           "settings": {}
         },
         "judge_me_reviews_preview_badge_Neci44": {
