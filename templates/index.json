@@ -163,7 +163,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
+        "collection": "best-sellers",
         "products_to_show": 8,
         "title": "Curated Selections",
         "heading_size": "h1",
