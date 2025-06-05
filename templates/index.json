@@ -136,7 +136,7 @@
             "heading": "A new chapter begins.",
             "text": "<p>For the first time, explore Gryphon, Monogram, and Roji under one roof. </p><p>Explore our full collection with 20% site wide using the code “<strong>newchapter</strong>” from now till 15 June.</p>",
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "shopify://collections/all"
           }
         }
       },
