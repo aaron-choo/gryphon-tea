@@ -4039,6 +4039,19 @@ div#PBarNextFrameWrapper {
   height: 46px;
 }
 
+.\/policies\/terms-of-service .rte ol {
+  list-style: decimal;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  ul {
+    list-style: disc;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 /* .jdgm-star {
     padding: 0!important;
 }
