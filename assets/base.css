@@ -1307,6 +1307,12 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
 }
 
+.button.color-override:after {
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+      currentColor,
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+}
+
 .quick-add__submit{
   overflow:hidden;
   border-radius: 0;
@@ -1359,6 +1365,12 @@ button.shopify-payment-button__button--unbranded {
   --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+}
+
+.button.color-override:not([disabled]):hover::after {
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+      currentColor,
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
@@ -4064,3 +4076,23 @@ div#PBarNextFrameWrapper {
 .jdgm-star.jdgm--off:before {
   opacity: 0.5!important;
 } */
+
+.mobile-font-override {
+  @media screen and (max-width: 750px) {
+    &.sm {
+      font-size:calc(var(--font-heading-scale) * 2rem);
+    }
+    &.md {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+    }
+    &.lg {
+      font-size: calc(var(--font-heading-scale) * 4rem);
+    }
+    &.xl {
+      font-size: calc(var(--font-heading-scale) * 5rem);
+    }
+    &.2xl {
+     font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
+    }
+  }
+}
