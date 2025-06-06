@@ -4080,19 +4080,19 @@ div#PBarNextFrameWrapper {
 .mobile-font-override {
   @media screen and (max-width: 750px) {
     &.sm {
-      font-size:calc(var(--font-heading-scale) * 2rem);
+      font-size:calc(var(--font-heading-scale) * 2rem)!important;
     }
     &.md {
-    font-size: calc(var(--font-heading-scale) * 3rem);
+    font-size: calc(var(--font-heading-scale) * 3rem)!important;
     }
     &.lg {
-      font-size: calc(var(--font-heading-scale) * 4rem);
+      font-size: calc(var(--font-heading-scale) * 4rem)!important;
     }
     &.xl {
-      font-size: calc(var(--font-heading-scale) * 5rem);
+      font-size: calc(var(--font-heading-scale) * 5rem)!important;
     }
     &.2xl {
-     font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
+     font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem))!important;
     }
   }
 }
