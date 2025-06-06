@@ -20,7 +20,8 @@
           "type": "heading",
           "settings": {
             "heading": "A new chapter begins.",
-            "heading_size": "hxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text": {
@@ -76,7 +77,8 @@
           "type": "heading",
           "settings": {
             "heading": "Lorem ipsum dolor sit amet",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_size_mobile": "none"
           }
         },
         "text_tBhW6B": {
@@ -132,7 +134,8 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Shaped with Time, Defined by Purpose</strong>",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_size_mobile": "md"
           }
         },
         "text_DJVtQm": {
@@ -278,7 +281,8 @@
           "type": "heading",
           "settings": {
             "heading": "Let your instincts guide you to your perfect cup of tea.",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_size_mobile": "none"
           }
         },
         "text_kU3ypA": {
