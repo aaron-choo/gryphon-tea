@@ -125,6 +125,62 @@
         "show_text_below": false
       }
     },
+    "image_banner_MVwWBQ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_bijqV3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Shaped with Time, Defined by Purpose</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_DJVtQm": {
+          "type": "text",
+          "settings": {
+            "text": "Driven by the same vision as when we first began, we present the next wave of our refreshed Artisan Selection.",
+            "text_style": "body"
+          }
+        },
+        "buttons_WiM6T8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "https://gryphontea.com/collections/new-in",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bijqV3",
+        "text_DJVtQm",
+        "buttons_WiM6T8"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/DSC00795.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": false,
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "text_color_override": "#ffffff",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "text_custom_position": "top-right",
+        "button_custom_position": "bottom-center",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
+    },
     "multirow_LVgLV3": {
       "type": "multirow",
       "blocks": {
@@ -575,6 +631,7 @@
     "brand_story_banner_jUXnaG",
     "image_banner",
     "image_banner_LH6MFT",
+    "image_banner_MVwWBQ",
     "multirow_LVgLV3",
     "featured_collection",
     "rich_text_grTYjQ",
