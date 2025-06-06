@@ -200,7 +200,11 @@
                     or section.settings.text_color_override == 'transparent'
                   -%}
                   {% else %}
-                    style="color: {{ section.settings.text_color_override }};"
+                    {% if block.settings.button_style_secondary_1 %}
+                      style="color: {{ section.settings.text_color_override }};"
+                    {% else %}
+                      style="background: {{ section.settings.text_color_override }};"
+                    {% endif %}
                   {%- endif -%}
                 >
                   {{- block.settings.button_label_1 | escape -}}
