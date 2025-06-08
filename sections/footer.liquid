@@ -108,7 +108,8 @@
                   required
                 >
                 <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                  {{ 'newsletter.label' | t }}
+                  {% comment %} {{ 'newsletter.label' | t }} {% endcomment %}
+                  Enter your email address
                 </label>
                 <button
                   type="submit"
