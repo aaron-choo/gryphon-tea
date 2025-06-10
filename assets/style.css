@@ -32,6 +32,7 @@
     --font-weight-light: 300;
     --tracking-normal: 0em;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -730,6 +731,10 @@
   .duration-\[calc\(var\(--timing-unit\)_\*_6\)\] {
     --tw-duration: calc(var(--timing-unit) * 6);
     transition-duration: calc(var(--timing-unit) * 6);
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
   }
   .ease-out {
     --tw-ease: var(--ease-out);
