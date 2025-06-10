@@ -170,7 +170,7 @@
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "is_hero_banner": false,
+        "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-4",
         "text_color_override": "#ffffff",
