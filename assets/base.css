@@ -4091,7 +4091,7 @@ div#PBarNextFrameWrapper {
     &.xl {
       font-size: calc(var(--font-heading-scale) * 5rem)!important;
     }
-    &.2xl {
+    &.\32 xl {
      font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem))!important;
     }
   }
