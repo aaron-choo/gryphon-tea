@@ -732,10 +732,6 @@
     --tw-duration: calc(var(--timing-unit) * 6);
     transition-duration: calc(var(--timing-unit) * 6);
   }
-  .ease-in-out {
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
-  }
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
