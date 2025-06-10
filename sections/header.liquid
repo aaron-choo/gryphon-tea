@@ -172,7 +172,7 @@
             <div class="main_logo_container">
               {{
                 settings.logo
-                | image_url: width: 600
+                | image_url: width: 600, format: 'webp'
                 | image_tag:
                   class: 'header__heading-logo motion-reduce',
                   widths: widths,
@@ -187,7 +187,7 @@
               <div class="hover_logo_container absolute top-0 right-0 w-full h-full p-[1rem] -translate-y-full opacity-0">
                 {{
                   section.settings.hover_logo
-                  | image_url: width: 600
+                  | image_url: width: 600, format: 'webp'
                   | image_tag:
                     class: 'header__heading-logo motion-reduce',
                     widths: widths,
@@ -232,7 +232,7 @@
             {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
             {{
               settings.logo
-              | image_url: width: 600
+              | image_url: width: 600, format: 'webp'
               | image_tag:
                 class: 'header__heading-logo',
                 widths: widths,
