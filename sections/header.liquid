@@ -308,7 +308,11 @@
       {%- endif -%}
 
       {%- if settings['enable-wishlist'] -%}
-        <a href="/pages/wishlist" class="header__icon header__icon--wishlist link focus-inset small-hide">
+        <a
+          href="/pages/wishlist"
+          class="header__icon header__icon--wishlist link focus-inset small-hide"
+          aria-label="Wishlist"
+        >
           {{ 'icon-wishlist.svg' | inline_asset_content }}
         </a>
       {% endif %}
