@@ -50,7 +50,7 @@
     assign fetch_priority = 'high'
   endif
 
-  if section.settings.is_hero_banner or request.path == '/'
+  if section.settings.is_hero_banner
     assign image_loading = 'eager'
   else
     assign image_loading = 'lazy'
