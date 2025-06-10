@@ -49,6 +49,12 @@
   if section.index == 1
     assign fetch_priority = 'high'
   endif
+
+  if section.settings.is_hero_banner
+    assign image_loading = 'eager'
+  else
+    assign image_loading = 'lazy'
+  endif
 -%}
 
 <div
@@ -82,6 +88,7 @@
           sizes: sizes,
           widths: widths,
           fetchpriority: fetch_priority,
+          loading: image_loading,
           preload: section.settings.is_hero_banner,
           onload: 'this.style.opacity=1'
       }}
@@ -117,6 +124,7 @@
           class: image_class_2,
           sizes: sizes,
           widths: widths,
+          loading: image_loading,
           fetchpriority: fetch_priority,
           preload: section.settings.is_hero_banner,
           onload: 'this.style.opacity=1'
