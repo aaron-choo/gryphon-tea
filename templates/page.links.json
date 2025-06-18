@@ -70,7 +70,7 @@
         "column_L8qXxq": {
           "type": "column",
           "settings": {
-            "title": "Find our teas on Shopee",
+            "title": "Shop our teas on Shopee",
             "text": "",
             "link_label": "",
             "link": "https://shopee.sg/gryphonteacompany"
@@ -79,10 +79,19 @@
         "column_bPfUzQ": {
           "type": "column",
           "settings": {
-            "title": "Find our products on Lazada",
+            "title": "Buy our products on Lazada",
             "text": "",
             "link_label": "",
             "link": "https://www.lazada.sg/shop/gryphon-tea-company"
+          }
+        },
+        "column_PwNgKz": {
+          "type": "column",
+          "settings": {
+            "title": "Locate our retail partners",
+            "text": "",
+            "link_label": "",
+            "link": "https://gryphontea.com/pages/locate-us"
           }
         },
         "column_MLkfGX": {
@@ -99,6 +108,7 @@
         "column_39diNy",
         "column_L8qXxq",
         "column_bPfUzQ",
+        "column_PwNgKz",
         "column_MLkfGX"
       ],
       "name": "t:sections.multicolumn.presets.name",
