@@ -35,7 +35,7 @@
       "settings": {
         "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-0981.jpg",
         "image_overlay_opacity": 35,
-        "image_height": "small",
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
