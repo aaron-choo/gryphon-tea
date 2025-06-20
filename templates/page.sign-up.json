@@ -15,14 +15,15 @@
         "heading_mrX8JF": {
           "type": "heading",
           "settings": {
-            "heading": "{{ page.title }}",
-            "heading_size": "hxl"
+            "heading": "Hello there.",
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text_TcJNHy": {
           "type": "text",
           "settings": {
-            "text": "{{ page.metafields.custom.excerpt.value }}",
+            "text": "From new experiences to the latest promotions, join our community and always receive the word first.",
             "text_style": "body"
           }
         }
@@ -32,8 +33,9 @@
         "text_TcJNHy"
       ],
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "extra-small",
+        "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-0981.jpg",
+        "image_overlay_opacity": 35,
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -51,53 +53,6 @@
         "show_text_below": false
       }
     },
-    "multicolumn_aeiJXt": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_LNfkyz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/wa_c26b29d2-1da5-469a-b3ef-66d0e2fe0b41.svg",
-            "title": "Send us a message on Whatsapp",
-            "text": "<p>Hours of operation: Monday–Sunday, 10AM - 5PM.</p>",
-            "link_label": "Send message",
-            "link": "https://wa.me/6588927475"
-          }
-        },
-        "column_NdjYHH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mail.svg",
-            "title": "Submit an enquiry",
-            "text": "<p>You will receive a response within 5 business days</p>",
-            "link_label": "Submit enquiry",
-            "link": "#shopify-section-template--23461853331490__form"
-          }
-        }
-      },
-      "block_order": [
-        "column_LNfkyz",
-        "column_NdjYHH"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "icon",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-1",
-        "border": true,
-        "full_button": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -105,23 +60,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "We’d love to hear from you",
-        "heading_size": "h1",
-        "color_scheme": "scheme-2",
-        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
     }
   },
   "order": [
     "image_banner_A8TLtW",
-    "multicolumn_aeiJXt",
-    "main",
-    "form"
+    "main"
   ]
 }
