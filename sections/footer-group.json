@@ -53,7 +53,7 @@
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
         "newsletter_heading": "<p>Crafted for<br/>Connection</p>",
-        "newsletter_legal": "<p>Sip on something new.<br/>Join our mailing list to enjoy 10% off your next order and be the first to hear our latest news.</p>",
+        "newsletter_legal": "<p>Sip on something new.</p><p> </p><p>Join our mailing list to enjoy 10% off your next order and be the first to hear our latest news.</p>",
         "copyright_text": "<p><a href=\"https://vast.sg\" target=\"_blank\" title=\"https://vast.sg\">©</a> 2025 GRYPHON® SINGAPORE</p>",
         "copyright_disclaimer": "<p>All material on this site is copyrighted by Gryphon® Singapore. Gryphon® Singapore is a registered trademark.</p><p>No images or copy on this site may be used without written permission by Gryphon® Singapore.</p>",
         "enable_follow_on_shop": false,
