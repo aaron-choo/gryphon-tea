@@ -1,0 +1,127 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_A8TLtW": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_mrX8JF": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "hxl"
+          }
+        },
+        "text_TcJNHy": {
+          "type": "text",
+          "settings": {
+            "text": "{{ page.metafields.custom.excerpt.value }}",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mrX8JF",
+        "text_TcJNHy"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "extra-small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "text_color_override": "rgba(0,0,0,0)",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "text_custom_position": "top-right",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
+      }
+    },
+    "multicolumn_aeiJXt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LNfkyz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/wa_c26b29d2-1da5-469a-b3ef-66d0e2fe0b41.svg",
+            "title": "Send us a message on Whatsapp",
+            "text": "<p>Hours of operation: Monday–Sunday, 10AM - 5PM.</p>",
+            "link_label": "Send message",
+            "link": "https://wa.me/6588927475"
+          }
+        },
+        "column_NdjYHH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mail.svg",
+            "title": "Submit an enquiry",
+            "text": "<p>You will receive a response within 5 business days</p>",
+            "link_label": "Submit enquiry",
+            "link": "#shopify-section-template--23461853331490__form"
+          }
+        }
+      },
+      "block_order": [
+        "column_LNfkyz",
+        "column_NdjYHH"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "icon",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "border": true,
+        "full_button": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "We’d love to hear from you",
+        "heading_size": "h1",
+        "color_scheme": "scheme-2",
+        "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "image_banner_A8TLtW",
+    "multicolumn_aeiJXt",
+    "main",
+    "form"
+  ]
+}
