@@ -62,6 +62,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-left",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": false,
@@ -119,6 +120,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-left",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": false,
@@ -133,15 +135,23 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Shaped with Time, Defined by Purpose</strong>",
+            "heading": "<strong>Reintroducing Roji</strong>",
             "heading_size": "h0",
             "heading_size_mobile": "md"
+          }
+        },
+        "subheading_WDFcaT": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Guided by tradition but unbound from it.",
+            "subheading_size": "h1",
+            "subheading_size_mobile": "none"
           }
         },
         "text_DJVtQm": {
           "type": "text",
           "settings": {
-            "text": "Driven by the same vision as when we first began, we present the next wave of our refreshed Artisan Selection.",
+            "text": "Explore Roji’s range of reimagined Japanese teas at 15% off using “enjoyroji” with a minimum spend of $60 from now till 29 June.",
             "text_style": "body"
           }
         },
@@ -149,7 +159,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "https://gryphontea.com/collections/new-in",
+            "button_link_1": "shopify://collections/roji",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -159,12 +169,13 @@
       },
       "block_order": [
         "heading_bijqV3",
+        "subheading_WDFcaT",
         "text_DJVtQm",
         "buttons_WiM6T8"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/DSC00795_1.jpg",
+        "image": "shopify://shop_images/momo-VI_Sqaure-2.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
@@ -176,8 +187,9 @@
         "text_color_override": "#ffffff",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
-        "text_custom_position": "top-right",
-        "button_custom_position": "bottom-center",
+        "subheading_custom_position": "top-right",
+        "text_custom_position": "bottom-left",
+        "button_custom_position": "bottom-right",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
@@ -322,6 +334,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": false,
         "heading_custom_position": "top-right",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-left",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
