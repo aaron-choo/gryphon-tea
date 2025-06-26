@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/momo-VI_Sqaure-2.png",
+        "image": "shopify://shop_images/momo-VI_Sqaure-2_575f8653-f753-44d8-88f8-fa1ea703c8e3.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
