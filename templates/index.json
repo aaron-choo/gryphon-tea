@@ -135,16 +135,23 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Reintroducing Roji</strong>",
+            "heading": "<strong>Reintroducing Monogram</strong>",
             "heading_size": "h0",
             "heading_size_mobile": "md"
+          }
+        },
+        "text_Dn6cNP": {
+          "type": "text",
+          "settings": {
+            "text": "Experience the art of tea layering with the code '<strong>enjoymonogram</strong>' for 15% off when you spend $60 or more from now till 13 July.",
+            "text_style": "body"
           }
         },
         "buttons_WiM6T8": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify://collections/roji",
+            "button_link_1": "shopify://collections/monogram",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -154,7 +161,7 @@
         "subheading_WDFcaT": {
           "type": "subheading",
           "settings": {
-            "subheading": "Guided by tradition but unbound from it.",
+            "subheading": "Let Your Insticnts Guide You.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -162,12 +169,13 @@
       },
       "block_order": [
         "heading_bijqV3",
+        "text_Dn6cNP",
         "buttons_WiM6T8",
         "subheading_WDFcaT"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Website_Momo_Banner.jpg",
+        "image": "shopify://shop_images/monogram-hero.jpg",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
@@ -181,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-left",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-right",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
