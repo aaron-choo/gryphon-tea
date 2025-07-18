@@ -190,22 +190,43 @@
     },
     "image_banner_YkFxwH": {
       "type": "image-banner",
+      "blocks": {
+        "heading_99L9Pz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>We're at Sentosa GrillFest!</strong>",
+            "heading_size": "h0",
+            "heading_size_mobile": "none"
+          }
+        },
+        "text_gcTD8V": {
+          "type": "text",
+          "settings": {
+            "text": "Fancy some tea cocktails or iced refreshments? Come find us at the Emerald Pavilion, every Friday to Sunday from now till 10 August!",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_99L9Pz",
+        "text_gcTD8V"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/DSC01916.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 30,
         "image_height": "medium",
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "top-left",
         "desktop_content_alignment": "center",
         "is_hero_banner": false,
-        "show_text_box": true,
-        "color_scheme": "",
-        "text_color_override": "transparent",
-        "custom_positioning": false,
-        "heading_custom_position": "top-left",
-        "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "text_color_override": "#f4f4f7",
+        "custom_positioning": true,
+        "heading_custom_position": "top-right",
+        "subheading_custom_position": "bottom-right",
+        "text_custom_position": "bottom-right",
         "button_custom_position": "bottom-right",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
