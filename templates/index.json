@@ -135,40 +135,48 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Reintroducing Monogram</strong>",
+            "heading": "Crunch, Sip, Repeat.",
             "heading_size": "h0",
             "heading_size_mobile": "md"
+          }
+        },
+        "subheading_WDFcaT": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Your Perfect Snacktime Duo.",
+            "subheading_size": "h1",
+            "subheading_size_mobile": "none"
+          }
+        },
+        "text_xABBaF": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy a curated set of 3 gourmet spiced potato crisps worth $14.90 from The Golden Duck with every purchase of 4 Cold Brewed Sparkling Tea Packs. Available while stocks last.",
+            "text_style": "body"
           }
         },
         "buttons_WiM6T8": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify://collections/monogram",
+            "button_link_1": "shopify://collections/gryphon-tea-co",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
-        },
-        "subheading_WDFcaT": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Let Your Instincts Guide You.",
-            "subheading_size": "h1",
-            "subheading_size_mobile": "none"
-          }
         }
       },
       "block_order": [
         "heading_bijqV3",
-        "buttons_WiM6T8",
-        "subheading_WDFcaT"
+        "subheading_WDFcaT",
+        "text_xABBaF",
+        "buttons_WiM6T8"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/monogram-hero.jpg",
-        "image_overlay_opacity": 10,
+        "image": "shopify://shop_images/DSC01824.jpg",
+        "image_overlay_opacity": 25,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -176,12 +184,12 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-4",
-        "text_color_override": "#ffffff",
+        "text_color_override": "#f4f4f7",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-left",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-right",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
