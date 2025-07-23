@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_size_mobile": "none"
           }
         },
         "text_MrcqfT": {
@@ -44,6 +45,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": false,
@@ -76,11 +78,23 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "row_ECGfTq": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/DSC02108.jpg",
+            "caption": "",
+            "heading": "",
+            "text": "<p>Gryphon is also recognized as a Champion of Good.<br/><br/>Awarded by the Company of Good, this national recognition reflects our Corporate Purpose, along with our work across 5 main impact areas: People, Society, Governance, Environment and Economic Impact.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "row_Yb73AA",
-        "row_QrYQYk"
+        "row_QrYQYk",
+        "row_ECGfTq"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
