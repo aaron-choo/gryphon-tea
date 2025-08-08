@@ -135,7 +135,7 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "Reintroducing our Gourmet Selection.",
+            "heading": "Reintroducing our Travel Series",
             "heading_size": "h0",
             "heading_size_mobile": "md"
           }
@@ -143,7 +143,7 @@
         "subheading_WDFcaT": {
           "type": "subheading",
           "settings": {
-            "subheading": "Blended with expertise, rooted in tradition.",
+            "subheading": "An Ode to Singapore, Captured in Every Blend.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -151,7 +151,7 @@
         "text_xABBaF": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "Discover our travel series with 15% off with the code ‘enjoytravel’ with a minimum spend of $60 or more. From now till 11 August. ",
             "text_style": "body"
           }
         },
@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/DSC02204-2.jpg",
+        "image": "shopify://shop_images/TRAVELSERIESBANNER.jpg",
         "image_overlay_opacity": 25,
         "image_height": "medium",
         "image_behavior": "none",
@@ -188,8 +188,8 @@
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "text_custom_position": "bottom-left",
+        "button_custom_position": "bottom-right",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
