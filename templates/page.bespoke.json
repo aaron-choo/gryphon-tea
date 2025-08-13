@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "hxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text_MrcqfT": {
@@ -44,6 +45,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": false,
@@ -61,7 +63,18 @@
             "image": "shopify://shop_images/bespoke1.jpg",
             "caption": "",
             "heading": "",
-            "text": "<p>At Gryphon, we believe that tea is an expression of individuality and artistry. Our bespoke blending service invites you to co-create a tea that’s crafted with precision, personality, and purpose. Whether you’re designing a signature blend for your brand, occasion, or gifting, we bring nearly a century of tea expertise to guide you.<br/><br/>Your journey begins with a consultation with our tea specialists, where we understand your preferences and intentions. From there, we work with you to explore a curated palette of premium teas, florals, herbs, and botanicals — all carefully pieced for a blend that tells your story.</p>",
+            "text": "<p>At Gryphon, we believe that tea is an expression of individuality and artistry. Our bespoke tea blending service is an invitation to co-create a tea that reflects your vision, crafted with the same precision and care that defines every blend we make.</p><p><br/>Whether it’s a signature flavour for your brand, a thoughtful wedding favour, or a personalised corporate gift, we bring nearly a century of tea expertise to help bring your idea to life. From the first conversation to the final sip, your story is woven into every detail.</p><p><strong><br/>What is a Bespoke Tea Blend?</strong></p><p><br/>A bespoke tea blend is a creation made exclusively for you, from selecting the tea base to layering florals, herbs, spices, and botanicals that capture your chosen flavour profile. It’s a sensory collaboration, where our master tea blender combines your inspiration with our craft to create a tea that is truly one-of-a-kind.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_pVT8CE": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-0981.jpg",
+            "caption": "",
+            "heading": "<strong>Who We Create For</strong>",
+            "text": "<p>Our bespoke tea service is designed to serve a wide range of needs:</p><h3><strong>Brand Collaborations & Private Label Commissions</strong></h3><p>Co-create exclusive blends that reflect your brand story and engage your audience.</p><h3><strong>Events & Weddings</strong></h3><p>Give guests a meaningful memento, blended with meaningful beauty.</p><h3><strong>Corporate Gifting</strong></h3><p>Impress clients and partners with tea gifts that embody your brand’s elegance and purpose.</p><h3><strong>Hospitality & F&B</strong></h3><p>Design a signature blend that elevates your menu and becomes part of your brand identity.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -71,8 +84,8 @@
           "settings": {
             "image": "shopify://shop_images/bespoke2.jpg",
             "caption": "",
-            "heading": "",
-            "text": "<p>Our bespoke offerings are ideal for:<br/><br/>• <strong>Brand Collaborations & Private Label Commissions</strong>: Co-create exclusive blends that speak to your audience.<br/>• <strong>Events & Weddings</strong>: Give your guests a thoughtful memento, blended with meaning.<br/>• <strong>Corporate Gifting</strong>: Impress clients and partners with personalized tea blends that embody your brand’s values<br/><br/>Each bespoke creation is a testament to Gryphon’s heritage of craftsmanship and innovation. From the initial consultation to the final packaging, we ensure that every detail resonates with quality and sophistication. Begin your tea journey with us.</p>",
+            "heading": "<strong>The Bespoke Process</strong>",
+            "text": "<p>Gryphon’s bespoke tea blending process is simple:</p><h3><strong>Step 1: Consultation</strong></h3><p>We learn your vision, preferences, and intended audience.</p><h3><strong>Step 2: Ingredient Curation</strong></h3><p>Explore base teas, florals, herbs, and botanicals from our curated palette.</p><h3><strong>Step 3: Blending & Tasting</strong></h3><p>Your recipe is refined through tasting sessions until perfected.</p><h3><strong>Step 4: Packaging</strong></h3><p>Select from our signature designs or work with us on custom options.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -80,6 +93,7 @@
       },
       "block_order": [
         "row_Yb73AA",
+        "row_pVT8CE",
         "row_QrYQYk"
       ],
       "settings": {
@@ -97,6 +111,49 @@
         "overlap": 48,
         "padding_top": 72,
         "padding_bottom": 72
+      }
+    },
+    "rich_text_nmgCtf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VaDF4F": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h1"
+          }
+        },
+        "text_nMnjFF": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Q: Can you match a scent or flavour I love?</strong></p><p>A: Definitely, we are often inspired by and translate beloved fragrances and foods into our tea blends.</p><p> </p><p><strong>Q: Can my blend be caffeine-free?</strong></p><p>A: Absolutely, we offer naturally caffeine-free options. </p><p><strong> </strong></p><p><strong>Q: Can I reorder my blend later?</strong></p><p>A: Yes, your recipe will be archived so you can reorder it anytime.</p><p><strong>Q: Do you work with international clients?</strong></p><p>A: Absolutely, we offer virtual consultations and ship globally. However, do note that certain countries may have special import requirements and restrictions that could result in additional charges. For a better assessment of your suitability, please contact us directly.</p><p><strong>Q: How long does it take to create a bespoke tea blend?</strong></p><p>A: It takes about 8 weeks from consultation to delivery, but this is heavily dependent on complexity and packaging requirements. If you have a specific timeline requirement, it's best to contact us directly.</p><p><strong>Q: What packaging sizes do you offer?</strong></p><p>A: We offer a range of options to suit various needs: from loose tea leaves for food service, to custom packaging that holds anywhere from 25g to 250g of tea, we have done it all.</p><p><strong>Q: Do you have a minimum order quantity (MOQ)?</strong></p><p>A: Our MOQ is typically 20kg, but if you have a smaller sized order, we’re open to discuss your needs. </p>"
+          }
+        },
+        "button_hTqJrB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VaDF4F",
+        "text_nMnjFF",
+        "button_hTqJrB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "multicolumn_MkA4KP": {
@@ -196,7 +253,7 @@
     "contact_form_cC8nHe": {
       "type": "contact-form",
       "settings": {
-        "heading": "Craft Your Own Bespoke Tea",
+        "heading": "<strong>Begin Your Bespoke Tea Journey</strong>",
         "heading_size": "h1",
         "color_scheme": "",
         "disclaimer": "By providing us with your contact details via this enquiry form, you are hereby consenting to a representative of Gryphon Singapore to make contact with you.",
@@ -216,6 +273,7 @@
   "order": [
     "image_banner_Uemy8z",
     "multirow_ECcXCd",
+    "rich_text_nmgCtf",
     "multicolumn_MkA4KP",
     "contact_form_cC8nHe",
     "main"
