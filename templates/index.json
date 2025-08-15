@@ -135,7 +135,7 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "Reintroducing our Travel Series",
+            "heading": "Embrace A New Cocktail Experience",
             "heading_size": "h0",
             "heading_size_mobile": "md"
           }
@@ -143,9 +143,16 @@
         "subheading_WDFcaT": {
           "type": "subheading",
           "settings": {
-            "subheading": "An Ode to Singapore, Captured in Every Blend.",
+            "subheading": "Recreate our Sentosa GrillFest experience right at home.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
+          }
+        },
+        "text_PBLyCb": {
+          "type": "text",
+          "settings": {
+            "text": "Spend at least $65 and include any Botanically Cold Brewed Sparkling Tea to receive exclusive mystery gifts.",
+            "text_style": "body"
           }
         },
         "buttons_WiM6T8": {
@@ -163,11 +170,12 @@
       "block_order": [
         "heading_bijqV3",
         "subheading_WDFcaT",
+        "text_PBLyCb",
         "buttons_WiM6T8"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/TRAVELSERIESBANNER.jpg",
+        "image": "shopify://shop_images/DSC01916.jpg",
         "image_overlay_opacity": 25,
         "image_height": "medium",
         "image_behavior": "none",
@@ -181,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
