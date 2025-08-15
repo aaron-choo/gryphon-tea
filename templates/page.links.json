@@ -88,10 +88,10 @@
         "column_CEthJF": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": "<p>Explore tea-based cocktail recipes 🍹</p>",
+            "title": "Explore tea-based cocktail recipes 🍹",
+            "text": "",
             "link_label": "",
-            "link": ""
+            "link": "https://gryphontea.com/blogs/journal/tagged/recipes"
           }
         },
         "column_PwNgKz": {
