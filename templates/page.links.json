@@ -61,7 +61,7 @@
         "column_39diNy": {
           "type": "column",
           "settings": {
-            "title": "View the latest promotions on our website",
+            "title": "View the latest promotions on our website 🌿",
             "text": "",
             "link_label": "",
             "link": "/"
@@ -70,7 +70,7 @@
         "column_L8qXxq": {
           "type": "column",
           "settings": {
-            "title": "Shop our teas on Shopee",
+            "title": "Shop our teas on Shopee 🔴",
             "text": "",
             "link_label": "",
             "link": "https://shopee.sg/gryphonteacompany"
@@ -79,7 +79,7 @@
         "column_bPfUzQ": {
           "type": "column",
           "settings": {
-            "title": "Buy our products on Lazada",
+            "title": "Buy our products on Lazada 🟦",
             "text": "",
             "link_label": "",
             "link": "https://www.lazada.sg/shop/gryphon-tea-company"
@@ -89,7 +89,7 @@
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<p>Explore tea-based cocktail recipes</p>",
+            "text": "<p>Explore tea-based cocktail recipes 🍹</p>",
             "link_label": "",
             "link": ""
           }
@@ -97,7 +97,7 @@
         "column_PwNgKz": {
           "type": "column",
           "settings": {
-            "title": "Locate our retail partners",
+            "title": "Locate our retail partners 🗺",
             "text": "",
             "link_label": "",
             "link": "https://gryphontea.com/pages/locate-us"
@@ -106,7 +106,7 @@
         "column_MLkfGX": {
           "type": "column",
           "settings": {
-            "title": "Contact us",
+            "title": "Contact us 📲",
             "text": "",
             "link_label": "",
             "link": "shopify://pages/contact"
