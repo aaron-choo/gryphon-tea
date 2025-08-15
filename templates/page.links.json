@@ -61,7 +61,7 @@
         "column_39diNy": {
           "type": "column",
           "settings": {
-            "title": "View our latest promotions",
+            "title": "View the latest promotions on our website",
             "text": "",
             "link_label": "",
             "link": "/"
@@ -83,6 +83,15 @@
             "text": "",
             "link_label": "",
             "link": "https://www.lazada.sg/shop/gryphon-tea-company"
+          }
+        },
+        "column_CEthJF": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Explore tea-based cocktail recipes</p>",
+            "link_label": "",
+            "link": ""
           }
         },
         "column_PwNgKz": {
@@ -108,6 +117,7 @@
         "column_39diNy",
         "column_L8qXxq",
         "column_bPfUzQ",
+        "column_CEthJF",
         "column_PwNgKz",
         "column_MLkfGX"
       ],
