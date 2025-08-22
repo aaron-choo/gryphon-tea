@@ -20,10 +20,18 @@
             "text": "Enjoy complimentary shipping on all orders over $60.",
             "link": ""
           }
+        },
+        "announcement_x9qAyU": {
+          "type": "announcement",
+          "settings": {
+            "text": "Enjoy complimentary shipping on all international orders over $180.",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_x9qAyU"
       ],
       "settings": {
         "auto_rotate": false,
