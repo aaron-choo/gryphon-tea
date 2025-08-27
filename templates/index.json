@@ -135,31 +135,16 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "Embrace A New Cocktail Experience",
+            "heading": "International Shipping is Now Available!",
             "heading_size": "h0",
             "heading_size_mobile": "md"
-          }
-        },
-        "subheading_WDFcaT": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Recreate our Sentosa GrillFest experience right at home.",
-            "subheading_size": "h1",
-            "subheading_size_mobile": "none"
-          }
-        },
-        "text_PBLyCb": {
-          "type": "text",
-          "settings": {
-            "text": "Spend at least $65 and include any Botanically Cold Brewed Sparkling Tea to receive exclusive mystery gifts.",
-            "text_style": "body"
           }
         },
         "buttons_WiM6T8": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify://collections/gryphon-tea-co",
+            "button_link_1": "shopify://collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -169,13 +154,11 @@
       },
       "block_order": [
         "heading_bijqV3",
-        "subheading_WDFcaT",
-        "text_PBLyCb",
         "buttons_WiM6T8"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/DSC01916.jpg",
+        "image": "shopify://shop_images/9e8b6231-4126-4122-9f91-61989fd5a57c.jpg",
         "image_overlay_opacity": 25,
         "image_height": "medium",
         "image_behavior": "none",
@@ -186,10 +169,10 @@
         "color_scheme": "scheme-4",
         "text_color_override": "#f4f4f7",
         "custom_positioning": true,
-        "heading_custom_position": "top-left",
+        "heading_custom_position": "top-center",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
