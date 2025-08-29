@@ -14,10 +14,17 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_9fzh8r": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Enjoy complimentary shipping on all local orders over $60.",
+            "text": "Enjoy free shipping on all local orders over SGD$60.",
             "link": ""
           }
         },
@@ -30,6 +37,7 @@
         }
       },
       "block_order": [
+        "announcement_9fzh8r",
         "announcement-bar-0",
         "announcement_x9qAyU"
       ],
