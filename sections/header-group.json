@@ -14,28 +14,28 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_x9qAyU": {
-          "type": "announcement",
-          "settings": {
-            "text": "Enjoy complimentary shipping on all international orders over $180.",
-            "link": ""
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "Enjoy complimentary shipping on all local orders over $60.",
             "link": ""
           }
+        },
+        "announcement_x9qAyU": {
+          "type": "announcement",
+          "settings": {
+            "text": "Enjoy complimentary shipping on all international orders over $180.",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement_x9qAyU",
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_x9qAyU"
       ],
       "settings": {
-        "auto_rotate": false,
-        "change_slides_speed": 5,
+        "auto_rotate": true,
+        "change_slides_speed": 3,
         "color_scheme": "",
         "show_line_separator": true,
         "show_social": false,
