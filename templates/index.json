@@ -148,13 +148,6 @@
             "subheading_size_mobile": "none"
           }
         },
-        "text_3DG9LP": {
-          "type": "text",
-          "settings": {
-            "text": "We’re celebrating the launch of our international shipping with 15% off storewide. Use the code ‘<strong>journeywithus</strong>’ on orders above $70 till 2 September.",
-            "text_style": "body"
-          }
-        },
         "buttons_WiM6T8": {
           "type": "buttons",
           "settings": {
@@ -170,7 +163,6 @@
       "block_order": [
         "heading_bijqV3",
         "subheading_6zyG46",
-        "text_3DG9LP",
         "buttons_WiM6T8"
       ],
       "name": "t:sections.image-banner.presets.name",
@@ -189,7 +181,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
