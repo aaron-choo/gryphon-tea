@@ -135,7 +135,7 @@
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "International Shipping is Now Available.",
+            "heading": "En x Gryphon Collagen-Infused Mooncakes",
             "heading_size": "h0",
             "heading_size_mobile": "md"
           }
@@ -143,15 +143,22 @@
         "subheading_6zyG46": {
           "type": "subheading",
           "settings": {
-            "subheading": "From Singapore to the World.",
+            "subheading": "Baked for beauty and vitality. ",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
+          }
+        },
+        "text_6LGdiL": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience.",
+            "text_style": "body"
           }
         },
         "buttons_WiM6T8": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop now",
+            "button_label_1": "Preorder Now",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -163,12 +170,13 @@
       "block_order": [
         "heading_bijqV3",
         "subheading_6zyG46",
+        "text_6LGdiL",
         "buttons_WiM6T8"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/DSC03258.jpg",
-        "image_overlay_opacity": 10,
+        "image": "shopify://shop_images/11_634A8523.jpg",
+        "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -181,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
