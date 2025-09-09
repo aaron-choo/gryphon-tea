@@ -282,12 +282,12 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#333a2e",
+          "background": "#5e6b47",
           "background_gradient": "",
           "text": "#9eb091",
-          "button": "#9eb091",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#9eb091",
+          "button": "#5e6b47",
+          "button_label": "#5e6b47",
+          "secondary_button_label": "#5e6b47",
           "shadow": "rgba(0,0,0,0)",
           "highlight": "#ffffff"
         }
