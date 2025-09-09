@@ -168,7 +168,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_7.png",
-        "image_overlay_opacity": 15,
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
