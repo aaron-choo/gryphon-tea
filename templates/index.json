@@ -129,37 +129,37 @@
         "show_text_below": false
       }
     },
-    "image_banner_MVwWBQ": {
+    "image_banner_TPBRMz": {
       "type": "image-banner",
       "blocks": {
-        "text_xbnzBn": {
-          "type": "text",
-          "settings": {
-            "text": "Receive an Air-Purifying Plant worth $20 when you purchase any of the relaunched flavours and spend $80 or more. From now till 23 Sept. Only applicable to local orders.",
-            "text_style": "body"
-          }
-        },
-        "heading_bijqV3": {
+        "heading_RFUf9F": {
           "type": "heading",
           "settings": {
-            "heading": "19 Years of Artistry, Now Yours to Rediscover.",
+            "heading": "En x Gryphon Collagen-Infused Mooncakes",
             "heading_size": "h0",
             "heading_size_mobile": "md"
           }
         },
-        "subheading_6zyG46": {
+        "subheading_CRBJgy": {
           "type": "subheading",
           "settings": {
-            "subheading": "Nine timeless blends, reimagined.",
+            "subheading": "Baked for beauty and vitality. ",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
         },
-        "buttons_WiM6T8": {
+        "text_YWtLpH": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience.",
+            "text_style": "body"
+          }
+        },
+        "buttons_Jg7M9R": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "https://gryphontea.com/collections/all/artisan",
+            "button_label_1": "Preorder Now",
+            "button_link_1": "shopify://products/en-gryphon-collagen-infused-baked-mooncakes",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -168,14 +168,14 @@
         }
       },
       "block_order": [
-        "text_xbnzBn",
-        "heading_bijqV3",
-        "subheading_6zyG46",
-        "buttons_WiM6T8"
+        "heading_RFUf9F",
+        "subheading_CRBJgy",
+        "text_YWtLpH",
+        "buttons_Jg7M9R"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/fareastfloral---2.jpg",
+        "image": "shopify://shop_images/11_634A8523.jpg",
         "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
@@ -202,7 +202,7 @@
         "heading_fGCjxD": {
           "type": "heading",
           "settings": {
-            "heading": "En x Gryphon Collagen-Infused Mooncakes",
+            "heading": "19 Years of Artistry, Now Yours to Rediscover",
             "heading_size": "h0",
             "heading_size_mobile": "md"
           }
@@ -210,7 +210,7 @@
         "subheading_HG8cXi": {
           "type": "subheading",
           "settings": {
-            "subheading": "Baked for beauty and vitality. ",
+            "subheading": "Nine timeless blends, reimagined ",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -218,15 +218,15 @@
         "text_a3QUkU": {
           "type": "text",
           "settings": {
-            "text": "Enjoy delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience.",
+            "text": "Receive an Air-Purifying Plant worth $20 when you purchase any of the relaunched flavours and spend a minimum of $80. From now till 23 Sept. ",
             "text_style": "body"
           }
         },
         "buttons_tfkTip": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Preorder Now",
-            "button_link_1": "shopify://products/en-gryphon-collagen-infused-baked-mooncakes",
+            "button_label_1": "Shop Now",
+            "button_link_1": "https://gryphontea.com/collections/all/artisan",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -242,7 +242,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/11_634A8523.jpg",
+        "image": "shopify://shop_images/fareastfloral---2.jpg",
         "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
@@ -715,7 +715,7 @@
     "brand_story_banner_jUXnaG",
     "image_banner",
     "image_banner_LH6MFT",
-    "image_banner_MVwWBQ",
+    "image_banner_TPBRMz",
     "image_banner_4ef6HW",
     "multirow_LVgLV3",
     "featured_collection",
