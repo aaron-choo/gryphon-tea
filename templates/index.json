@@ -132,10 +132,17 @@
     "image_banner_MVwWBQ": {
       "type": "image-banner",
       "blocks": {
+        "text_xbnzBn": {
+          "type": "text",
+          "settings": {
+            "text": "Receive an Air-Purifying Plant worth $20 when you purchase any of the relaunched flavours and spend $80 or more. From now till 23 Sept. Only applicable to local orders.",
+            "text_style": "body"
+          }
+        },
         "heading_bijqV3": {
           "type": "heading",
           "settings": {
-            "heading": "Journeys in Flavour, Perfected Over 19 Years.",
+            "heading": "19 Years of Artistry, Now Yours to Rediscover.",
             "heading_size": "h0",
             "heading_size_mobile": "md"
           }
@@ -143,7 +150,7 @@
         "subheading_6zyG46": {
           "type": "subheading",
           "settings": {
-            "subheading": "A Relaunch of our Artisan Selection.",
+            "subheading": "Nine timeless blends, reimagined.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -152,7 +159,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/new-in",
+            "button_link_1": "https://gryphontea.com/collections/all/artisan",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -161,6 +168,7 @@
         }
       },
       "block_order": [
+        "text_xbnzBn",
         "heading_bijqV3",
         "subheading_6zyG46",
         "buttons_WiM6T8"
@@ -168,7 +176,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_7.png",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -181,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
