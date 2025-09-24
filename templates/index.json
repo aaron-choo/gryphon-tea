@@ -148,13 +148,6 @@
             "subheading_size_mobile": "none"
           }
         },
-        "text_a3QUkU": {
-          "type": "text",
-          "settings": {
-            "text": "Receive an Air-Purifying Plant worth $20 when you purchase any of the relaunched flavours and spend a minimum of $80. From now till 23 Sept. ",
-            "text_style": "body"
-          }
-        },
         "buttons_tfkTip": {
           "type": "buttons",
           "settings": {
@@ -170,7 +163,6 @@
       "block_order": [
         "heading_fGCjxD",
         "subheading_HG8cXi",
-        "text_a3QUkU",
         "buttons_tfkTip"
       ],
       "name": "t:sections.image-banner.presets.name",
@@ -189,7 +181,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
