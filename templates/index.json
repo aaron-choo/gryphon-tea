@@ -129,6 +129,73 @@
         "show_text_below": false
       }
     },
+    "image_banner_TPBRMz": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_RFUf9F": {
+          "type": "heading",
+          "settings": {
+            "heading": "En x Gryphon Collagen-Infused Mooncakes",
+            "heading_size": "h0",
+            "heading_size_mobile": "md"
+          }
+        },
+        "subheading_CRBJgy": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Baked for beauty and vitality. ",
+            "subheading_size": "h1",
+            "subheading_size_mobile": "none"
+          }
+        },
+        "text_YWtLpH": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience.",
+            "text_style": "body"
+          }
+        },
+        "buttons_Jg7M9R": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Preorder Now",
+            "button_link_1": "shopify://products/en-gryphon-collagen-infused-baked-mooncakes",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RFUf9F",
+        "subheading_CRBJgy",
+        "text_YWtLpH",
+        "buttons_Jg7M9R"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/11_634A8523.jpg",
+        "image_overlay_opacity": 15,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "text_color_override": "#f4f4f7",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
+        "text_custom_position": "bottom-right",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
+    },
     "image_banner_4ef6HW": {
       "type": "image-banner",
       "blocks": {
@@ -182,73 +249,6 @@
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
         "button_custom_position": "bottom-center",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "mobile_content_vertical_alignment": "middle",
-        "show_text_below": true
-      }
-    },
-    "image_banner_TPBRMz": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_RFUf9F": {
-          "type": "heading",
-          "settings": {
-            "heading": "En x Gryphon Collagen-Infused Mooncakes",
-            "heading_size": "h0",
-            "heading_size_mobile": "md"
-          }
-        },
-        "subheading_CRBJgy": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Baked for beauty and vitality. ",
-            "subheading_size": "h1",
-            "subheading_size_mobile": "none"
-          }
-        },
-        "text_YWtLpH": {
-          "type": "text",
-          "settings": {
-            "text": "Enjoy delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience.",
-            "text_style": "body"
-          }
-        },
-        "buttons_Jg7M9R": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/en-gryphon-collagen-infused-baked-mooncakes",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_RFUf9F",
-        "subheading_CRBJgy",
-        "text_YWtLpH",
-        "buttons_Jg7M9R"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/11_634A8523.jpg",
-        "image_overlay_opacity": 15,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "is_hero_banner": true,
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
-        "text_color_override": "#f4f4f7",
-        "custom_positioning": true,
-        "heading_custom_position": "top-left",
-        "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
@@ -707,8 +707,8 @@
     "brand_story_banner_jUXnaG",
     "image_banner",
     "image_banner_LH6MFT",
-    "image_banner_4ef6HW",
     "image_banner_TPBRMz",
+    "image_banner_4ef6HW",
     "multirow_LVgLV3",
     "featured_collection",
     "rich_text_grTYjQ",
