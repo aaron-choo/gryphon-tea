@@ -235,7 +235,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/fareastfloral---2.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 5,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
