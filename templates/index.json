@@ -151,7 +151,7 @@
         "text_YWtLpH": {
           "type": "text",
           "settings": {
-            "text": "Enjoy delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience.",
+            "text": "Enjoy 10% off the delicate white lotus paste, enriched with our artisanal teas, and infused with collagen for an indulgent and nourishing experience. From now till 2 Oct.",
             "text_style": "body"
           }
         },
@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/11_634A8523.jpg",
+        "image": "shopify://shop_images/16_634A8762.jpg",
         "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
