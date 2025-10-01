@@ -196,65 +196,6 @@
         "show_text_below": true
       }
     },
-    "image_banner_4ef6HW": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_fGCjxD": {
-          "type": "heading",
-          "settings": {
-            "heading": "19 Years of Artistry, Now Yours to Rediscover",
-            "heading_size": "h0",
-            "heading_size_mobile": "md"
-          }
-        },
-        "subheading_HG8cXi": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Nine timeless blends, reimagined ",
-            "subheading_size": "h1",
-            "subheading_size_mobile": "none"
-          }
-        },
-        "buttons_tfkTip": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "https://gryphontea.com/collections/all/artisan",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_fGCjxD",
-        "subheading_HG8cXi",
-        "buttons_tfkTip"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/fareastfloral---2.jpg",
-        "image_overlay_opacity": 5,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "is_hero_banner": true,
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
-        "text_color_override": "#f4f4f7",
-        "custom_positioning": true,
-        "heading_custom_position": "top-left",
-        "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "mobile_content_vertical_alignment": "middle",
-        "show_text_below": true
-      }
-    },
     "multirow_LVgLV3": {
       "type": "multirow",
       "blocks": {
@@ -708,7 +649,6 @@
     "image_banner",
     "image_banner_LH6MFT",
     "image_banner_TPBRMz",
-    "image_banner_4ef6HW",
     "multirow_LVgLV3",
     "featured_collection",
     "rich_text_grTYjQ",
