@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "hxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text_MrcqfT": {
@@ -44,6 +45,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
@@ -72,7 +74,7 @@
     "featured_collection_ecdJUA": {
       "type": "featured-collection",
       "settings": {
-        "collection": "gryphon-tea-co",
+        "collection": "best-sellers",
         "products_to_show": 25,
         "title": "You may also like",
         "heading_size": "h1",
