@@ -129,6 +129,73 @@
         "show_text_below": false
       }
     },
+    "image_banner_BAQM9r": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_36fX4k": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Ritual of Renewal, Inside and Out.",
+            "heading_size": "h0",
+            "heading_size_mobile": "md"
+          }
+        },
+        "subheading_PrjEY8": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Backed by Science, Crafted for You. ",
+            "subheading_size": "h1",
+            "subheading_size_mobile": "none"
+          }
+        },
+        "text_VbaYrx": {
+          "type": "text",
+          "settings": {
+            "text": "Receive a pair of Sigi Skin samples worth $15 with any Botany Selection product in an order of $70 or more. From now till 8 Oct.",
+            "text_style": "body"
+          }
+        },
+        "buttons_4zTtrp": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "https://gryphontea.com/collections/all/botany",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_36fX4k",
+        "subheading_PrjEY8",
+        "text_VbaYrx",
+        "buttons_4zTtrp"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/DSC03451_Edited_1920x1080_ff06a0ec-7475-4f84-888a-2d0641ddc14e.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "text_color_override": "#f4f4f7",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
+        "text_custom_position": "bottom-right",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
+    },
     "image_banner_TPBRMz": {
       "type": "image-banner",
       "blocks": {
@@ -648,6 +715,7 @@
     "brand_story_banner_jUXnaG",
     "image_banner",
     "image_banner_LH6MFT",
+    "image_banner_BAQM9r",
     "image_banner_TPBRMz",
     "multirow_LVgLV3",
     "featured_collection",
