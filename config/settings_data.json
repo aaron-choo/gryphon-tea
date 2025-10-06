@@ -142,11 +142,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "9513407616245537438": {
-        "type": "shopify://apps/sami-wholesale/blocks/app-embed-block/799b9db0-2c2b-4b20-8675-98acd123fbb2",
-        "disabled": false,
-        "settings": {}
-      },
       "6441254115607727225": {
         "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/automatic-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
         "disabled": false,
@@ -240,6 +235,11 @@
       "15393088698543645836": {
         "type": "shopify://apps/essential-preorder/blocks/app-embed/bb7e7a06-2a82-4e7d-8984-c3918deb1c2a",
         "disabled": false,
+        "settings": {}
+      },
+      "9513407616245537438": {
+        "type": "shopify://apps/sami-wholesale/blocks/app-embed-block/799b9db0-2c2b-4b20-8675-98acd123fbb2",
+        "disabled": true,
         "settings": {}
       }
     },
