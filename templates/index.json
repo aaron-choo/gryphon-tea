@@ -140,10 +140,17 @@
             "heading_size_mobile": "md"
           }
         },
+        "text_UFpKcK": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy a complimentary set of 3 Gourmet Spiced Potato Crisps from The Golden Duck with any purchase of 4 packs of Cold Brewed Sparkling Teas.",
+            "text_style": "body"
+          }
+        },
         "subheading_PrjEY8": {
           "type": "subheading",
           "settings": {
-            "subheading": "Backed by Science, Crafted for You. ",
+            "subheading": "Your Perfect Pairing for the Festive Table. ",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -162,6 +169,7 @@
       },
       "block_order": [
         "heading_36fX4k",
+        "text_UFpKcK",
         "subheading_PrjEY8",
         "buttons_4zTtrp"
       ],
