@@ -176,7 +176,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/DSC03460_1920x1080_6013dd0c-81b8-4046-ac10-07191c6f9171.jpg",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
