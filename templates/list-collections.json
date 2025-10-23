@@ -16,13 +16,14 @@
           "type": "heading",
           "settings": {
             "heading": "Collections",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_size_mobile": "none"
           }
         },
         "text_LGM4Qn": {
           "type": "text",
           "settings": {
-            "text": "Reprehenderit do aliqua nisi esse duis elit. Nulla amet sit ullamco deserunt magna adipisicing.",
+            "text": "Discover our wide range of teas, from caffeinated to non-caffeinated options. There is something for everyone, at all times of the day.",
             "text_style": "body"
           }
         }
@@ -41,8 +42,10 @@
         "is_hero_banner": true,
         "show_text_box": false,
         "color_scheme": "scheme-5",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-right",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-left",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
