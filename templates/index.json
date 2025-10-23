@@ -146,7 +146,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "19 Years in the Making.",
+            "heading": "Celebrating 19 Years of Artistry. ",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -154,7 +154,7 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Timeless Blends, Reimagined for Today.",
+            "subheading": "A Legacy Shaped by Time and Craft.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -167,7 +167,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/DSC03258.jpg",
+        "image": "shopify://shop_images/Untitled_design_21.png",
         "image_overlay_opacity": 5,
         "image_height": "medium",
         "image_behavior": "none",
