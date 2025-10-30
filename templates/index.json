@@ -158,25 +158,17 @@
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
-        },
-        "text_33GxXK": {
-          "type": "text",
-          "settings": {
-            "text": "As a thank you for celebrating this milestone with us, enjoy <strong>20% off sitewide</strong> with a minimum spend of $100.Discount automatically applied at checkout; valid till <strong>28 October</strong>.",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
         "buttons_4zTtrp",
         "heading_XdQWKW",
-        "subheading_dW8RjM",
-        "text_33GxXK"
+        "subheading_dW8RjM"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_21.png",
-        "image_overlay_opacity": 25,
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -189,7 +181,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
