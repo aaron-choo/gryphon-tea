@@ -151,13 +151,6 @@
             "heading_size_mobile": "none"
           }
         },
-        "text_XpBMgF": {
-          "type": "text",
-          "settings": {
-            "text": "Enjoy a complimentary pair of Luzerne Oriental Chinois Tea Cups (worth $18) with $70 spent across Gryphon, Monogram, and Roji. From now till 12 Nov.",
-            "text_style": "body"
-          }
-        },
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
@@ -170,7 +163,6 @@
       "block_order": [
         "buttons_4zTtrp",
         "heading_XdQWKW",
-        "text_XpBMgF",
         "subheading_dW8RjM"
       ],
       "name": "t:sections.image-banner.presets.name",
@@ -189,7 +181,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-left",
-        "button_custom_position": "bottom-right",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
