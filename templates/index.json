@@ -132,11 +132,18 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
+        "text_QNV6wV": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy a 10ml Hotel Lobby Fragrance (worth $14) with every $40 spend on Monogram products; or choose the 50ml size (worth $45) when your purchase reaches $100 and above.",
+            "text_style": "body"
+          }
+        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify://collections/monogram",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -146,7 +153,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "Begin your ritual, your way.",
+            "heading": "From Hotel Lobby to Home.",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -154,21 +161,22 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Explore, mix, and make it your own.",
+            "subheading": "A sensory escape, reimagined for your space. ",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
         }
       },
       "block_order": [
+        "text_QNV6wV",
         "buttons_4zTtrp",
         "heading_XdQWKW",
         "subheading_dW8RjM"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/main_kv_-_16-9.png",
-        "image_overlay_opacity": 15,
+        "image": "shopify://shop_images/Untitled_design_25.png",
+        "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -180,8 +188,8 @@
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-left",
-        "button_custom_position": "bottom-center",
+        "text_custom_position": "bottom-right",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
