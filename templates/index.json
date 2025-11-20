@@ -132,13 +132,6 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
-        "text_QNV6wV": {
-          "type": "text",
-          "settings": {
-            "text": "Enjoy a 10ml Hotel Lobby Fragrance (worth $14) with every $40 spend on Monogram products; or choose the 50ml size (worth $45) when your purchase reaches $100 and above. From now till 19 Nov.",
-            "text_style": "body"
-          }
-        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
@@ -168,7 +161,6 @@
         }
       },
       "block_order": [
-        "text_QNV6wV",
         "buttons_4zTtrp",
         "heading_XdQWKW",
         "subheading_dW8RjM"
@@ -176,7 +168,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_25.png",
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -189,7 +181,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
