@@ -129,65 +129,6 @@
         "show_text_below": false
       }
     },
-    "image_banner_BAQM9r": {
-      "type": "image-banner",
-      "blocks": {
-        "buttons_4zTtrp": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "https://gryphontea.com/collections/all/gifting",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
-        "heading_XdQWKW": {
-          "type": "heading",
-          "settings": {
-            "heading": "One collection, countless ways to gift.",
-            "heading_size": "h1",
-            "heading_size_mobile": "none"
-          }
-        },
-        "subheading_dW8RjM": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Curated tea sets for effortless festive gifting.",
-            "subheading_size": "h1",
-            "subheading_size_mobile": "none"
-          }
-        }
-      },
-      "block_order": [
-        "buttons_4zTtrp",
-        "heading_XdQWKW",
-        "subheading_dW8RjM"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Untitled_design_30.png",
-        "image_overlay_opacity": 20,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "is_hero_banner": true,
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
-        "text_color_override": "#f4f4f7",
-        "custom_positioning": true,
-        "heading_custom_position": "top-left",
-        "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "mobile_content_vertical_alignment": "middle",
-        "show_text_below": true
-      }
-    },
     "image_banner_MUkf9f": {
       "type": "image-banner",
       "blocks": {
@@ -249,6 +190,65 @@
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
         "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": true
+      }
+    },
+    "image_banner_BAQM9r": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_4zTtrp": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "https://gryphontea.com/collections/all/gifting",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "heading_XdQWKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "One collection, countless ways to gift.",
+            "heading_size": "h1",
+            "heading_size_mobile": "none"
+          }
+        },
+        "subheading_dW8RjM": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Curated tea sets for effortless festive gifting.",
+            "subheading_size": "h1",
+            "subheading_size_mobile": "none"
+          }
+        }
+      },
+      "block_order": [
+        "buttons_4zTtrp",
+        "heading_XdQWKW",
+        "subheading_dW8RjM"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_30.png",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": true,
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "text_color_override": "#f4f4f7",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
+        "text_custom_position": "bottom-right",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
@@ -647,6 +647,43 @@
         "padding_bottom": 72
       }
     },
+    "multicolumn_6h3aJb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PxdPFn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/accolades.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PxdPFn"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Our Accolades",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2eed206b-146b-48ee-9fe5-c61658a1c4e9",
+        "border": false,
+        "full_button": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_JqB7Pa": {
       "type": "featured-blog",
       "settings": {
@@ -717,6 +754,7 @@
     "rich_text_FKFVfB",
     "1744644337f30e543e",
     "multicolumn_wNUTzQ",
+    "multicolumn_6h3aJb",
     "featured_blog_JqB7Pa",
     "multirow_7AbrGq"
   ]
