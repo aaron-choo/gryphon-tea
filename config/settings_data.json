@@ -321,11 +321,11 @@
           "background": "#f6bd9d",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#9eb091",
-          "button_label": "#5e6b47",
-          "secondary_button_label": "#5e6b47",
+          "button": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
           "shadow": "#ffffff",
-          "highlight": "#9eb091"
+          "highlight": "#ffffff"
         }
       }
     }
