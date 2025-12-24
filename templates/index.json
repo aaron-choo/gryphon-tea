@@ -143,7 +143,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/monogram",
+            "button_link_1": "shopify://collections/roji",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_33.png",
+        "image": "shopify://shop_images/roji_-_kv.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
