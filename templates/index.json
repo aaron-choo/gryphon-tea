@@ -196,73 +196,6 @@
         "show_text_below": true
       }
     },
-    "image_banner_MUkf9f": {
-      "type": "image-banner",
-      "blocks": {
-        "text_n7Mxjp": {
-          "type": "text",
-          "settings": {
-            "text": "Discover the gift of quiet indulgence with Rough Beauty’s botanical mint rose soap and blossom lip balm, complemented by Gryphon’s delicately fragrant mint and floral-infused teas. ",
-            "text_style": "body"
-          }
-        },
-        "buttons_hmxRJz": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/bloom-mint-harmony-collection",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
-        "heading_VQEp93": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bloom & Mint Harmony Collection.",
-            "heading_size": "h1",
-            "heading_size_mobile": "none"
-          }
-        },
-        "subheading_Yp3CND": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "A harmonious duo for the gifting season.",
-            "subheading_size": "h1",
-            "subheading_size_mobile": "none"
-          }
-        }
-      },
-      "block_order": [
-        "text_n7Mxjp",
-        "buttons_hmxRJz",
-        "heading_VQEp93",
-        "subheading_Yp3CND"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/roughbeauty_-_banner_-_KV.png",
-        "image_overlay_opacity": 20,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "is_hero_banner": true,
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
-        "text_color_override": "#f4f4f7",
-        "custom_positioning": true,
-        "heading_custom_position": "top-left",
-        "subheading_custom_position": "top-right",
-        "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "mobile_content_vertical_alignment": "middle",
-        "show_text_below": true
-      }
-    },
     "multirow_LVgLV3": {
       "type": "multirow",
       "blocks": {
@@ -794,7 +727,6 @@
     "image_banner",
     "image_banner_LH6MFT",
     "image_banner_BAQM9r",
-    "image_banner_MUkf9f",
     "multirow_LVgLV3",
     "featured_collection",
     "rich_text_grTYjQ",
