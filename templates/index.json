@@ -135,7 +135,7 @@
         "text_enqehk": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "Receive 15% off with purchase of any 3 items from the Botany Selection. Discount will be automatically applied at the checkout, from now till<strong> 11 Jan</strong>.",
             "text_style": "body"
           }
         },
@@ -143,7 +143,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "https://gryphontea.com/collections/all/botany",
+            "button_link_1": "shopify://collections/gryphon-singapore",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -153,7 +153,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "New Year, New Tea Rituals.",
+            "heading": "A New Year, Grounded in Gentle Rituals.",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -161,7 +161,7 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Our Botany Rituals Renewed.",
+            "subheading": "Begin and end the day with botanicals that restore balance.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -175,8 +175,8 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_34.png",
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/Untitled_design_35.png",
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -189,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
