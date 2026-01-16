@@ -12,36 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "pc_product_options_product_page_customizer_9A7mMi": {
-          "type": "shopify://apps/pc-product-options/blocks/product-page-customizer/6857ca6c-35eb-4b6f-9d58-a039f31d9406",
-          "settings": {
-            "pc_container_size": 100,
-            "pc_show_options_total": "initial",
-            "pc_customizations_total_text": "Customizations Total:",
-            "pc_show_preloader": "hide",
-            "pc_preloader_color": "",
-            "pc_ignore_redirect_command": true,
-            "pc_basic_label_text_color": "#000000",
-            "pc_basic_label_font_size": 14,
-            "pc_basic_label_bolden": "unset",
-            "pc_basic_label_space_above": 0,
-            "pc_basic_option_background_color": "#FFFFFF",
-            "pc_basic_option_text_color": "#000000",
-            "pc_basic_option_border_color": "#000000",
-            "pc_basic_option_border_style": "solid",
-            "pc_basic_option_border_width": 1,
-            "pc_basic_option_curve_the_corners": "none",
-            "pc_basic_option_font_size": 14,
-            "pc_basic_option_bolden": "none",
-            "pc_basic_option_width": 100,
-            "pc_basic_option_space_above": 0,
-            "pc_basic_option_space_below": 0,
-            "pc_basic_option_space_inside": 10,
-            "pc_advanced_custom_css": "",
-            "pc_advanced_custom_js": "",
-            "pc_show_image_swatch_preview": false
-          }
-        },
         "custom_liquid_7Ei3DA": {
           "type": "custom_liquid",
           "source": "{{ product.metafields.custom.brand.value }}",
@@ -68,6 +38,36 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "pc_product_options_product_page_customizer_9A7mMi": {
+          "type": "shopify://apps/pc-product-options/blocks/product-page-customizer/6857ca6c-35eb-4b6f-9d58-a039f31d9406",
+          "settings": {
+            "pc_container_size": 100,
+            "pc_show_options_total": "initial",
+            "pc_customizations_total_text": "Customizations Total:",
+            "pc_show_preloader": "hide",
+            "pc_preloader_color": "",
+            "pc_ignore_redirect_command": true,
+            "pc_basic_label_text_color": "#000000",
+            "pc_basic_label_font_size": 14,
+            "pc_basic_label_bolden": "unset",
+            "pc_basic_label_space_above": 0,
+            "pc_basic_option_background_color": "#ffffff",
+            "pc_basic_option_text_color": "#000000",
+            "pc_basic_option_border_color": "#000000",
+            "pc_basic_option_border_style": "solid",
+            "pc_basic_option_border_width": 1,
+            "pc_basic_option_curve_the_corners": "none",
+            "pc_basic_option_font_size": 14,
+            "pc_basic_option_bolden": "none",
+            "pc_basic_option_width": 100,
+            "pc_basic_option_space_above": 0,
+            "pc_basic_option_space_below": 0,
+            "pc_basic_option_space_inside": 10,
+            "pc_advanced_custom_css": "",
+            "pc_advanced_custom_js": "",
+            "pc_show_image_swatch_preview": false
+          }
         },
         "rivo_loyalty_rewards_referrals_potential_points_tfBDBM": {
           "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
@@ -246,7 +246,7 @@
             "pc_basic_label_font_size": 14,
             "pc_basic_label_bolden": "unset",
             "pc_basic_label_space_above": 0,
-            "pc_basic_option_background_color": "#FFFFFF",
+            "pc_basic_option_background_color": "#ffffff",
             "pc_basic_option_text_color": "#000000",
             "pc_basic_option_border_color": "#000000",
             "pc_basic_option_border_style": "solid",
@@ -265,12 +265,12 @@
         }
       },
       "block_order": [
-        "pc_product_options_product_page_customizer_9A7mMi",
         "custom_liquid_7Ei3DA",
         "vendor",
         "title",
         "description",
         "price",
+        "pc_product_options_product_page_customizer_9A7mMi",
         "rivo_loyalty_rewards_referrals_potential_points_tfBDBM",
         "rating_kdCQTq",
         "judge_me_reviews_preview_badge_Neci44",
