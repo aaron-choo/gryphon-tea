@@ -132,6 +132,13 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
+        "text_NcCNR3": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy a complimentary pack of Coba Cabana Pineapple or Mogambo Raspberry Orange with any 4 packs of  Cold Brewed Sparkling Teas purchased. From now till 23 Jan. ",
+            "text_style": "body"
+          }
+        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
@@ -146,7 +153,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "A New Year, Grounded in Gentle Rituals.",
+            "heading": "Let the Fizz Gallop into Your Lunar New Year. ",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -154,21 +161,22 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Begin and end the day with botanicals that restore balance.",
+            "subheading": "Mix your packs; celebrate your way.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
         }
       },
       "block_order": [
+        "text_NcCNR3",
         "buttons_4zTtrp",
         "heading_XdQWKW",
         "subheading_dW8RjM"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_35.png",
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/cbst_--_cny_--_kv.jpg",
+        "image_overlay_opacity": 20,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -181,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
