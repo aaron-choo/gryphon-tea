@@ -132,13 +132,6 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
-        "text_VHm7gh": {
-          "type": "text",
-          "settings": {
-            "text": "Enjoy a complimentary pack of Coba Cabana Pineapple or Mogambo Raspberry Orange with any 4 packs of Cold Brewed Sparkling Teas purchased. From now to 21 Jan.",
-            "text_style": "body"
-          }
-        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
@@ -168,7 +161,6 @@
         }
       },
       "block_order": [
-        "text_VHm7gh",
         "buttons_4zTtrp",
         "heading_XdQWKW",
         "subheading_dW8RjM"
@@ -176,7 +168,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/cbst_--_cny_--_kv.jpg",
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -189,7 +181,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
