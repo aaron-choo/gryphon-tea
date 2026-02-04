@@ -132,6 +132,13 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
+        "text_U4GtXr": {
+          "type": "text",
+          "settings": {
+            "text": "As we bid farewell to two of our beloved cold brewed sparkling tea flavours, enjoy them one last time with 30% off each pack or carton. Available for a limited time, from now till 6 February.",
+            "text_style": "body"
+          }
+        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
@@ -146,7 +153,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "Let the Fizz Gallop into Your Lunar New Year. ",
+            "heading": "A Final Sparkle, Light and Lingering.",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -154,21 +161,22 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Mix your packs; celebrate your way.",
+            "subheading": "Two cold brewed favourites take their final bow.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
         }
       },
       "block_order": [
+        "text_U4GtXr",
         "buttons_4zTtrp",
         "heading_XdQWKW",
         "subheading_dW8RjM"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/cbst_--_cny_--_kv.jpg",
-        "image_overlay_opacity": 10,
+        "image": "shopify://shop_images/discontinue_-_e_comm_--_campaign-03.jpg",
+        "image_overlay_opacity": 25,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -181,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-center",
+        "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
