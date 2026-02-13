@@ -135,7 +135,7 @@
         "text_U4GtXr": {
           "type": "text",
           "settings": {
-            "text": "As we bid farewell to two of our beloved cold brewed sparkling tea flavours, savour them one last time while stocks last.",
+            "text": "",
             "text_style": "body"
           }
         },
@@ -153,7 +153,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "A Final Sparkle, Light and Lingering.",
+            "heading": "Let the Fizz Gallop into Your Lunar New Year. ",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -161,7 +161,7 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Two cold brewed favourites take their final bow.",
+            "subheading": "Mix your packs; celebrate your way.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -175,8 +175,8 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/discontinue_-_e_comm_--_campaign-03.jpg",
-        "image_overlay_opacity": 25,
+        "image": "shopify://shop_images/cbst_--_cny_--_kv.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
@@ -189,7 +189,7 @@
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
