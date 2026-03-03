@@ -176,7 +176,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/mrbucket-banner_2_ad2481f7-6d2b-4d84-bad6-9d0064f9033d.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
