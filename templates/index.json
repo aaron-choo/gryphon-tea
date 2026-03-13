@@ -135,7 +135,7 @@
         "text_nTRmHG": {
           "type": "text",
           "settings": {
-            "text": "Enjoy a complimentary Mando Pop Bar from Mr Bucket when you spend $70 including any of our three new flavours.",
+            "text": "Celebrate Raya with up to 40% off selected cold-brewed sparkling teas. Available from now till 20 Mar.",
             "text_style": "body"
           }
         },
@@ -143,7 +143,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP NOW",
-            "button_link_1": "shopify://collections/new-in",
+            "button_link_1": "shopify://collections/gryphon-tea-co",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -153,7 +153,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "From Secret Gardens to Sunlit Vineyards. ",
+            "heading": "A Sparkling Touch for Your Raya Table. ",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -161,7 +161,7 @@
         "subheading_dW8RjM": {
           "type": "subheading",
           "settings": {
-            "subheading": "Three new Artisan blends, crafted to transport you.",
+            "subheading": "Gently sparkling teas made for joyful gatherings.",
             "subheading_size": "h1",
             "subheading_size_mobile": "none"
           }
@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/mrbucket-banner_2_ad2481f7-6d2b-4d84-bad6-9d0064f9033d.jpg",
+        "image": "shopify://shop_images/RAYA_--_banner.jpg",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
