@@ -513,16 +513,6 @@
             "link": ""
           }
         },
-        "column_jkDFxm": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/LOGO_CLEAN_UP-13.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_fCwmrd": {
           "type": "column",
           "settings": {
@@ -554,7 +544,6 @@
         "column_GqBncq",
         "column_3RWmUY",
         "column_jLHTNG",
-        "column_jkDFxm",
         "column_fCwmrd",
         "column_Dbkrre"
       ],
