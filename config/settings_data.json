@@ -518,7 +518,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "button#CartDrawer-Checkout {color: white;}",
+      "button#CartDrawer-Checkout,.cart-drawer__empty-content .button {color: white;}",
       "body:not(.\\/cart) quantity-input.quantity {display: flex;}"
     ]
   }
