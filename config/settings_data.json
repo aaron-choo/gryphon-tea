@@ -518,7 +518,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "button.quantity__button {display: none;}"
+      "button.quantity__button {display: none;}",
+      "input#Quantity-1 {border: 0; pointer-events: none;}"
     ]
   }
 }
