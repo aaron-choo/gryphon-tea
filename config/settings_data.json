@@ -520,6 +520,7 @@
     "custom_css": [
       "button.quantity__button {display: none;}",
       "input#Quantity-1 {border: 0; pointer-events: none;}",
+      "input#Quantity-1::after {border: 0; pointer-events: none;}",
       ".quantity:after {opacity: 0;}"
     ]
   }
