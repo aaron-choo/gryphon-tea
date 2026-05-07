@@ -519,7 +519,7 @@
   "platform_customizations": {
     "custom_css": [
       "button#CartDrawer-Checkout {color: white;}",
-      "body:not(.\\/cart) quantity-input.quantity {display: block;}"
+      "body:not(.\\/cart) quantity-input.quantity {display: flex;}"
     ]
   }
 }
