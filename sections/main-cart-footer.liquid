@@ -64,6 +64,38 @@
                 </div>
 
                 <small class="tax-note caption-large rte">
+                  {% assign bcrs_products_string = '' %}
+                  {% for item in cart.items %}
+                    {% if item.product.type == 'Sparkling Tea Cans' %}
+                      {% comment %} Collect titles or IDs into a list to verify {% endcomment %}
+                      {% assign bcrs_products_string = bcrs_products_string
+                        | append: item.quantity
+                        | append: ' x '
+                        | append: item.product.title
+                        | append: ','
+                      %}
+                    {% endif %}
+                  {% endfor %}
+
+                  {% assign bcrs_products = bcrs_products_string | split: ',' %}
+
+                  {% comment %} Correct variable name casing below {% endcomment %}
+                  {% if bcrs_products %}
+                    <div style="display:none">
+                      {{ bcrs_products | json }}
+                    </div>
+                  {% endif %}
+                  {% comment %}
+                    {% for item in cart.items -%}
+                      {% if item.product.type == 'Sparkling Tea Cans' %}
+                        Price includes BCRS Deposit (excl. GST)
+                      {% endif %}
+                      <br>
+                    {% endfor %}
+                  {% endcomment %}
+
+                  <br>
+                  <br>
                   {%- if cart.duties_included and cart.taxes_included -%}
                     {%- if shop.shipping_policy.body == blank -%}
                       {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
