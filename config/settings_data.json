@@ -518,8 +518,6 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "button.quantity__button {display: none;}",
-      ".quantity-popover-container input {border: 0; pointer-events: none;}",
       "button#checkout {background-color: #9eb091;}"
     ]
   }
