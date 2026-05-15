@@ -166,7 +166,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/2.Matcha_WebBanner.png",
+        "image": "shopify://shop_images/1.Matcha_WebBanner.png",
         "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
