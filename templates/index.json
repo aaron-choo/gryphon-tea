@@ -135,7 +135,7 @@
         "heading_XdQWKW": {
           "type": "heading",
           "settings": {
-            "heading": "Introducing Asatsuyu Matcha",
+            "heading": "For Journeys That Ask for a Little More Energy.",
             "heading_size": "h1",
             "heading_size_mobile": "none"
           }
@@ -143,7 +143,7 @@
         "text_j7zfgc": {
           "type": "text",
           "settings": {
-            "text": "Introducing our Premium Asatsuyu Matcha, made from second flush leaves from Kagoshima, Shizuoka and Uji.",
+            "text": "Receive an aromatherapy eye pillow from Flo Aroma when you spend $60 on any Botany items.  ",
             "text_style": "body"
           }
         },
@@ -151,7 +151,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP NOW",
-            "button_link_1": "https://gryphontea.com/products/premium-asatsuyu-matcha",
+            "button_link_1": "https://gryphontea.com/collections/all/botany",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -166,7 +166,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/1.Matcha_WebBanner.png",
+        "image": "shopify://shop_images/2.png",
         "image_overlay_opacity": 15,
         "image_height": "medium",
         "image_behavior": "none",
