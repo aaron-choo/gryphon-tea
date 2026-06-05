@@ -132,26 +132,11 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
-        "heading_XdQWKW": {
-          "type": "heading",
-          "settings": {
-            "heading": "For Journeys That Ask for a Little More Energy.",
-            "heading_size": "h1",
-            "heading_size_mobile": "none"
-          }
-        },
-        "text_j7zfgc": {
-          "type": "text",
-          "settings": {
-            "text": "Long flights, changing time zones, and days spent on the move call for moments of restoration.",
-            "text_style": "body"
-          }
-        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP NOW",
-            "button_link_1": "https://gryphontea.com/collections/all/botany",
+            "button_link_1": "shopify://products/muscat-beauty",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -160,13 +145,11 @@
         }
       },
       "block_order": [
-        "heading_XdQWKW",
-        "text_j7zfgc",
         "buttons_4zTtrp"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/5_6cc801fe-0a46-4a0c-b533-7824d8917725.png",
+        "image": "shopify://shop_images/Website-Banner.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
@@ -180,7 +163,7 @@
         "heading_custom_position": "top-center",
         "subheading_custom_position": "bottom-left",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-right",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
