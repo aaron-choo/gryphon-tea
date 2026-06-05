@@ -149,7 +149,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Website-Banner.png",
+        "image": "shopify://shop_images/Website_Banner-2.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
