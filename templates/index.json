@@ -132,21 +132,6 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
-        "heading_7TNVpA": {
-          "type": "heading",
-          "settings": {
-            "heading": "Assemble Your Dream Team of Sparkling Teas",
-            "heading_size": "h1",
-            "heading_size_mobile": "none"
-          }
-        },
-        "text_MeELg6": {
-          "type": "text",
-          "settings": {
-            "text": "Pick any 6 packs of our Cold Brewed Sparkling Teas and enjoy 50% off.                     From now till 14 June.",
-            "text_style": "body"
-          }
-        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
@@ -160,13 +145,11 @@
         }
       },
       "block_order": [
-        "heading_7TNVpA",
-        "text_MeELg6",
         "buttons_4zTtrp"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/1.-web_banner.png",
+        "image": "shopify://shop_images/2.-web_banner.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
@@ -180,7 +163,7 @@
         "heading_custom_position": "top-center",
         "subheading_custom_position": "bottom-left",
         "text_custom_position": "bottom-right",
-        "button_custom_position": "bottom-left",
+        "button_custom_position": "bottom-center",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "mobile_content_vertical_alignment": "middle",
