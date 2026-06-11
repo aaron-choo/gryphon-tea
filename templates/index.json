@@ -132,19 +132,19 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
-        "text_MeELg6": {
-          "type": "text",
-          "settings": {
-            "text": "Pick any 6 packs of our Cold Brewed Sparkling Teas and enjoy 50% off.                     From now till 14 June.",
-            "text_style": "body"
-          }
-        },
         "heading_7TNVpA": {
           "type": "heading",
           "settings": {
             "heading": "Assemble Your Dream Team of Sparkling Teas",
             "heading_size": "h1",
             "heading_size_mobile": "none"
+          }
+        },
+        "text_MeELg6": {
+          "type": "text",
+          "settings": {
+            "text": "Pick any 6 packs of our Cold Brewed Sparkling Teas and enjoy 50% off.                     From now till 14 June.",
+            "text_style": "body"
           }
         },
         "buttons_4zTtrp": {
@@ -160,8 +160,8 @@
         }
       },
       "block_order": [
-        "text_MeELg6",
         "heading_7TNVpA",
+        "text_MeELg6",
         "buttons_4zTtrp"
       ],
       "name": "t:sections.image-banner.presets.name",
