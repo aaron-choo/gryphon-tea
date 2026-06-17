@@ -132,6 +132,14 @@
     "image_banner_BAQM9r": {
       "type": "image-banner",
       "blocks": {
+        "heading_HenETn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Match Day Refreshments",
+            "heading_size": "h1",
+            "heading_size_mobile": "none"
+          }
+        },
         "buttons_4zTtrp": {
           "type": "buttons",
           "settings": {
@@ -145,11 +153,12 @@
         }
       },
       "block_order": [
+        "heading_HenETn",
         "buttons_4zTtrp"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/2.-web_banner_a0e8f713-3045-439f-8636-917cbef3489b.png",
+        "image": "shopify://shop_images/1.-web_banner.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
