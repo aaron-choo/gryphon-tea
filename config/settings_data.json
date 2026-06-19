@@ -327,6 +327,18 @@
           "shadow": "#ffffff",
           "highlight": "#ffffff"
         }
+      },
+      "scheme-transparent-bg": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "#5e6b47",
+          "button": "#5e6b47",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#5e6b47",
+          "shadow": "rgba(0,0,0,0)",
+          "highlight": "#9eb091"
+        }
       }
     }
   },
