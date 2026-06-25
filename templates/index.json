@@ -91,7 +91,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/home-hero.jpg",
+        "image": "shopify://shop_images/HeroBanner_MidyearSale.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
@@ -100,7 +100,7 @@
         "is_hero_banner": false,
         "show_text_box": true,
         "color_scheme": "scheme-transparent-bg",
-        "text_color_override": "transparent",
+        "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
