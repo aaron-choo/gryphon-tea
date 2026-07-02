@@ -78,7 +78,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "https://gryphontea.com/pages/brand/gryphon-singapore",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -91,7 +91,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-0144-02-2.jpg",
+        "image": "shopify://shop_images/Hero-Banner.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
