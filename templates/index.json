@@ -100,7 +100,7 @@
         "is_hero_banner": false,
         "show_text_box": true,
         "color_scheme": "scheme-transparent-bg",
-        "text_color_override": "#F4F4F7",
+        "text_color_override": "#5E6B47",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
