@@ -16,13 +16,14 @@
           "type": "heading",
           "settings": {
             "heading": "{{ collection.title }}",
-            "heading_size": "hxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text_KR8yhm": {
           "type": "text",
           "settings": {
-            "text": "Explore our full collection of teas, all in one place.",
+            "text": "Introducing our pink floral tea collection, featuring two new blends, Damask Peony and Rose Papillon, alongside our all-time best seller, Pearl of The Orient.",
             "text_style": "body"
           }
         }
@@ -44,6 +45,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
