@@ -117,7 +117,7 @@
         "is_hero_banner": false,
         "show_text_box": true,
         "color_scheme": "scheme-transparent-bg",
-        "text_color_override": "#FFFFFF",
+        "text_color_override": "#ffffff",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",
@@ -706,6 +706,94 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "17860042204f6a2039": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_31c9c07_DdweAa": {
+          "type": "ai_gen_block_31c9c07",
+          "settings": {
+            "collection_handle_1": "",
+            "banner_image_1": "shopify://shop_images/Hero-Banner_2.png",
+            "banner_heading_1": "",
+            "banner_subheading_1": "",
+            "collection_handle_2": "",
+            "banner_heading_2": "",
+            "banner_subheading_2": "",
+            "collection_handle_3": "",
+            "banner_heading_3": "",
+            "banner_subheading_3": "",
+            "collection_handle_4": "",
+            "banner_heading_4": "",
+            "banner_subheading_4": "",
+            "collection_handle_5": "",
+            "banner_heading_5": "",
+            "banner_subheading_5": "",
+            "show_fallback": true,
+            "fallback_heading": "",
+            "fallback_subheading": "",
+            "banner_height_desktop": 500,
+            "banner_height_mobile": 400,
+            "image_position": "center",
+            "text_alignment": "center",
+            "text_vertical_alignment": "center",
+            "heading_size_desktop": 48,
+            "heading_size_mobile": 32,
+            "subheading_size_desktop": 18,
+            "subheading_size_mobile": 16,
+            "heading_color": "#ffffff",
+            "subheading_color": "#ffffff",
+            "show_overlay": true,
+            "overlay_opacity": 0.3
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_31c9c07_DdweAa"
+      ],
+      "settings": {}
+    },
+    "1786004440fc6b5eb6": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6df551c_NjPQ97": {
+          "type": "ai_gen_block_6df551c",
+          "settings": {
+            "banner_height_desktop": 500,
+            "banner_height_mobile": 350,
+            "content_max_width": 800,
+            "text_alignment": "center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "heading_color": "#ffffff",
+            "heading_size": 48,
+            "heading_spacing": 16,
+            "subheading_color": "#ffffff",
+            "subheading_size": 18,
+            "collection_1_handle": "",
+            "collection_1_heading": "Mooncake Collection",
+            "collection_1_subheading": "Celebrate the season with our premium mooncake tea pairings",
+            "collection_2_handle": "",
+            "collection_2_heading": "Best Sellers",
+            "collection_2_subheading": "Discover our most loved premium tea blends",
+            "collection_3_handle": "",
+            "collection_3_heading": "New Arrivals",
+            "collection_3_subheading": "Explore our latest tea collections and gift sets",
+            "collection_4_handle": "",
+            "collection_4_heading": "Gift Sets",
+            "collection_4_subheading": "Thoughtfully curated tea gift sets for every occasion",
+            "collection_5_handle": "",
+            "collection_5_heading": "Seasonal Collection",
+            "collection_5_subheading": "Limited edition teas crafted for the season"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6df551c_NjPQ97"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -723,6 +811,8 @@
     "multicolumn_wNUTzQ",
     "multicolumn_jzb7dh",
     "featured_blog_JqB7Pa",
-    "multirow_7AbrGq"
+    "multirow_7AbrGq",
+    "17860042204f6a2039",
+    "1786004440fc6b5eb6"
   ]
 }

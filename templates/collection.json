@@ -12,13 +12,6 @@
     "image_banner_xDg4cg": {
       "type": "image-banner",
       "blocks": {
-        "text_AtzPhn": {
-          "type": "text",
-          "settings": {
-            "text": "Introducing our pink floral tea collection, featuring two new blends, <strong>Damask Peony</strong> and <strong>Rose Papillon</strong>, alongside our all-time best seller, <strong>Pearl of The Orient</strong>.",
-            "text_style": "body"
-          }
-        },
         "heading_QtAe4w": {
           "type": "heading",
           "settings": {
@@ -29,11 +22,10 @@
         }
       },
       "block_order": [
-        "text_AtzPhn",
         "heading_QtAe4w"
       ],
       "settings": {
-        "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-0259.jpg",
+        "image": "shopify://shop_images/gryphon-hero.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
