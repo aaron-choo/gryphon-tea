@@ -348,9 +348,9 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#5E6B47",
-          "button": "#F4F4F7",
-          "button_label": "#5E6B47",
+          "text": "#FFFFFF",
+          "button": "#5E6B47",
+          "button_label": "#5e6b47",
           "secondary_button_label": "#5e6b47",
           "shadow": "rgba(0,0,0,0)",
           "highlight": "#9eb091"
