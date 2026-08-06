@@ -1,6 +1,443 @@
+{% doc %}
+  @prompt
+    Create a collection banner section that displays a unique hero banner image per collection. The section should allow merchants to set a different banner image, heading text, and subheading for each collection handle (e.g. mooncake-collection, best-sellers, new-in). It should check the current collection handle and display the matching banner image. The design should be full-width, premium, and consistent with a refined tea brand aesthetic.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% liquid
+  assign current_collection_handle = collection.handle
+  assign matched_banner = null
+  
+  for i in (1..5)
+    assign collection_handle_key = 'collection_' | append: i | append: '_handle'
+    assign collection_handle = block.settings[collection_handle_key]
+    
+    if collection_handle == current_collection_handle
+      assign matched_banner = i
+      break
+    endif
+  endfor
+%}
+
+{% style %}
+  .ai-collection-banner-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+  }
+
+  .ai-collection-banner__wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.banner_height_desktop }}px;
+  }
+
+  .ai-collection-banner__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-collection-banner__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-collection-banner__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 400px;
+  }
+
+  .ai-collection-banner__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
+    pointer-events: none;
+  }
+
+  .ai-collection-banner__content-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: {{ block.settings.text_alignment }};
+    width: 90%;
+    max-width: {{ block.settings.content_max_width }}px;
+    z-index: 2;
+  }
+
+  .ai-collection-banner__heading-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .ai-collection-banner__subheading-{{ ai_gen_id }} {
+    color: {{ block.settings.subheading_color }};
+    font-size: {{ block.settings.subheading_size }}px;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ai-collection-banner__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-banner__wrapper-{{ ai_gen_id }} {
+      height: {{ block.settings.banner_height_mobile }}px;
+    }
+
+    .ai-collection-banner__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+    }
+
+    .ai-collection-banner__subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheading_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<collection-banner-{{ ai_gen_id }} class="ai-collection-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-collection-banner__wrapper-{{ ai_gen_id }}">
+    {% if matched_banner %}
+      {% liquid
+        assign image_key = 'collection_' | append: matched_banner | append: '_image'
+        assign heading_key = 'collection_' | append: matched_banner | append: '_heading'
+        assign subheading_key = 'collection_' | append: matched_banner | append: '_subheading'
+        
+        assign banner_image = block.settings[image_key]
+        assign banner_heading = block.settings[heading_key]
+        assign banner_subheading = block.settings[subheading_key]
+      %}
+
+      {% if banner_image %}
+        <img
+          src="{{ banner_image | image_url: width: 2400 }}"
+          alt="{{ banner_image.alt | escape }}"
+          loading="lazy"
+          width="{{ banner_image.width }}"
+          height="{{ banner_image.height }}"
+          class="ai-collection-banner__image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-collection-banner__placeholder-{{ ai_gen_id }}">
+          {{ 'hero-apparel-1' | placeholder_svg_tag }}
+          <div class="ai-collection-banner__empty-state-{{ ai_gen_id }}">
+            Add a banner image for this collection
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="ai-collection-banner__overlay-{{ ai_gen_id }}"></div>
+
+      <div class="ai-collection-banner__content-{{ ai_gen_id }}">
+        {% if banner_heading != blank %}
+          <h1 class="ai-collection-banner__heading-{{ ai_gen_id }}">{{ banner_heading }}</h1>
+        {% endif %}
+        {% if banner_subheading != blank %}
+          <div class="ai-collection-banner__subheading-{{ ai_gen_id }}">{{ banner_subheading }}</div>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="ai-collection-banner__placeholder-{{ ai_gen_id }}">
+        {{ 'collection-apparel-1' | placeholder_svg_tag }}
+        <div class="ai-collection-banner__empty-state-{{ ai_gen_id }}">
+          Configure a banner for collection: {{ current_collection_handle }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</collection-banner-{{ ai_gen_id }}>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Collection banner",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "banner_height_desktop",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Desktop height",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "banner_height_mobile",
+      "min": 150,
+      "max": 600,
+      "step": 50,
+      "unit": "px",
+      "label": "Mobile height",
+      "default": 350
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 800
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Heading spacing",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Subheading size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Collection 1"
+    },
+    {
+      "type": "text",
+      "id": "collection_1_handle",
+      "label": "Collection handle",
+      "placeholder": "mooncake-collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_1_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "collection_1_heading",
+      "label": "Heading",
+      "default": "Mooncake Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "collection_1_subheading",
+      "label": "Subheading",
+      "default": "Celebrate the season with our premium mooncake tea pairings"
+    },
+    {
+      "type": "header",
+      "content": "Collection 2"
+    },
+    {
+      "type": "text",
+      "id": "collection_2_handle",
+      "label": "Collection handle",
+      "placeholder": "best-sellers"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_2_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "collection_2_heading",
+      "label": "Heading",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "textarea",
+      "id": "collection_2_subheading",
+      "label": "Subheading",
+      "default": "Discover our most loved premium tea blends"
+    },
+    {
+      "type": "header",
+      "content": "Collection 3"
+    },
+    {
+      "type": "text",
+      "id": "collection_3_handle",
+      "label": "Collection handle",
+      "placeholder": "new-in"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_3_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "collection_3_heading",
+      "label": "Heading",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "textarea",
+      "id": "collection_3_subheading",
+      "label": "Subheading",
+      "default": "Explore our latest tea collections and gift sets"
+    },
+    {
+      "type": "header",
+      "content": "Collection 4"
+    },
+    {
+      "type": "text",
+      "id": "collection_4_handle",
+      "label": "Collection handle",
+      "placeholder": "gift-sets"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_4_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "collection_4_heading",
+      "label": "Heading",
+      "default": "Gift Sets"
+    },
+    {
+      "type": "textarea",
+      "id": "collection_4_subheading",
+      "label": "Subheading",
+      "default": "Thoughtfully curated tea gift sets for every occasion"
+    },
+    {
+      "type": "header",
+      "content": "Collection 5"
+    },
+    {
+      "type": "text",
+      "id": "collection_5_handle",
+      "label": "Collection handle",
+      "placeholder": "seasonal"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_5_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "collection_5_heading",
+      "label": "Heading",
+      "default": "Seasonal Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "collection_5_subheading",
+      "label": "Subheading",
+      "default": "Limited edition teas crafted for the season"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection banner"
+    }
+  ]
+}
 {% endschema %}
