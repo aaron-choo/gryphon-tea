@@ -79,7 +79,7 @@
           "settings": {
             "heading": "A Blush Beneath the Moon",
             "heading_size": "h1",
-            "heading_size_mobile": "none"
+            "heading_size_mobile": "md"
           }
         },
         "text_xGVDbM": {
@@ -117,7 +117,7 @@
         "is_hero_banner": false,
         "show_text_box": true,
         "color_scheme": "scheme-transparent-bg",
-        "text_color_override": "#ffffff",
+        "text_color_override": "#FFFFFF",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
         "subheading_custom_position": "top-right",

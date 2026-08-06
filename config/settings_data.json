@@ -348,7 +348,7 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#ffffff",
+          "text": "#5E6B47",
           "button": "#5e6b47",
           "button_label": "#5e6b47",
           "secondary_button_label": "#5e6b47",
