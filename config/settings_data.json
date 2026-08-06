@@ -298,7 +298,7 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#5e6b47",
+          "background": "#5E6B47",
           "background_gradient": "",
           "text": "#9eb091",
           "button": "#5e6b47",
@@ -346,10 +346,10 @@
       },
       "scheme-transparent-bg": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#5E6B47",
           "background_gradient": "",
           "text": "#FFFFFF",
-          "button": "#5E6B47",
+          "button": "#5e6b47",
           "button_label": "#5e6b47",
           "secondary_button_label": "#5e6b47",
           "shadow": "rgba(0,0,0,0)",

@@ -74,19 +74,19 @@
     "image_banner_jYV7Ht": {
       "type": "image-banner",
       "blocks": {
-        "text_xGVDbM": {
-          "type": "text",
-          "settings": {
-            "text": "Celebrate Mooncake Festival with three pink floral teas made for gifting, pairing, and sharing.",
-            "text_style": "body"
-          }
-        },
         "heading_3KqePe": {
           "type": "heading",
           "settings": {
             "heading": "A Blush Beneath the Moon",
             "heading_size": "h1",
             "heading_size_mobile": "none"
+          }
+        },
+        "text_xGVDbM": {
+          "type": "text",
+          "settings": {
+            "text": "Celebrate Mooncake Festival with three pink floral teas made for gifting, pairing, and sharing.",
+            "text_style": "body"
           }
         },
         "buttons_hWRnd3": {
@@ -102,8 +102,8 @@
         }
       },
       "block_order": [
-        "text_xGVDbM",
         "heading_3KqePe",
+        "text_xGVDbM",
         "buttons_hWRnd3"
       ],
       "name": "t:sections.image-banner.presets.name",
@@ -116,7 +116,7 @@
         "desktop_content_alignment": "center",
         "is_hero_banner": false,
         "show_text_box": true,
-        "color_scheme": "scheme-transparent-bg",
+        "color_scheme": "scheme-4",
         "text_color_override": "#ffffff",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
