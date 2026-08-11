@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "hxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text_TcJNHy": {
@@ -43,6 +44,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
@@ -115,6 +117,15 @@
             "row_content": "<p>Store your teas in an airtight container, away from light, moisture, and heat.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_RgFgiB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What teas can I drink before bed?",
+            "icon": "none",
+            "row_content": "<p>We recommend caffeine-free blends such as Aromatherapy in a Cup, Calming Spirit and other herbal selections.<br/><br/></p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -123,7 +134,8 @@
         "collapsible_row_bTH3g3",
         "collapsible_row_LXYpC7",
         "collapsible_row_8jYgGt",
-        "collapsible_row_Bb4DhC"
+        "collapsible_row_Bb4DhC",
+        "collapsible_row_RgFgiB"
       ],
       "custom_css": [
         ".color-scheme-2 {background: #a7d4ee;}"
