@@ -567,16 +567,6 @@
             "link": ""
           }
         },
-        "column_6b3tX7": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Asset_2_2x-8.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_qDUC8p": {
           "type": "column",
           "settings": {
@@ -610,7 +600,6 @@
       },
       "block_order": [
         "column_EWBYcM",
-        "column_6b3tX7",
         "column_qDUC8p",
         "column_GRpdiV",
         "column_8Jbpdf"
