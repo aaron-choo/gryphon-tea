@@ -136,6 +136,15 @@
             "page": ""
           }
         },
+        "collapsible_row_NtUjTz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What teas help to boost energy?",
+            "icon": "none",
+            "row_content": "<p>Teas containing caffeine, particularly black tea, green tea and matcha, can help support alertness and provide a natural energy lift. At Gryphon, we recommend <strong>Bullseye</strong> for mornings, long workdays, studying and moments when you need to stay focused.<br/><br/></p>",
+            "page": ""
+          }
+        },
         "collapsible_row_y4n6KT": {
           "type": "collapsible_row",
           "settings": {
@@ -155,6 +164,7 @@
         "collapsible_row_Bb4DhC",
         "collapsible_row_RgFgiB",
         "collapsible_row_Mqrpyy",
+        "collapsible_row_NtUjTz",
         "collapsible_row_y4n6KT"
       ],
       "custom_css": [
