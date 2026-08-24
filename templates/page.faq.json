@@ -145,12 +145,12 @@
             "page": ""
           }
         },
-        "collapsible_row_y4n6KT": {
+        "collapsible_row_ttLNPM": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do I need milk or sugar?",
+            "heading": "How should I brew Gryphon's tea for the best flavor?",
             "icon": "none",
-            "row_content": "<p>Most of these blends are designed to be enjoyed on their own, though some black teas like Earl Grey Lavender and Contessa Grey pair well with a splash of milk.<br/><br/></p>",
+            "row_content": "<p>Optimal brewing depends on the tea category:</p><ul><li><strong>Black & Herbal Teas:</strong> Steep in boiling water (<strong>100°C / 212°F</strong>) for <strong>3–5 minutes</strong>.</li><li><strong>Green & Oolong Teas:</strong> Steep in warm water (<strong>80°C–85°C / 175°F–185°F</strong>) for <strong>2–3 minutes</strong> to preserve delicate antioxidants and prevent bitterness.</li><li><strong>Cold Brews:</strong> Submerge 1 sachet in 250ml of cold water and refrigerate for <strong>6–8 hours</strong>.</li></ul>",
             "page": ""
           }
         }
@@ -165,7 +165,7 @@
         "collapsible_row_RgFgiB",
         "collapsible_row_Mqrpyy",
         "collapsible_row_NtUjTz",
-        "collapsible_row_y4n6KT"
+        "collapsible_row_ttLNPM"
       ],
       "custom_css": [
         ".color-scheme-2 {background: #a7d4ee;}"
@@ -575,6 +575,61 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_yY9qd9": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_VQ8jbD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Gryphon's tea blends unique?",
+            "icon": "none",
+            "row_content": "<p>Gryphon combines over a century of family tea heritage with modern Asian botanical mixology. Each blend features premium, hand-harvested whole tea leaves, natural flowers, fruits, and essential oils, crafted without artificial preservatives or synthetic flavoring.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qNB3Hi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the difference between Gryphon, Roji, and Monogram teas?",
+            "icon": "none",
+            "row_content": "<ul><li><strong>Gryphon Singapore:</strong> Our signature line of award-winning artisan black, green, and herbal botanical blends.</li><li><strong>Roji:</strong> Inspired by Japanese tea traditions, focusing on authentic Japanese green teas, sencha blends, and delicate florals.</li><li><strong>Monogram:</strong> Tailored for bespoke tea pairing, gastronomy, and fine dining hospitality experiences.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KQxf3k": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What material are Gryphon sachets made from?",
+            "icon": "none",
+            "row_content": "<p>Our silken tea sachets are made from <strong>PLA (polylactic acid)</strong>, a plant-based biopolymer derived from renewable resources such as corn starch. Unlike conventional nylon or PET tea bags, PLA is produced from renewable plant sources and is specifically designed for food-contact applications.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_VQ8jbD",
+        "collapsible_row_qNB3Hi",
+        "collapsible_row_KQxf3k"
+      ],
+      "custom_css": [
+        ".color-scheme-2 {background: #a7d4ee;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "About Gryphon",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -584,6 +639,7 @@
     "collapsible_content_qcgTyN",
     "collapsible_content_GrQqnz",
     "collapsible_content_7HgnDm",
-    "collapsible_content_Pe4pyp"
+    "collapsible_content_Pe4pyp",
+    "collapsible_content_yY9qd9"
   ]
 }
