@@ -91,6 +91,48 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Desktop_e59d7eeb-59b2-48f3-b1dc-799691df4984.png",
+        "mobile_image": "shopify://shop_images/Mobile_f93e4fe9-10a3-411a-816f-55f3c4921082.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": false,
+        "show_text_box": true,
+        "color_scheme": "scheme-transparent-bg",
+        "text_color_override": "#ffffff",
+        "custom_positioning": true,
+        "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
+        "text_custom_position": "top-right",
+        "button_custom_position": "bottom-center",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "bottom",
+        "show_text_below": false
+      }
+    },
+    "image_banner_dVNmR4": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_3rEMfM": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/mooncake-collection",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "buttons_3rEMfM"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
         "image": "shopify://shop_images/desktop_e2e3197c-3fa3-411f-b3cd-11bea4818842.png",
         "mobile_image": "shopify://shop_images/mobile.png",
         "image_overlay_opacity": 0,
@@ -644,6 +686,7 @@
     "brand_story_banner_jUXnaG",
     "image_banner",
     "image_banner_jYV7Ht",
+    "image_banner_dVNmR4",
     "image_banner_LH6MFT",
     "featured_collection",
     "rich_text_grTYjQ",
