@@ -612,3 +612,7 @@
     color: #ffffff !important;
   }
 }
+.banner__buttons .button::after {
+  box-shadow: none !important;
+  border: none !important;
+}
