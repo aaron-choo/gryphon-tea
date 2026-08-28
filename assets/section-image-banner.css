@@ -603,11 +603,12 @@
   }
 }
 .banner__buttons .button {
-  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 @media (hover: hover) {
   .banner__buttons .button:hover {
-    opacity: 0.7;
+    background-color: #9EB091 !important;
+    color: #ffffff !important;
   }
 }
