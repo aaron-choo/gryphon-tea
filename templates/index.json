@@ -91,7 +91,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/desktop.png",
+        "image": "shopify://shop_images/desktop_e2e3197c-3fa3-411f-b3cd-11bea4818842.png",
         "mobile_image": "shopify://shop_images/mobile.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
