@@ -616,3 +616,9 @@
   box-shadow: none !important;
   border: none !important;
 }
+@media screen and (max-width: 749px) {
+  .banner--mobile-bottom .banner__box {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
