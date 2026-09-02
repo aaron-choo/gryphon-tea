@@ -11,6 +11,7 @@
   "sections": {
     "brand_story_banner_jUXnaG": {
       "type": "brand-story-banner",
+      "disabled": true,
       "settings": {}
     },
     "image_banner": {
