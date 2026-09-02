@@ -2,9 +2,11 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 <style>
+  /* =========================
+     DESKTOP: PROMO 50/50
+     ========================= */
   @media screen and (min-width: 750px) {
 
-    /* PROMO SLIDE: LEFT IMAGE 50% */
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
       width: 50% !important;
       left: 0;
@@ -17,7 +19,6 @@
       object-fit: cover;
     }
 
-    /* PROMO SLIDE: RIGHT CONTENT 50% */
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
       width: 50%;
       max-width: none;
@@ -44,7 +45,13 @@
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
       min-width: 180px;
- @media screen and (max-width: 749px) {
+    }
+  }
+
+  /* =========================
+     MOBILE: IMAGE + TEXT STACK
+     ========================= */
+  @media screen and (max-width: 749px) {
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo {
       height: auto !important;
