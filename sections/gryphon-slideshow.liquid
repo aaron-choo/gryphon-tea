@@ -172,6 +172,24 @@
         display: block;
       }
     }
+    /* =========================
+   DESKTOP / MOBILE IMAGES
+   ========================= */
+
+#shopify-section-{{ section.id }} .gryphon-mobile-image {
+  display: none !important;
+}
+
+@media screen and (max-width: 749px) {
+
+  #shopify-section-{{ section.id }} .has-mobile-image .gryphon-desktop-image {
+    display: none !important;
+  }
+
+  #shopify-section-{{ section.id }} .has-mobile-image .gryphon-mobile-image {
+    display: block !important;
+  }
+}
   {%- endstyle -%}
 {%- endif -%}
 
@@ -271,7 +289,7 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if block.settings.mobile_image != blank %} has-mobile-image{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           {%- if block.settings.image -%}
             {%- liquid
               assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
@@ -287,19 +305,44 @@
                 assign fetch_priority = 'high'
               endif
             -%}
-            {%- if forloop.first %}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-              }}
-            {%- else -%}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-              }}
-            {%- endif -%}
+            {%- if forloop.first -%}
+  {{
+    block.settings.image
+    | image_url: width: 3840
+    | image_tag:
+      class: 'gryphon-desktop-image',
+      height: height,
+      sizes: sizes,
+      widths: widths,
+      fetchpriority: fetch_priority
+  }}
+{%- else -%}
+  {{
+    block.settings.image
+    | image_url: width: 3840
+    | image_tag:
+      class: 'gryphon-desktop-image',
+      loading: 'lazy',
+      height: height,
+      sizes: sizes,
+      widths: widths
+  }}
+{%- endif -%}
+
+{%- if block.settings.mobile_image != blank -%}
+  {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
+
+  {{
+    block.settings.mobile_image
+    | image_url: width: 1500
+    | image_tag:
+      class: 'gryphon-mobile-image',
+      loading: 'lazy',
+      height: mobile_height,
+      sizes: '100vw',
+      widths: '375, 550, 750, 1100, 1500'
+  }}
+{%- endif -%}
           {%- else -%}
             {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
             {%- if placeholder_slide == 1 -%}
