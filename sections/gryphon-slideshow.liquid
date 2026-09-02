@@ -222,28 +222,30 @@
      PROMO BUTTON
      ======================================== */
 
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
-    background: var(--gryphon-button-color) !important;
-    color: #FFFFFF !important;
-    border: none !important;
-    min-width: 180px;
-    min-height: 46px;
-    border-radius: 999px;
-    opacity: 1;
-    transition: background 0.25s ease;
-  }
+#shopify-section-{{ section.id }} .gryphon-slide--promo .button {
+  background: var(--gryphon-button-color) !important;
+  color: var(--gryphon-button-text-color) !important;
+  border: none !important;
+  min-width: 180px;
+  min-height: 46px;
+  border-radius: 999px;
+  opacity: 1;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
 
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .button::before,
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .button::after {
-    box-shadow: none !important;
-    border: none !important;
-  }
+#shopify-section-{{ section.id }} .gryphon-slide--promo .button::before,
+#shopify-section-{{ section.id }} .gryphon-slide--promo .button::after {
+  box-shadow: none !important;
+  border: none !important;
+}
 
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .button:hover {
-    background: var(--gryphon-button-hover-color) !important;
-    color: #FFFFFF !important;
-    opacity: 1;
-  }
+#shopify-section-{{ section.id }} .gryphon-slide--promo .button:hover {
+  background: var(--gryphon-button-hover-color) !important;
+  color: var(--gryphon-button-hover-text-color) !important;
+  opacity: 1;
+}
 /* ========================================
    AESOP-STYLE PAGINATION
    ======================================== */
