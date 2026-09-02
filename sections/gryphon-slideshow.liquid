@@ -3,8 +3,28 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 <style>
   /* =========================
+     DESKTOP / MOBILE IMAGE SWAP
+     ========================= */
+
+  #shopify-section-{{ section.id }} .gryphon-mobile-image {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .has-mobile-image .gryphon-desktop-image {
+      display: none !important;
+    }
+
+    #shopify-section-{{ section.id }} .has-mobile-image .gryphon-mobile-image {
+      display: block !important;
+    }
+  }
+
+
+  /* =========================
      DESKTOP: PROMO 50/50
      ========================= */
+
   @media screen and (min-width: 750px) {
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
@@ -48,23 +68,26 @@
 
 
   /* =========================
-     MOBILE: IMAGE ABOVE TEXT
+     MOBILE: PROMO STACK
      ========================= */
+
   @media screen and (max-width: 749px) {
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo {
-      min-height: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
       height: auto !important;
-      display: block !important;
+      min-height: 0 !important;
     }
 
-    /* IMAGE */
+    /* Image */
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
       position: relative !important;
-      width: 100% !important;
-      height: 280px !important;
-      min-height: 0 !important;
       inset: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: hidden;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media::before {
@@ -72,38 +95,41 @@
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
-      position: absolute !important;
-      inset: 0 !important;
+      position: relative !important;
+      inset: auto !important;
       width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
+      height: auto !important;
+      object-fit: contain !important;
+      display: block;
     }
 
-    /* TEXT AREA */
+    /* Text area */
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
       position: relative !important;
+      inset: auto !important;
       display: block !important;
       width: 100% !important;
       height: auto !important;
       min-height: 0 !important;
-      padding: 0 !important;
       margin: 0 !important;
+      padding: 0 !important;
+      flex-grow: 0 !important;
       background: var(--gryphon-promo-background) !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 28px 24px 32px !important;
+      border-radius: 0 !important;
+      background: var(--gryphon-promo-background) !important;
       display: flex !important;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100% !important;
-      height: auto !important;
-      min-height: 0 !important;
-      max-width: none !important;
-      margin: 0 !important;
-      padding: 28px 24px 32px !important;
-      background: var(--gryphon-promo-background) !important;
-      border-radius: 0 !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__heading {
@@ -111,16 +137,11 @@
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text {
-      margin: 12px 0 0 !important;
+      margin: 10px 0 0 !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
-      margin: 20px 0 0 !important;
-    }
-
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
-      min-width: 170px;
-      min-height: 44px;
+      margin: 18px 0 0 !important;
     }
   }
 
@@ -128,6 +149,7 @@
   /* =========================
      PROMO BUTTON
      ========================= */
+
   #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
     background: #5E6B47 !important;
     color: #FFFFFF !important;
