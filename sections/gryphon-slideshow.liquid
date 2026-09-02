@@ -2,9 +2,9 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 <style>
-  /* =========================
-     DESKTOP / MOBILE IMAGE SWAP
-     ========================= */
+  /* ========================================
+     IMAGE SWAP
+     ======================================== */
 
   #shopify-section-{{ section.id }} .gryphon-mobile-image {
     display: none !important;
@@ -21,109 +21,177 @@
   }
 
 
-  /* =========================
-     DESKTOP: PROMO 50/50
-     ========================= */
+  /* ========================================
+     DESKTOP SLIDE SIZE — 1920 x 650
+     ======================================== */
 
   @media screen and (min-width: 750px) {
 
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
-      width: 50% !important;
-      left: 0;
-      right: auto;
-    }
-
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
+    #shopify-section-{{ section.id }} #Slider-{{ section.id }} {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
-      width: 50%;
-      max-width: none;
-      margin-left: 50%;
-      padding: 0;
-      background: var(--gryphon-promo-background) !important;
-    }
-
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
-      width: 100%;
-      max-width: none;
-      height: 100%;
-      min-height: 100%;
-      margin: 0;
-      padding: 50px 8%;
-      border-radius: 0;
-      background: var(--gryphon-promo-background) !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
-      margin-top: 24px;
-    }
-  }
-
-
-  /* =========================
-     MOBILE: PROMO STACK
-     ========================= */
-
-  @media screen and (max-width: 749px) {
-
-    #shopify-section-{{ section.id }} .gryphon-slide--promo {
-      display: flex !important;
-      flex-direction: column !important;
       height: auto !important;
       min-height: 0 !important;
+      aspect-ratio: 1920 / 650;
     }
 
-    /* Image */
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
-      position: relative !important;
-      inset: auto !important;
+    #shopify-section-{{ section.id }} .gryphon-slide {
+      height: 100% !important;
+      min-height: 0 !important;
+      position: relative;
+    }
+
+
+    /* BRANDING — FULL IMAGE */
+
+    #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media {
+      position: absolute !important;
+      inset: 0 !important;
       width: 100% !important;
-      height: auto !important;
-      min-height: 0 !important;
-      overflow: hidden;
+      height: 100% !important;
     }
 
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media::before {
+    #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__text-wrapper {
       display: none !important;
     }
 
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
-      position: relative !important;
-      inset: auto !important;
-      width: 100% !important;
-      height: auto !important;
-      object-fit: contain !important;
-      display: block;
+
+    /* PROMO — 50 / 50 */
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
+      position: absolute !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: auto !important;
+      width: 50% !important;
+      height: 100% !important;
     }
 
-    /* Text area */
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
-      position: relative !important;
-      inset: auto !important;
-      display: block !important;
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
       width: 100% !important;
-      height: auto !important;
-      min-height: 0 !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
+      position: absolute !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      left: auto !important;
+      width: 50% !important;
+      height: 100% !important;
+      max-width: none !important;
       margin: 0 !important;
       padding: 0 !important;
-      flex-grow: 0 !important;
       background: var(--gryphon-promo-background) !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
       width: 100% !important;
       max-width: none !important;
-      height: auto !important;
+      height: 100% !important;
       min-height: 0 !important;
       margin: 0 !important;
-      padding: 28px 24px 32px !important;
+      padding: 50px 8% !important;
+      border-radius: 0 !important;
+      background: var(--gryphon-promo-background) !important;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+
+  /* ========================================
+     MOBILE SLIDE SIZE — 1080 x 1350
+     ======================================== */
+
+  @media screen and (max-width: 749px) {
+
+    #shopify-section-{{ section.id }} #Slider-{{ section.id }} {
+      width: 100%;
+      height: auto !important;
+      min-height: 0 !important;
+      aspect-ratio: 4 / 5;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide {
+      height: 100% !important;
+      min-height: 0 !important;
+      position: relative !important;
+    }
+
+
+    /* BRANDING MOBILE — FULL IMAGE */
+
+    #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__text-wrapper {
+      display: none !important;
+    }
+
+
+    /* PROMO MOBILE — IMAGE TOP 50% */
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: auto !important;
+      width: 100% !important;
+      height: 50% !important;
+      min-height: 0 !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+
+
+    /* PROMO MOBILE — TEXT BOTTOM 50% */
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
+      position: absolute !important;
+      top: 50% !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 50% !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: var(--gryphon-promo-background) !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+      width: 100% !important;
+      max-width: none !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 24px !important;
       border-radius: 0 !important;
       background: var(--gryphon-promo-background) !important;
       display: flex !important;
@@ -137,18 +205,18 @@
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text {
-      margin: 10px 0 0 !important;
+      margin-top: 10px !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
-      margin: 18px 0 0 !important;
+      margin-top: 18px !important;
     }
   }
 
 
-  /* =========================
+  /* ========================================
      PROMO BUTTON
-     ========================= */
+     ======================================== */
 
   #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
     background: #5E6B47 !important;
@@ -172,37 +240,6 @@
     color: #FFFFFF !important;
     opacity: 1;
   }
-  /* =========================
-   MOBILE: STOP CONTENT CLIPPING
-   ========================= */
-@media screen and (max-width: 749px) {
-
-  #shopify-section-{{ section.id }} .gryphon-slide--promo {
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: visible !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: visible !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
-    height: auto !important;
-    min-height: 0 !important;
-    overflow: visible !important;
-    padding-bottom: 40px !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
-    position: relative !important;
-    margin-top: 18px !important;
-    margin-bottom: 0 !important;
-  }
-}
-
 </style>
 
 <slideshow-component
@@ -292,44 +329,6 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
-/* =========================
-   MOBILE: BRANDING SLIDE
-   ========================= */
-@media screen and (max-width: 749px) {
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding {
-    position: relative !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    display: block !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media::before {
-    display: none !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media img {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__text-wrapper {
-    display: none !important;
-  }
-}
       </style>
       <div
         class="slideshow__slide gryphon-slide gryphon-slide--{{ block.settings.gryphon_layout }} grid__item grid--1-col slider__slide"
