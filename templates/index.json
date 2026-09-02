@@ -72,7 +72,7 @@
             "promo_button_hover_text_color": "#5e6b47",
             "promo_button_hover_color": "#9eb091",
             "desktop_content_padding": 50,
-            "mobile_padding_top": 80,
+            "mobile_padding_top": 24,
             "mobile_padding_bottom": 36,
             "button_margin_top": 0,
             "color_scheme": ""
