@@ -21,8 +21,8 @@
           "type": "slide",
           "settings": {
             "gryphon_layout": "branding",
-            "image": "shopify://shop_images/Untitled_design_34.png",
-            "mobile_image": "shopify://shop_images/2.-Launch.png",
+            "image": "shopify://shop_images/destop-branding.png",
+            "mobile_image": "shopify://shop_images/mobile-branding.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -42,7 +42,8 @@
           "type": "slide",
           "settings": {
             "gryphon_layout": "promo",
-            "image": "shopify://shop_images/Mobile_f93e4fe9-10a3-411a-816f-55f3c4921082.png",
+            "image": "shopify://shop_images/promo-5050-desktop.png",
+            "mobile_image": "shopify://shop_images/promo-5050-mobile.png",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
