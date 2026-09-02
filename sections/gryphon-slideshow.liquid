@@ -339,6 +339,29 @@
     height: 2px !important;
   }
 }
+/* ========================================
+   FIXED PROMO TEXT SPACING
+   ======================================== */
+
+#shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+  gap: 0 !important;
+}
+
+/* Heading */
+#shopify-section-{{ section.id }} .gryphon-slide--promo .banner__heading {
+  margin: 0 !important;
+}
+
+/* Fixed gap: heading → subheading */
+#shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text {
+  margin: 12px 0 0 !important;
+}
+
+/* Fixed gap: subheading → button */
+#shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
+  margin: 16px 0 0 !important;
+  padding: 0 !important;
+}
 </style>
 
 <slideshow-component
