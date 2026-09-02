@@ -518,14 +518,13 @@
       </style>
       <div
         class="slideshow__slide gryphon-slide gryphon-slide--{{ block.settings.gryphon_layout }} grid__item grid--1-col slider__slide"
-        style="
+style="
   --gryphon-promo-background: {{ block.settings.promo_background }};
   --gryphon-promo-text: {{ block.settings.promo_text_color }};
-  --gryphon-desktop-padding: {{ block.settings.desktop_content_padding }}px;
-  --gryphon-mobile-padding-top: {{ block.settings.mobile_padding_top }}px;
-  --gryphon-mobile-padding-bottom: {{ block.settings.mobile_padding_bottom }}px;
   --gryphon-button-color: {{ block.settings.promo_button_color }};
---gryphon-button-hover-color: {{ block.settings.promo_button_hover_color }};
+  --gryphon-button-text-color: {{ block.settings.promo_button_text_color }};
+  --gryphon-button-hover-color: {{ block.settings.promo_button_hover_color }};
+  --gryphon-button-hover-text-color: {{ block.settings.promo_button_hover_text_color }};
 "
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
@@ -1042,6 +1041,18 @@
   "id": "promo_button_color",
   "label": "Button colour",
   "default": "#5E6B47"
+},
+{
+  "type": "color",
+  "id": "promo_button_text_color",
+  "label": "Button text colour",
+  "default": "#FFFFFF"
+},
+{
+  "type": "color",
+  "id": "promo_button_hover_text_color",
+  "label": "Button hover text colour",
+  "default": "#FFFFFF"
 },
 {
   "type": "color",
