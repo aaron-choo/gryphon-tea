@@ -362,6 +362,59 @@
   margin: 16px 0 0 !important;
   padding: 0 !important;
 }
+/* ========================================
+   MOBILE ONLY — FIX PROMO TEXT/BUTTON GAP
+   ======================================== */
+
+@media screen and (max-width: 749px) {
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: max-content !important;
+    align-content: center !important;
+    justify-items: center !important;
+    gap: 0 !important;
+  }
+
+  /* Kill Dawn's automatic margins */
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text > * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text p {
+    margin: 0 !important;
+  }
+
+  /* Heading → subheading */
+  #shopify-section-{{ section.id }}
+  .gryphon-slide--promo
+  .banner__heading + .banner__text {
+    margin-top: 12px !important;
+  }
+
+  /* Subheading → button: FIXED 16px */
+  #shopify-section-{{ section.id }}
+  .gryphon-slide--promo
+  .banner__text + .banner__buttons {
+    margin-top: 16px !important;
+  }
+
+  /* If there is no subheading */
+  #shopify-section-{{ section.id }}
+  .gryphon-slide--promo
+  .banner__heading + .banner__buttons {
+    margin-top: 16px !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
+    position: static !important;
+    transform: none !important;
+    align-self: center !important;
+    padding: 0 !important;
+  }
+}
 </style>
 
 <slideshow-component
