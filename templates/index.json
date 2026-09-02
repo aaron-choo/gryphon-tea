@@ -148,6 +148,7 @@
       "block_order": [
         "buttons_hWRnd3"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Desktop_e59d7eeb-59b2-48f3-b1dc-799691df4984.png",
@@ -190,6 +191,7 @@
       "block_order": [
         "buttons_3rEMfM"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/desktop_e2e3197c-3fa3-411f-b3cd-11bea4818842.png",
