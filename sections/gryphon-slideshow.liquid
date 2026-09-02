@@ -209,83 +209,10 @@
     margin-bottom: 0 !important;
   }
 }
-/* =========================
-   MOBILE: BRANDING SLIDE
-   ========================= */
-@media screen and (max-width: 749px) {
 
-  #shopify-section-{{ section.id }} .gryphon-slide--branding {
-    height: auto !important;
-    min-height: 0 !important;
-    align-self: flex-start !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media::before {
-    display: none !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media img {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-
-  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__text-wrapper {
-    display: none !important;
-  }
-}
 </style>
 
-{%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
-  {%- style -%}
-    @media screen and (max-width: 749px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before,
-      #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-
-    @media screen and (min-width: 750px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-    /* =========================
-   DESKTOP / MOBILE IMAGES
-   ========================= */
-
-#shopify-section-{{ section.id }} .gryphon-mobile-image {
-  display: none !important;
-}
-
-@media screen and (max-width: 749px) {
-
-  #shopify-section-{{ section.id }} .has-mobile-image .gryphon-desktop-image {
-    display: none !important;
-  }
-
-  #shopify-section-{{ section.id }} .has-mobile-image .gryphon-mobile-image {
-    display: block !important;
-  }
-}
-  {%- endstyle -%}
-{%- endif -%}
+<slideshow-component
 
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
@@ -372,6 +299,35 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
+        /* =========================
+   MOBILE: BRANDING SLIDE
+   ========================= */
+@media screen and (max-width: 749px) {
+
+  #shopify-section-{{ section.id }} .gryphon-slide--branding {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--branding .slideshow__text-wrapper {
+    display: none !important;
+  }
+}
       </style>
       <div
         class="slideshow__slide gryphon-slide gryphon-slide--{{ block.settings.gryphon_layout }} grid__item grid--1-col slider__slide"
@@ -544,58 +500,6 @@
     </div>
   {%- endif -%}
 </slideshow-component>
-<script>
-  (() => {
-    const slider = document.getElementById('Slider-{{ section.id }}');
-
-    if (!slider) return;
-
-    const slides = Array.from(
-      slider.querySelectorAll('.slideshow__slide')
-    );
-
-    if (!slides.length) return;
-
-    let frame;
-
-    function getCurrentSlide() {
-      return slides.reduce((closest, slide) => {
-        const currentDistance = Math.abs(slide.offsetLeft - slider.scrollLeft);
-        const closestDistance = Math.abs(closest.offsetLeft - slider.scrollLeft);
-
-        return currentDistance < closestDistance ? slide : closest;
-      });
-    }
-
-    function updateSliderHeight() {
-      cancelAnimationFrame(frame);
-
-      frame = requestAnimationFrame(() => {
-        if (window.innerWidth >= 750) {
-          slider.style.height = '';
-          return;
-        }
-
-        const currentSlide = getCurrentSlide();
-
-        if (currentSlide) {
-          slider.style.height = `${currentSlide.scrollHeight}px`;
-        }
-      });
-    }
-
-    slider.addEventListener('scroll', updateSliderHeight, { passive: true });
-    window.addEventListener('resize', updateSliderHeight);
-
-    if ('ResizeObserver' in window) {
-      const observer = new ResizeObserver(updateSliderHeight);
-
-      slides.forEach((slide) => observer.observe(slide));
-    }
-
-    updateSliderHeight();
-  })();
-</script>
 
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
