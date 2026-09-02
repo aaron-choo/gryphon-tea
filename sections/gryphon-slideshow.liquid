@@ -53,58 +53,74 @@
   @media screen and (max-width: 749px) {
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo {
-      height: auto !important;
       min-height: 0 !important;
+      height: auto !important;
+      display: block !important;
     }
 
     /* IMAGE */
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
       position: relative !important;
       width: 100% !important;
-      height: 34rem !important;
+      height: 280px !important;
       min-height: 0 !important;
+      inset: auto !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media::before {
+      display: none !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
+      position: absolute !important;
+      inset: 0 !important;
       width: 100% !important;
       height: 100% !important;
       object-fit: cover !important;
     }
 
-    /* TEXT SECTION */
+    /* TEXT AREA */
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
       position: relative !important;
+      display: block !important;
       width: 100% !important;
       height: auto !important;
       min-height: 0 !important;
-      flex-grow: 0 !important;
       padding: 0 !important;
       margin: 0 !important;
       background: var(--gryphon-promo-background) !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100% !important;
-      max-width: none !important;
       height: auto !important;
       min-height: 0 !important;
+      max-width: none !important;
       margin: 0 !important;
-      padding: 32px 24px 36px !important;
-      border-radius: 0 !important;
+      padding: 28px 24px 32px !important;
       background: var(--gryphon-promo-background) !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      border-radius: 0 !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__heading {
+      margin: 0 !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text {
-      margin-top: 12px !important;
+      margin: 12px 0 0 !important;
     }
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
-      margin-top: 20px !important;
-      display: flex;
-      justify-content: center;
+      margin: 20px 0 0 !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
+      min-width: 170px;
+      min-height: 44px;
     }
   }
 
