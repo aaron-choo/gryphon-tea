@@ -35,6 +35,10 @@
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "promo_background": "#f4f4f7",
+            "desktop_content_padding": 50,
+            "mobile_padding_top": 24,
+            "mobile_padding_bottom": 24,
+            "button_margin_top": 18,
             "color_scheme": ""
           }
         },
@@ -55,7 +59,11 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "promo_background": "#f4f4f7",
+            "promo_background": "#EFDA8F",
+            "desktop_content_padding": 50,
+            "mobile_padding_top": 40,
+            "mobile_padding_bottom": 80,
+            "button_margin_top": 0,
             "color_scheme": ""
           }
         }
