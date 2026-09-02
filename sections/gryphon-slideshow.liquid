@@ -240,6 +240,125 @@
     color: #FFFFFF !important;
     opacity: 1;
   }
+  /* ========================================
+   AESOP-STYLE SLIDESHOW CONTROLS
+   ======================================== */
+
+#shopify-section-{{ section.id }} slideshow-component {
+  position: relative;
+}
+
+/* Turn control bar into an overlay */
+#shopify-section-{{ section.id }} .slideshow__controls {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 5;
+  border: 0 !important;
+  background: transparent !important;
+  pointer-events: none;
+}
+
+/* Pagination container */
+#shopify-section-{{ section.id }} .slider-counter {
+  position: absolute !important;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  min-width: 0;
+  margin: 0 !important;
+  pointer-events: auto;
+}
+
+#shopify-section-{{ section.id }} .slideshow__control-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Remove Dawn's large clickable-dot spacing */
+#shopify-section-{{ section.id }} .slider-counter__link--dots {
+  padding: 8px 0 !important;
+}
+
+/* Inactive line */
+#shopify-section-{{ section.id }} .slider-counter__link--dots .dot {
+  width: 46px !important;
+  height: 3px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: rgba(94, 107, 71, 0.35) !important;
+  transform: none !important;
+}
+
+/* Active line */
+#shopify-section-{{ section.id }}
+  .slider-counter__link--active.slider-counter__link--dots
+  .dot {
+  background: #5E6B47 !important;
+  transform: none !important;
+}
+
+/* Stop Dawn hover scaling */
+#shopify-section-{{ section.id }}
+  .slider-counter__link--dots:hover
+  .dot {
+  transform: none !important;
+}
+
+/* Left arrow */
+#shopify-section-{{ section.id }} .slider-button--prev {
+  position: absolute !important;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  pointer-events: auto;
+  background: transparent !important;
+}
+
+/* Right arrow */
+#shopify-section-{{ section.id }} .slider-button--next {
+  position: absolute !important;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  pointer-events: auto;
+  background: transparent !important;
+}
+
+/* Hide pause/play button */
+#shopify-section-{{ section.id }} .slideshow__autoplay {
+  display: none !important;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 749px) {
+
+  #shopify-section-{{ section.id }} .slider-counter {
+    bottom: 12px;
+  }
+
+  #shopify-section-{{ section.id }} .slideshow__control-wrapper {
+    gap: 6px;
+  }
+
+  #shopify-section-{{ section.id }} .slider-counter__link--dots .dot {
+    width: 30px !important;
+    height: 2px !important;
+  }
+
+  #shopify-section-{{ section.id }} .slider-button--prev {
+    left: 10px;
+  }
+
+  #shopify-section-{{ section.id }} .slider-button--next {
+    right: 10px;
+  }
+}
 </style>
 
 <slideshow-component
