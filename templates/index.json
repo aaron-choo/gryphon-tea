@@ -66,11 +66,37 @@
             "button_margin_top": 0,
             "color_scheme": ""
           }
+        },
+        "slide_kJdN83": {
+          "type": "slide",
+          "settings": {
+            "gryphon_layout": "promo",
+            "image": "shopify://shop_images/promo-5050-desktop.png",
+            "mobile_image": "shopify://shop_images/promo-5050-mobile.png",
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Shop Now",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "promo_background": "#9EB091",
+            "desktop_content_padding": 50,
+            "mobile_padding_top": 40,
+            "mobile_padding_bottom": 80,
+            "button_margin_top": 0,
+            "color_scheme": ""
+          }
         }
       },
       "block_order": [
         "slide_paDqCQ",
-        "slide_dNJAr6"
+        "slide_dNJAr6",
+        "slide_kJdN83"
       ],
       "name": "Gryphon Slideshow",
       "settings": {

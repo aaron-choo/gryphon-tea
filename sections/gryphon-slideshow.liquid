@@ -415,6 +415,15 @@
     padding: 0 !important;
   }
 }
+/* ========================================
+   PROMO TEXT COLOUR
+   ======================================== */
+
+#shopify-section-{{ section.id }} .gryphon-slide--promo .banner__heading,
+#shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text,
+#shopify-section-{{ section.id }} .gryphon-slide--promo .banner__text p {
+  color: var(--gryphon-promo-text) !important;
+}
 </style>
 
 <slideshow-component
@@ -509,10 +518,10 @@
         class="slideshow__slide gryphon-slide gryphon-slide--{{ block.settings.gryphon_layout }} grid__item grid--1-col slider__slide"
         style="
   --gryphon-promo-background: {{ block.settings.promo_background }};
+  --gryphon-promo-text: {{ block.settings.promo_text_color }};
   --gryphon-desktop-padding: {{ block.settings.desktop_content_padding }}px;
   --gryphon-mobile-padding-top: {{ block.settings.mobile_padding_top }}px;
   --gryphon-mobile-padding-bottom: {{ block.settings.mobile_padding_bottom }}px;
-  --gryphon-button-margin-top: {{ block.settings.button_margin_top }}px;
 "
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
@@ -1017,6 +1026,12 @@
   "id": "promo_background",
   "label": "Promo background colour",
   "default": "#F4F4F7"
+},
+{
+  "type": "color",
+  "id": "promo_text_color",
+  "label": "Promo text colour",
+  "default": "#5E6B47"
 },
 {
   "type": "header",
