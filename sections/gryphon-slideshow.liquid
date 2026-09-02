@@ -172,6 +172,43 @@
     color: #FFFFFF !important;
     opacity: 1;
   }
+  /* =========================
+   MOBILE: STOP CONTENT CLIPPING
+   ========================= */
+@media screen and (max-width: 749px) {
+
+  #shopify-section-{{ section.id }} #Slider-{{ section.id }} {
+    height: auto !important;
+    min-height: 0 !important;
+    align-items: flex-start !important;
+    overflow-y: visible !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding-bottom: 40px !important;
+  }
+
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
+    position: relative !important;
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+  }
+}
 </style>
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
