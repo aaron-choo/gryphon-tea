@@ -44,6 +44,50 @@
 
     #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
       min-width: 180px;
+ @media screen and (max-width: 749px) {
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo {
+      height: auto !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__media img {
+      position: relative !important;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text-wrapper {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      padding: 0;
+      margin: 0;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .slideshow__text {
+      width: 100%;
+      max-width: none;
+      min-height: 0;
+      margin: 0;
+      padding: 36px 24px 44px;
+      border-radius: 0;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
+      margin-top: 22px;
+    }
+
+    #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
+      min-width: 160px;
     }
   }
 </style>
