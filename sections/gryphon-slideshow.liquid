@@ -99,7 +99,7 @@
       height: 100% !important;
       min-height: 0 !important;
       margin: 0 !important;
-      padding: 50px 8% !important;
+      padding: var(--gryphon-desktop-padding) 8% !important;
       border-radius: 0 !important;
       background: var(--gryphon-promo-background) !important;
       display: flex !important;
@@ -191,7 +191,11 @@
       height: 100% !important;
       min-height: 0 !important;
       margin: 0 !important;
-      padding: 24px !important;
+      padding:
+  var(--gryphon-mobile-padding-top)
+  24px
+  var(--gryphon-mobile-padding-bottom)
+  !important;
       border-radius: 0 !important;
       background: var(--gryphon-promo-background) !important;
       display: flex !important;
@@ -208,9 +212,9 @@
       margin-top: 10px !important;
     }
 
-    #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
-      margin-top: 18px !important;
-    }
+  #shopify-section-{{ section.id }} .gryphon-slide--promo .banner__buttons {
+  margin-top: var(--gryphon-button-margin-top) !important;
+}
   }
 
 
@@ -427,7 +431,13 @@
       </style>
       <div
         class="slideshow__slide gryphon-slide gryphon-slide--{{ block.settings.gryphon_layout }} grid__item grid--1-col slider__slide"
-        style="--gryphon-promo-background: {{ block.settings.promo_background }};"
+        style="
+  --gryphon-promo-background: {{ block.settings.promo_background }};
+  --gryphon-desktop-padding: {{ block.settings.desktop_content_padding }}px;
+  --gryphon-mobile-padding-top: {{ block.settings.mobile_padding_top }}px;
+  --gryphon-mobile-padding-bottom: {{ block.settings.mobile_padding_bottom }}px;
+  --gryphon-button-margin-top: {{ block.settings.button_margin_top }}px;
+"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
         role="group"
