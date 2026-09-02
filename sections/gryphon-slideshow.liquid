@@ -391,10 +391,26 @@
       "limit": 5,
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
-        },
+  "type": "select",
+  "id": "gryphon_layout",
+  "label": "Slide layout",
+  "options": [
+    {
+      "value": "branding",
+      "label": "Branding image"
+    },
+    {
+      "value": "promo",
+      "label": "Promo 50-50"
+    }
+  ],
+  "default": "branding"
+},
+{
+  "type": "image_picker",
+  "id": "image",
+  "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+},
         {
           "type": "range",
           "id": "image_overlay_opacity",
