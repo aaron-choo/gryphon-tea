@@ -223,7 +223,7 @@
      ======================================== */
 
   #shopify-section-{{ section.id }} .gryphon-slide--promo .button {
-    background: #5E6B47 !important;
+    background: var(--gryphon-button-color) !important;
     color: #FFFFFF !important;
     border: none !important;
     min-width: 180px;
@@ -240,7 +240,7 @@
   }
 
   #shopify-section-{{ section.id }} .gryphon-slide--promo .button:hover {
-    background: #9EB091 !important;
+    background: var(--gryphon-button-hover-color) !important;
     color: #FFFFFF !important;
     opacity: 1;
   }
@@ -522,6 +522,8 @@
   --gryphon-desktop-padding: {{ block.settings.desktop_content_padding }}px;
   --gryphon-mobile-padding-top: {{ block.settings.mobile_padding_top }}px;
   --gryphon-mobile-padding-bottom: {{ block.settings.mobile_padding_bottom }}px;
+  --gryphon-button-color: {{ block.settings.promo_button_color }};
+--gryphon-button-hover-color: {{ block.settings.promo_button_hover_color }};
 "
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
@@ -1032,6 +1034,18 @@
   "id": "promo_text_color",
   "label": "Promo text colour",
   "default": "#5E6B47"
+},
+{
+  "type": "color",
+  "id": "promo_button_color",
+  "label": "Button colour",
+  "default": "#5E6B47"
+},
+{
+  "type": "color",
+  "id": "promo_button_hover_color",
+  "label": "Button hover colour",
+  "default": "#9EB091"
 },
 {
   "type": "header",
