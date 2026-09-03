@@ -23,8 +23,6 @@
           "settings": {
             "gryphon_layout": "branding",
             "branding_media_type": "video",
-            "image": "shopify://shop_images/destop-branding.png",
-            "mobile_image": "shopify://shop_images/mobile-branding.png",
             "branding_video": "shopify://files/videos/website banner.mp4",
             "image_overlay_opacity": 0,
             "heading": "",
