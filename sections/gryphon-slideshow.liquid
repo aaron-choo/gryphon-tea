@@ -1347,32 +1347,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
-Result
-
-Say your slideshow is:
-
-Slide 1 — 8 second video
-Slide 2 — promo image
-Slide 3 — 13 second video
-
-With Change slides every = 5 seconds, it behaves as:
-
-Slide 1
-0 sec ━━━━━━━━━ 8 sec
-VIDEO FINISHES
-       ↓
-
-Slide 2
-0 sec ━━━━━ 5 sec
-       ↓
-
-Slide 3
-0 sec ━━━━━━━━━━━━━ 13 sec
-VIDEO FINISHES
-       ↓
-
-back to Slide 1
-video restarts
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
