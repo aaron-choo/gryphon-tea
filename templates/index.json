@@ -23,7 +23,7 @@
           "settings": {
             "gryphon_layout": "branding",
             "branding_media_type": "video",
-            "branding_video": "shopify://files/videos/website banner_fa.mp4",
+            "branding_video": "shopify://files/videos/website banner_fa_2fa0ecb5-e624-4152-a267-bc05d583387e.mp4",
             "branding_mobile_video": "shopify://files/videos/website banner_mobile2.mp4",
             "image_overlay_opacity": 0,
             "heading": "",
@@ -56,6 +56,7 @@
             "branding_media_type": "image",
             "image": "shopify://shop_images/promo-5050-desktop.png",
             "mobile_image": "shopify://shop_images/promo-5050-mobile.png",
+            "branding_video": "shopify://files/videos/website banner_fa_2fa0ecb5-e624-4152-a267-bc05d583387e.mp4",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
