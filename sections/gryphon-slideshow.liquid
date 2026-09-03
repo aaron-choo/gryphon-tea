@@ -801,6 +801,289 @@ style="
 
 </slideshow-component>
 <script>
+(function () {
+
+  function initGryphonSlideshow() {
+
+    const section = document.querySelector('#shopify-section-{{ section.id }}');
+
+    if (!section) return;
+
+    /* Prevent double initialization */
+    if (section.dataset.gryphonVideoSliderReady === 'true') return;
+
+    const component = section.querySelector('slideshow-component');
+    const slider = section.querySelector('#Slider-{{ section.id }}');
+
+    if (!component || !slider) return;
+
+    section.dataset.gryphonVideoSliderReady = 'true';
+
+    const slides = Array.from(
+      slider.querySelectorAll('.gryphon-slide')
+    );
+
+    const imageDelay =
+      {{ section.settings.change_slides_speed | times: 1000 }};
+
+    let imageTimer = null;
+    let scrollTimer = null;
+    let currentVideo = null;
+
+
+    /* ========================================
+       FIND CURRENT SLIDE
+       ======================================== */
+
+    function getCurrentIndex() {
+
+      const slideWidth = slider.clientWidth;
+
+      if (!slideWidth) return 0;
+
+      return Math.round(
+        slider.scrollLeft / slideWidth
+      );
+    }
+
+
+    /* ========================================
+       FIND VISIBLE DESKTOP / MOBILE VIDEO
+       ======================================== */
+
+    function getVisibleVideo(slide) {
+
+      const videos = Array.from(
+        slide.querySelectorAll('video')
+      );
+
+      return videos.find(function (video) {
+
+        const style = window.getComputedStyle(video);
+
+        return (
+          style.display !== 'none' &&
+          style.visibility !== 'hidden' &&
+          video.offsetWidth > 0 &&
+          video.offsetHeight > 0
+        );
+
+      });
+
+    }
+
+
+    /* ========================================
+       CLEAR CURRENT TIMER / VIDEO EVENT
+       ======================================== */
+
+    function clearCurrentState() {
+
+      if (imageTimer) {
+        clearTimeout(imageTimer);
+        imageTimer = null;
+      }
+
+      if (currentVideo) {
+        currentVideo.onended = null;
+        currentVideo = null;
+      }
+
+    }
+
+
+    /* ========================================
+       NEXT SLIDE
+       ======================================== */
+
+    function goToNextSlide() {
+
+      clearCurrentState();
+
+      const nextButton =
+        component.querySelector('.slider-button--next');
+
+      if (!nextButton) return;
+
+      nextButton.click();
+
+      /*
+        Give Dawn time to move to the next slide,
+        then start that slide's timing.
+      */
+      setTimeout(function () {
+        runCurrentSlide();
+      }, 350);
+
+    }
+
+
+    /* ========================================
+       RUN ACTIVE SLIDE
+       ======================================== */
+
+    function runCurrentSlide() {
+
+      clearCurrentState();
+
+      let currentIndex = getCurrentIndex();
+
+      if (currentIndex < 0) currentIndex = 0;
+
+      if (currentIndex >= slides.length) {
+        currentIndex = slides.length - 1;
+      }
+
+      const currentSlide = slides[currentIndex];
+
+      if (!currentSlide) return;
+
+
+      /* Pause/reset videos on OTHER slides */
+
+      slides.forEach(function (slide, index) {
+
+        slide.querySelectorAll('video').forEach(function (video) {
+
+          if (index !== currentIndex) {
+
+            video.pause();
+
+            try {
+              video.currentTime = 0;
+            } catch (e) {}
+
+          }
+
+        });
+
+      });
+
+
+      const video = getVisibleVideo(currentSlide);
+
+
+      /* ====================================
+         VIDEO SLIDE
+         ==================================== */
+
+      if (video) {
+
+        currentVideo = video;
+
+        video.pause();
+
+        try {
+          video.currentTime = 0;
+        } catch (e) {}
+
+        video.loop = false;
+        video.muted = true;
+
+
+        /* THIS moves slideshow when video ends */
+
+        video.onended = function () {
+          goToNextSlide();
+        };
+
+
+        const playPromise = video.play();
+
+        if (playPromise !== undefined) {
+
+          playPromise.catch(function (error) {
+            console.log('Gryphon video autoplay blocked:', error);
+          });
+
+        }
+
+        return;
+      }
+
+
+      /* ====================================
+         IMAGE / PROMO SLIDE
+         ==================================== */
+
+      imageTimer = setTimeout(function () {
+
+        goToNextSlide();
+
+      }, imageDelay);
+
+    }
+
+
+    /* ========================================
+       MANUAL SWIPE / PAGINATION
+       ======================================== */
+
+    slider.addEventListener('scroll', function () {
+
+      clearTimeout(scrollTimer);
+
+      scrollTimer = setTimeout(function () {
+        runCurrentSlide();
+      }, 300);
+
+    });
+
+
+    /* ========================================
+       DESKTOP ↔ MOBILE
+       ======================================== */
+
+    window.addEventListener('resize', function () {
+
+      clearTimeout(scrollTimer);
+
+      scrollTimer = setTimeout(function () {
+        runCurrentSlide();
+      }, 300);
+
+    });
+
+
+    /* START IMMEDIATELY */
+    runCurrentSlide();
+
+  }
+
+
+  /* Normal storefront */
+  if (document.readyState === 'loading') {
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      initGryphonSlideshow
+    );
+
+  } else {
+
+    initGryphonSlideshow();
+
+  }
+
+
+  /* Shopify Customize section reload */
+  document.addEventListener(
+    'shopify:section:load',
+    function (event) {
+
+      if (
+        event.target &&
+        event.target.id === 'shopify-section-{{ section.id }}'
+      ) {
+        initGryphonSlideshow();
+      }
+
+    }
+  );
+
+})();
+</script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
 
   const section = document.querySelector('#shopify-section-{{ section.id }}');
