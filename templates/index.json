@@ -356,8 +356,8 @@
         "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 72,
-        "padding_bottom": 0
+        "padding_top": 32,
+        "padding_bottom": 24
       }
     },
     "rich_text_grTYjQ": {
@@ -384,7 +384,7 @@
         "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 72
+        "padding_bottom": 24
       }
     },
     "image_banner_mb4wNd": {
@@ -394,7 +394,7 @@
           "type": "heading",
           "settings": {
             "heading": "Let your instincts guide you to your perfect cup of tea.",
-            "heading_size": "h0",
+            "heading_size": "h1",
             "heading_size_mobile": "none"
           }
         },
@@ -402,7 +402,7 @@
           "type": "text",
           "settings": {
             "text": "Delve into our interactive quiz designed to uncover your unique preferences.",
-            "text_style": "body"
+            "text_style": "subtitle"
           }
         },
         "buttons_bwmhiG": {
@@ -425,7 +425,7 @@
       "settings": {
         "image": "shopify://shop_images/b2b-hero.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -659,7 +659,7 @@
       "settings": {
         "title": "Our Partners",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "half",
         "image_ratio": "square",
         "button_label": "",
         "button_link": "",
@@ -671,8 +671,8 @@
         "full_button": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "multicolumn_jzb7dh": {
@@ -729,11 +729,11 @@
       "settings": {
         "title": "Our Accolades",
         "heading_size": "h1",
-        "image_width": "half",
+        "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "scheme-2eed206b-146b-48ee-9fe5-c61658a1c4e9",
@@ -741,8 +741,8 @@
         "full_button": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "featured_blog_JqB7Pa": {
@@ -761,8 +761,8 @@
         "show_date": false,
         "show_author": false,
         "color_scheme": "",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 32,
+        "padding_bottom": 24
       }
     },
     "multirow_7AbrGq": {
@@ -796,8 +796,8 @@
         "section_color_scheme": "scheme-2",
         "row_color_scheme": "scheme-2",
         "overlap": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
