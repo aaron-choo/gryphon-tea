@@ -2,6 +2,15 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 <style>
+  #shopify-section-{{ section.id }} .gryphon-slide {
+  cursor: pointer;
+}
+
+/* Keep actual buttons behaving normally */
+#shopify-section-{{ section.id }} .gryphon-slide a,
+#shopify-section-{{ section.id }} .gryphon-slide button {
+  cursor: pointer;
+}
   /* ========================================
      IMAGE SWAP
      ======================================== */
@@ -1336,7 +1345,24 @@ if (isVideoSlide && video) {
     }, 250);
 
   });
+/* ========================================
+   CLICK BANNER → NEXT SLIDE
+   ======================================== */
 
+slider.addEventListener('click', function (event) {
+
+  /* Don't change slide when clicking links/buttons */
+  if (
+    event.target.closest(
+      'a, button, input, select, textarea, label'
+    )
+  ) {
+    return;
+  }
+
+  goToNextSlide();
+
+});
 
   /* ----------------------------------------
      START
