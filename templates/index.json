@@ -22,8 +22,10 @@
           "name": "Branding",
           "settings": {
             "gryphon_layout": "branding",
+            "branding_media_type": "video",
             "image": "shopify://shop_images/destop-branding.png",
             "mobile_image": "shopify://shop_images/mobile-branding.png",
+            "branding_video": "shopify://files/videos/website banner.mp4",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -52,6 +54,7 @@
           "type": "slide",
           "settings": {
             "gryphon_layout": "promo",
+            "branding_media_type": "image",
             "image": "shopify://shop_images/promo-5050-desktop.png",
             "mobile_image": "shopify://shop_images/promo-5050-mobile.png",
             "image_overlay_opacity": 0,
@@ -82,6 +85,7 @@
           "type": "slide",
           "settings": {
             "gryphon_layout": "promo",
+            "branding_media_type": "image",
             "image": "shopify://shop_images/promo-5050-desktop.png",
             "mobile_image": "shopify://shop_images/promo-5050-mobile.png",
             "image_overlay_opacity": 0,
