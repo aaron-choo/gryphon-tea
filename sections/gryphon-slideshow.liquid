@@ -585,13 +585,11 @@ style="
     {%- if block.settings.branding_video != blank -%}
       {{
         block.settings.branding_video
-        | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          playsinline: true,
-          class: 'gryphon-desktop-video'
+       | video_tag:
+  muted: true,
+  controls: false,
+  playsinline: true,
+  class: 'gryphon-desktop-video'
       }}
     {%- endif -%}
 
@@ -599,12 +597,10 @@ style="
       {{
         block.settings.branding_mobile_video
         | video_tag:
-          autoplay: true,
-          loop: true,
-          muted: true,
-          controls: false,
-          playsinline: true,
-          class: 'gryphon-mobile-video'
+  muted: true,
+  controls: false,
+  playsinline: true,
+  class: 'gryphon-mobile-video'
       }}
     {%- endif -%}
 
@@ -804,7 +800,296 @@ style="
 {%- endif -%}
 
 </slideshow-component>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
+  const section = document.querySelector('#shopify-section-{{ section.id }}');
+  if (!section) return;
+
+  const component = section.querySelector('slideshow-component');
+  const slider = section.querySelector('#Slider-{{ section.id }}');
+
+  if (!component || !slider) return;
+
+  const slides = Array.from(
+    slider.querySelectorAll('.gryphon-slide')
+  );
+
+  const imageDelay = {{ section.settings.change_slides_speed | times: 1000 }};
+
+  let timer = null;
+  let activeVideo = null;
+  let scrollTimer = null;
+
+
+  /* ----------------------------------------
+     FIND CURRENT SLIDE
+     ---------------------------------------- */
+
+  function getCurrentIndex() {
+
+    const dots = Array.from(
+      component.querySelectorAll('.slider-counter__link')
+    );
+
+    const activeDot = component.querySelector(
+      '.slider-counter__link--active'
+    );
+
+    if (activeDot && dots.length) {
+      const index = dots.indexOf(activeDot);
+
+      if (index >= 0) {
+        return index;
+      }
+    }
+
+    const slideWidth = slider.clientWidth || 1;
+
+    return Math.round(
+      slider.scrollLeft / slideWidth
+    );
+  }
+
+
+  /* ----------------------------------------
+     FIND THE VIDEO ACTUALLY VISIBLE
+     Desktop OR Mobile
+     ---------------------------------------- */
+
+  function getVisibleVideo(slide) {
+
+    const videos = Array.from(
+      slide.querySelectorAll('video')
+    );
+
+    return videos.find(function (video) {
+
+      const style = window.getComputedStyle(video);
+
+      return (
+        style.display !== 'none' &&
+        style.visibility !== 'hidden'
+      );
+
+    });
+  }
+
+
+  /* ----------------------------------------
+     STOP OLD TIMERS / VIDEOS
+     ---------------------------------------- */
+
+  function clearCurrentPlayback() {
+
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+
+    if (activeVideo) {
+      activeVideo.onended = null;
+      activeVideo = null;
+    }
+
+  }
+
+
+  /* ----------------------------------------
+     GO TO NEXT SLIDE
+     ---------------------------------------- */
+
+  function goToNextSlide() {
+
+    clearCurrentPlayback();
+
+    const dots = Array.from(
+      component.querySelectorAll('.slider-counter__link')
+    );
+
+    const currentIndex = getCurrentIndex();
+
+    const nextIndex =
+      (currentIndex + 1) % slides.length;
+
+
+    /* Use Dawn pagination so its own
+       slider logic remains intact */
+
+    if (dots[nextIndex]) {
+
+      dots[nextIndex].click();
+
+    } else {
+
+      const nextButton =
+        component.querySelector('.slider-button--next');
+
+      if (nextButton) {
+        nextButton.click();
+      }
+
+    }
+  }
+
+
+  /* ----------------------------------------
+     CONTROL CURRENT SLIDE
+     ---------------------------------------- */
+
+  function runCurrentSlide() {
+
+    clearCurrentPlayback();
+
+    const currentIndex = getCurrentIndex();
+
+    const currentSlide = slides[currentIndex];
+
+    if (!currentSlide) return;
+
+
+    /* Pause + reset every video
+       that is not on current slide */
+
+    slides.forEach(function (slide, index) {
+
+      slide.querySelectorAll('video').forEach(function (video) {
+
+        if (index !== currentIndex) {
+
+          video.pause();
+
+          try {
+            video.currentTime = 0;
+          } catch (e) {}
+
+        }
+
+      });
+
+    });
+
+
+    const video =
+      getVisibleVideo(currentSlide);
+
+
+    /* ------------------------------------
+       VIDEO SLIDE
+       ------------------------------------ */
+
+    if (video) {
+
+      activeVideo = video;
+
+      video.pause();
+
+      try {
+        video.currentTime = 0;
+      } catch (e) {}
+
+      video.loop = false;
+      video.muted = true;
+
+      video.onended = function () {
+        goToNextSlide();
+      };
+
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(function () {
+          /* Muted autoplay normally works.
+             Do nothing if browser blocks it. */
+        });
+      }
+
+      return;
+    }
+
+
+    /* ------------------------------------
+       IMAGE / PROMO SLIDE
+       ------------------------------------ */
+
+    timer = setTimeout(function () {
+
+      goToNextSlide();
+
+    }, imageDelay);
+
+  }
+
+
+  /* ----------------------------------------
+     USER SWIPE / DOT CHANGE
+     ---------------------------------------- */
+
+  slider.addEventListener('scroll', function () {
+
+    clearTimeout(scrollTimer);
+
+    scrollTimer = setTimeout(function () {
+
+      runCurrentSlide();
+
+    }, 250);
+
+  });
+
+
+  /* ----------------------------------------
+     IF SCREEN CHANGES MOBILE ↔ DESKTOP
+     choose correct video again
+     ---------------------------------------- */
+
+  window.addEventListener('resize', function () {
+
+    clearTimeout(scrollTimer);
+
+    scrollTimer = setTimeout(function () {
+
+      runCurrentSlide();
+
+    }, 250);
+
+  });
+
+
+  /* ----------------------------------------
+     START
+     ---------------------------------------- */
+
+  runCurrentSlide();
+
+});
+</script>
+Result
+
+Say your slideshow is:
+
+Slide 1 — 8 second video
+Slide 2 — promo image
+Slide 3 — 13 second video
+
+With Change slides every = 5 seconds, it behaves as:
+
+Slide 1
+0 sec ━━━━━━━━━ 8 sec
+VIDEO FINISHES
+       ↓
+
+Slide 2
+0 sec ━━━━━ 5 sec
+       ↓
+
+Slide 3
+0 sec ━━━━━━━━━━━━━ 13 sec
+VIDEO FINISHES
+       ↓
+
+back to Slide 1
+video restarts
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
