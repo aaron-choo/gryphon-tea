@@ -538,7 +538,7 @@
     id="Slider-{{ section.id }}"
     aria-live="polite"
     aria-atomic="true"
-    data-autoplay="{{ section.settings.auto_rotate }}"
+    data-autoplay="false"
     data-speed="{{ section.settings.change_slides_speed }}"
   >
     {%- for block in section.blocks -%}
@@ -549,6 +549,7 @@
       </style>
       <div
         class="slideshow__slide gryphon-slide gryphon-slide--{{ block.settings.gryphon_layout }} grid__item grid--1-col slider__slide"
+        data-gryphon-media-type="{{ block.settings.branding_media_type }}"
 style="
   --gryphon-promo-background: {{ block.settings.promo_background }};
   --gryphon-promo-text: {{ block.settings.promo_text_color }};
@@ -1253,15 +1254,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const video =
-      getVisibleVideo(currentSlide);
+const isVideoSlide =
+  currentSlide.classList.contains('gryphon-slide--branding') &&
+  currentSlide.dataset.gryphonMediaType === 'video';
 
+const video = getVisibleVideo(currentSlide);
 
-    /* ------------------------------------
-       VIDEO SLIDE
-       ------------------------------------ */
-
-    if (video) {
+if (isVideoSlide && video) {
 
       activeVideo = video;
 
