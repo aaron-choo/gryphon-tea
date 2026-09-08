@@ -1,0 +1,260 @@
+/* =========================================================
+   GRYPHON TEA SPIRIT
+   Phase 1: movement + catch interaction
+========================================================= */
+
+.gryphon-tea-spirit {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 110px;
+  height: 135px;
+
+  z-index: 999999;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  opacity: 0;
+
+  will-change: transform, opacity;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gryphon-tea-spirit[hidden] {
+  display: none !important;
+}
+
+
+/* ---------- SPIRIT ---------- */
+
+.gryphon-tea-spirit__body {
+  position: absolute;
+
+  width: 72px;
+  height: 92px;
+
+  left: 19px;
+  top: 10px;
+
+  border-radius: 48% 52% 44% 56% / 38% 42% 58% 62%;
+
+  background:
+    radial-gradient(
+      circle at 45% 28%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.74) 38%,
+      rgba(244, 244, 247, 0.35) 68%,
+      rgba(244, 244, 247, 0) 100%
+    );
+
+  filter: blur(0.2px);
+
+  animation: gryphon-spirit-float 1.4s ease-in-out infinite alternate;
+}
+
+
+/* ---------- GLOW ---------- */
+
+.gryphon-tea-spirit__glow {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(237, 207, 208, 0.32) 0%,
+      rgba(185, 182, 233, 0.18) 35%,
+      rgba(255, 255, 255, 0) 72%
+    );
+
+  filter: blur(13px);
+
+  animation: gryphon-spirit-glow 1.8s ease-in-out infinite alternate;
+}
+
+
+/* ---------- MIST / TAIL ---------- */
+
+.gryphon-tea-spirit__mist {
+  position: absolute;
+
+  width: 55px;
+  height: 65px;
+
+  left: 9px;
+  top: 52px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0)
+    );
+
+  filter: blur(8px);
+
+  transform: rotate(7deg);
+
+  opacity: 0.65;
+}
+
+
+/* ---------- TEA TAG ---------- */
+
+.gryphon-tea-spirit__tag {
+  position: absolute;
+
+  width: 34px;
+  height: 24px;
+
+  left: 47px;
+  top: 67px;
+
+  background: #5e6b47;
+
+  color: #f4f4f7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-body-family, sans-serif);
+
+  font-size: 5px;
+  letter-spacing: 0.7px;
+
+  transform: rotate(-8deg);
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.gryphon-tea-spirit__tag::before {
+  content: "";
+
+  position: absolute;
+
+  width: 1px;
+  height: 34px;
+
+  left: 50%;
+  bottom: 100%;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  transform-origin: bottom;
+}
+
+
+/* ---------- CAUGHT MESSAGE ---------- */
+
+.gryphon-tea-spirit-caught {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%) scale(0.96);
+
+  z-index: 1000000;
+
+  padding: 16px 26px;
+
+  background: rgba(51, 58, 46, 0.96);
+
+  color: #f4f4f7;
+
+  font-family: var(--font-heading-family, serif);
+
+  font-size: 16px;
+
+  letter-spacing: 0.12em;
+
+  pointer-events: none;
+
+  opacity: 0;
+}
+
+.gryphon-tea-spirit-caught.is-visible {
+  animation: gryphon-caught-message 1.4s ease forwards;
+}
+
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes gryphon-spirit-float {
+  from {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+
+  to {
+    transform: translateY(6px) rotate(3deg);
+  }
+}
+
+@keyframes gryphon-spirit-glow {
+  from {
+    transform: scale(0.92);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+@keyframes gryphon-caught-message {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media screen and (max-width: 749px) {
+
+  .gryphon-tea-spirit {
+    width: 92px;
+    height: 115px;
+  }
+
+  .gryphon-tea-spirit__body {
+    width: 62px;
+    height: 80px;
+
+    left: 15px;
+  }
+
+  .gryphon-tea-spirit__tag {
+    width: 30px;
+    height: 21px;
+
+    left: 39px;
+
+    font-size: 4.5px;
+  }
+
+}
