@@ -1,30 +1,131 @@
-{{ 'gryphon-tea-spirit.css' | asset_url | stylesheet_tag }}
-
-<div
-  id="gryphon-tea-spirit"
-  class="gryphon-tea-spirit"
-  aria-label="Catch the Tea Spirit"
-  role="button"
-  tabindex="0"
-  hidden
->
-  <div class="gryphon-tea-spirit__glow"></div>
-
-  <div class="gryphon-tea-spirit__body">
-    <div class="gryphon-tea-spirit__mist"></div>
-
-    <div class="gryphon-tea-spirit__tag">
-      <span>GRYPHON</span>
-    </div>
+<div id="gryphon-ghost">
+  <div class="gryphon-ghost-body">
+    <div class="gryphon-eye left"></div>
+    <div class="gryphon-eye right"></div>
+    <div class="gryphon-tag">GRYPHON</div>
   </div>
 </div>
 
-<div
-  id="gryphon-tea-spirit-caught"
-  class="gryphon-tea-spirit-caught"
-  hidden
->
-  <span>GOTCHA.</span>
+<div id="gryphon-gotcha">
+  GOTCHA.
 </div>
 
-<script src="{{ 'gryphon-tea-spirit.js' | asset_url }}" defer="defer"></script>
+<style>
+  #gryphon-ghost {
+    position: fixed;
+    left: -130px;
+    top: 40vh;
+    width: 100px;
+    height: 120px;
+    z-index: 9999999;
+    cursor: pointer;
+    display: none;
+  }
+
+  #gryphon-ghost.flying {
+    display: block;
+    animation: gryphonGhostFly 5s linear forwards;
+  }
+
+  .gryphon-ghost-body {
+    position: relative;
+    width: 75px;
+    height: 90px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50% 50% 40% 40%;
+    box-shadow:
+      0 0 25px rgba(185, 182, 233, 0.9),
+      0 0 55px rgba(237, 207, 208, 0.7);
+  }
+
+  .gryphon-eye {
+    position: absolute;
+    top: 30px;
+    width: 6px;
+    height: 9px;
+    background: #333a2e;
+    border-radius: 50%;
+  }
+
+  .gryphon-eye.left {
+    left: 23px;
+  }
+
+  .gryphon-eye.right {
+    right: 23px;
+  }
+
+  .gryphon-tag {
+    position: absolute;
+    top: 67px;
+    left: 48px;
+    padding: 6px 8px;
+    background: #5e6b47;
+    color: white;
+    font-size: 6px;
+    letter-spacing: 1px;
+    transform: rotate(-8deg);
+  }
+
+  #gryphon-gotcha {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000000;
+
+    background: #333a2e;
+    color: white;
+    padding: 18px 30px;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  @keyframes gryphonGhostFly {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+
+    25% {
+      transform: translateX(30vw) translateY(-35px);
+    }
+
+    50% {
+      transform: translateX(60vw) translateY(25px);
+    }
+
+    75% {
+      transform: translateX(90vw) translateY(-20px);
+    }
+
+    100% {
+      transform: translateX(calc(100vw + 250px)) translateY(10px);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const ghost = document.getElementById('gryphon-ghost');
+    const gotcha = document.getElementById('gryphon-gotcha');
+
+    if (!ghost) return;
+
+    setTimeout(function () {
+      ghost.classList.add('flying');
+    }, 1000);
+
+    ghost.addEventListener('click', function () {
+      ghost.style.display = 'none';
+
+      gotcha.style.display = 'block';
+
+      setTimeout(function () {
+        gotcha.style.display = 'none';
+      }, 1500);
+    });
+  });
+</script>
