@@ -831,7 +831,7 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% if product.available != true %}
+{% if product.available != true %}
       <style>
         body:not(.\/cart) quantity-input.quantity {
           display: none;
@@ -844,6 +844,9 @@
         }
       </style>
     {% endif %}
-     {% render 'samita-custom' %}
+
+    {% render 'gryphon-tea-spirit' %}
+
+    {% render 'samita-custom' %}
   </body>
 </html>
