@@ -12,15 +12,17 @@
 
 <style>
   #gryphon-ghost {
-    position: fixed;
-    left: -130px;
-    top: 40vh;
-    width: 100px;
-    height: 120px;
-    z-index: 9999999;
-    cursor: pointer;
-    display: none;
-  }
+     position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 120px;
+  z-index: 9999999;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  pointer-events: auto;
+}
 
 #gryphon-ghost.flying {
   display: block;
@@ -84,51 +86,6 @@
     letter-spacing: 2px;
   }
 
-@keyframes gryphonGhostFly {
-  0% {
-    transform: translateX(0) translateY(0) rotate(-6deg);
-  }
-
-  10% {
-    transform: translateX(12vw) translateY(-45px) rotate(5deg);
-  }
-
-  20% {
-    transform: translateX(24vw) translateY(28px) rotate(-4deg);
-  }
-
-  30% {
-    transform: translateX(36vw) translateY(-55px) rotate(6deg);
-  }
-
-  40% {
-    transform: translateX(48vw) translateY(18px) rotate(-5deg);
-  }
-
-  50% {
-    transform: translateX(60vw) translateY(-42px) rotate(4deg);
-  }
-
-  60% {
-    transform: translateX(72vw) translateY(34px) rotate(-6deg);
-  }
-
-  70% {
-    transform: translateX(84vw) translateY(-30px) rotate(5deg);
-  }
-
-  80% {
-    transform: translateX(96vw) translateY(22px) rotate(-4deg);
-  }
-
-  90% {
-    transform: translateX(108vw) translateY(-18px) rotate(3deg);
-  }
-
-  100% {
-    transform: translateX(calc(100vw + 250px)) translateY(10px) rotate(0deg);
-  }
-}
 </style>
 
 <script>
@@ -138,18 +95,142 @@
 
     if (!ghost) return;
 
-    setTimeout(function () {
-      ghost.classList.add('flying');
-    }, 1000);
+    const INITIAL_DELAY = 1000;   // for testing first
+    const TOTAL_BURSTS = 4;       // how many times it appears
+    const POP_GAP_MIN = 250;      // disappear gap before reappearing
+    const POP_GAP_MAX = 700;
+    const BURST_DURATION_MIN = 1200;
+    const BURST_DURATION_MAX = 1900;
 
-    ghost.addEventListener('click', function () {
+    let caught = false;
+    let currentAnimation = null;
+
+    function rand(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function getSpawnPoint() {
+      return {
+        x: rand(20, Math.max(20, window.innerWidth - 140)),
+        y: rand(100, Math.max(100, window.innerHeight - 180))
+      };
+    }
+
+    function buildZigZagFrames(start) {
+      const frames = [];
+      let x = start.x;
+      let y = start.y;
+
+      frames.push({
+        transform: `translate3d(${x}px, ${y}px, 0) rotate(-8deg)`
+      });
+
+      const steps = Math.floor(rand(4, 7));
+
+      for (let i = 1; i <= steps; i++) {
+        x += rand(-140, 140);
+        y += i % 2 === 0 ? rand(50, 110) : rand(-110, -50);
+
+        x = Math.max(20, Math.min(window.innerWidth - 120, x));
+        y = Math.max(90, Math.min(window.innerHeight - 140, y));
+
+        frames.push({
+          offset: i / steps,
+          transform: `translate3d(${x}px, ${y}px, 0) rotate(${rand(-12, 12)}deg)`
+        });
+      }
+
+      return {
+        frames: frames,
+        endX: x,
+        endY: y
+      };
+    }
+
+    async function doBurst() {
+      const spawn = getSpawnPoint();
+
+      ghost.style.display = 'block';
+      ghost.style.opacity = '0';
+      ghost.style.transform = `translate3d(${spawn.x}px, ${spawn.y}px, 0)`;
+
+      // force repaint
+      ghost.offsetHeight;
+
+      ghost.style.opacity = '1';
+
+      const path = buildZigZagFrames(spawn);
+
+      currentAnimation = ghost.animate(path.frames, {
+        duration: rand(BURST_DURATION_MIN, BURST_DURATION_MAX),
+        easing: 'ease-in-out',
+        fill: 'forwards'
+      });
+
+      try {
+        await currentAnimation.finished;
+      } catch (e) {}
+
+      currentAnimation = null;
+
+      ghost.style.transform = `translate3d(${path.endX}px, ${path.endY}px, 0)`;
+
+      if (caught) return;
+
+      ghost.style.opacity = '0';
+      await sleep(220);
+    }
+
+    async function runSequence() {
+      await sleep(INITIAL_DELAY);
+
+      for (let i = 0; i < TOTAL_BURSTS; i++) {
+        if (caught) return;
+
+        await doBurst();
+
+        if (caught) return;
+
+        if (i < TOTAL_BURSTS - 1) {
+          await sleep(rand(POP_GAP_MIN, POP_GAP_MAX));
+        }
+      }
+
       ghost.style.display = 'none';
+    }
 
-      gotcha.style.display = 'block';
+    function catchGhost() {
+      if (caught) return;
+
+      caught = true;
+
+      if (currentAnimation) {
+        currentAnimation.cancel();
+        currentAnimation = null;
+      }
+
+      ghost.style.opacity = '0';
 
       setTimeout(function () {
-        gotcha.style.display = 'none';
-      }, 1500);
-    });
+        ghost.style.display = 'none';
+      }, 180);
+
+      if (gotcha) {
+        gotcha.style.display = 'block';
+
+        setTimeout(function () {
+          gotcha.style.display = 'none';
+        }, 1500);
+      }
+    }
+
+    ghost.addEventListener('click', catchGhost);
+    ghost.addEventListener('touchstart', catchGhost, { passive: true });
+
+    runSequence();
   });
 </script>
