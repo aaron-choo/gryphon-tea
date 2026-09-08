@@ -1,0 +1,30 @@
+{{ 'gryphon-tea-spirit.css' | asset_url | stylesheet_tag }}
+
+<div
+  id="gryphon-tea-spirit"
+  class="gryphon-tea-spirit"
+  aria-label="Catch the Tea Spirit"
+  role="button"
+  tabindex="0"
+  hidden
+>
+  <div class="gryphon-tea-spirit__glow"></div>
+
+  <div class="gryphon-tea-spirit__body">
+    <div class="gryphon-tea-spirit__mist"></div>
+
+    <div class="gryphon-tea-spirit__tag">
+      <span>GRYPHON</span>
+    </div>
+  </div>
+</div>
+
+<div
+  id="gryphon-tea-spirit-caught"
+  class="gryphon-tea-spirit-caught"
+  hidden
+>
+  <span>GOTCHA.</span>
+</div>
+
+<script src="{{ 'gryphon-tea-spirit.js' | asset_url }}" defer="defer"></script>
