@@ -49,18 +49,19 @@
       class="gryphon-step is-active gryphon-reveal-screen"
     >
 
-      <p class="gryphon-eyebrow">
-        GRYPHON AFTER DARK
-      </p>
+<p class="gryphon-eyebrow">
+  GRYPHON AFTER DARK
+</p>
 
-      <h2>
-        YOU CAUGHT GRIFFIN.
-      </h2>
+<h2>
+  GOTCHA!
+</h2>
 
-      <p>
-        Trick or Treat?<br>
-        Only one way to find out.
-      </p>
+<p>
+  You caught the Griffin Ghost<br><br>
+  <strong>Trick or Treat?</strong><br>
+  Only one way to find out.
+</p>
 
       <button
         type="button"
@@ -306,6 +307,7 @@
 .gryphon-theme-neutral {
   background: #303828;
   color: #f4efe5;
+  height: 300px;
 }
 
 
@@ -382,19 +384,21 @@
 ======================================================= */
 
 .gryphon-reveal-screen {
-  padding: 75px 80px;
+  height: 100%;
+  padding: 38px 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   text-align: center;
 }
 
-.gryphon-eyebrow {
-  margin: 0 0 16px;
-
-  font-size: 11px;
-
-  letter-spacing: 0.18em;
-
-  opacity: 0.75;
+.gryphon-reveal-screen .gryphon-main-button {
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .gryphon-reveal-screen h2 {
