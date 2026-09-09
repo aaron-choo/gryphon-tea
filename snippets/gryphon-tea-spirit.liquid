@@ -1,6 +1,6 @@
 <!-- ======================================================
   GRYPHON AFTER DARK
-  Tea Spirit Hunt - Prototype
+  Tea Spirit Hunt - Artwork Version
 ======================================================= -->
 
 <div
@@ -14,20 +14,22 @@
     src="https://cdn.shopify.com/s/files/1/0772/8142/7490/files/Griffin_Ghost.png?v=1788858668"
     alt="Catch Griffin"
     class="gryphon-ghost-image"
+    width="240"
+    height="240"
   >
 </div>
 
-
-<!-- ======================================================
-  PRIZE MODAL
-======================================================= -->
-
-<div id="gryphon-spirit-modal" class="gryphon-spirit-modal" aria-hidden="true">
-
+<div
+  id="gryphon-spirit-modal"
+  class="gryphon-spirit-modal"
+  aria-hidden="true"
+>
   <div class="gryphon-spirit-modal__backdrop"></div>
 
-  <div class="gryphon-spirit-card">
-
+  <div
+    id="gryphon-spirit-card"
+    class="gryphon-spirit-card theme-neutral"
+  >
     <button
       type="button"
       class="gryphon-spirit-close"
@@ -37,745 +39,675 @@
       ×
     </button>
 
-
-    <!-- STEP 1: TRICK OR TREAT -->
-
+    <!-- ==============================================
+      STEP 1: REVEAL
+    =============================================== -->
     <div
       class="gryphon-spirit-step is-active"
       id="gryphon-step-reveal"
     >
+      <div class="gryphon-step-body gryphon-step-body--reveal">
+        <p class="gryphon-spirit-eyebrow">
+          GRYPHON AFTER DARK
+        </p>
 
-      <p class="gryphon-spirit-eyebrow">
-        GRYPHON AFTER DARK
-      </p>
+        <h2 class="gryphon-reveal-title">
+          TRICK OR TREAT?
+        </h2>
 
-      <h2>
-        TRICK OR TREAT?
-      </h2>
+        <p class="gryphon-spirit-copy gryphon-spirit-copy--center">
+          You caught a Gryphon Spirit.<br>
+          Only one way to find out.
+        </p>
 
-      <p class="gryphon-spirit-copy">
-        You caught a Gryphon Spirit.<br>
-        Now reveal your fate.
-      </p>
-
-      <button
-        type="button"
-        class="gryphon-spirit-button"
-        id="gryphon-reveal-button"
-      >
-        REVEAL MY FATE
-      </button>
-
+        <button
+          type="button"
+          class="gryphon-spirit-button"
+          id="gryphon-reveal-button"
+        >
+          REVEAL MY FATE
+        </button>
+      </div>
     </div>
 
-
-    <!-- STEP 2: PRIZE -->
-
+    <!-- ==============================================
+      STEP 2: RESULT + CLAIM
+    =============================================== -->
     <div
       class="gryphon-spirit-step"
       id="gryphon-step-prize"
     >
+      <div
+        class="gryphon-step-media"
+        id="gryphon-prize-art"
+      ></div>
 
-      <p
-        class="gryphon-spirit-eyebrow"
-        id="gryphon-prize-type"
-      >
-        TREAT
-      </p>
-
-      <h2 id="gryphon-prize-title">
-        20% OFF
-      </h2>
-
-      <p
-        class="gryphon-spirit-copy"
-        id="gryphon-prize-message"
-      >
-        Griffin was feeling generous.
-      </p>
-
-
-      <div class="gryphon-claim">
-
-        <h3>
-          Claim your prize
-        </h3>
-
-        <p>
-          Enter your email to unlock your unique code.
+      <div class="gryphon-step-body">
+        <p
+          class="gryphon-spirit-eyebrow"
+          id="gryphon-prize-type"
+        >
+          TREAT
         </p>
 
-        <form id="gryphon-claim-form">
+        <h2
+          class="gryphon-result-title"
+          id="gryphon-prize-title"
+        >
+          $10 OFF
+        </h2>
 
-          <input
-            type="email"
-            id="gryphon-claim-email"
-            class="gryphon-spirit-email"
-            placeholder="Email address"
-            autocomplete="email"
-            required
-          >
+        <p
+          class="gryphon-spirit-copy"
+          id="gryphon-prize-message"
+        >
+          A little something found its way to you.
+        </p>
 
-          <label class="gryphon-consent">
+        <div class="gryphon-claim">
+          <h3>
+            Claim your prize
+          </h3>
 
+          <p>
+            Enter your email to unlock your reward.
+          </p>
+
+          <form id="gryphon-claim-form">
             <input
-              type="checkbox"
-              id="gryphon-marketing-consent"
+              type="email"
+              id="gryphon-claim-email"
+              class="gryphon-spirit-email"
+              placeholder="Email address"
+              autocomplete="email"
+              required
             >
 
-            <span>
-              Yes, send me Gryphon news, launches and offers.
-            </span>
+            <label class="gryphon-consent">
+              <input
+                type="checkbox"
+                id="gryphon-marketing-consent"
+              >
+              <span>
+                Yes, send me Gryphon news, launches and offers.
+              </span>
+            </label>
 
-          </label>
-
-          <button
-            type="submit"
-            class="gryphon-spirit-button"
-          >
-            UNLOCK MY CODE
-          </button>
-
-        </form>
-
+            <button
+              type="submit"
+              class="gryphon-spirit-button"
+            >
+              CLAIM MY PRIZE
+            </button>
+          </form>
+        </div>
       </div>
-
     </div>
 
-
-    <!-- STEP 3: CODE -->
-
+    <!-- ==============================================
+      STEP 3: CODE / CONFIRMATION
+    =============================================== -->
     <div
       class="gryphon-spirit-step"
       id="gryphon-step-code"
     >
+      <div
+        class="gryphon-step-media"
+        id="gryphon-code-art"
+      ></div>
 
-      <p class="gryphon-spirit-eyebrow">
-        YOUR PRIZE IS YOURS
-      </p>
+      <div class="gryphon-step-body">
+        <p class="gryphon-spirit-eyebrow">
+          YOUR PRIZE IS YOURS
+        </p>
 
-      <h2>
-        YOUR UNIQUE CODE
-      </h2>
+        <h2 class="gryphon-result-title">
+          YOUR UNIQUE CODE
+        </h2>
 
-      <div class="gryphon-code-box">
+        <div class="gryphon-code-box">
+          <span id="gryphon-generated-code">
+            TEST-GRYPHON-000000
+          </span>
 
-        <span id="gryphon-generated-code">
-          TEST-GHOST-123456
-        </span>
+          <button
+            type="button"
+            id="gryphon-copy-code"
+          >
+            COPY
+          </button>
+        </div>
+
+        <p
+          class="gryphon-spirit-copy gryphon-spirit-copy--center"
+          id="gryphon-code-prize"
+        >
+          $10 OFF
+        </p>
 
         <button
           type="button"
-          id="gryphon-copy-code"
+          class="gryphon-spirit-button"
+          id="gryphon-finish-button"
         >
-          COPY
+          CONTINUE SHOPPING
         </button>
-
       </div>
-
-      <p
-        class="gryphon-spirit-copy"
-        id="gryphon-code-prize"
-      ></p>
-
-      <button
-        type="button"
-        class="gryphon-spirit-button"
-        id="gryphon-finish-button"
-      >
-        CONTINUE SHOPPING
-      </button>
-
     </div>
-
   </div>
-
 </div>
 
-
 <style>
-
   /* ======================================================
-     GHOST
+     FLYING GHOST
   ====================================================== */
 
   #gryphon-ghost {
     position: fixed;
-
     left: 0;
     top: 0;
-
-    width: 125px;
-
+    width: 115px;
     z-index: 9999998;
-
     cursor: pointer;
-
     opacity: 0;
     visibility: hidden;
-
     pointer-events: none;
-
     -webkit-tap-highlight-color: transparent;
-
     will-change: transform, opacity;
   }
 
-
   .gryphon-ghost-image {
     display: block;
-
-    width: 75%;
+    width: 100%;
     height: auto;
-
     pointer-events: none;
-
     user-select: none;
-
     -webkit-user-drag: none;
   }
 
-
   /* ======================================================
-     MODAL
+     MODAL WRAP
   ====================================================== */
 
   .gryphon-spirit-modal {
     position: fixed;
-
     inset: 0;
-
     z-index: 9999999;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 24px;
-
+    padding: 16px;
     opacity: 0;
     visibility: hidden;
-
     pointer-events: none;
-
-    transition:
-      opacity 250ms ease,
-      visibility 250ms ease;
+    transition: opacity 220ms ease, visibility 220ms ease;
   }
-
 
   .gryphon-spirit-modal.is-open {
     opacity: 1;
     visibility: visible;
-
     pointer-events: auto;
   }
 
-
   .gryphon-spirit-modal__backdrop {
     position: absolute;
-
     inset: 0;
-
-    background: rgba(20, 23, 18, 0.72);
-
+    background: rgba(18, 20, 16, 0.74);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
 
+  /* ======================================================
+     CARD
+  ====================================================== */
 
   .gryphon-spirit-card {
     position: relative;
+    width: min(440px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  }
 
-    width: min(440px, 100%);
-
+  .gryphon-spirit-card.theme-neutral {
     background: #333a2e;
-    color: #f4f4f7;
-
-    padding: 58px 44px 46px;
-
-    text-align: center;
-
-    box-shadow:
-      0 30px 80px rgba(0, 0, 0, 0.25);
-
-    overflow: hidden;
+    color: #f5efe4;
   }
 
-
-  .gryphon-spirit-card::before {
-    content: "";
-
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    top: -130px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    border-radius: 50%;
-
-    background: rgba(185, 182, 233, 0.16);
-
-    filter: blur(40px);
-
-    pointer-events: none;
+  .gryphon-spirit-card.theme-trick {
+    background: #2d3727;
+    color: #f5efe4;
   }
 
+  .gryphon-spirit-card.theme-treat {
+    background: #f6f1e7;
+    color: #865224;
+  }
 
   .gryphon-spirit-close {
     position: absolute;
-
-    top: 16px;
-    right: 18px;
-
-    width: 34px;
-    height: 34px;
-
-    padding: 0;
-
+    top: 12px;
+    right: 14px;
+    z-index: 5;
+    width: 32px;
+    height: 32px;
     border: 0;
     background: transparent;
-
-    color: #f4f4f7;
-
-    font-size: 27px;
+    color: currentColor;
+    font-size: 28px;
     line-height: 1;
-
     cursor: pointer;
+    padding: 0;
   }
 
-
   /* ======================================================
-     MODAL CONTENT
+     STEPS
   ====================================================== */
 
   .gryphon-spirit-step {
     display: none;
   }
 
-
   .gryphon-spirit-step.is-active {
     display: block;
-
-    animation: gryphonStepIn 400ms ease forwards;
+    animation: gryphonStepIn 260ms ease forwards;
   }
 
-
-  .gryphon-spirit-eyebrow {
-    margin: 0 0 18px;
-
-    font-size: 11px;
-    line-height: 1.2;
-
-    letter-spacing: 0.18em;
-
-    text-transform: uppercase;
-
-    opacity: 0.75;
+  .gryphon-step-media {
+    line-height: 0;
   }
 
-
-  .gryphon-spirit-card h2 {
-    margin: 0 0 18px;
-
-    color: #f4f4f7;
-
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
-
-    font-size: clamp(30px, 5vw, 45px);
-    line-height: 1;
-
-    letter-spacing: 0.02em;
-  }
-
-
-  .gryphon-spirit-copy {
-    margin: 0 auto 30px;
-
-    max-width: 330px;
-
-    font-size: 14px;
-    line-height: 1.55;
-
-    opacity: 0.88;
-  }
-
-
-  .gryphon-spirit-button {
+  .gryphon-step-media picture,
+  .gryphon-step-media img {
+    display: block;
     width: 100%;
-
-    min-height: 50px;
-
-    padding: 14px 22px;
-
-    border: 1px solid #f4f4f7;
-
-    background: #f4f4f7;
-    color: #333a2e;
-
-    font-family: var(--font-body-family);
-
-    font-size: 12px;
-
-    letter-spacing: 0.12em;
-
-    cursor: pointer;
-
-    transition:
-      background 180ms ease,
-      color 180ms ease;
+    height: auto;
   }
 
-
-  .gryphon-spirit-button:hover {
-    background: transparent;
-
-    color: #f4f4f7;
+  .gryphon-step-body {
+    padding: 24px 24px 26px;
   }
 
+  .gryphon-step-body--reveal {
+    padding: 56px 26px 30px;
+    text-align: center;
+  }
 
   /* ======================================================
-     CLAIM FORM
+     TYPE
+  ====================================================== */
+
+  .gryphon-spirit-eyebrow {
+    margin: 0 0 10px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    opacity: 0.85;
+    text-align: center;
+  }
+
+  .gryphon-reveal-title,
+  .gryphon-result-title {
+    margin: 0 0 12px;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  .gryphon-reveal-title {
+    font-size: clamp(32px, 7vw, 44px);
+  }
+
+  .gryphon-result-title {
+    font-size: clamp(24px, 6vw, 34px);
+  }
+
+  .gryphon-spirit-copy {
+    margin: 0 0 22px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .gryphon-spirit-copy--center {
+    text-align: center;
+  }
+
+  /* ======================================================
+     CLAIM AREA
   ====================================================== */
 
   .gryphon-claim {
-    margin-top: 34px;
-
-    padding-top: 28px;
-
-    border-top: 1px solid rgba(244, 244, 247, 0.22);
-
-    text-align: left;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
   }
 
+  .theme-trick .gryphon-claim {
+    border-top-color: rgba(245, 239, 228, 0.16);
+  }
 
   .gryphon-claim h3 {
-    margin: 0 0 7px;
-
-    color: #f4f4f7;
-
+    margin: 0 0 6px;
     font-size: 18px;
     font-weight: 600;
   }
 
-
   .gryphon-claim > p {
-    margin: 0 0 19px;
-
+    margin: 0 0 16px;
     font-size: 13px;
-    line-height: 1.5;
-
-    opacity: 0.82;
+    line-height: 1.45;
+    opacity: 0.88;
   }
-
 
   .gryphon-spirit-email {
     display: block;
-
     width: 100%;
-
-    height: 50px;
-
-    padding: 0 15px;
-
-    border: 1px solid rgba(244, 244, 247, 0.55);
-
+    height: 48px;
+    padding: 0 14px;
     border-radius: 0;
-
-    background: transparent;
-
-    color: #f4f4f7;
-
-    font-family: var(--font-body-family);
-    font-size: 14px;
-
     outline: none;
+    font-size: 14px;
+    font-family: var(--font-body-family);
+    background: transparent;
   }
 
-
-  .gryphon-spirit-email::placeholder {
-    color: rgba(244, 244, 247, 0.55);
+  .theme-trick .gryphon-spirit-email {
+    border: 1px solid rgba(245, 239, 228, 0.45);
+    color: #f5efe4;
   }
 
-
-  .gryphon-spirit-email:focus {
-    border-color: #f4f4f7;
+  .theme-trick .gryphon-spirit-email::placeholder {
+    color: rgba(245, 239, 228, 0.58);
   }
 
+  .theme-trick .gryphon-spirit-email:focus {
+    border-color: #f5efe4;
+  }
+
+  .theme-treat .gryphon-spirit-email,
+  .theme-neutral .gryphon-spirit-email {
+    border: 1px solid rgba(40, 51, 34, 0.22);
+    color: #2d3727;
+  }
+
+  .theme-treat .gryphon-spirit-email::placeholder,
+  .theme-neutral .gryphon-spirit-email::placeholder {
+    color: rgba(45, 55, 39, 0.54);
+  }
+
+  .theme-treat .gryphon-spirit-email:focus,
+  .theme-neutral .gryphon-spirit-email:focus {
+    border-color: #2d3727;
+  }
 
   .gryphon-consent {
     display: flex;
-    align-items: flex-start;
-
     gap: 10px;
-
-    margin: 16px 0 22px;
-
+    align-items: flex-start;
+    margin: 14px 0 20px;
     cursor: pointer;
   }
-
 
   .gryphon-consent input {
     width: 15px;
     height: 15px;
-
     margin: 2px 0 0;
-
     flex: 0 0 auto;
   }
-
 
   .gryphon-consent span {
     font-size: 12px;
     line-height: 1.45;
-
-    opacity: 0.85;
+    opacity: 0.92;
   }
 
+  /* ======================================================
+     BUTTONS
+  ====================================================== */
+
+  .gryphon-spirit-button {
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 20px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-family: var(--font-body-family);
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+  }
+
+  .theme-trick .gryphon-spirit-button,
+  .theme-neutral .gryphon-spirit-button {
+    background: #f5efe4;
+    color: #243022;
+    border: 1px solid #f5efe4;
+  }
+
+  .theme-trick .gryphon-spirit-button:hover,
+  .theme-neutral .gryphon-spirit-button:hover {
+    background: transparent;
+    color: #f5efe4;
+  }
+
+  .theme-treat .gryphon-spirit-button {
+    background: #233022;
+    color: #f5efe4;
+    border: 1px solid #233022;
+  }
+
+  .theme-treat .gryphon-spirit-button:hover {
+    background: transparent;
+    color: #233022;
+  }
 
   /* ======================================================
-     CODE
+     CODE BOX
   ====================================================== */
 
   .gryphon-code-box {
     display: flex;
-    align-items: stretch;
-
     width: 100%;
-
-    margin: 28px 0 22px;
-
-    border: 1px solid rgba(244, 244, 247, 0.7);
+    margin: 20px 0 18px;
   }
 
+  .theme-trick .gryphon-code-box,
+  .theme-neutral .gryphon-code-box {
+    border: 1px solid rgba(245, 239, 228, 0.6);
+  }
+
+  .theme-treat .gryphon-code-box {
+    border: 1px solid rgba(35, 48, 34, 0.28);
+  }
 
   .gryphon-code-box span {
     flex: 1;
-
     display: flex;
     align-items: center;
-
-    padding: 15px;
-
+    min-height: 48px;
+    padding: 0 14px;
     font-size: 14px;
-    letter-spacing: 0.08em;
-
-    text-align: left;
-
+    letter-spacing: 0.05em;
     overflow-wrap: anywhere;
   }
 
-
   .gryphon-code-box button {
     flex: 0 0 auto;
-
-    padding: 0 17px;
-
+    min-width: 72px;
     border: 0;
-    border-left: 1px solid rgba(244, 244, 247, 0.7);
-
     background: transparent;
-
-    color: #f4f4f7;
-
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.12em;
-
     cursor: pointer;
   }
 
+  .theme-trick .gryphon-code-box button,
+  .theme-neutral .gryphon-code-box button {
+    color: #f5efe4;
+    border-left: 1px solid rgba(245, 239, 228, 0.6);
+  }
+
+  .theme-treat .gryphon-code-box button {
+    color: #233022;
+    border-left: 1px solid rgba(35, 48, 34, 0.28);
+  }
 
   /* ======================================================
      ANIMATION
   ====================================================== */
 
   @keyframes gryphonStepIn {
-
     from {
       opacity: 0;
       transform: translateY(8px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
     }
-
   }
-
 
   /* ======================================================
      MOBILE
   ====================================================== */
 
   @media screen and (max-width: 749px) {
-
     #gryphon-ghost {
-      width: 100px;
+      width: 95px;
     }
-
-
-    .gryphon-spirit-modal {
-      padding: 16px;
-    }
-
 
     .gryphon-spirit-card {
-      width: 100%;
-
-      padding:
-        52px
-        24px
-        34px;
+      width: min(340px, calc(100vw - 24px));
+      max-height: calc(100vh - 24px);
     }
 
-
-    .gryphon-spirit-card h2 {
-      font-size: 34px;
+    .gryphon-step-body {
+      padding: 18px 18px 20px;
     }
 
+    .gryphon-step-body--reveal {
+      padding: 48px 20px 24px;
+    }
+
+    .gryphon-result-title {
+      font-size: 20px;
+    }
+
+    .gryphon-reveal-title {
+      font-size: 32px;
+    }
+
+    .gryphon-spirit-copy {
+      font-size: 13px;
+    }
   }
-
 </style>
 
-
 <script>
-
 document.addEventListener('DOMContentLoaded', function () {
+  const ghost = document.getElementById('gryphon-ghost');
+  const modal = document.getElementById('gryphon-spirit-modal');
+  const card = document.getElementById('gryphon-spirit-card');
+
+  const closeButton = document.getElementById('gryphon-spirit-close');
+  const revealButton = document.getElementById('gryphon-reveal-button');
+  const claimForm = document.getElementById('gryphon-claim-form');
+  const emailInput = document.getElementById('gryphon-claim-email');
+  const copyButton = document.getElementById('gryphon-copy-code');
+  const finishButton = document.getElementById('gryphon-finish-button');
+
+  const prizeType = document.getElementById('gryphon-prize-type');
+  const prizeTitle = document.getElementById('gryphon-prize-title');
+  const prizeMessage = document.getElementById('gryphon-prize-message');
+  const codeOutput = document.getElementById('gryphon-generated-code');
+  const codePrize = document.getElementById('gryphon-code-prize');
+
+  const prizeArt = document.getElementById('gryphon-prize-art');
+  const codeArt = document.getElementById('gryphon-code-art');
+
+  if (!ghost || !modal || !card) return;
 
   /* ======================================================
-     ELEMENTS
+     ASSETS
   ====================================================== */
 
-  const ghost =
-    document.getElementById('gryphon-ghost');
-
-  const modal =
-    document.getElementById('gryphon-spirit-modal');
-
-  const closeButton =
-    document.getElementById('gryphon-spirit-close');
-
-  const revealButton =
-    document.getElementById('gryphon-reveal-button');
-
-  const claimForm =
-    document.getElementById('gryphon-claim-form');
-
-  const emailInput =
-    document.getElementById('gryphon-claim-email');
-
-  const consentInput =
-    document.getElementById('gryphon-marketing-consent');
-
-  const copyButton =
-    document.getElementById('gryphon-copy-code');
-
-  const finishButton =
-    document.getElementById('gryphon-finish-button');
-
-  const prizeType =
-    document.getElementById('gryphon-prize-type');
-
-  const prizeTitle =
-    document.getElementById('gryphon-prize-title');
-
-  const prizeMessage =
-    document.getElementById('gryphon-prize-message');
-
-  const codeOutput =
-    document.getElementById('gryphon-generated-code');
-
-  const codePrize =
-    document.getElementById('gryphon-code-prize');
-
-
-  if (!ghost || !modal) return;
-
+  const ART = {
+    trick: {
+      desktop: 'https://cdn.shopify.com/s/files/1/0772/8142/7490/files/halloween-trick-desktop.png?v=1788943099',
+      mobile: 'https://cdn.shopify.com/s/files/1/0772/8142/7490/files/halloween-trick-mobile.png?v=1788943098'
+    },
+    treat: {
+      desktop: 'https://cdn.shopify.com/s/files/1/0772/8142/7490/files/halloween-treat-desktop.png?v=1788943099',
+      mobile: 'https://cdn.shopify.com/s/files/1/0772/8142/7490/files/halloween-treat-mobile.png?v=1788943099'
+    }
+  };
 
   /* ======================================================
      TEST SETTINGS
   ====================================================== */
 
   const INITIAL_DELAY = 1000;
-
   const TOTAL_BURSTS = 4;
-
   const POP_GAP_MIN = 300;
   const POP_GAP_MAX = 800;
-
   const BURST_MIN = 1300;
   const BURST_MAX = 2000;
-
 
   let caught = false;
   let currentAnimation = null;
   let selectedPrize = null;
 
-
   /* ======================================================
      TEST PRIZES
-
-     WE WILL REPLACE THESE LATER WITH THE REAL REWARDS
+     For now, keep these to code-style rewards only.
   ====================================================== */
 
   const prizes = [
-
     {
       type: 'TRICK',
-      title: '5% OFF',
+      title: 'BOO! 10% OFF',
       message: 'Griffin almost got away with it.',
-      weight: 30,
-      prefix: 'GHOST5'
+      weight: 26,
+      prefix: 'BOO10'
     },
-
     {
       type: 'TRICK',
-      title: 'MYSTERY TEA SACHET',
-      message: 'A little something was left behind.',
-      weight: 20,
-      prefix: 'SACHET'
+      title: '$3 OFF',
+      message: 'You have been tricked... but not entirely.',
+      weight: 24,
+      prefix: 'TRICK3'
     },
-
     {
-      type: 'TREAT',
-      title: 'FREE SHIPPING',
-      message: 'Your next tea delivery is on Griffin.',
-      weight: 18,
-      prefix: 'SHIP'
+      type: 'TRICK',
+      title: 'FREE SHIPPING OVER $40',
+      message: 'No candy here... but shipping is on us over $40.',
+      weight: 16,
+      prefix: 'SHIP40'
     },
-
     {
       type: 'TREAT',
       title: '$10 OFF',
-      message: 'A treat worth catching.',
-      weight: 15,
-      prefix: 'TEN'
+      message: 'Rosie has something for you.',
+      weight: 16,
+      prefix: 'TREAT10'
     },
-
     {
       type: 'TREAT',
-      title: 'FREE COLLAGEN POUCH',
-      message: 'Something extra is coming your way.',
+      title: '15% OFF YOUR ORDER',
+      message: 'A little goodness found its way to you.',
       weight: 10,
-      prefix: 'COLLAGEN'
+      prefix: 'TREAT15'
     },
-
     {
       type: 'TREAT',
-      title: '20% OFF',
-      message: 'Griffin was feeling generous.',
-      weight: 7,
-      prefix: 'GHOST20'
+      title: '20% OFF YOUR ORDER',
+      message: 'Rosie was feeling generous.',
+      weight: 8,
+      prefix: 'TREAT20'
     }
-
   ];
-
 
   /* ======================================================
      HELPERS
@@ -785,555 +717,285 @@ document.addEventListener('DOMContentLoaded', function () {
     return Math.random() * (max - min) + min;
   }
 
-
   function sleep(ms) {
     return new Promise(function (resolve) {
       setTimeout(resolve, ms);
     });
   }
 
-
   function showStep(id) {
+    document.querySelectorAll('.gryphon-spirit-step').forEach(function (step) {
+      step.classList.remove('is-active');
+    });
 
-    document
-      .querySelectorAll('.gryphon-spirit-step')
-      .forEach(function (step) {
-        step.classList.remove('is-active');
-      });
-
-
-    const nextStep =
-      document.getElementById(id);
-
-
-    if (nextStep) {
-      nextStep.classList.add('is-active');
-    }
-
+    const nextStep = document.getElementById(id);
+    if (nextStep) nextStep.classList.add('is-active');
   }
 
+  function setTheme(type) {
+    card.classList.remove('theme-neutral', 'theme-trick', 'theme-treat');
 
-  /* ======================================================
-     PRIZE PICKER
-  ====================================================== */
+    if (type === 'TRICK') {
+      card.classList.add('theme-trick');
+    } else if (type === 'TREAT') {
+      card.classList.add('theme-treat');
+    } else {
+      card.classList.add('theme-neutral');
+    }
+  }
+
+  function getArtworkMarkup(type) {
+    if (type === 'TRICK') {
+      return `
+        <picture>
+          <source media="(max-width: 749px)" srcset="${ART.trick.mobile}">
+          <img
+            src="${ART.trick.desktop}"
+            alt="Trick artwork"
+            class="gryphon-result-image"
+            width="880"
+            height="640"
+          >
+        </picture>
+      `;
+    }
+
+    return `
+      <picture>
+        <source media="(max-width: 749px)" srcset="${ART.treat.mobile}">
+        <img
+          src="${ART.treat.desktop}"
+          alt="Treat artwork"
+          class="gryphon-result-image"
+          width="880"
+          height="640"
+        >
+      </picture>
+    `;
+  }
 
   function pickPrize() {
+    const totalWeight = prizes.reduce(function (sum, prize) {
+      return sum + prize.weight;
+    }, 0);
 
-    const totalWeight =
-      prizes.reduce(function (total, prize) {
-        return total + prize.weight;
-      }, 0);
-
-
-    let roll =
-      Math.random() * totalWeight;
-
+    let roll = Math.random() * totalWeight;
 
     for (const prize of prizes) {
-
       roll -= prize.weight;
-
-      if (roll <= 0) {
-        return prize;
-      }
-
+      if (roll <= 0) return prize;
     }
 
-
     return prizes[0];
-
   }
-
 
   /* ======================================================
      RANDOM GHOST MOVEMENT
   ====================================================== */
 
   function getSpawnPoint() {
-
-    const ghostWidth =
-      ghost.offsetWidth || 125;
-
-    const ghostHeight =
-      ghost.offsetHeight || 140;
-
+    const ghostWidth = ghost.offsetWidth || 115;
+    const ghostHeight = ghost.offsetHeight || 115;
 
     return {
-
-      x: random(
-        15,
-        Math.max(
-          20,
-          window.innerWidth - ghostWidth - 20
-        )
-      ),
-
-      y: random(
-        90,
-        Math.max(
-          100,
-          window.innerHeight - ghostHeight - 40
-        )
-      )
-
+      x: random(15, Math.max(20, window.innerWidth - ghostWidth - 20)),
+      y: random(90, Math.max(100, window.innerHeight - ghostHeight - 40))
     };
-
   }
 
-
   function buildZigZagFrames(start) {
-
     const frames = [];
-
     let x = start.x;
     let y = start.y;
 
-
     frames.push({
-      transform:
-        `translate3d(${x}px, ${y}px, 0) rotate(-5deg)`
+      transform: `translate3d(${x}px, ${y}px, 0) rotate(-5deg)`
     });
 
-
-    const steps =
-      Math.floor(random(4, 7));
-
+    const steps = Math.floor(random(4, 7));
 
     for (let i = 1; i <= steps; i++) {
-
       x += random(-150, 150);
+      y += i % 2 === 0 ? random(45, 105) : random(-105, -45);
 
-      y +=
-        i % 2 === 0
-          ? random(45, 105)
-          : random(-105, -45);
-
-
-      x =
-        Math.max(
-          15,
-          Math.min(
-            window.innerWidth - 125,
-            x
-          )
-        );
-
-
-      y =
-        Math.max(
-          80,
-          Math.min(
-            window.innerHeight - 150,
-            y
-          )
-        );
-
+      x = Math.max(15, Math.min(window.innerWidth - 120, x));
+      y = Math.max(80, Math.min(window.innerHeight - 140, y));
 
       frames.push({
-
         offset: i / steps,
-
-        transform:
-          `translate3d(${x}px, ${y}px, 0) rotate(${random(-11, 11)}deg)`
-
+        transform: `translate3d(${x}px, ${y}px, 0) rotate(${random(-11, 11)}deg)`
       });
-
     }
 
-
     return frames;
-
   }
 
-
   async function runBurst() {
+    const spawn = getSpawnPoint();
 
-    const spawn =
-      getSpawnPoint();
-
-
-    ghost.style.visibility =
-      'visible';
-
-    ghost.style.pointerEvents =
-      'auto';
-
-    ghost.style.opacity =
-      '0';
-
-    ghost.style.transform =
-      `translate3d(${spawn.x}px, ${spawn.y}px, 0)`;
-
+    ghost.style.visibility = 'visible';
+    ghost.style.pointerEvents = 'auto';
+    ghost.style.opacity = '0';
+    ghost.style.transform = `translate3d(${spawn.x}px, ${spawn.y}px, 0)`;
 
     ghost.offsetHeight;
 
+    ghost.style.transition = 'opacity 180ms ease';
+    ghost.style.opacity = '1';
 
-    ghost.style.transition =
-      'opacity 180ms ease';
-
-    ghost.style.opacity =
-      '1';
-
-
-    currentAnimation =
-      ghost.animate(
-
-        buildZigZagFrames(spawn),
-
-        {
-          duration:
-            random(
-              BURST_MIN,
-              BURST_MAX
-            ),
-
-          easing:
-            'ease-in-out',
-
-          fill:
-            'forwards'
-        }
-
-      );
-
+    currentAnimation = ghost.animate(buildZigZagFrames(spawn), {
+      duration: random(BURST_MIN, BURST_MAX),
+      easing: 'ease-in-out',
+      fill: 'forwards'
+    });
 
     try {
-
       await currentAnimation.finished;
-
     } catch (error) {}
-
 
     currentAnimation = null;
 
-
     if (caught) return;
 
+    ghost.style.opacity = '0';
+    await sleep(180);
 
-    ghost.style.opacity =
-      '0';
-
-
-    await sleep(200);
-
-
-    ghost.style.visibility =
-      'hidden';
-
-    ghost.style.pointerEvents =
-      'none';
-
+    ghost.style.visibility = 'hidden';
+    ghost.style.pointerEvents = 'none';
   }
 
-
   async function runGhostSequence() {
-
     await sleep(INITIAL_DELAY);
 
-
-    for (
-      let i = 0;
-      i < TOTAL_BURSTS;
-      i++
-    ) {
-
+    for (let i = 0; i < TOTAL_BURSTS; i++) {
       if (caught) return;
-
 
       await runBurst();
 
-
       if (caught) return;
 
-
-      if (
-        i <
-        TOTAL_BURSTS - 1
-      ) {
-
-        await sleep(
-          random(
-            POP_GAP_MIN,
-            POP_GAP_MAX
-          )
-        );
-
+      if (i < TOTAL_BURSTS - 1) {
+        await sleep(random(POP_GAP_MIN, POP_GAP_MAX));
       }
-
     }
-
   }
-
 
   /* ======================================================
      CATCH
   ====================================================== */
 
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
   function catchGhost() {
-
     if (caught) return;
-
 
     caught = true;
 
-
     if (currentAnimation) {
-
       currentAnimation.cancel();
-
       currentAnimation = null;
-
     }
 
+    ghost.style.opacity = '0';
+    ghost.style.visibility = 'hidden';
+    ghost.style.pointerEvents = 'none';
 
-    ghost.style.opacity =
-      '0';
-
-    ghost.style.visibility =
-      'hidden';
-
-    ghost.style.pointerEvents =
-      'none';
-
-
-    showStep(
-      'gryphon-step-reveal'
-    );
-
-
-    modal.classList.add(
-      'is-open'
-    );
-
-
-    modal.setAttribute(
-      'aria-hidden',
-      'false'
-    );
-
-
-    document.body.style.overflow =
-      'hidden';
-
+    setTheme('neutral');
+    showStep('gryphon-step-reveal');
+    openModal();
   }
 
+  ghost.addEventListener('pointerup', catchGhost);
 
-  ghost.addEventListener(
-    'pointerup',
-    catchGhost
-  );
-
-
-  ghost.addEventListener(
-    'keydown',
-    function (event) {
-
-      if (
-        event.key === 'Enter' ||
-        event.key === ' '
-      ) {
-
-        event.preventDefault();
-
-        catchGhost();
-
-      }
-
+  ghost.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      catchGhost();
     }
-  );
-
+  });
 
   /* ======================================================
      REVEAL PRIZE
   ====================================================== */
 
-  revealButton.addEventListener(
-    'click',
-    function () {
+  revealButton.addEventListener('click', function () {
+    selectedPrize = pickPrize();
 
-      selectedPrize =
-        pickPrize();
+    prizeType.textContent = selectedPrize.type;
+    prizeTitle.textContent = selectedPrize.title;
+    prizeMessage.textContent = selectedPrize.message;
 
+    prizeArt.innerHTML = getArtworkMarkup(selectedPrize.type);
+    codeArt.innerHTML = getArtworkMarkup(selectedPrize.type);
 
-      prizeType.textContent =
-        selectedPrize.type;
-
-
-      prizeTitle.textContent =
-        selectedPrize.title;
-
-
-      prizeMessage.textContent =
-        selectedPrize.message;
-
-
-      showStep(
-        'gryphon-step-prize'
-      );
-
-    }
-  );
-
+    setTheme(selectedPrize.type);
+    showStep('gryphon-step-prize');
+  });
 
   /* ======================================================
      CLAIM
-
-     CURRENTLY TEST ONLY.
-     EMAIL IS NOT BEING SENT ANYWHERE YET.
+     Prototype only: creates a fake test code.
   ====================================================== */
 
-  claimForm.addEventListener(
-    'submit',
-    function (event) {
+  claimForm.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-      event.preventDefault();
-
-
-      if (
-        !emailInput.checkValidity()
-      ) {
-
-        emailInput.reportValidity();
-
-        return;
-
-      }
-
-
-      const randomPart =
-        Math.random()
-          .toString(36)
-          .substring(2, 8)
-          .toUpperCase();
-
-
-      const testCode =
-        'TEST-' +
-        selectedPrize.prefix +
-        '-' +
-        randomPart;
-
-
-      codeOutput.textContent =
-        testCode;
-
-
-      codePrize.textContent =
-        selectedPrize.title;
-
-
-      /*
-        We can access these later when
-        connecting Klaviyo:
-
-        emailInput.value
-        consentInput.checked
-      */
-
-
-      showStep(
-        'gryphon-step-code'
-      );
-
+    if (!emailInput.checkValidity()) {
+      emailInput.reportValidity();
+      return;
     }
-  );
 
+    const randomPart = Math.random().toString(36).substring(2, 8).toUpperCase();
+    const testCode = 'TEST-' + selectedPrize.prefix + '-' + randomPart;
+
+    codeOutput.textContent = testCode;
+    codePrize.textContent = selectedPrize.title;
+
+    showStep('gryphon-step-code');
+  });
 
   /* ======================================================
-     COPY CODE
+     COPY
   ====================================================== */
 
-  copyButton.addEventListener(
-    'click',
-    async function () {
+  copyButton.addEventListener('click', async function () {
+    const code = codeOutput.textContent.trim();
 
-      const code =
-        codeOutput.textContent.trim();
+    try {
+      await navigator.clipboard.writeText(code);
+      copyButton.textContent = 'COPIED';
 
-
-      try {
-
-        await navigator.clipboard.writeText(
-          code
-        );
-
-
-        copyButton.textContent =
-          'COPIED';
-
-
-        setTimeout(
-          function () {
-
-            copyButton.textContent =
-              'COPY';
-
-          },
-          1500
-        );
-
-
-      } catch (error) {
-
-        copyButton.textContent =
-          'SELECT CODE';
-
-      }
-
+      setTimeout(function () {
+        copyButton.textContent = 'COPY';
+      }, 1500);
+    } catch (error) {
+      copyButton.textContent = 'SELECT';
     }
-  );
-
+  });
 
   /* ======================================================
      CLOSE
   ====================================================== */
 
-  function closeModal() {
+  closeButton.addEventListener('click', closeModal);
+  finishButton.addEventListener('click', closeModal);
 
-    modal.classList.remove(
-      'is-open'
-    );
-
-
-    modal.setAttribute(
-      'aria-hidden',
-      'true'
-    );
-
-
-    document.body.style.overflow =
-      '';
-
-  }
-
-
-  closeButton.addEventListener(
-    'click',
-    closeModal
-  );
-
-
-  finishButton.addEventListener(
-    'click',
-    closeModal
-  );
-
-
-  modal
-    .querySelector(
-      '.gryphon-spirit-modal__backdrop'
-    )
-    .addEventListener(
-      'click',
-      closeModal
-    );
-
+  modal.querySelector('.gryphon-spirit-modal__backdrop').addEventListener('click', closeModal);
 
   /* ======================================================
      START
   ====================================================== */
 
   runGhostSequence();
-
 });
 </script>
