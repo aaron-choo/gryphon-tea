@@ -476,6 +476,20 @@
   opacity: 0.76;
 }
 
+/* HUGE TRICK / TREAT TITLE ON PRIZE SCREEN ONLY */
+#gryphon-type {
+  margin: 0 0 18px;
+
+  font-family: var(--font-heading-family);
+  font-size: 68px;
+  line-height: 0.9;
+
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  opacity: 1;
+}
+
 .gryphon-prize-title {
   margin: 0 0 8px;
 
@@ -702,8 +716,14 @@
 
 @media screen and (max-width: 749px) {
 
+    #gryphon-type {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
   #gryphon-ghost {
     width: 95px;
+    
   }
 
 
