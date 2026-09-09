@@ -307,7 +307,9 @@
 .gryphon-theme-neutral {
   background: #303828;
   color: #f4efe5;
-  height: 300px;
+  width: 580px;
+  height: 280px;
+  max-width: calc(100vw - 40px);
 }
 
 
@@ -383,9 +385,9 @@
    FIRST SCREEN
 ======================================================= */
 
-.gryphon-reveal-screen {
+.gryphon-theme-neutral .gryphon-reveal-screen {
   height: 100%;
-  padding: 38px 70px;
+  padding: 28px 50px 26px;
 
   display: flex;
   flex-direction: column;
@@ -395,28 +397,39 @@
   text-align: center;
 }
 
-.gryphon-reveal-screen .gryphon-main-button {
-  width: 320px;
+.gryphon-theme-neutral .gryphon-reveal-screen .gryphon-main-button {
+  width: 260px;
   max-width: 100%;
   margin: 0 auto;
 }
 
-.gryphon-reveal-screen h2 {
+.gryphon-theme-neutral .gryphon-eyebrow {
   margin: 0 0 16px;
+
+  font-size: 9px;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  opacity: 0.8;
+}
+
+.gryphon-theme-neutral .gryphon-reveal-screen h2 {
+  margin: 0 0 18px;
 
   color: inherit;
 
   font-family: var(--font-heading-family);
 
-  font-size: 38px;
+  font-size: 34px;
   line-height: 1;
 }
 
-.gryphon-reveal-screen > p:not(.gryphon-eyebrow) {
-  margin: 0 auto 28px;
+.gryphon-theme-neutral .gryphon-reveal-screen > p:not(.gryphon-eyebrow) {
+  margin: 0 auto 22px;
 
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 
