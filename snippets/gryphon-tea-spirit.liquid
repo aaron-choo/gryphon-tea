@@ -86,26 +86,32 @@
       <div class="gryphon-coded-area">
 
         <p
-          id="gryphon-type"
-          class="gryphon-result-type"
-        >
-          TRICK
-        </p>
+  id="gryphon-mood"
+  class="gryphon-result-type"
+>
+  A little mischief
+</p>
 
-        <h2
-          id="gryphon-prize-title"
-          class="gryphon-prize-title"
-        >
-          $3 OFF
-        </h2>
+<h2
+  id="gryphon-type"
+  class="gryphon-big-type"
+>
+  TRICK!
+</h2>
 
-        <p
-          id="gryphon-prize-copy"
-          class="gryphon-prize-copy"
-        >
-          Griffin left you something after all.
-        </p>
+<p
+  id="gryphon-character-copy"
+  class="gryphon-character-copy"
+>
+  Griffin’s up to something...
+</p>
 
+<h3
+  id="gryphon-prize-title"
+  class="gryphon-prize-title"
+>
+  $3 OFF
+</h3>
 
         <form id="gryphon-claim-form">
 
@@ -463,6 +469,26 @@
 /* ======================================================
    PRIZE COPY
 ======================================================= */
+
+.gryphon-big-type {
+  margin: 4px 0 10px;
+
+  color: inherit;
+
+  font-family: var(--font-heading-family);
+
+  font-size: 64px;
+  line-height: 0.9;
+
+  letter-spacing: 0;
+}
+
+.gryphon-character-copy {
+  margin: 0 0 22px;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
 
 .gryphon-result-type {
   margin: 0 0 7px;
@@ -895,14 +921,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const email =
     document.getElementById('gryphon-email');
 
-  const typeText =
-    document.getElementById('gryphon-type');
+const moodText =
+  document.getElementById('gryphon-mood');
 
-  const prizeTitle =
-    document.getElementById('gryphon-prize-title');
+const typeText =
+  document.getElementById('gryphon-type');
 
-  const prizeCopy =
-    document.getElementById('gryphon-prize-copy');
+const characterCopy =
+  document.getElementById('gryphon-character-copy');
+
+const prizeTitle =
+  document.getElementById('gryphon-prize-title');
 
   const finalPrize =
     document.getElementById('gryphon-final-prize');
@@ -1392,16 +1421,32 @@ document.addEventListener('DOMContentLoaded', function () {
         pickPrize();
 
 
-      typeText.textContent =
-        selectedPrize.type;
+if (selectedPrize.type === 'TRICK') {
 
+  moodText.textContent =
+    'A little mischief';
 
-      prizeTitle.textContent =
-        selectedPrize.title;
+  typeText.textContent =
+    'TRICK!';
 
+  characterCopy.textContent =
+    'Griffin’s up to something...';
 
-      prizeCopy.textContent =
-        selectedPrize.copy;
+} else {
+
+  moodText.textContent =
+    'A little goodness';
+
+  typeText.textContent =
+    'TREAT!';
+
+  characterCopy.textContent =
+    'Rosie has something for you.';
+
+}
+
+prizeTitle.textContent =
+  selectedPrize.title;
 
 
       setTheme(
