@@ -903,7 +903,6 @@
 }
 
 
-  #gryphon-type {
 #gryphon-type {
   margin: 0 0 5px;
 
@@ -1054,12 +1053,6 @@ const prizeTitle =
 
   const prizeDescription =
   document.getElementById('gryphon-prize-description');
-
-  prizeTitle.textContent =
-  selectedPrize.title;
-
-  prizeDescription.textContent =
-  selectedPrize.copy;
 
   const finalPrize =
     document.getElementById('gryphon-final-prize');
@@ -1926,6 +1919,9 @@ if (selectedPrize.type === 'TRICK') {
 prizeTitle.textContent =
   selectedPrize.title;
 
+  prizeDescription.textContent =
+  selectedPrize.copy;
+
 
       setTheme(
         selectedPrize.type
@@ -1969,11 +1965,13 @@ prizeTitle.textContent =
           .toUpperCase();
 
 
-      codeText.textContent =
-        'TEST-' +
-        selectedPrize.prefix +
-        '-' +
-        randomPart;
+codeText.textContent =
+  'TEST-' +
+  selectedPrize.id
+    .replace(/[^a-z0-9]/gi, '')
+    .toUpperCase() +
+  '-' +
+  randomPart;
 
 
       finalPrize.textContent =
