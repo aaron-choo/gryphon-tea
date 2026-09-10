@@ -764,6 +764,13 @@
    PRIZE COPY
 ======================================================= */
 
+.gryphon-error-title {
+  font-size: 18px;
+  line-height: 1.15;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+
 .gryphon-swap-message {
   margin: 0 0 18px;
   font-size: 13px;
@@ -2833,6 +2840,10 @@ function showClaimError() {
   confirmLabel.textContent =
     'SOMETHING WENT WRONG.';
 
+    confirmLabel.classList.add(
+  'gryphon-error-title'
+);
+
   finalPrize.textContent =
     '';
 
@@ -2864,6 +2875,10 @@ function showClaimError() {
 }
 
 function showAlreadyParticipated() {
+
+  confirmLabel.classList.remove(
+  'gryphon-error-title'
+);
 
   confirmLabel.textContent =
     'GRIFFIN REMEMBERS YOU!';
@@ -2905,6 +2920,10 @@ function showRewardConfirmation(
 
 
   /* Reset everything first */
+
+  confirmLabel.classList.remove(
+  'gryphon-error-title'
+);
 
   swapMessage.hidden = true;
 swapMessage.textContent = '';
