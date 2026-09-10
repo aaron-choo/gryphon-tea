@@ -1478,7 +1478,7 @@ testMode: true,
 testDate: '2026-10-18',
 
 testLoyaltyMember: true,
-testAlreadyParticipated: false,
+testAlreadyParticipated: true,
 },
 
 
@@ -2744,6 +2744,37 @@ function makeTestCode(prize) {
 
 }
 
+unction showAlreadyParticipated() {
+
+  confirmLabel.textContent =
+    'GRIFFIN REMEMBERS YOU!';
+
+  finalPrize.textContent =
+    '';
+
+  confirmCopy.textContent =
+    'You’ve already had your turn this time. We hope you’ll join us again on the next adventure.';
+
+  confirmTnc.textContent =
+    '';
+
+  codeWrap.hidden =
+    true;
+
+  loyaltyAction.hidden =
+    true;
+
+  finishButton.hidden =
+    false;
+
+  finishButton.textContent =
+    'CONTINUE SHOPPING';
+
+  showStep(
+    'gryphon-step-code'
+  );
+
+}
 
 function showRewardConfirmation(
   claimResponse
@@ -2963,15 +2994,26 @@ claimForm.addEventListener(
         await claimReward();
 
 
-      if (
-        claimResponse.status === 'success'
-      ) {
+if (
+  claimResponse.status === 'already_participated'
+) {
 
-        showRewardConfirmation(
-          claimResponse
-        );
+  showAlreadyParticipated();
 
-      }
+  return;
+
+}
+
+
+if (
+  claimResponse.status === 'success'
+) {
+
+  showRewardConfirmation(
+    claimResponse
+  );
+
+}
 
 
     } catch (error) {
