@@ -2364,36 +2364,6 @@ function beginHunt() {
     const height =
       ghost.offsetHeight || 120;
 
-      /* Test a prize becoming unavailable during claim */
-
-if (
-  campaignConfig.campaign.testPrizeExhausted
-) {
-
-  const replacementPrize =
-    prizes.find(function (prize) {
-      return prize.id !== selectedPrize.id;
-    });
-
-
-  return {
-    status: 'success',
-    swapped: true,
-    prizeId: replacementPrize.id,
-
-    code: (
-      replacementPrize.rewardType === 'loyalty-immediate' ||
-      replacementPrize.rewardType === 'loyalty-double'
-    )
-      ? null
-      : makeTestCode(replacementPrize),
-
-    loyaltyMember:
-      campaignConfig.campaign.testLoyaltyMember
-  };
-
-}
-
     return {
 
       x: random(
@@ -2757,6 +2727,33 @@ async function claimReward() {
 
   return {
     status: 'already_participated'
+  };
+
+}
+
+if (
+  campaignConfig.campaign.testPrizeExhausted
+) {
+
+  const replacementPrize =
+    prizes.find(function (prize) {
+      return prize.id !== selectedPrize.id;
+    });
+
+  return {
+    status: 'success',
+    swapped: true,
+    prizeId: replacementPrize.id,
+
+    code: (
+      replacementPrize.rewardType === 'loyalty-immediate' ||
+      replacementPrize.rewardType === 'loyalty-double'
+    )
+      ? null
+      : makeTestCode(replacementPrize),
+
+    loyaltyMember:
+      campaignConfig.campaign.testLoyaltyMember
   };
 
 }
