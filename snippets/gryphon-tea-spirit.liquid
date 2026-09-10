@@ -1403,6 +1403,9 @@ const startHuntButton =
   const email =
     document.getElementById('gryphon-email');
 
+    const consentCheckbox =
+  document.getElementById('gryphon-consent');
+
 const moodText =
   document.getElementById('gryphon-mood');
 
@@ -2663,6 +2666,49 @@ prizeTitle.textContent =
   );
 
 /* ======================================================
+   CLAIM REWARD
+
+   TEST MODE FOR NOW.
+   Later this function will call the secure backend.
+======================================================= */
+
+async function claimReward() {
+
+  const claimData = {
+    email: email.value.trim(),
+    marketingConsent:
+      consentCheckbox
+        ? consentCheckbox.checked
+        : false,
+    prizeId: selectedPrize.id
+  };
+
+
+  console.log(
+    'TEST CLAIM:',
+    claimData
+  );
+
+
+  /* Fake backend response for now */
+
+  return {
+    status: 'success',
+    prizeId: selectedPrize.id,
+    code: (
+      selectedPrize.rewardType === 'loyalty-immediate' ||
+      selectedPrize.rewardType === 'loyalty-double'
+    )
+      ? null
+      : makeTestCode(selectedPrize),
+
+    loyaltyMember:
+      campaignConfig.campaign.testLoyaltyMember
+  };
+
+}
+
+/* ======================================================
    CONFIRMATION SCREEN — TEST MODE
 ======================================================= */
 
@@ -2687,7 +2733,9 @@ function makeTestCode(prize) {
 }
 
 
-function showRewardConfirmation() {
+function showRewardConfirmation(
+  claimResponse
+) {
 
   if (!selectedPrize) {
     return;
@@ -2731,8 +2779,8 @@ function showRewardConfirmation() {
     selectedPrize.rewardType === 'physical'
   ) {
 
-    codeText.textContent =
-      makeTestCode(selectedPrize);
+codeText.textContent =
+  claimResponse.code;
 
   }
 
@@ -2784,9 +2832,9 @@ function showRewardConfirmation() {
       true;
 
 
-    if (
-      campaignConfig.campaign.testLoyaltyMember
-    ) {
+if (
+  claimResponse.loyaltyMember
+) {
 
       confirmLabel.textContent =
         '50 POINTS ARE YOURS!';
@@ -2832,9 +2880,9 @@ function showRewardConfirmation() {
       true;
 
 
-    if (
-      campaignConfig.campaign.testLoyaltyMember
-    ) {
+if (
+  claimResponse.loyaltyMember
+) {
 
       confirmLabel.textContent =
         '2× POINTS UNLOCKED!';
@@ -2882,7 +2930,7 @@ function showRewardConfirmation() {
 
 claimForm.addEventListener(
   'submit',
-  function (event) {
+  async function (event) {
 
     event.preventDefault();
 
@@ -2898,7 +2946,31 @@ claimForm.addEventListener(
     }
 
 
-    showRewardConfirmation();
+    try {
+
+      const claimResponse =
+        await claimReward();
+
+
+      if (
+        claimResponse.status === 'success'
+      ) {
+
+        showRewardConfirmation(
+          claimResponse
+        );
+
+      }
+
+
+    } catch (error) {
+
+      console.error(
+        'Gryphon Halloween claim error:',
+        error
+      );
+
+    }
 
   }
 );
