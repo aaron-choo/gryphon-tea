@@ -15,7 +15,44 @@
   >
 </div>
 
-   WHERE’S GRIFFIN?
+<!-- ======================================================
+  DAILY GHOST CLUE
+======================================================= -->
+
+<button
+  type="button"
+  id="gryphon-clue-tab"
+  class="gryphon-clue-tab"
+  aria-label="Open today's ghost clue"
+>
+  CLUE
+</button>
+
+<div
+  id="gryphon-clue-modal"
+  class="gryphon-clue-modal"
+  aria-hidden="true"
+>
+
+  <div class="gryphon-clue-backdrop"></div>
+
+  <div class="gryphon-clue-card">
+
+    <button
+      type="button"
+      id="gryphon-clue-close"
+      class="gryphon-clue-close"
+      aria-label="Close clue"
+    >
+      ×
+    </button>
+
+    <p class="gryphon-clue-eyebrow">
+      TODAY’S GHOST SIGHTING
+    </p>
+
+    <h2>
+      WHERE’S GRIFFIN?
     </h2>
 
     <p
@@ -990,7 +1027,6 @@
   font-size: 8px;
 }
 
-}
     
   /* =========================================
      FLYING GRIFFIN
@@ -1763,8 +1799,17 @@ function getCampaignDate() {
   return formatter.format(new Date());
 }
 
+function getTodayClue() {
 
-function getTodayClue() let huntStarted = false;
+  const date =
+    getCampaignDate();
+
+  return campaignConfig.clues[date] || null;
+
+}
+
+
+let huntStarted = false;
 
 
 function openClue() {
@@ -1812,9 +1857,11 @@ function closeClue() {
   );
 
 
-  clueTab.classList.add(
-    'is-visible'
-  );
+  if (clueTab) {
+    clueTab.classList.add(
+      'is-visible'
+    );
+  }
 
 }
 
@@ -1831,18 +1878,7 @@ function beginHunt() {
 
   huntStarted = true;
 
-
   startGhost();
-
-}
-{
-
-    
-
-  const date =
-    getCampaignDate();
-
-  return campaignConfig.clues[date] || null;
 
 }
 
@@ -2521,6 +2557,7 @@ if (todayClue) {
   startGhost();
 
 }
-);
+
+});
 
 </script>
