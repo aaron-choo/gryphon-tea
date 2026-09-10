@@ -1478,6 +1478,7 @@ testMode: true,
 testDate: '2026-10-18',
 
 testLoyaltyMember: true,
+testAlreadyParticipated: false,
 },
 
 
@@ -2689,6 +2690,17 @@ async function claimReward() {
     claimData
   );
 
+  /* Test an email that has already participated */
+
+  if (
+  campaignConfig.campaign.testAlreadyParticipated
+) {
+
+  return {
+    status: 'already_participated'
+  };
+
+}
 
   /* Fake backend response for now */
 
