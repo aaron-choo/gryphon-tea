@@ -3492,44 +3492,91 @@ if (clueBackdrop) {
    START
 ======================================================= */
 
-const todayClue =
-  getTodayClue();
+const campaignStatus =
+  getCampaignStatus();
 
 
-if (todayClue) {
+if (
+  campaignStatus === 'active'
+) {
 
-  if (
-    hasStartedHuntToday()
-  ) {
+  const todayClue =
+    getTodayClue();
 
-    huntStarted = true;
 
-    clueTab.classList.add(
-      'is-visible'
-    );
+  if (todayClue) {
 
-    maybeStartGhost();
+    if (
+      hasStartedHuntToday()
+    ) {
 
-  } else if (
-    hasSeenClueToday()
-  ) {
+      huntStarted = true;
 
-    clueTab.classList.add(
-      'is-visible'
-    );
+      clueTab.classList.add(
+        'is-visible'
+      );
 
-  } else {
+      maybeStartGhost();
 
-    setTimeout(
-      function () {
+    } else if (
+      hasSeenClueToday()
+    ) {
 
-        openClue();
+      clueTab.classList.add(
+        'is-visible'
+      );
 
-      },
-      500
-    );
+    } else {
+
+      setTimeout(
+        function () {
+
+          openClue();
+
+        },
+        500
+      );
+
+    }
 
   }
+
+}
+
+
+/* TEST PRE / ENDED STATES ONLY */
+
+else if (
+  campaignConfig.campaign.testMode &&
+  campaignStatus === 'pre'
+) {
+
+  setTimeout(
+    function () {
+
+      showPreCampaign();
+
+    },
+    500
+  );
+
+}
+
+
+else if (
+  campaignConfig.campaign.testMode &&
+  campaignStatus === 'ended'
+) {
+
+  setTimeout(
+    function () {
+
+      showEndedCampaign();
+
+    },
+    500
+  );
+
 
 }
 
