@@ -1507,7 +1507,8 @@ testMode: true,
 testDate: '2026-10-18',
 
 testLoyaltyMember: true,
-testAlreadyParticipated: true,
+testAlreadyParticipated: false,
+testPrizeExhausted: true,
 },
 
 
@@ -2363,6 +2364,35 @@ function beginHunt() {
     const height =
       ghost.offsetHeight || 120;
 
+      /* Test a prize becoming unavailable during claim */
+
+if (
+  campaignConfig.campaign.testPrizeExhausted
+) {
+
+  const replacementPrize =
+    prizes.find(function (prize) {
+      return prize.id !== selectedPrize.id;
+    });
+
+
+  return {
+    status: 'success',
+    swapped: true,
+    prizeId: replacementPrize.id,
+
+    code: (
+      replacementPrize.rewardType === 'loyalty-immediate' ||
+      replacementPrize.rewardType === 'loyalty-double'
+    )
+      ? null
+      : makeTestCode(replacementPrize),
+
+    loyaltyMember:
+      campaignConfig.campaign.testLoyaltyMember
+  };
+
+}
 
     return {
 
@@ -2988,10 +3018,19 @@ if (
 
   }
 
+if (
+  claimResponse.swapped
+) {
 
-  showStep(
-    'gryphon-step-code'
-  );
+  confirmCopy.textContent =
+    'Rosie was a little too generous. That treat has been fully claimed, so we’ve swapped it for another surprise. ' +
+    confirmCopy.textContent;
+
+}
+
+showStep(
+  'gryphon-step-code'
+);
 
 }
 
@@ -3037,6 +3076,18 @@ if (
 if (
   claimResponse.status === 'success'
 ) {
+
+  const confirmedPrize =
+    prizes.find(function (prize) {
+      return prize.id === claimResponse.prizeId;
+    });
+
+
+  if (confirmedPrize) {
+    selectedPrize =
+      confirmedPrize;
+  }
+
 
   showRewardConfirmation(
     claimResponse
