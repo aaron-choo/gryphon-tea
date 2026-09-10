@@ -2282,6 +2282,55 @@ function showPreCampaign() {
 
 }
 
+function showEndedCampaign() {
+
+  setTheme(null);
+
+  confirmLabel.textContent =
+    'THE GHOST HAS VANISHED';
+
+  finalPrize.textContent =
+    '';
+
+  confirmCopy.textContent =
+    'Gryphon Halloween has come to an end. Until the next haunting...';
+
+  confirmTnc.textContent =
+    '';
+
+  codeWrap.hidden =
+    true;
+
+  swapMessage.hidden =
+    true;
+
+  loyaltyAction.hidden =
+    true;
+
+  finishButton.hidden =
+    false;
+
+  finishButton.textContent =
+    'CONTINUE SHOPPING';
+
+  showStep(
+    'gryphon-step-code'
+  );
+
+  modal.classList.add(
+    'is-open'
+  );
+
+  modal.setAttribute(
+    'aria-hidden',
+    'false'
+  );
+
+  document.body.style.overflow =
+    'hidden';
+
+}
+
 function openClue() {
 
   const todayClue =
