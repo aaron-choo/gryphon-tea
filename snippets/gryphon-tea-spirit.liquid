@@ -113,6 +113,13 @@
   $3 OFF
 </h3>
 
+<p
+  id="gryphon-prize-description"
+  class="gryphon-prize-copy"
+>
+  Griffin swiped the good stuff. He left you $3 instead.
+</p>
+
         <form id="gryphon-claim-form">
 
           <input
@@ -1045,6 +1052,15 @@ const characterCopy =
 const prizeTitle =
   document.getElementById('gryphon-prize-title');
 
+  const prizeDescription =
+  document.getElementById('gryphon-prize-description');
+
+  prizeTitle.textContent =
+  selectedPrize.title;
+
+  prizeDescription.textContent =
+  selectedPrize.copy;
+
   const finalPrize =
     document.getElementById('gryphon-final-prize');
 
@@ -1068,57 +1084,407 @@ const prizeTitle =
      TEST PRIZES FOR NOW
   ====================================================== */
 
-  const prizes = [
+/* ======================================================
+   GRYPHON HALLOWEEN — CAMPAIGN CONFIG
 
-    {
-      type: 'TRICK',
-      title: '$3 OFF',
-      copy: 'Griffin left you something after all.',
-      prefix: 'TRICK3',
-      weight: 30
+   Customer-facing copy lives here.
+   Real codes + prize caps will live in the backend.
+====================================================== */
+
+const campaignConfig = {
+
+  campaign: {
+    name: 'Gryphon Halloween',
+    startDate: '2026-10-16',
+    endDate: '2026-10-31',
+    rewardExpiry: '2026-11-30'
+  },
+
+
+  /* ====================================================
+     CORE COPY
+  ==================================================== */
+
+  copy: {
+
+    gotcha: {
+      eyebrow: 'GRYPHON HALLOWEEN',
+      title: 'GOTCHA!',
+      caught: 'You caught the Griffin Ghost',
+      question: 'Trick or Treat?',
+      line: 'Only one way to find out.',
+      button: 'REVEAL MY FATE'
     },
 
-    {
-      type: 'TRICK',
-      title: 'BOO! 10% OFF',
-      copy: 'Griffin was feeling particularly cheeky.',
-      prefix: 'BOO10',
-      weight: 25
+    claim: {
+      instruction: 'Enter your email to claim your prize.',
+      placeholder: 'Email address',
+      consent: 'Send me Gryphon Singapore news and offers.',
+      button: 'CLAIM MY PRIZE'
     },
 
-    {
-      type: 'TRICK',
-      title: 'FREE SHIPPING',
-      copy: 'No candy. But Griffin spared your delivery fee.',
-      prefix: 'BOOSHIP',
-      weight: 15
+    treat: {
+      mood: 'A little goodness',
+      type: 'TREAT!',
+      character: 'Rosie has something for you.'
     },
 
-    {
-      type: 'TREAT',
-      title: '$10 OFF',
-      copy: 'Rosie has something for you.',
-      prefix: 'TREAT10',
-      weight: 15
+    trick: {
+      mood: 'A little mischief',
+      type: 'TRICK!',
+      character: 'Griffin’s up to something...'
     },
 
-    {
-      type: 'TREAT',
-      title: '15% OFF',
-      copy: 'A little goodness found its way to you.',
-      prefix: 'TREAT15',
-      weight: 10
+    genericCodeInstruction:
+      'Use this code on your next purchase.',
+
+    copied:
+      'COPIED!'
+
+  },
+
+
+  /* ====================================================
+     DAILY GHOST SIGHTINGS
+
+     targetKey will later control where Griffin appears.
+  ==================================================== */
+
+  clues: {
+
+    '2026-10-16': {
+      targetKey: 'milky-oolong',
+      clue:
+        'Griffin’s been sniffing around something creamy, roasted and very milky.'
     },
 
-    {
-      type: 'TREAT',
-      title: '20% OFF',
-      copy: 'Rosie was feeling generous.',
-      prefix: 'TREAT20',
-      weight: 5
+    '2026-10-17': {
+      targetKey: 'strawberry-cream',
+      clue:
+        'Griffin’s been following a trail of strawberries and something sweet.'
+    },
+
+    '2026-10-18': {
+      targetKey: 'asatsuyu-matcha',
+      clue:
+        'Today’s trail is looking very, very green.'
+    },
+
+    '2026-10-19': {
+      targetKey: 'mogambo',
+      clue:
+        'Something juicy, sparkling and caffeine-free has caught Griffin’s attention.'
+    },
+
+    '2026-10-20': {
+      targetKey: 'botany',
+      clue:
+        'Griffin’s hiding among the botanicals today. Apparently ghosts need self-care too.'
+    },
+
+    '2026-10-21': {
+      targetKey: 'earl-grey-lavender',
+      clue:
+        'A little bergamot. A little lavender. And possibly one badly behaved ghost.'
+    },
+
+    '2026-10-22': {
+      targetKey: 'kaya-toast',
+      clue:
+        'Something smells warm, toasted and suspiciously familiar...'
+    },
+
+    '2026-10-23': {
+      targetKey: 'marrakesh-mint',
+      clue:
+        'A cool minty trail with a hint of orange blossom... Griffin can’t be far.'
+    },
+
+    '2026-10-24': {
+      targetKey: 'cold-brew-sparkling',
+      clue:
+        'We heard a pop, then a fizz. Griffin’s somewhere among the bubbles.'
+    },
+
+    '2026-10-25': {
+      targetKey: 'osmanthus-sencha',
+      clue:
+        'A tiny golden flower may have seen where Griffin went.'
+    },
+
+    '2026-10-26': {
+      targetKey: 'chamomile-dream',
+      clue:
+        'Griffin’s gone unusually quiet. Perhaps he’s somewhere made for dreaming.'
+    },
+
+    '2026-10-27': {
+      targetKey: 'pearl-of-the-orient',
+      clue:
+        'A trail of jasmine, rose and something rather precious...'
+    },
+
+    '2026-10-28': {
+      targetKey: 'tiramisu',
+      clue:
+        'Roasted coffee, caramel and a smooth finish... Griffin clearly has dessert on his mind.'
+    },
+
+    '2026-10-29': {
+      targetKey: 'roji',
+      clue:
+        'Griffin’s wandered over to our Japanese side. He thinks we won’t look there.'
+    },
+
+    '2026-10-30': {
+      targetKey: 'gifting',
+      clue:
+        'Griffin’s looking for a gift for Rosie. Where do you think he went?'
+    },
+
+    '2026-10-31': {
+      targetKey: 'muscat-beauty',
+      clue:
+        'Final sighting: Griffin’s wandered somewhere with grapes, florals and a little vineyard charm.'
     }
 
-  ];
+  },
+
+
+  /* ====================================================
+     PRIZES
+
+     TEMP weight = 1 for testing only.
+
+     DO NOT put real Shopify codes here.
+     Backend will control:
+     - actual reward code
+     - caps
+     - exhausted rewards
+     - email participation check
+     - Rivo handling
+  ==================================================== */
+
+  prizes: [
+
+    /* ---------------- TREAT ---------------- */
+
+    {
+      id: 'treat-5-off',
+      type: 'TREAT',
+      rewardType: 'discount',
+      title: '$5 OFF',
+      copy:
+        'A little treat for your next tea run.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-10-off',
+      type: 'TREAT',
+      rewardType: 'discount',
+      title: '$10 OFF',
+      copy:
+        'Rosie saved you a better one.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-15-percent',
+      type: 'TREAT',
+      rewardType: 'discount',
+      title: '15% OFF YOUR ORDER',
+      copy:
+        'A sweeter deal for your next order.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-20-percent',
+      type: 'TREAT',
+      rewardType: 'discount',
+      title: '20% OFF YOUR ORDER',
+      copy:
+        'Now that’s a proper treat.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-free-shipping',
+      type: 'TREAT',
+      rewardType: 'shipping',
+      title: 'FREE SHIPPING',
+      copy:
+        'Rosie got you covered!',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-mystery-gift',
+      type: 'TREAT',
+      rewardType: 'physical',
+      title: 'FREE MYSTERY GIFT',
+      copy:
+        'A surprise, specially picked by Rosie, is coming with your next order.',
+      tnc:
+        'Valid on your next purchase only. Mystery gift selected by Gryphon Singapore. No selection or exchange. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-kaya-toast',
+      type: 'TREAT',
+      rewardType: 'physical',
+      title: 'FREE KAYA TOAST TEA',
+      copy:
+        'Rosie picked a local favourite for you.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Subject to availability. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-sparkling-tea',
+      type: 'TREAT',
+      rewardType: 'physical',
+      title: 'FREE SPARKLING TEA CAN',
+      copy:
+        'Leave it to Rosie. She’ll choose your sparkling treat.',
+      tnc:
+        'Valid on your next purchase only. Flavour selected by Gryphon Singapore. No selection or exchange. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-botany',
+      type: 'TREAT',
+      rewardType: 'physical',
+      title: 'FREE BOTANY DISCOVERY SET',
+      copy:
+        'A little discovery, specially picked for you by Rosie.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Subject to availability. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-20-credit',
+      type: 'TREAT',
+      rewardType: 'credit',
+      title: '$20 SHOPPING CREDIT',
+      copy:
+        'Rosie must really like you! $20 to spend on your next order.',
+      tnc:
+        'Valid on your next purchase only. One-time use. No cash value. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-double-points',
+      type: 'TREAT',
+      rewardType: 'loyalty-double',
+      title: 'DOUBLE LOYALTY POINTS',
+      copy:
+        'Rosie doubled the fun. Your next order earns 2× points.',
+      tnc:
+        'Applies to your next purchase made by 30 November 2026. Use the same email used to claim this reward. Bonus points will be credited after purchase. A Gryphon loyalty account is required.',
+      weight: 1
+    },
+
+    {
+      id: 'treat-golden',
+      type: 'TREAT',
+      rewardType: 'credit',
+      title: '$50 SHOPPING CREDIT',
+      label: 'GOLDEN TREAT',
+      copy:
+        'Psst... You must be Rosie’s favourite!',
+      tnc:
+        'Valid on your next purchase only. One-time use. No cash value. Expires 30 November 2026.',
+      weight: 1
+    },
+
+
+    /* ---------------- TRICK ---------------- */
+
+    {
+      id: 'trick-10-percent',
+      type: 'TRICK',
+      rewardType: 'discount',
+      title: 'BOO! 10% OFF',
+      copy:
+        'Griffin tried to scare you. Take 10% off for surviving.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'trick-free-shipping-40',
+      type: 'TRICK',
+      rewardType: 'shipping',
+      title: 'FREE SHIPPING OVER $40',
+      copy:
+        'No candy here. Spend $40 and Griffin will cover the ride.',
+      tnc:
+        'Valid on your next purchase with a minimum spend of $40. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'trick-3-off',
+      type: 'TRICK',
+      rewardType: 'discount',
+      title: '$3 OFF',
+      copy:
+        'Griffin swiped the good stuff. He left you $3 instead.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    },
+
+    {
+      id: 'trick-50-points',
+      type: 'TRICK',
+      rewardType: 'loyalty-immediate',
+      title: '50 BONUS LOYALTY POINTS',
+      copy:
+        'Griffin took it all, then felt bad. Here’s what he left for you: 50 bonus points.',
+      tnc:
+        '50 bonus points will be credited to the Gryphon loyalty account linked to the email used to claim this reward. A Gryphon loyalty account is required.',
+      weight: 1
+    },
+
+    {
+      id: 'trick-5-percent',
+      type: 'TRICK',
+      rewardType: 'discount',
+      title: '5% OFF',
+      copy:
+        'The ghost got there first. Griffin managed to save you 5%.',
+      tnc:
+        'Valid on your next purchase only. One-time use. Expires 30 November 2026.',
+      weight: 1
+    }
+
+  ]
+
+};
+
+
+/* Existing prize picker can continue using this */
+const prizes =
+  campaignConfig.prizes;
 
 
   let caught = false;
