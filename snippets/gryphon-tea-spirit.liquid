@@ -1523,7 +1523,8 @@ testDate: '2026-10-18',
 
 testLoyaltyMember: true,
 testAlreadyParticipated: false,
-testPrizeExhausted: true,
+testPrizeExhausted: false,
+testClaimError: false,
 },
 
 
@@ -2746,6 +2747,18 @@ async function claimReward() {
 
 }
 
+/* Test claim failure */
+
+if (
+  campaignConfig.campaign.testClaimError
+) {
+
+  return {
+    status: 'error'
+  };
+
+}
+
 if (
   campaignConfig.campaign.testPrizeExhausted
 ) {
@@ -2811,6 +2824,41 @@ function makeTestCode(prize) {
       .toUpperCase() +
     '-' +
     randomPart
+  );
+
+}
+
+function showClaimError() {
+
+  confirmLabel.textContent =
+    'SOMETHING WENT WRONG.';
+
+  finalPrize.textContent =
+    '';
+
+  confirmCopy.textContent =
+    'We couldn’t claim your prize just yet. Please try again.';
+
+  confirmTnc.textContent =
+    '';
+
+  codeWrap.hidden =
+    true;
+
+  swapMessage.hidden =
+    true;
+
+  loyaltyAction.hidden =
+    true;
+
+  finishButton.hidden =
+    false;
+
+  finishButton.textContent =
+    'TRY AGAIN';
+
+  showStep(
+    'gryphon-step-code'
   );
 
 }
