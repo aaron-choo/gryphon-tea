@@ -216,58 +216,80 @@
     </div>
 
 
-    <!-- =========================
-         STEP 3 — TEST CODE
-    ========================== -->
+<!-- =========================
+     STEP 3 — CONFIRMATION
+========================== -->
+
+<div
+  id="gryphon-step-code"
+  class="gryphon-step gryphon-result-screen"
+>
+
+  <div class="gryphon-coded-area gryphon-coded-area--claimed">
+
+    <p
+      id="gryphon-confirm-label"
+      class="gryphon-result-type"
+    >
+      CLAIMED!
+    </p>
+
+    <h2
+      id="gryphon-final-prize"
+      class="gryphon-prize-title"
+    >
+      $5 OFF
+    </h2>
+
+    <p
+      id="gryphon-confirm-copy"
+      class="gryphon-prize-copy"
+    >
+      Use this code on your next purchase.
+    </p>
 
     <div
-      id="gryphon-step-code"
-      class="gryphon-step gryphon-result-screen"
+      id="gryphon-code-wrap"
+      class="gryphon-code"
     >
+      <span id="gryphon-code-text">
+        TEST-ABC123
+      </span>
 
-      <div class="gryphon-coded-area gryphon-coded-area--claimed">
-
-        <p class="gryphon-result-type">
-          YOURS TO KEEP
-        </p>
-
-        <h2
-          id="gryphon-final-prize"
-          class="gryphon-prize-title"
-        >
-          $3 OFF
-        </h2>
-
-        <div class="gryphon-code">
-
-          <span id="gryphon-code-text">
-            TEST-ABC123
-          </span>
-
-          <button
-            type="button"
-            id="gryphon-copy"
-          >
-            COPY
-          </button>
-
-        </div>
-
-        <button
-          type="button"
-          id="gryphon-finish"
-          class="gryphon-main-button"
-        >
-          CONTINUE SHOPPING
-        </button>
-
-      </div>
-
+      <button
+        type="button"
+        id="gryphon-copy"
+      >
+        COPY
+      </button>
     </div>
 
-  </div>
-</div>
+    <p
+      id="gryphon-confirm-tnc"
+      class="gryphon-confirm-tnc"
+    >
+    </p>
 
+    <button
+      type="button"
+      id="gryphon-loyalty-action"
+      class="gryphon-main-button"
+      hidden
+    >
+      CREATE MY ACCOUNT
+    </button>
+
+    <button
+      type="button"
+      id="gryphon-finish"
+      class="gryphon-main-button"
+    >
+      CONTINUE SHOPPING
+    </button>
+
+  </div>
+
+</div>
 
 <style>
 
@@ -788,13 +810,19 @@
   line-height: 1.05;
 }
 
-.gryphon-prize-copy {
-  margin: 0 0 18px;
+.gryphon-confirm-tnc {
+  margin: 10px 0 14px;
 
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 8px;
+  line-height: 1.35;
+
+  opacity: 0.7;
 }
 
+
+[hidden] {
+  display: none !important;
+}
 
 /* ======================================================
    EMAIL
@@ -1002,6 +1030,13 @@
 ======================================================= */
 
 @media screen and (max-width: 749px) {
+
+    .gryphon-confirm-tnc {
+  margin: 7px 0 10px;
+
+  font-size: 7.5px;
+  line-height: 1.3;
+}
 
     .gryphon-clue-card {
   width: 330px;
@@ -1349,6 +1384,21 @@ const prizeTitle =
   const finalPrize =
     document.getElementById('gryphon-final-prize');
 
+    const confirmLabel =
+  document.getElementById('gryphon-confirm-label');
+
+const confirmCopy =
+  document.getElementById('gryphon-confirm-copy');
+
+const confirmTnc =
+  document.getElementById('gryphon-confirm-tnc');
+
+const codeWrap =
+  document.getElementById('gryphon-code-wrap');
+
+const loyaltyAction =
+  document.getElementById('gryphon-loyalty-action');
+
   const codeText =
     document.getElementById('gryphon-code-text');
 
@@ -1384,8 +1434,10 @@ campaign: {
   endDate: '2026-10-31',
   rewardExpiry: '2026-11-30',
 
-  testMode: true,
-  testDate: '2026-10-19'
+testMode: true,
+testDate: '2026-10-19',
+
+testLoyaltyMember: true
 },
 
 
@@ -2573,55 +2625,246 @@ prizeTitle.textContent =
     }
   );
 
+/* ======================================================
+   CONFIRMATION SCREEN — TEST MODE
+======================================================= */
+
+function makeTestCode(prize) {
+
+  const randomPart =
+    Math.random()
+      .toString(36)
+      .substring(2, 8)
+      .toUpperCase();
+
+
+  return (
+    'TEST-' +
+    prize.id
+      .replace(/[^a-z0-9]/gi, '')
+      .toUpperCase() +
+    '-' +
+    randomPart
+  );
+
+}
+
+
+function showRewardConfirmation() {
+
+  if (!selectedPrize) {
+    return;
+  }
+
+
+  /* Reset everything first */
+
+  confirmLabel.textContent =
+    'CLAIMED!';
+
+  finalPrize.textContent =
+    selectedPrize.title;
+
+  confirmCopy.textContent =
+    campaignConfig.copy.genericCodeInstruction;
+
+  confirmTnc.textContent =
+    selectedPrize.tnc || '';
+
+  codeWrap.hidden =
+    false;
+
+  loyaltyAction.hidden =
+    true;
+
+  finishButton.hidden =
+    false;
+
+  finishButton.textContent =
+    'CONTINUE SHOPPING';
+
+
+  /* =========================================
+     NORMAL CODE REWARDS
+  ========================================= */
+
+  if (
+    selectedPrize.rewardType === 'discount' ||
+    selectedPrize.rewardType === 'shipping' ||
+    selectedPrize.rewardType === 'physical'
+  ) {
+
+    codeText.textContent =
+      makeTestCode(selectedPrize);
+
+  }
+
+
+  /* =========================================
+     SHOPPING CREDIT
+  ========================================= */
+
+  else if (
+    selectedPrize.rewardType === 'credit'
+  ) {
+
+    codeText.textContent =
+      makeTestCode(selectedPrize);
+
+
+    if (
+      selectedPrize.id === 'treat-golden'
+    ) {
+
+      confirmLabel.textContent =
+        'YOU FOUND THE GOLDEN TREAT!';
+
+      confirmCopy.textContent =
+        'Psst... You must be Rosie’s favourite! Use this code on your next purchase.';
+
+    } else {
+
+      confirmLabel.textContent =
+        '$20 IS YOURS!';
+
+      confirmCopy.textContent =
+        'Rosie must really like you. Use this code on your next purchase.';
+
+    }
+
+  }
+
+
+  /* =========================================
+     50 BONUS POINTS — IMMEDIATE
+  ========================================= */
+
+  else if (
+    selectedPrize.rewardType === 'loyalty-immediate'
+  ) {
+
+    codeWrap.hidden =
+      true;
+
+
+    if (
+      campaignConfig.campaign.testLoyaltyMember
+    ) {
+
+      confirmLabel.textContent =
+        '50 POINTS ARE YOURS!';
+
+      confirmCopy.textContent =
+        'Your bonus points have been added to your Gryphon loyalty account.';
+
+      loyaltyAction.textContent =
+        'VIEW MY REWARDS';
+
+    } else {
+
+      confirmLabel.textContent =
+        'YOUR 50 POINTS ARE WAITING';
+
+      confirmCopy.textContent =
+        'Create a Gryphon loyalty account using this email to receive your bonus points.';
+
+      loyaltyAction.textContent =
+        'CREATE MY ACCOUNT';
+
+    }
+
+
+    loyaltyAction.hidden =
+      false;
+
+    finishButton.hidden =
+      true;
+
+  }
+
+
+  /* =========================================
+     DOUBLE LOYALTY POINTS
+  ========================================= */
+
+  else if (
+    selectedPrize.rewardType === 'loyalty-double'
+  ) {
+
+    codeWrap.hidden =
+      true;
+
+
+    if (
+      campaignConfig.campaign.testLoyaltyMember
+    ) {
+
+      confirmLabel.textContent =
+        '2× POINTS UNLOCKED!';
+
+      confirmCopy.textContent =
+        'Your next purchase using this email will earn double loyalty points.';
+
+      loyaltyAction.hidden =
+        true;
+
+      finishButton.hidden =
+        false;
+
+    } else {
+
+      confirmLabel.textContent =
+        'YOUR 2× POINTS ARE WAITING';
+
+      confirmCopy.textContent =
+        'Create a Gryphon loyalty account using this email before your next purchase to activate your reward.';
+
+      loyaltyAction.textContent =
+        'CREATE MY ACCOUNT';
+
+      loyaltyAction.hidden =
+        false;
+
+      finishButton.hidden =
+        true;
+
+    }
+
+  }
+
+
+  showStep(
+    'gryphon-step-code'
+  );
+
+}
 
   /* ======================================================
      CLAIM — TEST ONLY
   ====================================================== */
 
-  claimForm.addEventListener(
-    'submit',
-    function (event) {
+claimForm.addEventListener(
+  'submit',
+  function (event) {
 
-      event.preventDefault();
-
-
-      if (
-        !email.checkValidity()
-      ) {
-
-        email.reportValidity();
-
-        return;
-
-      }
+    event.preventDefault();
 
 
-      const randomPart =
-        Math.random()
-          .toString(36)
-          .substring(2, 8)
-          .toUpperCase();
+    if (
+      !email.checkValidity()
+    ) {
 
+      email.reportValidity();
 
-codeText.textContent =
-  'TEST-' +
-  selectedPrize.id
-    .replace(/[^a-z0-9]/gi, '')
-    .toUpperCase() +
-  '-' +
-  randomPart;
-
-
-      finalPrize.textContent =
-        selectedPrize.title;
-
-
-      showStep(
-        'gryphon-step-code'
-      );
+      return;
 
     }
-  );
+
+
+    showRewardConfirmation();
+
+  }
+);
 
 
   /* ======================================================
