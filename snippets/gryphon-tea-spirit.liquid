@@ -1774,10 +1774,72 @@ campaign: {
 const prizes =
   campaignConfig.prizes;
 
+  /* ======================================================
+   GHOST HIDING TARGETS
+======================================================= */
+
+const ghostTargets = {
+
+  'mogambo': {
+    paths: [
+      '/products/mogambo-with-raspberry-orange-4-cans-x-250ml'
+    ]
+  }
+
+};
+
 
   let caught = false;
   let currentAnimation = null;
   let selectedPrize = null;
+
+  const HUNT_STORAGE_KEY =
+  'gryphonHalloweenHuntDate';
+
+const CLUE_SEEN_STORAGE_KEY =
+  'gryphonHalloweenClueSeenDate';
+
+
+function hasStartedHuntToday() {
+
+  return (
+    sessionStorage.getItem(
+      HUNT_STORAGE_KEY
+    ) === getCampaignDate()
+  );
+
+}
+
+
+function markHuntStarted() {
+
+  sessionStorage.setItem(
+    HUNT_STORAGE_KEY,
+    getCampaignDate()
+  );
+
+}
+
+
+function hasSeenClueToday() {
+
+  return (
+    sessionStorage.getItem(
+      CLUE_SEEN_STORAGE_KEY
+    ) === getCampaignDate()
+  );
+
+}
+
+
+function markClueSeen() {
+
+  sessionStorage.setItem(
+    CLUE_SEEN_STORAGE_KEY,
+    getCampaignDate()
+  );
+
+}
 
 function getCampaignDate() {
 
@@ -1811,6 +1873,58 @@ function getTodayClue() {
 
 }
 
+function pageMatchesGhostTarget(
+  targetKey
+) {
+
+  const target =
+    ghostTargets[targetKey];
+
+  if (!target) {
+    return false;
+  }
+
+  const currentPath =
+    window.location.pathname.toLowerCase();
+
+  return target.paths.some(
+    function (path) {
+
+      return currentPath.includes(
+        path.toLowerCase()
+      );
+
+    }
+  );
+
+}
+
+
+function maybeStartGhost() {
+
+  const todayClue =
+    getTodayClue();
+
+  if (!todayClue) {
+    return;
+  }
+
+  if (!hasStartedHuntToday()) {
+    return;
+  }
+
+  if (
+    !pageMatchesGhostTarget(
+      todayClue.targetKey
+    )
+  ) {
+    return;
+  }
+
+  startGhost();
+
+}
+
 
 let huntStarted = false;
 
@@ -1827,6 +1941,8 @@ function openClue() {
 
   clueCopy.textContent =
     todayClue.clue;
+
+    markClueSeen();
 
 
   clueModal.classList.add(
@@ -1873,11 +1989,11 @@ function beginHunt() {
 
   closeClue();
 
-  if (huntStarted) {
-    return;
-  }
+  markHuntStarted();
 
   huntStarted = true;
+
+  maybeStartGhost();
 
 }
 
@@ -2534,18 +2650,38 @@ const todayClue =
 
 if (todayClue) {
 
-  setTimeout(
-    function () {
+  if (
+    hasStartedHuntToday()
+  ) {
 
-      openClue();
+    huntStarted = true;
 
-    },
-    500
-  );
+    clueTab.classList.add(
+      'is-visible'
+    );
 
-} else {
+    maybeStartGhost();
 
-  startGhost();
+  } else if (
+    hasSeenClueToday()
+  ) {
+
+    clueTab.classList.add(
+      'is-visible'
+    );
+
+  } else {
+
+    setTimeout(
+      function () {
+
+        openClue();
+
+      },
+      500
+    );
+
+  }
 
 }
 
