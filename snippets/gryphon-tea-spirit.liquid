@@ -2793,9 +2793,8 @@ codeText.textContent =
     selectedPrize.rewardType === 'credit'
   ) {
 
-    codeText.textContent =
-      makeTestCode(selectedPrize);
-
+codeText.textContent =
+  claimResponse.code;
 
     if (
       selectedPrize.id === 'treat-golden'
