@@ -1474,9 +1474,8 @@ campaign: {
 testMode: true,
 testDate: '2026-10-19',
 
-testLoyaltyMember: false,
-
-testPrizeId: 'treat-double-points'
+testLoyaltyMember: true,
+},
 
 
   /* ====================================================
@@ -2286,27 +2285,6 @@ function beginHunt() {
 
 
   function pickPrize() {
-
-    if (
-  campaignConfig.campaign.testMode &&
-  campaignConfig.campaign.testPrizeId
-) {
-
-  const forcedPrize =
-    prizes.find(
-      function (prize) {
-        return (
-          prize.id ===
-          campaignConfig.campaign.testPrizeId
-        );
-      }
-    );
-
-
-  if (forcedPrize) {
-    return forcedPrize;
-  }
-
 
     const total =
       prizes.reduce(function (sum, prize) {
