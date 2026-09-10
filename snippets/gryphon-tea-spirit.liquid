@@ -2143,6 +2143,32 @@ function getCampaignDate() {
   return formatter.format(new Date());
 }
 
+function getCampaignStatus() {
+
+  const date =
+    getCampaignDate();
+
+  const startDate =
+    campaignConfig.campaign.startDate;
+
+  const endDate =
+    campaignConfig.campaign.endDate;
+
+
+  if (date < startDate) {
+    return 'pre';
+  }
+
+
+  if (date > endDate) {
+    return 'ended';
+  }
+
+
+  return 'active';
+
+}
+
 function getTodayClue() {
 
   const date =
@@ -2207,6 +2233,54 @@ function maybeStartGhost() {
 
 let huntStarted = false;
 
+function showPreCampaign() {
+
+  setTheme(null);
+
+  confirmLabel.textContent =
+    'SOMETHING’S STIRRING...';
+
+  finalPrize.textContent =
+    '';
+
+  confirmCopy.textContent =
+    'The Griffin Ghost arrives 16 October. Come back when the haunting begins.';
+
+  confirmTnc.textContent =
+    '';
+
+  codeWrap.hidden =
+    true;
+
+  swapMessage.hidden =
+    true;
+
+  loyaltyAction.hidden =
+    true;
+
+  finishButton.hidden =
+    false;
+
+  finishButton.textContent =
+    'CONTINUE SHOPPING';
+
+  showStep(
+    'gryphon-step-code'
+  );
+
+  modal.classList.add(
+    'is-open'
+  );
+
+  modal.setAttribute(
+    'aria-hidden',
+    'false'
+  );
+
+  document.body.style.overflow =
+    'hidden';
+
+}
 
 function openClue() {
 
