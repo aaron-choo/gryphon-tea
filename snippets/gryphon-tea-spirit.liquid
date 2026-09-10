@@ -1524,7 +1524,7 @@ testDate: '2026-10-18',
 testLoyaltyMember: true,
 testAlreadyParticipated: false,
 testPrizeExhausted: false,
-testClaimError: false,
+testClaimError: true,
 },
 
 
@@ -3136,6 +3136,15 @@ if (
 
 }
 
+if (
+  claimResponse.status === 'error'
+) {
+
+  showClaimError();
+
+  return;
+
+}
 
 if (
   claimResponse.status === 'success'
@@ -3242,11 +3251,26 @@ if (
     closeModal
   );
 
+finishButton.addEventListener(
+  'click',
+  function () {
 
-  finishButton.addEventListener(
-    'click',
-    closeModal
-  );
+    if (
+      finishButton.textContent.trim() === 'TRY AGAIN'
+    ) {
+
+      showStep(
+        'gryphon-step-prize'
+      );
+
+      return;
+
+    }
+
+    closeModal();
+
+  }
+);
 
 
   document
