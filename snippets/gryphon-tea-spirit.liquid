@@ -15,6 +15,27 @@
   >
 </div>
 
+   WHERE’S GRIFFIN?
+    </h2>
+
+    <p
+      id="gryphon-clue-copy"
+      class="gryphon-clue-copy"
+    >
+      Something juicy, sparkling and caffeine-free has caught Griffin’s attention.
+    </p>
+
+    <button
+      type="button"
+      id="gryphon-start-hunt"
+      class="gryphon-clue-button"
+    >
+      START HUNTING
+    </button>
+
+  </div>
+
+</div>
 
 <!-- POPUP -->
 <div
@@ -246,6 +267,194 @@
   user-select: none;
 }
 
+/* ======================================================
+   DAILY CLUE
+======================================================= */
+
+.gryphon-clue-modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999997;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 200ms ease,
+    visibility 200ms ease;
+}
+
+
+.gryphon-clue-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.gryphon-clue-backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(17, 20, 15, 0.68);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+.gryphon-clue-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 430px;
+  max-width: calc(100vw - 40px);
+
+  padding: 42px 48px 38px;
+
+  background: #f4efe5;
+  color: #303828;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+
+.gryphon-clue-close {
+  position: absolute;
+
+  right: 13px;
+  top: 10px;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: #303828;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+.gryphon-clue-eyebrow {
+  margin: 0 0 13px;
+
+  font-size: 9px;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  opacity: 0.7;
+}
+
+
+.gryphon-clue-card h2 {
+  margin: 0 0 18px;
+
+  color: inherit;
+
+  font-family: var(--font-heading-family);
+
+  font-size: 31px;
+  line-height: 1;
+}
+
+
+.gryphon-clue-copy {
+  margin: 0 auto 24px;
+
+  max-width: 310px;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+.gryphon-clue-button {
+  width: 100%;
+
+  min-height: 40px;
+
+  padding: 11px 15px;
+
+  border: 1px solid #303828;
+
+  background: #303828;
+  color: #f4efe5;
+
+  font-family: var(--font-body-family);
+
+  font-size: 10px;
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+}
+
+
+.gryphon-clue-button:hover {
+  background: transparent;
+  color: #303828;
+}
+
+
+/* Small tab remains available after clue closes */
+
+.gryphon-clue-tab {
+  position: fixed;
+
+  right: 0;
+  top: 50%;
+
+  z-index: 9999996;
+
+  padding: 12px 8px;
+
+  border: 0;
+
+  background: #303828;
+  color: #f4efe5;
+
+  font-family: var(--font-body-family);
+
+  font-size: 9px;
+  letter-spacing: 0.12em;
+
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 180ms ease;
+}
+
+
+.gryphon-clue-tab.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* ======================================================
    MODAL
@@ -754,6 +963,35 @@
 
 @media screen and (max-width: 749px) {
 
+    .gryphon-clue-card {
+  width: 330px;
+  max-width: calc(100vw - 24px);
+
+  padding: 38px 28px 30px;
+}
+
+
+.gryphon-clue-card h2 {
+  font-size: 27px;
+}
+
+
+.gryphon-clue-copy {
+  max-width: 260px;
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
+.gryphon-clue-tab {
+  padding: 10px 7px;
+
+  font-size: 8px;
+}
+
+}
+    
   /* =========================================
      FLYING GRIFFIN
   ========================================= */
@@ -1023,6 +1261,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const ghost =
     document.getElementById('gryphon-ghost');
+
+    const clueModal =
+  document.getElementById('gryphon-clue-modal');
+
+const clueCopy =
+  document.getElementById('gryphon-clue-copy');
+
+const clueTab =
+  document.getElementById('gryphon-clue-tab');
+
+const clueClose =
+  document.getElementById('gryphon-clue-close');
+
+const startHuntButton =
+  document.getElementById('gryphon-start-hunt');
 
   const modal =
     document.getElementById('gryphon-spirit-modal');
@@ -1511,7 +1764,80 @@ function getCampaignDate() {
 }
 
 
-function getTodayClue() {
+function getTodayClue() let huntStarted = false;
+
+
+function openClue() {
+
+  const todayClue =
+    getTodayClue();
+
+  if (!todayClue || !clueModal) {
+    return;
+  }
+
+
+  clueCopy.textContent =
+    todayClue.clue;
+
+
+  clueModal.classList.add(
+    'is-open'
+  );
+
+
+  clueModal.setAttribute(
+    'aria-hidden',
+    'false'
+  );
+
+}
+
+
+function closeClue() {
+
+  if (!clueModal) {
+    return;
+  }
+
+
+  clueModal.classList.remove(
+    'is-open'
+  );
+
+
+  clueModal.setAttribute(
+    'aria-hidden',
+    'true'
+  );
+
+
+  clueTab.classList.add(
+    'is-visible'
+  );
+
+}
+
+
+function beginHunt() {
+
+  closeClue();
+
+
+  if (huntStarted) {
+    return;
+  }
+
+
+  huntStarted = true;
+
+
+  startGhost();
+
+}
+{
+
+    
 
   const date =
     getCampaignDate();
@@ -2106,23 +2432,95 @@ codeText.textContent =
       closeModal
     );
 
+/* ======================================================
+   DAILY CLUE
+======================================================= */
 
-  /* ======================================================
-     START
-  ====================================================== */
-  
-console.log(
-  'Gryphon Halloween date:',
-  getCampaignDate()
-);
+if (startHuntButton) {
 
-console.log(
-  'Today’s ghost clue:',
-  getTodayClue()
-);
+  startHuntButton.addEventListener(
+    'click',
+    beginHunt
+  );
+
+}
+
+
+if (clueClose) {
+
+  clueClose.addEventListener(
+    'click',
+    function () {
+
+      closeClue();
+
+      if (!huntStarted) {
+        beginHunt();
+      }
+
+    }
+  );
+
+}
+
+
+if (clueTab) {
+
+  clueTab.addEventListener(
+    'click',
+    openClue
+  );
+
+}
+
+
+const clueBackdrop =
+  document.querySelector(
+    '.gryphon-clue-backdrop'
+  );
+
+
+if (clueBackdrop) {
+
+  clueBackdrop.addEventListener(
+    'click',
+    function () {
+
+      closeClue();
+
+      if (!huntStarted) {
+        beginHunt();
+      }
+
+    }
+  );
+
+}
+
+/* ======================================================
+   START
+======================================================= */
+
+const todayClue =
+  getTodayClue();
+
+
+if (todayClue) {
+
+  setTimeout(
+    function () {
+
+      openClue();
+
+    },
+    500
+  );
+
+} else {
 
   startGhost();
 
-});
+}
+);
 
 </script>
