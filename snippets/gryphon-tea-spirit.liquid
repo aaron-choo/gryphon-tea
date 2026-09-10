@@ -227,6 +227,12 @@
 
   <div class="gryphon-coded-area gryphon-coded-area--claimed">
 
+<p
+  id="gryphon-swap-message"
+  class="gryphon-swap-message"
+  hidden
+></p>
+
     <p
       id="gryphon-confirm-label"
       class="gryphon-result-type"
@@ -757,6 +763,12 @@
 /* ======================================================
    PRIZE COPY
 ======================================================= */
+
+.gryphon-swap-message {
+  margin: 0 0 18px;
+  font-size: 10px;
+  line-height: 1.4;
+}
 
 #gryphon-confirm-copy {
   font-size: 12px;
@@ -1452,6 +1464,9 @@ const prizeTitle =
 
   const finalPrize =
     document.getElementById('gryphon-final-prize');
+
+const swapMessage =
+  document.getElementById('gryphon-swap-message');
 
     const confirmLabel =
   document.getElementById('gryphon-confirm-label');
@@ -2843,6 +2858,9 @@ function showRewardConfirmation(
 
   /* Reset everything first */
 
+  swapMessage.hidden = true;
+swapMessage.textContent = '';
+
   confirmLabel.textContent =
     'CLAIMED!';
 
@@ -3019,9 +3037,10 @@ if (
   claimResponse.swapped
 ) {
 
-  confirmCopy.textContent =
-    'Rosie was a little too generous. That treat has been fully claimed, so we’ve swapped it for another surprise. ' +
-    confirmCopy.textContent;
+  swapMessage.hidden = false;
+
+  swapMessage.textContent =
+    'Rosie was a little too generous. That treat has been fully claimed, so we’ve swapped it for another surprise.';
 
 }
 
