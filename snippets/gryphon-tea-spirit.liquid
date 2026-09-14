@@ -2991,87 +2991,50 @@ card.classList.remove(
 
 async function claimReward() {
 
-  const claimData = {
-    email: email.value.trim(),
-    marketingConsent:
-      consentCheckbox
-        ? consentCheckbox.checked
-        : false,
-    prizeId: selectedPrize.id
-  };
+  if (!revealId) {
+    throw new Error(
+      'Missing reveal ID'
+    );
+  }
 
 
-  console.log(
-    'TEST CLAIM:',
-    claimData
-  );
+  const response =
+    await fetch(
+      '/apps/gryphon-halloween/claim',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type':
+            'application/json'
+        },
+        body: JSON.stringify({
+          email:
+            email.value
+              .trim(),
+          revealId:
+            revealId,
+          marketingConsent:
+            consentCheckbox
+              ? consentCheckbox.checked
+              : false
+        })
+      }
+    );
 
-  /* Test an email that has already participated */
 
-  if (
-  campaignConfig.campaign.testAlreadyParticipated
-) {
+  const data =
+    await response.json();
 
-  return {
-    status: 'already_participated'
-  };
 
-}
+  if (!response.ok) {
+    throw new Error(
+      data.message ||
+      'Could not claim prize'
+    );
+  }
 
-/* Test claim failure */
 
-if (
-  campaignConfig.campaign.testClaimError
-) {
-
-  return {
-    status: 'error'
-  };
-
-}
-
-if (
-  campaignConfig.campaign.testPrizeExhausted
-) {
-
-  const replacementPrize =
-    prizes.find(function (prize) {
-      return prize.id !== selectedPrize.id;
-    });
-
-  return {
-    status: 'success',
-    swapped: true,
-    prizeId: replacementPrize.id,
-
-    code: (
-      replacementPrize.rewardType === 'loyalty-immediate' ||
-      replacementPrize.rewardType === 'loyalty-double'
-    )
-      ? null
-      : makeTestCode(replacementPrize),
-
-    loyaltyMember:
-      campaignConfig.campaign.testLoyaltyMember
-  };
-
-}
-
-  /* Fake backend response for now */
-
-  return {
-    status: 'success',
-    prizeId: selectedPrize.id,
-    code: (
-      selectedPrize.rewardType === 'loyalty-immediate' ||
-      selectedPrize.rewardType === 'loyalty-double'
-    )
-      ? null
-      : makeTestCode(selectedPrize),
-
-    loyaltyMember:
-      campaignConfig.campaign.testLoyaltyMember
-  };
+  return data;
 
 }
 
