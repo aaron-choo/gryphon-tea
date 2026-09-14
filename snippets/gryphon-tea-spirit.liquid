@@ -2855,42 +2855,100 @@ card.classList.remove(
   ====================================================== */
 
   revealButton.addEventListener(
-    'click',
-    function () {
+  'click',
+  async function () {
+
+    revealButton.disabled = true;
+    revealButton.textContent =
+      'REVEALING...';
+
+    try {
+
+      const response =
+        await fetch(
+          '/apps/gryphon-halloween/reveal',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type':
+                'application/json'
+            },
+            body: JSON.stringify({})
+          }
+        );
+
+
+      const data =
+        await response.json();
+
+
+      if (
+        !response.ok ||
+        data.status !== 'success'
+      ) {
+        throw new Error(
+          data.message ||
+          'Could not reveal prize'
+        );
+      }
+
+
+      revealId =
+        data.revealId;
+
 
       selectedPrize =
-        pickPrize();
+        prizes.find(
+          function (prize) {
+            return (
+              prize.id ===
+              data.prizeId
+            );
+          }
+        );
 
 
-if (selectedPrize.type === 'TRICK') {
+      if (!selectedPrize) {
+        throw new Error(
+          'Prize not found: ' +
+          data.prizeId
+        );
+      }
 
-  moodText.textContent =
-    'A little mischief';
 
-  typeText.textContent =
-    'TRICK!';
+      if (
+        selectedPrize.type ===
+        'TRICK'
+      ) {
 
-  characterCopy.textContent =
-    'Griffin’s up to something...';
+        moodText.textContent =
+          'A little mischief';
 
-} else {
+        typeText.textContent =
+          'TRICK!';
 
-  moodText.textContent =
-    'A little goodness';
+        characterCopy.textContent =
+          'Griffin’s up to something...';
 
-  typeText.textContent =
-    'TREAT!';
+      } else {
 
-  characterCopy.textContent =
-    'Rosie has something for you.';
+        moodText.textContent =
+          'A little goodness';
 
-}
+        typeText.textContent =
+          'TREAT!';
 
-prizeTitle.textContent =
-  selectedPrize.title;
+        characterCopy.textContent =
+          'Rosie has something for you.';
 
-  prizeDescription.textContent =
-  selectedPrize.copy;
+      }
+
+
+      prizeTitle.textContent =
+        selectedPrize.title;
+
+      prizeDescription.textContent =
+        selectedPrize.copy;
 
 
       setTheme(
@@ -2902,8 +2960,27 @@ prizeTitle.textContent =
         'gryphon-step-prize'
       );
 
+
+    } catch (error) {
+
+      console.error(
+        'Gryphon reveal error:',
+        error
+      );
+
+      revealId = null;
+      selectedPrize = null;
+
+      revealButton.disabled =
+        false;
+
+      revealButton.textContent =
+        'TRY AGAIN';
+
     }
-  );
+
+  }
+);
 
 /* ======================================================
    CLAIM REWARD
