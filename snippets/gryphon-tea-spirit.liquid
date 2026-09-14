@@ -3326,6 +3326,31 @@ if (
     }
 
   }
+/* TEMP:
+   Hide code area until real Shopify
+   reward codes are connected.
+*/
+
+const rewardNeedsCode = [
+  'discount',
+  'shipping',
+  'physical',
+  'credit'
+].includes(
+  selectedPrize.rewardType
+);
+
+if (
+  rewardNeedsCode &&
+  !claimResponse.code
+) {
+
+  codeWrap.hidden = true;
+
+  confirmCopy.textContent =
+    'Your reward has been claimed successfully.';
+
+}
 
 if (
   claimResponse.swapped
