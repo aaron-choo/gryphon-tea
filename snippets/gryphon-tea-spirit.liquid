@@ -2119,6 +2119,7 @@ const ghostTargets = {
   let currentAnimation = null;
   let selectedPrize = null;
   let revealId = null;
+  let revealPromise = null;
 
   const HUNT_STORAGE_KEY =
   'gryphonHalloweenHuntDate';
@@ -2469,6 +2470,72 @@ function beginHunt() {
     });
 
   }
+
+  function warmRevealBackend() {
+
+  fetch(
+    '/apps/gryphon-halloween/reveal',
+    {
+      method: 'GET'
+    }
+  ).catch(function () {
+    /* Wake-up only. Ignore errors here. */
+  });
+
+}
+
+
+function requestReveal() {
+
+  if (revealPromise) {
+    return revealPromise;
+  }
+
+
+  revealPromise =
+    fetch(
+      '/apps/gryphon-halloween/reveal',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type':
+            'application/json'
+        },
+        body: JSON.stringify({})
+      }
+    )
+      .then(async function (response) {
+
+        const data =
+          await response.json();
+
+
+        if (
+          !response.ok ||
+          data.status !== 'success'
+        ) {
+          throw new Error(
+            data.message ||
+            'Could not reveal prize'
+          );
+        }
+
+
+        return data;
+
+      })
+      .catch(function (error) {
+
+        revealPromise = null;
+
+        throw error;
+
+      });
+
+
+  return revealPromise;
+
+}
 
 
   function showStep(id) {
