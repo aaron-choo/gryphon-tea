@@ -2275,6 +2275,8 @@ function maybeStartGhost() {
     return;
   }
 
+  warmRevealBackend();
+
   startGhost();
 
 }
@@ -2869,6 +2871,17 @@ card.classList.remove(
 
     caught = true;
 
+    requestReveal().catch(
+  function (error) {
+
+    console.error(
+      'Gryphon reveal preload error:',
+      error
+    );
+
+  }
+);
+
 
     if (currentAnimation) {
 
@@ -2931,34 +2944,8 @@ card.classList.remove(
 
     try {
 
-      const response =
-        await fetch(
-          '/apps/gryphon-halloween/reveal',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type':
-                'application/json'
-            },
-            body: JSON.stringify({})
-          }
-        );
-
-
-      const data =
-        await response.json();
-
-
-      if (
-        !response.ok ||
-        data.status !== 'success'
-      ) {
-        throw new Error(
-          data.message ||
-          'Could not reveal prize'
-        );
-      }
-
+const data =
+  await requestReveal();
 
       revealId =
         data.revealId;
