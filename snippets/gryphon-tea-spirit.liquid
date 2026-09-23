@@ -1556,6 +1556,10 @@ const loyaltyAction =
   const finishButton =
     document.getElementById('gryphon-finish');
 
+const halloweenRewardVariants = {
+  'treat-kaya-toast': 46003614711842,
+  'treat-sparkling-tea': 43845999263778
+};
 
   if (!ghost || !modal) return;
 
@@ -3233,6 +3237,29 @@ swapMessage.textContent = '';
   finishButton.textContent =
     'CONTINUE SHOPPING';
 
+    if (
+  selectedPrize.id === 'treat-kaya-toast'
+) {
+
+  confirmCopy.textContent =
+    'Add your free Kaya Toast straight to cart. Your reward code will be copied for checkout.';
+
+  finishButton.textContent =
+    'ADD FREE KAYA TO CART';
+
+}
+
+else if (
+  selectedPrize.id === 'treat-sparkling-tea'
+) {
+
+  confirmCopy.textContent =
+    'Add your free Mogambo 4-Pack straight to cart. Your reward code will be copied for checkout.';
+
+  finishButton.textContent =
+    'ADD FREE MOGAMBO 4-PACK TO CART';
+
+}
 
   /* =========================================
      NORMAL CODE REWARDS
@@ -3576,12 +3603,165 @@ if (
     closeModal
   );
 
+async function addHalloweenRewardProductToCart(
+  prizeId
+) {
+
+  const variantId =
+    halloweenRewardVariants[prizeId];
+
+  if (!variantId) {
+    return false;
+  }
+
+
+  /* Check whether product is already in cart */
+
+  const cartResponse =
+    await fetch('/cart.js', {
+      headers: {
+        Accept: 'application/json'
+      }
+    });
+
+
+  if (!cartResponse.ok) {
+    throw new Error(
+      'Could not read cart'
+    );
+  }
+
+
+  const cart =
+    await cartResponse.json();
+
+
+  const alreadyInCart =
+    cart.items.some(function (item) {
+
+      return (
+        Number(item.variant_id) ===
+        Number(variantId)
+      );
+
+    });
+
+
+  /* Only add if it is not already there */
+
+  if (!alreadyInCart) {
+
+    const addResponse =
+      await fetch('/cart/add.js', {
+
+        method: 'POST',
+
+        headers: {
+          'Content-Type':
+            'application/json',
+          Accept:
+            'application/json'
+        },
+
+        body: JSON.stringify({
+          items: [
+            {
+              id: variantId,
+              quantity: 1
+            }
+          ]
+        })
+
+      });
+
+
+    if (!addResponse.ok) {
+      throw new Error(
+        'Could not add reward product to cart'
+      );
+    }
+
+  }
+
+
+  /* Copy Halloween reward code */
+
+  try {
+
+    await navigator.clipboard.writeText(
+      codeText.textContent.trim()
+    );
+
+  } catch (error) {
+
+    console.warn(
+      'Could not copy reward code:',
+      error
+    );
+
+  }
+
+
+  window.location.href =
+    '/cart';
+
+  return true;
+
+}
+
 finishButton.addEventListener(
   'click',
-  function () {
+  async function () {
 
     if (
-      finishButton.textContent.trim() === 'TRY AGAIN'
+      selectedPrize &&
+      halloweenRewardVariants[
+        selectedPrize.id
+      ]
+    ) {
+
+      const originalText =
+        finishButton.textContent;
+
+      finishButton.disabled =
+        true;
+
+      finishButton.textContent =
+        'ADDING TO CART...';
+
+
+      try {
+
+        await addHalloweenRewardProductToCart(
+          selectedPrize.id
+        );
+
+      } catch (error) {
+
+        console.error(
+          'Halloween reward cart error:',
+          error
+        );
+
+        finishButton.disabled =
+          false;
+
+        finishButton.textContent =
+          originalText;
+
+        confirmCopy.textContent =
+          'We could not add it automatically. Please add the product to your cart manually and use the reward code above at checkout.';
+
+      }
+
+      return;
+
+    }
+
+
+    if (
+      finishButton.textContent.trim() ===
+      'TRY AGAIN'
     ) {
 
       showStep(
@@ -3591,6 +3771,7 @@ finishButton.addEventListener(
       return;
 
     }
+
 
     closeModal();
 
