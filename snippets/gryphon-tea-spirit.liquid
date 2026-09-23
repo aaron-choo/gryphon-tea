@@ -3470,6 +3470,31 @@ showStep(
 }
 
   /* ======================================================
+     EMAIL VALIDATION
+  ====================================================== */
+
+function isValidHalloweenEmail(value) {
+
+  const normalizedEmail =
+    value.trim();
+
+  return /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(
+    normalizedEmail
+  );
+
+}
+
+email.addEventListener(
+  'input',
+  function () {
+
+    email.setCustomValidity('');
+
+  }
+);
+
+
+/* ======================================================
      CLAIM — TEST ONLY
   ====================================================== */
 
@@ -3480,15 +3505,29 @@ claimForm.addEventListener(
     event.preventDefault();
 
 
+    const enteredEmail =
+      email.value.trim();
+
+    email.setCustomValidity('');
+
     if (
-      !email.checkValidity()
+      !email.checkValidity() ||
+      !isValidHalloweenEmail(
+        enteredEmail
+      )
     ) {
+
+      email.setCustomValidity(
+        'Oops... you entered an invalid email. Give it another try.'
+      );
 
       email.reportValidity();
 
       return;
 
     }
+
+    email.setCustomValidity('');
 
 
     try {
