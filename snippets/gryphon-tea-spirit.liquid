@@ -830,6 +830,13 @@
   margin-bottom: 24px;
 }
 
+/* Larger reminder copy after Kaya/Mogambo is added to cart */
+#gryphon-confirm-copy.gryphon-cart-reminder-copy {
+  font-size: 16px;
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+
 #gryphon-step-prize .gryphon-character-copy {
   margin-bottom: 10px;
 }
@@ -1132,6 +1139,11 @@
 ======================================================= */
 
 @media screen and (max-width: 749px) {
+
+#gryphon-confirm-copy.gryphon-cart-reminder-copy {
+  font-size: 14px;
+  line-height: 1.45;
+}
 
     .gryphon-confirm-tnc {
   margin: 7px 0 10px;
@@ -3210,6 +3222,10 @@ function showRewardConfirmation(
   'gryphon-error-title'
 );
 
+  confirmCopy.classList.remove(
+    'gryphon-cart-reminder-copy'
+  );
+
   swapMessage.hidden = true;
 swapMessage.textContent = '';
 
@@ -3799,6 +3815,10 @@ finishButton.addEventListener(
 
         confirmLabel.textContent =
           'ADDED TO CART!';
+
+        confirmCopy.classList.add(
+          'gryphon-cart-reminder-copy'
+        );
 
 
         if (
