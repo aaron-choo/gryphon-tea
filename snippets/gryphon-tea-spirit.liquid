@@ -3237,29 +3237,32 @@ swapMessage.textContent = '';
   finishButton.textContent =
     'CONTINUE SHOPPING';
 
-    if (
-  selectedPrize.id === 'treat-kaya-toast'
-) {
+  /* Reset physical reward cart CTA state */
+  finishButton.dataset.rewardCartState = '';
 
-  confirmCopy.textContent =
-    'Add your free Kaya Toast straight to cart. Your reward code will be copied for checkout.';
+  if (
+    selectedPrize.id === 'treat-kaya-toast'
+  ) {
 
-  finishButton.textContent =
-    'ADD FREE KAYA TO CART';
+    confirmCopy.textContent =
+      'Add your free Kaya Toast straight to cart. We’ll remind you to copy your reward code next.';
 
-}
+    finishButton.textContent =
+      'ADD FREE KAYA TO CART';
 
-else if (
-  selectedPrize.id === 'treat-sparkling-tea'
-) {
+  }
 
-  confirmCopy.textContent =
-    'Add your free Mogambo 4-Pack straight to cart. Your reward code will be copied for checkout.';
+  else if (
+    selectedPrize.id === 'treat-sparkling-tea'
+  ) {
 
-  finishButton.textContent =
-    'ADD FREE MOGAMBO 4-PACK TO CART';
+    confirmCopy.textContent =
+      'Add your free Mogambo 4-Pack straight to cart. We’ll remind you to copy your reward code next.';
 
-}
+    finishButton.textContent =
+      'ADD FREE MOGAMBO 4-PACK TO CART';
+
+  }
 
   /* =========================================
      NORMAL CODE REWARDS
@@ -3684,41 +3687,93 @@ async function addHalloweenRewardProductToCart(
   }
 
 
-  /* Copy Halloween reward code */
+  return true;
 
-  try {
+}
 
-    await navigator.clipboard.writeText(
-      codeText.textContent.trim()
-    );
 
-  } catch (error) {
+async function copyHalloweenRewardCode() {
 
-    console.warn(
-      'Could not copy reward code:',
-      error
-    );
+  const rewardCode =
+    codeText.textContent.trim();
 
+  if (!rewardCode) {
+    return false;
   }
 
-
-  window.location.href =
-    '/cart';
+  await navigator.clipboard.writeText(
+    rewardCode
+  );
 
   return true;
 
 }
 
+
 finishButton.addEventListener(
   'click',
   async function () {
 
-    if (
+    const rewardHasCartProduct =
       selectedPrize &&
       halloweenRewardVariants[
         selectedPrize.id
-      ]
-    ) {
+      ];
+
+
+    if (rewardHasCartProduct) {
+
+      /* STEP 2: code reminder, then cart */
+
+      if (
+        finishButton.dataset.rewardCartState ===
+        'added'
+      ) {
+
+        const originalText =
+          finishButton.textContent;
+
+        finishButton.disabled =
+          true;
+
+        finishButton.textContent =
+          'COPYING CODE...';
+
+
+        try {
+
+          await copyHalloweenRewardCode();
+
+          finishButton.textContent =
+            'CODE COPIED';
+
+          window.location.href =
+            '/cart';
+
+        } catch (error) {
+
+          console.error(
+            'Halloween reward code copy error:',
+            error
+          );
+
+          finishButton.disabled =
+            false;
+
+          finishButton.textContent =
+            originalText;
+
+          confirmCopy.textContent =
+            'Your item is already in the cart. Please tap COPY beside the reward code above, then continue to your cart.';
+
+        }
+
+        return;
+
+      }
+
+
+      /* STEP 1: add physical reward to cart */
 
       const originalText =
         finishButton.textContent;
@@ -3735,6 +3790,35 @@ finishButton.addEventListener(
         await addHalloweenRewardProductToCart(
           selectedPrize.id
         );
+
+        finishButton.disabled =
+          false;
+
+        finishButton.dataset.rewardCartState =
+          'added';
+
+        confirmLabel.textContent =
+          'ADDED TO CART!';
+
+
+        if (
+          selectedPrize.id ===
+          'treat-kaya-toast'
+        ) {
+
+          confirmCopy.textContent =
+            'Your Kaya Toast is waiting. Copy your reward code and use the same email you claimed with at checkout.';
+
+        } else {
+
+          confirmCopy.textContent =
+            'Your Mogambo 4-Pack is waiting. Copy your reward code and use the same email you claimed with at checkout.';
+
+        }
+
+
+        finishButton.textContent =
+          'COPY CODE & GO TO CART';
 
       } catch (error) {
 
@@ -3777,6 +3861,7 @@ finishButton.addEventListener(
 
   }
 );
+
 
 
   document
