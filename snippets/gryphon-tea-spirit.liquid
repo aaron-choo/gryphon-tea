@@ -97,6 +97,13 @@
       ×
     </button>
 
+    <img
+      id="gryphon-ended-image"
+      class="gryphon-ended-image"
+      src="https://cdn.shopify.com/s/files/1/0772/8142/7490/files/End_of_Halloween.png?v=1790317858"
+      alt="Rosie revealing Griffin under the ghost costume"
+    >
+
 
     <!-- =========================
          STEP 1 — REVEAL FATE
@@ -647,6 +654,78 @@
 .gryphon-theme-status #gryphon-finish {
   width: 300px;
   max-width: 100%;
+}
+
+
+/* ---------- CAMPAIGN ENDING ---------- */
+
+.gryphon-ended-image {
+  display: none;
+}
+
+.gryphon-theme-neutral.gryphon-theme-status.gryphon-theme-ended {
+  width: 720px;
+  height: 360px;
+}
+
+.gryphon-theme-ended .gryphon-ended-image {
+  display: block;
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+  width: 300px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+}
+
+.gryphon-theme-ended #gryphon-step-code .gryphon-coded-area--claimed {
+  left: auto;
+  right: 38px;
+  top: 50%;
+  bottom: auto;
+
+  width: 330px;
+  max-width: 46%;
+
+  height: auto;
+  min-height: 0;
+
+  padding: 0;
+
+  transform: translateY(-50%);
+
+  align-items: flex-start;
+  justify-content: center;
+
+  text-align: left;
+}
+
+.gryphon-theme-ended #gryphon-confirm-label {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+
+  text-align: left;
+}
+
+.gryphon-theme-ended #gryphon-confirm-copy {
+  margin-bottom: 22px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+.gryphon-theme-ended #gryphon-finish {
+  width: 100%;
+  max-width: 300px;
+
+  font-size: 11px;
 }
 
 
@@ -1477,6 +1556,70 @@
     margin: 8px 0 10px;
   }
 
+
+  /* =========================================
+     CAMPAIGN ENDING
+  ========================================= */
+
+  .gryphon-theme-neutral.gryphon-theme-status.gryphon-theme-ended {
+    width: 340px;
+    height: 500px;
+
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+
+  .gryphon-theme-ended .gryphon-ended-image {
+    left: 50%;
+    top: 18px;
+    bottom: auto;
+
+    width: 220px;
+
+    transform: translateX(-50%);
+  }
+
+  .gryphon-theme-ended #gryphon-step-code .gryphon-coded-area--claimed {
+    left: 22px;
+    right: 22px;
+    top: auto;
+    bottom: 24px;
+
+    width: auto;
+    max-width: none;
+
+    transform: none;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+  }
+
+  .gryphon-theme-ended #gryphon-confirm-label {
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    line-height: 1.3;
+
+    text-align: center;
+  }
+
+  .gryphon-theme-ended #gryphon-confirm-copy {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    text-align: center;
+  }
+
+  .gryphon-theme-ended #gryphon-finish {
+    width: 100%;
+
+    font-size: 10px;
+  }
+
 }
 
 /* ======================================================
@@ -1621,7 +1764,7 @@ campaign: {
   rewardExpiry: '2026-11-30',
 
 testMode: true,
-testDate: '2026-11-01',
+testDate: '2026-10-16',
 
 testLoyaltyMember: false,
 testAlreadyParticipated: false,
@@ -2383,17 +2526,18 @@ function showEndedCampaign() {
   setTheme(null);
 
   card.classList.add(
-    'gryphon-theme-status'
+    'gryphon-theme-status',
+    'gryphon-theme-ended'
   );
 
-confirmLabel.textContent =
-  "Turns out, the ghost was Griffin all along. Now he’s here to stay, alongside Rosie.";
+  confirmLabel.textContent =
+    'THANKS FOR HELPING ROSIE CATCH THE GHOST.';
 
   finalPrize.textContent =
     '';
 
-  confirmCopy.textContent =
-    'Gryphon Halloween has come to an end. Until the next haunting...';
+  confirmCopy.innerHTML =
+    'The haunting is over… and Griffin has finally been exposed.<br><br>Turns out, he was the ghost all along.';
 
   confirmTnc.textContent =
     '';
@@ -2611,7 +2755,8 @@ card.classList.remove(
   'gryphon-theme-neutral',
   'gryphon-theme-trick',
   'gryphon-theme-treat',
-  'gryphon-theme-status'
+  'gryphon-theme-status',
+  'gryphon-theme-ended'
 );
 
 
