@@ -1043,6 +1043,10 @@
 }
 
 
+#gryphon-claim-form .gryphon-main-button {
+  font-size: 12px;
+}
+
 /* Neutral + Trick */
 
 .gryphon-theme-neutral .gryphon-main-button,
@@ -1448,6 +1452,10 @@
   font-size: 9px;
 }
 
+#gryphon-claim-form .gryphon-main-button {
+  font-size: 11px;
+}
+
 
   /* =========================================
      FINAL CODE SCREEN
@@ -1513,6 +1521,11 @@ const startHuntButton =
 
   const claimForm =
     document.getElementById('gryphon-claim-form');
+
+  const claimButton =
+    claimForm
+      ? claimForm.querySelector('.gryphon-main-button')
+      : null;
 
   const email =
     document.getElementById('gryphon-email');
@@ -3019,6 +3032,13 @@ const data =
 
       prizeDescription.textContent =
         selectedPrize.copy;
+
+      if (claimButton) {
+        claimButton.textContent =
+          selectedPrize.type === 'TRICK'
+            ? 'CLAIM IT ANYWAY'
+            : 'CLAIM MY PRIZE';
+      }
 
 
       setTheme(
