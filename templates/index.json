@@ -662,8 +662,8 @@
       ],
       "settings": {
         "title": "Our Partners",
-        "heading_size": "h1",
-        "image_width": "half",
+        "heading_size": "h2",
+        "image_width": "icon",
         "image_ratio": "square",
         "button_label": "",
         "button_link": "",
@@ -740,7 +740,7 @@
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Our Accolades",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
@@ -772,7 +772,7 @@
         "filter_tag": "All",
         "post_limit": 4,
         "heading": "{{ section.settings.blog.title }}",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "show_slides": true,
         "columns_desktop": 3,
         "show_view_all": true,
