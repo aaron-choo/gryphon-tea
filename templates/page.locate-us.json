@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "hxl",
+            "heading_size": "h1",
             "heading_size_mobile": "none"
           }
         },
@@ -24,7 +24,7 @@
           "type": "text",
           "settings": {
             "text": "{{ page.metafields.custom.excerpt.value }}",
-            "text_style": "body"
+            "text_style": "subtitle"
           }
         }
       },
