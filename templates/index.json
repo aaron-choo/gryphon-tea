@@ -523,6 +523,7 @@
         "judge_me_reviews_all_reviews_text_a4hMPi",
         "judge_me_reviews_featured_carousel_YCxwjD"
       ],
+      "disabled": true,
       "custom_css": [
         "#stamped-main-widget {padding-bottom: 4rem;}"
       ],
