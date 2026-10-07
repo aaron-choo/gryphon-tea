@@ -51,6 +51,7 @@
         },
         "slide_dNJAr6": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "gryphon_layout": "promo",
             "branding_media_type": "image",
@@ -83,6 +84,7 @@
         },
         "slide_kJdN83": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "gryphon_layout": "promo",
             "branding_media_type": "image",
