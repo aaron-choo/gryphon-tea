@@ -456,7 +456,7 @@
             "image": "shopify://shop_images/20250515_SC_Gryphon_Singapore-0259.jpg",
             "caption": "Brand Story",
             "heading": "Crafted for Connection",
-            "text": "<p>Gryphon is an Asian artisanal tea brand built on nearly a century of family-owned heritage. </p><p>Distributed and served in over 1,000 F&B and hospitality outlets across 11 countries, Gryphon embodies the art and science of distilling ingredients into harmonious brews rich in flavour and emotion.</p>",
+            "text": "<p>Gryphon is an Asian artisanal tea brand built on nearly a century of family-owned heritage.&nbsp;</p><p>Distributed and served in over 1,000 F&B and hospitality outlets across 11 countries, Gryphon embodies the art and science of distilling ingredients into harmonious brews rich in flavour and emotion.</p>",
             "button_label": "Our Brand Story",
             "button_link": "shopify://metaobjects/brand/gryphon-singapore"
           }
@@ -680,7 +680,7 @@
         "carousel_gap_mobile": 28,
         "carousel_logo_height": 75,
         "carousel_logo_height_mobile": 55,
-        "carousel_pause_hover": true,
+        "carousel_pause_hover": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 24,
