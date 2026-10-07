@@ -204,7 +204,7 @@
       ],
       "settings": {
         "title": "Our Partners",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "square",
         "button_label": "",
