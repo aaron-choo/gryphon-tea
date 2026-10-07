@@ -471,8 +471,8 @@
         "row_LAWLkf"
       ],
       "custom_css": [
-        "h2{font-size:32px;}",
-        ".button{text-decoration:underline!important; text-decoration-thickness:.5px!important; text-underline-offset:7px!important;}"
+        "h2 {font-size: 32px;}",
+        ".button {text-decoration: underline !important; text-decoration-thickness: 0.5px !important; text-underline-offset: 7px !important;}"
       ],
       "settings": {
         "image_height": "adapt",
@@ -748,6 +748,10 @@
         "column_qDUC8p",
         "column_GRpdiV",
         "column_8Jbpdf"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link{margin-bottom:1px!important;}",
+        ".multicolumn-list{margin-top:0!important;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
