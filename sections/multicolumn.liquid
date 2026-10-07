@@ -37,7 +37,8 @@
       padding: 0;
       overflow-x: auto;
       overflow-y: hidden;
-      scroll-snap-type: x proximity;
+      scroll-snap-type: none;
+      scroll-behavior: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
       overscroll-behavior-inline: contain;
@@ -57,7 +58,6 @@
       max-width: none;
       margin: 0;
       padding: 0;
-      scroll-snap-align: center;
     }
 
     #shopify-section-{{ section.id }} .gryphon-partner-carousel .multicolumn-card {
@@ -178,15 +178,17 @@
 
     {%- endunless -%}
 
-    <slider-component
-      class="slider-mobile-gutter{% if section.settings.horizontal_carousel %} gryphon-partner-carousel{% endif %}"
-      {% if section.settings.horizontal_carousel %}
+    {% if section.settings.horizontal_carousel %}
+      <div
+        class="slider-mobile-gutter gryphon-partner-carousel"
         data-gryphon-carousel
         data-auto-scroll="{{ section.settings.carousel_auto_scroll }}"
         data-loop-duration="{{ section.settings.carousel_speed }}"
         data-pause-hover="{{ section.settings.carousel_pause_hover }}"
-      {% endif %}
-    >
+      >
+    {% else %}
+      <slider-component class="slider-mobile-gutter">
+    {% endif %}
 
       <ul
 
@@ -462,7 +464,11 @@
 
       {%- endif -%}
 
-    </slider-component>
+    {% if section.settings.horizontal_carousel %}
+      </div>
+    {% else %}
+      </slider-component>
+    {% endif %}
 
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
 
@@ -527,6 +533,12 @@
           clone.querySelectorAll('[data-shopify-editor-block]').forEach((el) => {
             el.removeAttribute('data-shopify-editor-block');
           });
+          clone.classList.remove('scroll-trigger', 'animate--slide-in');
+          clone.removeAttribute('data-cascade');
+          clone.style.removeProperty('--animation-order');
+          clone.querySelectorAll('.scroll-trigger, .animate--slide-in').forEach((el) => {
+            el.classList.remove('scroll-trigger', 'animate--slide-in');
+          });
           clone.querySelectorAll('a, button, input, select, textarea').forEach((el) => {
             el.setAttribute('tabindex', '-1');
           });
@@ -551,7 +563,9 @@
 
         const originalSetWidth = () => {
           if (!firstOriginal || !firstClone) return 0;
-          return firstClone.offsetLeft - firstOriginal.offsetLeft;
+          const measured = firstClone.getBoundingClientRect().left - firstOriginal.getBoundingClientRect().left;
+          if (measured > 0) return measured;
+          return track.scrollWidth / 2;
         };
 
         const normalisePosition = () => {
@@ -567,8 +581,7 @@
           const delta = Math.min(timestamp - lastTimestamp, 100);
           lastTimestamp = timestamp;
 
-          const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          const shouldMove = autoScroll && !reducedMotion && !pausedByHover && !pausedByInteraction;
+          const shouldMove = autoScroll && !pausedByHover && !pausedByInteraction;
 
           if (shouldMove) {
             const width = originalSetWidth();
@@ -624,7 +637,7 @@
           if (event.detail.sectionId === sectionId) destroyed = true;
         });
 
-        requestAnimationFrame(animate);
+        window.setTimeout(() => requestAnimationFrame(animate), 100);
       };
 
       initialiseGryphonPartnerCarousel();
