@@ -1,3 +1,80 @@
+<style>
+  /* GRYPHON JOURNAL */
+
+  #shopify-section-{{ section.id }} .blog__title {
+    font-size: 26px !important;
+  }
+
+  #shopify-section-{{ section.id }} .article-card .card__heading {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  #shopify-section-{{ section.id }} .article-card__excerpt {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  #shopify-section-{{ section.id }} .article-card .caption-with-letter-spacing {
+    font-size: 9px !important;
+  }
+
+  @media screen and (max-width: 749px) {
+
+    #shopify-section-{{ section.id }} .blog__title {
+      font-size: 21px !important;
+      margin-bottom: 22px !important;
+    }
+
+    #shopify-section-{{ section.id }} .blog__post {
+      width: 58% !important;
+      max-width: 58% !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card .card__inner {
+      height: 145px !important;
+      min-height: 145px !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card .card__media,
+    #shopify-section-{{ section.id }} .article-card .media {
+      height: 145px !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card .media img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card .card__information {
+      padding: 10px 4px 4px !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card .caption-with-letter-spacing {
+      font-size: 8px !important;
+      line-height: 1.2 !important;
+      margin-bottom: 5px !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card .card__heading {
+      font-size: 14px !important;
+      line-height: 1.25 !important;
+      margin: 4px 0 !important;
+    }
+
+    #shopify-section-{{ section.id }} .article-card__excerpt {
+      font-size: 11px !important;
+      line-height: 1.35 !important;
+      margin-top: 7px !important;
+    }
+
+    #shopify-section-{{ section.id }} .blog__posts {
+      column-gap: 12px !important;
+    }
+  }
+</style>
+
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
