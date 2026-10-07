@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ page.title }}",
-            "heading_size": "hxl"
+            "heading_size": "hxl",
+            "heading_size_mobile": "none"
           }
         },
         "text_MrcqfT": {
@@ -44,6 +45,7 @@
         "text_color_override": "rgba(0,0,0,0)",
         "custom_positioning": true,
         "heading_custom_position": "top-left",
+        "subheading_custom_position": "top-right",
         "text_custom_position": "top-right",
         "button_custom_position": "bottom-left",
         "stack_images_on_mobile": true,
@@ -213,10 +215,18 @@
         "color_scheme": "scheme-5419b8a9-1dd5-40a3-9f30-0e115a8951ff",
         "border": false,
         "full_button": false,
+        "horizontal_carousel": true,
+        "carousel_auto_scroll": true,
+        "carousel_speed": 30,
+        "carousel_gap": 60,
+        "carousel_gap_mobile": 28,
+        "carousel_logo_height": 75,
+        "carousel_logo_height_mobile": 55,
+        "carousel_pause_hover": true,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 24,
+        "padding_bottom": 20
       }
     }
   },
