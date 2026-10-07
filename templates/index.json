@@ -427,6 +427,9 @@
         "text_kU3ypA",
         "buttons_bwmhiG"
       ],
+      "custom_css": [
+        ".banner__buttons .button {text-decoration: underline !important; text-decoration-thickness: 0.5px !important; text-underline-offset: 7px !important;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/b2b-hero.jpg",
         "image_overlay_opacity": 40,
@@ -466,6 +469,10 @@
       },
       "block_order": [
         "row_LAWLkf"
+      ],
+      "custom_css": [
+        "h2{font-size:32px;}",
+        ".button{text-decoration:underline!important; text-decoration-thickness:.5px!important; text-underline-offset:7px!important;}"
       ],
       "settings": {
         "image_height": "adapt",
@@ -775,7 +782,9 @@
     },
     "featured_blog_JqB7Pa": {
       "type": "featured-blog",
-      "custom_css": [],
+      "custom_css": [
+        ".blog__button {text-decoration: underline !important; text-decoration-thickness: 0.5px !important; text-underline-offset: 7px !important;}"
+      ],
       "settings": {
         "blog": "journal",
         "filter_tag": "All",
