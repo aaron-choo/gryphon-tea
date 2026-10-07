@@ -775,22 +775,23 @@
     },
     "featured_blog_JqB7Pa": {
       "type": "featured-blog",
+      "custom_css": [],
       "settings": {
         "blog": "journal",
         "filter_tag": "All",
         "post_limit": 4,
         "heading": "{{ section.settings.blog.title }}",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "show_slides": true,
         "columns_desktop": 3,
         "show_view_all": true,
         "show_image": true,
         "show_blog_title": true,
-        "show_date": false,
+        "show_date": true,
         "show_author": false,
         "color_scheme": "",
         "padding_top": 32,
-        "padding_bottom": 24
+        "padding_bottom": 32
       }
     },
     "multirow_7AbrGq": {
