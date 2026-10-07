@@ -1,8 +1,13 @@
 <style>
-  /* JOURNAL - DESKTOP */
+  /* GRYPHON JOURNAL */
+
+  #shopify-section-{{ section.id }} .blog__title {
+    font-size: 26px !important;
+  }
+
   #shopify-section-{{ section.id }} .article-card .card__heading {
     font-size: 16px !important;
-    line-height: 1.25 !important;
+    line-height: 1.3 !important;
   }
 
   #shopify-section-{{ section.id }} .article-card__excerpt {
@@ -10,32 +15,30 @@
     line-height: 1.4 !important;
   }
 
-  #shopify-section-{{ section.id }} .caption-with-letter-spacing {
-    font-size: 10px !important;
+  #shopify-section-{{ section.id }} .article-card .caption-with-letter-spacing {
+    font-size: 9px !important;
   }
 
-  /* JOURNAL - MOBILE */
   @media screen and (max-width: 749px) {
 
-    #shopify-section-{{ section.id }} .title {
+    #shopify-section-{{ section.id }} .blog__title {
       font-size: 21px !important;
+      margin-bottom: 22px !important;
+    }
+
+    #shopify-section-{{ section.id }} .blog__post {
+      width: 58% !important;
+      max-width: 58% !important;
     }
 
     #shopify-section-{{ section.id }} .article-card .card__inner {
-      height: 155px !important;
-      min-height: 155px !important;
-      --ratio-percent: 0% !important;
+      height: 145px !important;
+      min-height: 145px !important;
     }
 
-    #shopify-section-{{ section.id }} .article-card .card__media {
-      position: absolute !important;
-      inset: 0 !important;
-      height: 155px !important;
-    }
-
+    #shopify-section-{{ section.id }} .article-card .card__media,
     #shopify-section-{{ section.id }} .article-card .media {
-      height: 155px !important;
-      padding-bottom: 0 !important;
+      height: 145px !important;
     }
 
     #shopify-section-{{ section.id }} .article-card .media img {
@@ -45,29 +48,29 @@
     }
 
     #shopify-section-{{ section.id }} .article-card .card__information {
-      padding: 8px 4px !important;
+      padding: 10px 4px 4px !important;
     }
 
-    #shopify-section-{{ section.id }} .caption-with-letter-spacing {
+    #shopify-section-{{ section.id }} .article-card .caption-with-letter-spacing {
       font-size: 8px !important;
       line-height: 1.2 !important;
+      margin-bottom: 5px !important;
     }
 
     #shopify-section-{{ section.id }} .article-card .card__heading {
       font-size: 14px !important;
       line-height: 1.25 !important;
-      margin: 5px 0 !important;
+      margin: 4px 0 !important;
     }
 
     #shopify-section-{{ section.id }} .article-card__excerpt {
       font-size: 11px !important;
       line-height: 1.35 !important;
-      margin-top: 6px !important;
+      margin-top: 7px !important;
     }
 
-    #shopify-section-{{ section.id }} .slider__slide {
-      width: 62% !important;
-      max-width: 62% !important;
+    #shopify-section-{{ section.id }} .blog__posts {
+      column-gap: 12px !important;
     }
   }
 </style>
