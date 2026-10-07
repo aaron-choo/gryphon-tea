@@ -682,6 +682,9 @@
         "carousel_logo_height_mobile": 55,
         "carousel_pause_hover": false,
         "columns_mobile": "3",
+        "mobile_single_row": false,
+        "mobile_single_row_logo_height": 65,
+        "mobile_single_row_gap": 12,
         "swipe_on_mobile": false,
         "padding_top": 24,
         "padding_bottom": 24
@@ -760,6 +763,9 @@
         "carousel_logo_height_mobile": 55,
         "carousel_pause_hover": true,
         "columns_mobile": "1",
+        "mobile_single_row": true,
+        "mobile_single_row_logo_height": 65,
+        "mobile_single_row_gap": 12,
         "swipe_on_mobile": false,
         "padding_top": 24,
         "padding_bottom": 24
