@@ -393,13 +393,14 @@
         "heading_EUi3zc": {
           "type": "heading",
           "settings": {
-            "heading": "Let your instincts guide you to your perfect cup of tea.",
-            "heading_size": "h1",
+            "heading": "Discover teas made for every mood, moment and table",
+            "heading_size": "h2",
             "heading_size_mobile": "none"
           }
         },
         "text_kU3ypA": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Delve into our interactive quiz designed to uncover your unique preferences.",
             "text_style": "subtitle"
