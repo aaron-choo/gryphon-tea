@@ -337,7 +337,7 @@
       "settings": {
         "collection": "best-sellers",
         "products_to_show": 8,
-        "title": "Curated Selections",
+        "title": "Shop Best Sellers",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
