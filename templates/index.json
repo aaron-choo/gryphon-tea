@@ -438,7 +438,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Firefly_Gemini_Flash_2.png",
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 20,
         "image_height": "extra-small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",

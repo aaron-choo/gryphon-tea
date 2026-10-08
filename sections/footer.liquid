@@ -161,177 +161,222 @@
   .gf-lower .gf-lower__socials .list-social__link { padding: 2px !important; }
 }
 
-/* ===== GRYPHON NEWSLETTER (DESKTOP + MOBILE) =====
-   Scoped exclusively to the newsletter, not the lower footer. */
+/* ===== GRYPHON NEWSLETTER: COMPACT RESPONSIVE LAYOUT ===== */
 .gryphon-footer-group .footer-block__newsletter {
   position: relative;
   isolation: isolate;
   overflow: hidden;
 }
 
-/* The decorative glow is removed from normal layout flow. */
+/* Decorative glow only; never determines section height. */
 .gryphon-footer-group .footer-block__newsletter .footer-block__motif {
   position: absolute !important;
   z-index: 0;
-  left: -1%;
-  right: auto !important;
-  top: auto !important;
-  bottom: -190px;
-  width: min(43vw, 560px) !important;
+  width: min(43vw, 540px) !important;
   height: auto !important;
   max-width: none !important;
+  top: 50px !important;
+  bottom: auto !important;
+  left: 0 !important;
+  right: auto !important;
   margin: 0 !important;
-  pointer-events: none;
   transform: none !important;
+  pointer-events: none;
 }
 
-/* Explicit desktop two-column grid prevents theme !grid utilities
-   from leaving newsletter copy in the left column. */
-@media screen and (min-width: 750px) {
-  .gryphon-footer-group .footer-block__newsletter > .page-width {
-    position: relative;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-    align-items: center !important;
-    min-height: 310px !important;
-    padding: 28px 48px !important;
-    box-sizing: border-box;
-  }
-  .gryphon-footer-group .gryphon-newsletter-content {
-    grid-column: 2 / 3 !important;
-    grid-row: 1 !important;
-    justify-self: stretch !important;
-    align-self: center !important;
-    width: 100% !important;
-    max-width: 600px;
-    margin: 0 auto !important;
-  }
+.gryphon-footer-group .gf-newsletter-layout {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: center !important;
+  justify-items: stretch !important;
+  min-height: 288px !important;
+  padding: 24px 48px !important;
+  box-sizing: border-box;
 }
-
 .gryphon-footer-group .gryphon-newsletter-content {
   position: relative;
   z-index: 1;
+  grid-column: 2 / 3 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 12px !important;
+  width: 100% !important;
+  max-width: 600px !important;
+  margin: 0 !important;
   padding: 0 !important;
+  gap: 11px !important;
   text-align: center !important;
 }
-
-/* The theme's !text-5xl / lg:!text-6xl classes must not set
-   a giant heading in the compact newsletter. */
-.gryphon-footer-group .gryphon-newsletter-content > h2,
-.gryphon-footer-group .gryphon-newsletter-content > h2 p,
-.gryphon-footer-group .gryphon-newsletter-content > h2 span {
-  font-size: clamp(32px, 3vw, 42px) !important;
-  font-weight: 300 !important;
-  line-height: 1.16 !important;
-  letter-spacing: 0.01em;
-  text-align: center !important;
+.gryphon-footer-group .gryphon-newsletter-content > h2.gf-newsletter-title {
+  display: block !important;
+  width: max-content !important;
+  max-width: none !important;
   margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  font-size: clamp(24px, 2.6vw, 36px) !important;
+  font-weight: 300 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -.01em !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  text-wrap: nowrap !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
-  width: 100%;
-  margin: 0 !important;
-  font-size: 15px !important;
-  line-height: 1.4 !important;
+  width: 100% !important;
+  max-width: 420px !important;
+  margin: 0 auto !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 1.35 !important;
   text-align: center !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p {
+  margin: 0 !important;
+  color: inherit !important;
   font-size: inherit !important;
   line-height: inherit !important;
-  margin: 0 !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p + p {
-  margin-top: 6px !important;
+  max-width: 270px !important; /* long sentence breaks into 3 lines on desktop */
+  margin: 7px auto 0 !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .newsletter-form {
+  display: block !important;
   width: 100% !important;
-  max-width: 570px;
-  margin: 10px 0 0 !important;
+  max-width: 510px !important;
+  margin: 5px 0 0 !important;
 }
-.gryphon-footer-group .footer-block__newsletter .newsletter-form__field-wrapper,
-.gryphon-footer-group .footer-block__newsletter .dotted-field {
+.gryphon-footer-group .gryphon-newsletter-content .newsletter-form__field-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+/* Independent transparent field: no theme dotted-field/field__input pseudo-elements. */
+.gryphon-footer-group .gf-newsletter-field {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
-  max-width: 100%;
+  min-height: 58px;
+  box-sizing: border-box;
   background: transparent !important;
-  background-color: transparent !important;
   box-shadow: none !important;
 }
-/* Keep existing dotted lines, but remove the filled rectangle
-   behind the text and arrow in all interaction states. */
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input,
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input:focus,
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input:not(:placeholder-shown),
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__label,
-.gryphon-footer-group .footer-block__newsletter .dotted-field .newsletter-form__button {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
+.gryphon-footer-group .gf-newsletter-field::before,
+.gryphon-footer-group .gf-newsletter-field::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,.95) 1.4px, transparent 1.9px) left center / 16px 4px repeat-x;
 }
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input {
+.gryphon-footer-group .gf-newsletter-field::before { top: 0; }
+.gryphon-footer-group .gf-newsletter-field::after { bottom: 0; }
+.gryphon-footer-group .gf-newsletter-input {
+  display: block !important;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 8px 12px !important;
   border: 0 !important;
   border-radius: 0 !important;
+  appearance: none;
+  outline: 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
   color: #fff !important;
+  font: inherit;
+  font-family: var(--font-body-family);
+  font-size: 15px;
+  line-height: 1.35;
 }
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__label {
+.gryphon-footer-group .gf-newsletter-input::placeholder {
+  color: rgba(255,255,255,.95) !important;
+  opacity: 1 !important;
+}
+.gryphon-footer-group .gf-newsletter-field:focus-within {
+  outline: 1px solid rgba(255,255,255,.85);
+  outline-offset: 3px;
+}
+.gryphon-footer-group .gf-newsletter-submit {
+  display: inline-flex !important;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
   color: #fff !important;
-  font-size: 15px !important;
+  cursor: pointer;
 }
-.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input::placeholder {
-  color: transparent;
+.gryphon-footer-group .gf-newsletter-submit .svg-wrapper,
+.gryphon-footer-group .gf-newsletter-submit svg {
+  width: 22px !important;
+  height: 22px !important;
+  color: inherit !important;
 }
 
 @media screen and (max-width: 749px) {
-  .gryphon-footer-group .footer-block__newsletter > .page-width {
-    position: relative;
+  .gryphon-footer-group .gf-newsletter-layout {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     grid-template-columns: none !important;
-    min-height: 330px !important;
-    padding: 27px 24px 34px !important;
-    box-sizing: border-box;
+    min-height: 318px !important;
+    padding: 29px 20px 36px !important;
   }
   .gryphon-footer-group .footer-block__newsletter .footer-block__motif {
     width: min(130vw, 550px) !important;
     left: 50% !important;
-    right: auto !important;
-    bottom: -270px !important;
+    top: auto !important;
+    bottom: -245px !important;
     transform: translateX(-50%) !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content {
-    flex: 0 0 auto !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    justify-self: auto !important;
     width: 100% !important;
-    max-width: 440px;
+    max-width: 440px !important;
     margin: 0 auto !important;
-    gap: 13px !important;
+    gap: 17px !important;
   }
-  .gryphon-footer-group .gryphon-newsletter-content > h2,
-  .gryphon-footer-group .gryphon-newsletter-content > h2 p,
-  .gryphon-footer-group .gryphon-newsletter-content > h2 span {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
-    white-space: normal !important;
-    text-wrap: balance;
+  .gryphon-footer-group .gryphon-newsletter-content > h2.gf-newsletter-title {
+    font-size: clamp(21px, 6.9vw, 28px) !important;
+    letter-spacing: -.025em !important;
+    white-space: nowrap !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
     font-size: 13px !important;
     line-height: 1.4 !important;
+    max-width: 390px !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p + p {
-    margin-top: 7px !important;
+    max-width: 100% !important;
+    margin: 9px auto 0 !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content > .newsletter-form {
-    max-width: 100%;
-    margin-top: 13px !important;
+    max-width: 100% !important;
+    margin-top: 12px !important;
   }
-  .gryphon-footer-group .footer-block__newsletter .dotted-field .field__label {
-    font-size: 14px !important;
-  }
+  .gryphon-footer-group .gf-newsletter-input { font-size: 14px !important; }
 }
 /* ===== END GRYPHON NEWSLETTER ===== */
 
@@ -345,7 +390,7 @@
 
       <div
 
-        class="page-width section-{{ section.id }}-padding !grid sm:grid-cols-2 items-center justify-items-center"
+        class="page-width section-{{ section.id }}-padding gf-newsletter-layout"
 
       >
 
@@ -400,11 +445,7 @@
 
           {%- if section.settings.newsletter_heading != blank -%}
 
-            <h2 class="inline-richtext !text-5xl lg:!text-6xl text-left">
-
-              {{ section.settings.newsletter_heading }}
-
-            </h2>
+            <h2 class="gf-newsletter-title">{{ section.settings.newsletter_heading | replace: '<br>', ' ' | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '</p>', ' ' | strip_html | strip | escape }}</h2>
 
           {%- endif -%}
 
@@ -424,7 +465,7 @@
 
             <div class="newsletter-form__field-wrapper">
 
-              <div class="dotted-field">
+              <div class="gf-newsletter-field">
 
                 <input
 
@@ -434,7 +475,7 @@
 
                   name="contact[email]"
 
-                  class="field__input"
+                  class="gf-newsletter-input"
 
                   value="{{ form.email }}"
 
@@ -460,13 +501,13 @@
 
                   {% endif %}
 
-                  placeholder="{{ 'newsletter.label' | t }}"
+                  placeholder="Enter your email address"
 
                   required
 
                 >
 
-                <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                <label class="gf-newsletter-label visually-hidden" for="NewsletterForm--{{ section.id }}">
 
                   {% comment %} {{ 'newsletter.label' | t }} {% endcomment %}
 
@@ -478,7 +519,7 @@
 
                   type="submit"
 
-                  class="newsletter-form__button field__button"
+                  class="gf-newsletter-submit"
 
                   name="commit"
 
