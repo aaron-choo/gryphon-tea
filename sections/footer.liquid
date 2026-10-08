@@ -648,7 +648,8 @@
 
 <div class="gf-lower"><div class="gf-lower__inner"><div class="gf-lower__grid">
 
-<div>{% if section.settings.gf_footer_logo != blank %}<img class="gf-lower__logo" src="{{ section.settings.gf_footer_logo | image_url: width: 640 }}" alt="{{ section.settings.gf_footer_logo.alt | default: shop.name | escape }}" width="{{ section.settings.gf_footer_logo_width }}" height="{{ section.settings.gf_footer_logo_width | divided_by: section.settings.gf_footer_logo.aspect_ratio | round }}" style="width:{{ section.settings.gf_footer_logo_width }}px" loading="lazy">{% else %}<div class="gf-lower__name">GRYPHON® SINGAPORE</div>{% endif %}<p class="gf-lower__tagline">THE ART AND SCIENCE OF TEA</p></div>
+<div>{% if section.settings.gf_footer_logo != blank %}<img class="gf-lower__logo" src="{{ section.settings.gf_footer_logo | image_url: width: 640 }}" alt="{{ section.settings.gf_footer_logo.alt | default: shop.name | escape }}" width="{{ section.settings.gf_footer_logo_width }}" height="{{ section.settings.gf_footer_logo_width | divided_by: section.settings.gf_footer_logo.aspect_ratio | round }}" style="width:{{ section.settings.gf_footer_logo_width }}px" loading="lazy">{% else %}
+<div class="gf-lower__name">GRYPHON® SINGAPORE</div>{% endif %}</div>
 
 {% assign brands_menu = blank %}{% assign about_menu = blank %}{% assign faq_menu = blank %}
 
