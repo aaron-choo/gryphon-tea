@@ -106,14 +106,22 @@
 
 }
 
-/* Force the two navigation headings to match FAQ, overriding theme h3 rules. */
-.gf-lower .gf-lower__grid > div.gf-lower__desktop > h3.gf-lower__heading {
-  font-weight: 800 !important;
+/* Keep all three headings in the same typeface and weight. */
+.gf-lower .gf-lower__heading,
+.gf-lower .gf-lower__grid > div.gf-lower__desktop > h3.gf-lower__heading,
+.gf-lower details.gf-lower__desktop > summary.gf-lower__heading {
   font-family: var(--font-body-family) !important;
-  font-synthesis: weight;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-synthesis: none;
+  letter-spacing: inherit;
 }
 @media (max-width: 749px) {
-  .gf-lower details.gf-lower__mobile > summary { font-weight: 700 !important; }
+  .gf-lower details.gf-lower__mobile > summary {
+    font-family: var(--font-body-family) !important;
+    font-weight: 600 !important;
+    font-synthesis: none;
+  }
 }
 </style>
 
