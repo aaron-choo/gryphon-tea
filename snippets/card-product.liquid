@@ -96,8 +96,26 @@
       white-space: nowrap;
     }
 
+    /* Keep title and description together, independent of theme card spacing.
+       Change --gf-title-desc-gap above to control the actual gap. */
+    .gryphon-featured-card .gryphon-featured-copy {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: stretch !important;
+      gap: var(--gf-title-desc-gap) !important;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      height: auto !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      flex: 0 0 auto !important;
+    }
+
     /* Natural title height, no empty second title line. */
-    .gryphon-featured-card .card > .card__content > .card__information > .card__heading {
+    .gryphon-featured-card .gryphon-featured-copy > .gryphon-featured-title {
       height: auto !important;
       min-height: 0 !important;
       max-height: none !important;
@@ -143,7 +161,7 @@
       justify-content: flex-start !important;
       min-height: 0 !important;
     }
-    .gryphon-featured-card .card__information > .gryphon-featured-description {
+    .gryphon-featured-card .gryphon-featured-copy > .gryphon-featured-description {
       box-sizing: border-box;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -154,7 +172,7 @@
       height: 2.8em !important;
       font-size: 13px !important;
       line-height: 1.4 !important;
-      margin: var(--gf-title-desc-gap) 0 0 !important;
+      margin: 0 !important;
       padding: 0 !important;
     }
     .gryphon-featured-card .gryphon-featured-price {
@@ -180,7 +198,7 @@
         font-size: 10px !important;
         letter-spacing: 0.04em;
       }
-      .gryphon-featured-card .card__information > .gryphon-featured-description {
+      .gryphon-featured-card .gryphon-featured-copy > .gryphon-featured-description {
         font-size: 12px !important;
       }
       /* Constrain price/button to the width of each mobile slide. */
@@ -523,6 +541,10 @@
 
           </div>
 
+          {%- if gryphon_featured_card -%}
+            <div class="gryphon-featured-copy">
+          {%- endif -%}
+
           <h3
 
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}{% if gryphon_featured_card %} gryphon-featured-title{% endif %}"
@@ -557,6 +579,7 @@
             <p class="text-sm font-light line-clamp-3 gryphon-featured-description">
               {{ card_product.description | strip_html | truncatewords: 100 }}
             </p>
+            </div>
           {%- endif -%}
 
           <div class="card-information">
