@@ -337,9 +337,10 @@
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
-        ".collection__view-all .button {background: #5e6b47 !important; color: #fff !important; border: 0 !important;}",
-        ".collection__view-all .button:hover {background: #9eb091 !important;}",
-        "@media (min-width: 750px) {.card > .card__content > .card__information > .card__heading {height: 3em !important; line-height: 1.5 !important; overflow: hidden; } .card-information p.line-clamp-3 {height: 3em !important; line-height: 1.5 !important; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }}"
+        ".collection__view-all .button{background:#5e6b47!important;color:#fff!important;border:0}",
+        ".collection__view-all .button:hover{background:#9eb091!important}",
+        ".card-information p.line-clamp-3{font-size:12px!important}",
+        "@media(min-width:750px){.card__information>.card__heading{height:3em;line-height:1.5;overflow:hidden}.card-information p.line-clamp-3{font-size:13px!important;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}}"
       ],
       "settings": {
         "collection": "best-sellers",
