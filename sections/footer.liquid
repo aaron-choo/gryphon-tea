@@ -15,7 +15,7 @@
 .gf-lower *{box-sizing:border-box}.gf-lower a{color:#9eb091;text-decoration:none}.gf-lower a:hover{text-decoration:underline}
 .gf-lower__inner{max-width:1440px;margin:auto;padding:38px 48px 24px}
 .gf-lower__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
-.gf-lower__name{font-size:17px;font-weight:500;letter-spacing:.035em}.gf-lower__tagline{font-size:10px;letter-spacing:.08em;margin:8px 0}
+.gf-lower__logo{display:block;max-width:100%;height:auto;object-fit:contain;object-position:left center;margin-bottom:8px}.gf-lower__name{font-size:17px;font-weight:500;letter-spacing:.035em}.gf-lower__tagline{font-size:10px;letter-spacing:.08em;margin:8px 0}
 .gf-lower__heading{font-size:13px;font-weight:600;margin:0 0 10px;color:#5e6b47;padding-bottom:11px;border-bottom:1px solid #c9d3c2}
 .gf-lower__links{list-style:none;padding:0;margin:0;display:grid;gap:6px}.gf-lower__links li{list-style:none}.gf-lower__links li a{color:#9eb091}
 .gf-lower details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -23,10 +23,11 @@
 .gf-lower details summary:after{content:'+';font-size:18px;font-weight:400}
 .gf-lower details[open] summary:after{content:'−'}
 .gf-lower details .gf-lower__links{padding-top:10px}
-.gf-lower__rule{border-top:1px solid #c9d3c2;margin:58px 0 22px}
+.gf-lower details.gf-lower__desktop{padding:0;margin:0;min-width:0}.gf-lower details.gf-lower__desktop summary.gf-lower__heading{margin:0 0 10px;padding:0 0 11px;min-height:0;line-height:1.45;border-bottom:1px solid #c9d3c2}
+.gf-lower__rule{border-top:1px solid #c9d3c2;margin:88px 0 24px}
 .gf-lower__legal{text-align:center;font-size:10px;line-height:1.5;color:#5e6b47}.gf-lower__legal p{margin:10px 0}
 .gf-lower__mobile{display:none}
-@media(max-width:749px){.gf-lower__inner{padding:24px 22px}.gf-lower__grid{display:block}.gf-lower__name{font-size:15px}.gf-lower__tagline{font-size:10px;margin:7px 0 17px}.gf-lower__desktop{display:none}.gf-lower__mobile{display:block;border-top:1px solid #c9d3c2}.gf-lower__mobile:last-child{border-bottom:1px solid #c9d3c2}.gf-lower__mobile summary{padding:12px 0;font-size:13px;font-weight:600}.gf-lower__mobile .gf-lower__links{padding:0 0 13px;gap:7px}.gf-lower__rule{margin:38px 0 22px}.gf-lower__legal{font-size:10px}}
+@media(max-width:749px){.gf-lower__inner{padding:24px 22px}.gf-lower__grid{display:block}.gf-lower__name{font-size:15px}.gf-lower__tagline{font-size:10px;margin:7px 0 17px}.gf-lower__desktop{display:none}.gf-lower__mobile{display:block;border-top:1px solid #c9d3c2}.gf-lower__mobile:last-child{border-bottom:1px solid #c9d3c2}.gf-lower__mobile summary{padding:12px 0;font-size:13px;font-weight:600}.gf-lower__mobile .gf-lower__links{padding:0 0 13px;gap:7px}.gf-lower__rule{margin:62px 0 24px}.gf-lower__legal{font-size:10px}}
 </style>
 <div class="footer-group gryphon-footer-group">
 
@@ -281,14 +282,16 @@
   {%- endif -%}
 
 <div class="gf-lower"><div class="gf-lower__inner"><div class="gf-lower__grid">
-<div><div class="gf-lower__name">GRYPHON® SINGAPORE</div><p class="gf-lower__tagline">THE ART AND SCIENCE OF TEA</p></div>
+<div>{% if section.settings.gf_footer_logo != blank %}<img class="gf-lower__logo" src="{{ section.settings.gf_footer_logo | image_url: width: 640 }}" alt="{{ section.settings.gf_footer_logo.alt | default: shop.name | escape }}" width="{{ section.settings.gf_footer_logo_width }}" height="{{ section.settings.gf_footer_logo_width | divided_by: section.settings.gf_footer_logo.aspect_ratio | round }}" style="width:{{ section.settings.gf_footer_logo_width }}px" loading="lazy">{% else %}<div class="gf-lower__name">GRYPHON® SINGAPORE</div>{% endif %}<p class="gf-lower__tagline">THE ART AND SCIENCE OF TEA</p></div>
 {% assign brands_menu = blank %}{% assign about_menu = blank %}{% assign faq_menu = blank %}
 {% assign brands_fallback = blank %}
 {% for block in section.blocks %}
   {% if block.type == 'text' and block.settings.subtext contains 'Gryphon Tea Co.' %}
     {% assign brands_markup = block.settings.subtext | split: '<ul>' %}
     {% if brands_markup.size > 1 %}
-      {% assign brands_fallback = brands_markup[1] | split: '</ul>' | first %}
+      {% assign brands_raw = brands_markup[1] | split: '</ul>' | first %}
+      {% assign brand_items = brands_raw | split: '</li>' %}
+      {% capture brands_fallback %}{% for brand_item in brand_items %}{% assign brand_label = brand_item | strip_html | strip | remove: '•' | strip %}{% unless brand_label == blank or brand_label == 'Our Brands' %}{{ brand_item }}</li>{% endunless %}{% endfor %}{% endcapture %}
     {% endif %}
   {% endif %}
 {% endfor %}
@@ -512,6 +515,21 @@
   ],
 
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "gf_footer_logo",
+      "label": "Footer logo (optional)"
+    },
+    {
+      "type": "range",
+      "id": "gf_footer_logo_width",
+      "label": "Footer logo width",
+      "min": 80,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 180
+    },
 
     {
 
