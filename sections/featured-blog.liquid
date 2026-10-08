@@ -58,18 +58,16 @@
 
   @media screen and (max-width: 749px) {
 
-#shopify-section-{{ section.id }} .swiper-slide {
-  min-width: 0;
-  overflow: hidden;
+#shopify-section-{{ section.id }} .article-card .card__heading {
+  overflow: hidden !important;
 }
 
-#shopify-section-{{ section.id }} .article-card,
-#shopify-section-{{ section.id }} .article-card-wrapper,
-#shopify-section-{{ section.id }} .card__content,
-#shopify-section-{{ section.id }} .card__information {
-  min-width: 0;
-  width: 100%;
-  overflow: hidden;
+#shopify-section-{{ section.id }} .article-card .card__heading a {
+  display: block !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 #shopify-section-{{ section.id }} .article-card .card__heading,
