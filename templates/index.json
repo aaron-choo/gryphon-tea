@@ -337,10 +337,10 @@
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
-        ".collection__view-all .button {background: #5e6b47!important; color: #fff!important; border: 0!important;}",
-        ".collection__view-all .button:before,.collection__view-all .button:after {box-shadow: none!important;}",
-        ".collection__view-all .button:hover {background: #9eb091!important;}",
-        "@media(min-width:990px) {slider-component {max-width: 1200px; margin: 0 auto; } .card__heading {font-size: 15px; } .price {font-size: 14px; } .title {font-size: 22px; }}"
+        ".collection__view-all .button {background: #5e6b47 !important; color: #fff !important; border: 0 !important;}",
+        ".collection__view-all .button:before,.collection__view-all .button:after {box-shadow: none !important;}",
+        ".collection__view-all .button:hover {background: #9eb091 !important;}",
+        "@media (min-width: 990px) {slider-component {max-width: 1200px; margin: 0 auto; } .card__heading {font-size: 15px; } .price {font-size: 14px; } .title {font-size: 22px; }}"
       ],
       "settings": {
         "collection": "best-sellers",
