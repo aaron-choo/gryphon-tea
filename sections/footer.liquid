@@ -305,6 +305,10 @@
   color: rgba(255,255,255,.95) !important;
   opacity: 1 !important;
 }
+.gryphon-footer-group .gf-newsletter-input:focus::placeholder {
+  color: transparent !important;
+  opacity: 0 !important;
+}
 .gryphon-footer-group .gf-newsletter-field:focus-within {
   outline: 1px solid rgba(255,255,255,.85);
   outline-offset: 3px;
@@ -477,6 +481,8 @@
 
                   class="gf-newsletter-input"
 
+                  aria-label="Enter your email address"
+
                   value="{{ form.email }}"
 
                   aria-required="true"
@@ -506,14 +512,6 @@
                   required
 
                 >
-
-                <label class="gf-newsletter-label visually-hidden" for="NewsletterForm--{{ section.id }}">
-
-                  {% comment %} {{ 'newsletter.label' | t }} {% endcomment %}
-
-                  Enter your email address
-
-                </label>
 
                 <button
 
