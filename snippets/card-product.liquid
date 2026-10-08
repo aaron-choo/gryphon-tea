@@ -77,15 +77,119 @@
       height: 2.8em;
       margin: 8px 0 12px !important;
     }
+    /* Remove the fixed two-line title slot in Featured Collection only. */
+    .gryphon-featured-card .card > .card__content > .card__information > .card__heading {
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      overflow: visible !important;
+      margin-bottom: 0;
+    }
+    /* One-line Featured Collection titles. JavaScript reduces only those
+       that are wider than their card, keeping short names unchanged. */
+    .gryphon-featured-card .gryphon-featured-title,
+    .gryphon-featured-card .gryphon-featured-title > a {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
+    .gryphon-featured-card .gryphon-featured-title > a {
+      display: block;
+      white-space: nowrap !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    /* Reserve the same total text space for each card, not for each title.
+       A one-line title now puts its description directly underneath. */
+    .gryphon-featured-card .card > .card__content > .card__information {
+      display: flex;
+      flex-direction: column;
+      min-height: 215px;
+    }
+    .gryphon-featured-card .card > .card__content > .card__information > .card-information {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      width: 100%;
+    }
+    /* Push just the price to the bottom of the fixed card information area. */
     .gryphon-featured-card .gryphon-featured-price {
-      margin: 0 0 10px;
+      margin: auto 0 10px;
     }
     @media screen and (max-width: 749px) {
       .gryphon-featured-card .gryphon-featured-description {
         font-size: 12px !important;
       }
+      .gryphon-featured-card .card > .card__content > .card__information {
+        min-height: 182px;
+      }
     }
   </style>
+  <script>
+    /* Fit long Featured Collection titles to the real rendered card width.
+       Short titles keep the theme's normal type size. */
+    (function () {
+      if (window.__gryphonFeaturedTitleFitter) return;
+      window.__gryphonFeaturedTitleFitter = true;
+
+      function fitTitle(link) {
+        if (!link.isConnected || !link.clientWidth) return;
+        /* Read the true theme font size at the current breakpoint. */
+        link.style.removeProperty('font-size');
+        const original = parseFloat(getComputedStyle(link).fontSize);
+        if (!original || link.scrollWidth <= link.clientWidth) return;
+
+        const minimum = matchMedia('(max-width: 749px)').matches ? 11 : 12;
+        let low = Math.min(minimum, original);
+        let high = original;
+
+        for (let i = 0; i < 10; i++) {
+          const middle = (low + high) / 2;
+          link.style.setProperty('font-size', middle + 'px', 'important');
+          if (link.scrollWidth > link.clientWidth) high = middle;
+          else low = middle;
+        }
+        link.style.setProperty('font-size', Math.max(minimum, low - 0.25).toFixed(2) + 'px', 'important');
+      }
+
+      const observed = new WeakSet();
+      let resizeObserver;
+      if ('ResizeObserver' in window) {
+        resizeObserver = new ResizeObserver(function (entries) {
+          entries.forEach(function (entry) {
+            const width = Math.round(entry.contentRect.width);
+            if (entry.target.__gryphonLastWidth !== width) {
+              entry.target.__gryphonLastWidth = width;
+              fitTitle(entry.target);
+            }
+          });
+        });
+      }
+
+      function initTitles() {
+        document.querySelectorAll('.gryphon-featured-card .gryphon-featured-title > a')
+          .forEach(function (link) {
+            fitTitle(link);
+            if (resizeObserver && !observed.has(link)) {
+              observed.add(link);
+              resizeObserver.observe(link);
+            }
+          });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTitles, { once: true });
+      } else {
+        requestAnimationFrame(initTitles);
+      }
+      window.addEventListener('resize', function () {
+        requestAnimationFrame(initTitles);
+      }, { passive: true });
+      document.addEventListener('shopify:section:load', function () {
+        requestAnimationFrame(initTitles);
+      });
+    })();
+  </script>
 {%- endif -%}
 
 {%- if card_product and card_product != empty -%}
@@ -350,7 +454,7 @@
 
           <h3
 
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}{% if gryphon_featured_card %} gryphon-featured-title{% endif %}"
 
             {% if card_product.featured_media or settings.card_style == 'card' %}
 
