@@ -437,9 +437,9 @@
         ".banner__buttons .button {text-decoration: underline !important; text-decoration-thickness: 0.5px !important; text-underline-offset: 7px !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/b2b-hero.jpg",
+        "image": "shopify://shop_images/Firefly_Gemini_Flash_2.png",
         "image_overlay_opacity": 40,
-        "image_height": "small",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
