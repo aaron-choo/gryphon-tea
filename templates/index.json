@@ -339,8 +339,9 @@
       "custom_css": [
         ".collection__view-all .button{background:#5e6b47!important;color:#fff!important;border:0}",
         ".collection__view-all .button:hover{background:#9eb091!important}",
-        ".card-information p.line-clamp-3{font-size:12px!important}",
-        "@media(min-width:750px){.card__information>.card__heading{height:3em;line-height:1.5;overflow:hidden}.card-information p.line-clamp-3{font-size:13px!important;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}}"
+        ".gryphon-featured-card .card__heading{height:auto!important;min-height:0!important;margin-bottom:0!important}",
+        ".gryphon-featured-card .card-information{margin-top:0!important}",
+        ".gryphon-featured-card .gryphon-featured-description{margin-top:0!important}"
       ],
       "settings": {
         "collection": "best-sellers",
