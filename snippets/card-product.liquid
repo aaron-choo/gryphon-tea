@@ -70,7 +70,7 @@
     /* Featured Collection: change THESE values to adjust spacing.
        Both breakpoints use the same rules; mobile values are below. */
     .gryphon-featured-card {
-      --gf-title-desc-gap: 1px;
+      --gf-title-desc-gap: 2px;
       --gf-desc-price-gap: 6px;
       --gf-price-button-gap: 2px;
       min-width: 0;
@@ -138,6 +138,8 @@
       width: 100%;
       margin-top: 0 !important;
       gap: 0 !important;
+      justify-content: flex-start !important;
+      min-height: 0 !important;
     }
     .gryphon-featured-card .gryphon-featured-description {
       box-sizing: border-box;
@@ -147,7 +149,7 @@
       overflow: hidden;
       white-space: normal;
       width: 100%;
-      height: 2.8em;
+      height: 2.8em !important;
       font-size: 13px !important;
       line-height: 1.4 !important;
       margin: var(--gf-title-desc-gap) 0 0 !important;
@@ -168,8 +170,9 @@
         --gf-desc-price-gap: 4px;
         --gf-price-button-gap: 0px;
       }
+      /* Readable mobile names; long ones stay inside the slide. */
       .gryphon-featured-card .gryphon-featured-title > a {
-        font-size: 12px !important;
+        font-size: 16px !important;
       }
       .gryphon-featured-card .card__information > .caption-with-letter-spacing {
         font-size: 10px !important;
@@ -550,7 +553,9 @@
 
           <div class="card-information">
 
-            <span class="caption-large light">{{ block.settings.description | escape }}</span>
+            {%- unless gryphon_featured_card -%}
+              <span class="caption-large light">{{ block.settings.description | escape }}</span>
+            {%- endunless -%}
 
 
 
