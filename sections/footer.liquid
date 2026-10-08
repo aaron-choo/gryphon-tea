@@ -16,17 +16,17 @@
 .gf-lower__inner{max-width:1440px;margin:auto;padding:38px 48px 24px}
 .gf-lower__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
 .gf-lower__name{font-size:17px;font-weight:500;letter-spacing:.035em}.gf-lower__tagline{font-size:10px;letter-spacing:.08em;margin:8px 0}
-.gf-lower__heading{font-size:13px;font-weight:600;margin:0 0 10px;color:#5e6b47}
-.gf-lower__links{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.gf-lower__heading{font-size:13px;font-weight:600;margin:0 0 10px;color:#5e6b47;padding-bottom:11px;border-bottom:1px solid #c9d3c2}
+.gf-lower__links{list-style:none;padding:0;margin:0;display:grid;gap:6px}.gf-lower__links li{list-style:none}.gf-lower__links li a{color:#9eb091}
 .gf-lower details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .gf-lower details summary::-webkit-details-marker{display:none}
 .gf-lower details summary:after{content:'+';font-size:18px;font-weight:400}
 .gf-lower details[open] summary:after{content:'−'}
 .gf-lower details .gf-lower__links{padding-top:10px}
-.gf-lower__rule{border-top:1px solid #c9d3c2;margin:25px 0 15px}
-.gf-lower__legal{text-align:center;font-size:10px;line-height:1.5;color:#5e6b47}.gf-lower__legal p{margin:4px 0}
+.gf-lower__rule{border-top:1px solid #c9d3c2;margin:58px 0 22px}
+.gf-lower__legal{text-align:center;font-size:10px;line-height:1.5;color:#5e6b47}.gf-lower__legal p{margin:10px 0}
 .gf-lower__mobile{display:none}
-@media(max-width:749px){.gf-lower__inner{padding:24px 22px}.gf-lower__grid{display:block}.gf-lower__name{font-size:15px}.gf-lower__tagline{font-size:10px;margin:7px 0 17px}.gf-lower__desktop{display:none}.gf-lower__mobile{display:block;border-top:1px solid #c9d3c2}.gf-lower__mobile:last-child{border-bottom:1px solid #c9d3c2}.gf-lower__mobile summary{padding:12px 0;font-size:13px;font-weight:600}.gf-lower__mobile .gf-lower__links{padding:0 0 13px;gap:7px}.gf-lower__rule{margin:20px 0 14px}.gf-lower__legal{font-size:10px}}
+@media(max-width:749px){.gf-lower__inner{padding:24px 22px}.gf-lower__grid{display:block}.gf-lower__name{font-size:15px}.gf-lower__tagline{font-size:10px;margin:7px 0 17px}.gf-lower__desktop{display:none}.gf-lower__mobile{display:block;border-top:1px solid #c9d3c2}.gf-lower__mobile:last-child{border-bottom:1px solid #c9d3c2}.gf-lower__mobile summary{padding:12px 0;font-size:13px;font-weight:600}.gf-lower__mobile .gf-lower__links{padding:0 0 13px;gap:7px}.gf-lower__rule{margin:38px 0 22px}.gf-lower__legal{font-size:10px}}
 </style>
 <div class="footer-group gryphon-footer-group">
 
@@ -283,6 +283,15 @@
 <div class="gf-lower"><div class="gf-lower__inner"><div class="gf-lower__grid">
 <div><div class="gf-lower__name">GRYPHON® SINGAPORE</div><p class="gf-lower__tagline">THE ART AND SCIENCE OF TEA</p></div>
 {% assign brands_menu = blank %}{% assign about_menu = blank %}{% assign faq_menu = blank %}
+{% assign brands_fallback = blank %}
+{% for block in section.blocks %}
+  {% if block.type == 'text' and block.settings.subtext contains 'Gryphon Tea Co.' %}
+    {% assign brands_markup = block.settings.subtext | split: '<ul>' %}
+    {% if brands_markup.size > 1 %}
+      {% assign brands_fallback = brands_markup[1] | split: '</ul>' | first %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 {% for block in section.blocks %}{% if block.type == 'link_list' %}
 {% assign heading_lower = block.settings.heading | downcase %}
 {% if heading_lower contains 'brand' %}{% assign brands_menu = block.settings.menu %}{% elsif heading_lower contains 'about' %}{% assign about_menu = block.settings.menu %}{% elsif heading_lower contains 'faq' or heading_lower contains 'support' %}{% assign faq_menu = block.settings.menu %}{% endif %}
@@ -290,10 +299,10 @@
 {% assign brands_menu = brands_menu | default: linklists['our-brands'] %}
 {% assign about_menu = about_menu | default: linklists['about-us'] %}
 {% assign faq_menu = linklists['faq'] | default: faq_menu %}
-<div class="gf-lower__desktop"><h3 class="gf-lower__heading">Our Brands</h3><ul class="gf-lower__links">{% for link in brands_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></div>
+<div class="gf-lower__desktop"><h3 class="gf-lower__heading">Our Brands</h3><ul class="gf-lower__links">{% if brands_menu.links.size > 0 %}{% for link in brands_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}{% elsif brands_fallback != blank %}{{ brands_fallback }}{% else %}<li>Assign an Our Brands menu in Shopify Navigation</li>{% endif %}</ul></div>
 <div class="gf-lower__desktop"><h3 class="gf-lower__heading">About Us</h3><ul class="gf-lower__links">{% for link in about_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></div>
 <details class="gf-lower__desktop"><summary class="gf-lower__heading">FAQ</summary><ul class="gf-lower__links">{% for link in faq_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></details>
-<details class="gf-lower__mobile"><summary>Our Brands</summary><ul class="gf-lower__links">{% for link in brands_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></details>
+<details class="gf-lower__mobile"><summary>Our Brands</summary><ul class="gf-lower__links">{% if brands_menu.links.size > 0 %}{% for link in brands_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}{% elsif brands_fallback != blank %}{{ brands_fallback }}{% else %}<li>Assign an Our Brands menu in Shopify Navigation</li>{% endif %}</ul></details>
 <details class="gf-lower__mobile"><summary>About Us</summary><ul class="gf-lower__links">{% for link in about_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></details>
 <details class="gf-lower__mobile"><summary>FAQ</summary><ul class="gf-lower__links">{% for link in faq_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></details>
 </div><div class="gf-lower__rule"></div><div class="gf-lower__legal"><p>© 2025 GRYPHON® SINGAPORE</p><p>All material on this site is copyrighted by Gryphon® Singapore. Gryphon® Singapore is a registered trademark.<br>No images or copy on this site may be used without written permission by Gryphon® Singapore.</p></div></div></div>
