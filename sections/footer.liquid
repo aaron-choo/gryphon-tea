@@ -160,6 +160,147 @@
   }
   .gf-lower .gf-lower__socials .list-social__link { padding: 2px !important; }
 }
+
+/* ===== GRYPHON NEWSLETTER: compact responsive layout =====
+   Newsletter only; lower footer is deliberately untouched. */
+.gryphon-footer-group .footer-block__newsletter {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.gryphon-footer-group .footer-block__newsletter > .page-width {
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  box-sizing: border-box;
+  min-height: 365px;
+  padding: 38px 48px !important;
+}
+/* The circle is decorative: it cannot add to newsletter height. */
+.gryphon-footer-group .footer-block__newsletter .footer-block__motif {
+  position: absolute !important;
+  z-index: 0;
+  display: block;
+  width: min(43vw, 560px) !important;
+  height: auto !important;
+  max-width: none !important;
+  left: 5%;
+  bottom: -260px;
+  top: auto;
+  right: auto;
+  margin: 0 !important;
+  transform: none !important;
+  pointer-events: none;
+}
+.gryphon-footer-group .gryphon-newsletter-content {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 1 53%;
+  width: 53%;
+  max-width: 660px;
+  margin-left: auto;
+  padding: 0 !important;
+  gap: 14px !important;
+  text-align: center !important;
+}
+.gryphon-footer-group .gryphon-newsletter-content > h2 {
+  font-size: clamp(30px, 3vw, 46px) !important;
+  font-weight: 300 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0.012em;
+  text-align: center !important;
+  margin: 0 !important;
+}
+.gryphon-footer-group .gryphon-newsletter-content > h2 p { margin: 0 !important; }
+.gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
+  width: 100%;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+.gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p {
+  margin: 0 !important;
+  line-height: inherit !important;
+  font-size: inherit !important;
+}
+.gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p + p {
+  margin-top: 7px !important;
+}
+.gryphon-footer-group .gryphon-newsletter-content > .newsletter-form {
+  width: 100%;
+  max-width: 570px;
+  margin: 12px 0 0 !important;
+}
+.gryphon-footer-group .footer-block__newsletter .dotted-field {
+  width: 100%;
+}
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__label {
+  font-size: 16px !important;
+}
+@media screen and (max-width: 749px) {
+  .gryphon-footer-group .footer-block__newsletter > .page-width {
+    min-height: 355px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 35px 24px 42px !important;
+  }
+  .gryphon-footer-group .footer-block__newsletter .footer-block__motif {
+    width: min(140vw, 570px) !important;
+    height: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: -265px !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content {
+    width: 100%;
+    max-width: 420px;
+    flex: 0 0 auto;
+    margin: 0 auto;
+    gap: 15px !important;
+    text-align: center !important;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content > h2 {
+    font-size: clamp(22px, 5.7vw, 29px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: normal;
+    text-wrap: balance;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p + p {
+    margin-top: 9px !important;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content > .newsletter-form {
+    margin-top: 18px !important;
+    max-width: 100%;
+  }
+  .gryphon-footer-group .footer-block__newsletter .dotted-field .field__label {
+    font-size: 15px !important;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 1050px) {
+  .gryphon-footer-group .gryphon-newsletter-content > h2 {
+    font-size: clamp(27px, 3.2vw, 35px) !important;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
+    font-size: 14px !important;
+  }
+}
+/* ===== END GRYPHON NEWSLETTER ===== */
+
 </style>
 
 <div class="footer-group gryphon-footer-group">
@@ -220,41 +361,6 @@
 
         </svg>
 
-        <script>
-
-          // use a script tag or an external JS file
-
-          document.addEventListener('DOMContentLoaded', (event) => {
-
-            gsap.registerPlugin(ScrollTrigger);
-
-            gsap.set('.footer-block__motif', {
-
-              y: '100%',
-
-            });
-
-            gsap.to('.footer-block__motif', {
-
-              scrollTrigger: {
-
-                trigger: '.footer-block__newsletter',
-
-                start: 'top bottom',
-
-                end: 'bottom bottom',
-
-                scrub: 4,
-
-              },
-
-              y: 0,
-
-            });
-
-          });
-
-        </script>
 
         <div class="gryphon-newsletter-content scroll-trigger animate--slide-in grid grid-cols-1 !gap-4 text-left !py-4 z-1">
 
@@ -265,6 +371,16 @@
               {{ section.settings.newsletter_heading }}
 
             </h2>
+
+          {%- endif -%}
+
+          {%- if section.settings.newsletter_legal != blank -%}
+
+            <div class="footer-block__legal inline-richtext">
+
+              {{ section.settings.newsletter_legal }}
+
+            </div>
 
           {%- endif -%}
 
@@ -395,16 +511,6 @@
             {%- endif -%}
 
           {%- endform -%}
-
-          {%- if section.settings.newsletter_legal != blank -%}
-
-            <div class="footer-block__legal inline-richtext">
-
-              {{ section.settings.newsletter_legal }}
-
-            </div>
-
-          {%- endif -%}
 
         </div>
 
