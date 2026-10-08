@@ -77,12 +77,37 @@
       height: 2.8em;
       margin: 8px 0 12px !important;
     }
+    /* Remove the fixed two-line title slot in Featured Collection only. */
+    .gryphon-featured-card .card > .card__content > .card__information > .card__heading {
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      overflow: visible !important;
+      margin-bottom: 0;
+    }
+    /* Reserve the same total text space for each card, not for each title.
+       A one-line title now puts its description directly underneath. */
+    .gryphon-featured-card .card > .card__content > .card__information {
+      display: flex;
+      flex-direction: column;
+      min-height: 215px;
+    }
+    .gryphon-featured-card .card > .card__content > .card__information > .card-information {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      width: 100%;
+    }
+    /* Push just the price to the bottom of the fixed card information area. */
     .gryphon-featured-card .gryphon-featured-price {
-      margin: 0 0 10px;
+      margin: auto 0 10px;
     }
     @media screen and (max-width: 749px) {
       .gryphon-featured-card .gryphon-featured-description {
         font-size: 12px !important;
+      }
+      .gryphon-featured-card .card > .card__content > .card__information {
+        min-height: 182px;
       }
     }
   </style>
