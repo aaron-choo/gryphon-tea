@@ -396,6 +396,20 @@
 }
 /* ===== END GRYPHON NEWSLETTER ===== */
 
+
+/* Align mobile newsletter content with the Locate Us text axis above.
+   Use a smaller correction on narrow phones to avoid clipping. */
+@media screen and (max-width: 749px) {
+  .gryphon-footer-group .gryphon-newsletter-content {
+    transform: translateX(-12px) !important;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 749px) {
+  .gryphon-footer-group .gryphon-newsletter-content {
+    transform: translateX(-7vw) !important;
+  }
+}
+
 </style>
 
 <div class="footer-group gryphon-footer-group">
