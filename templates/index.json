@@ -336,7 +336,12 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "custom_css": [],
+      "custom_css": [
+        ".collection__view-all .button {background: #5e6b47 !important; color: #ffffff !important; border: none !important;}",
+        ".collection__view-all .button::before,.collection__view-all .button::after {box-shadow: none !important;}",
+        ".collection__view-all .button:hover {background: #9eb091 !important; color: #ffffff !important;}",
+        ".collection__view-all .button:hover::before,.collection__view-all .button:hover::after {box-shadow: none !important;}"
+      ],
       "settings": {
         "collection": "best-sellers",
         "products_to_show": 12,
@@ -669,6 +674,10 @@
         "column_jLHTNG",
         "column_fCwmrd",
         "column_Dbkrre"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {margin-bottom: 8px !important;}",
+        ".title {margin-bottom: 0 !important;}"
       ],
       "settings": {
         "title": "Our Partners",
