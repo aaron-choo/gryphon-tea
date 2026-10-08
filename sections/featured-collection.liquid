@@ -1,35 +1,28 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
-
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
-
 {%- unless section.settings.quick_add == 'none' -%}
   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
-
 {%- if section.settings.quick_add == 'standard' -%}
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
 {%- if section.settings.quick_add == 'bulk' -%}
   <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -37,33 +30,27 @@
     }
   }
 {%- endstyle -%}
-
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
-
   if section.settings.collection.all_products_count > section.settings.products_to_show
     assign products_to_display = section.settings.products_to_show
     assign more_in_collection = true
   endif
-
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign columns_desktop_int = section.settings.columns_desktop | plus: 0
   assign show_mobile_slider = false
   if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
     assign show_mobile_slider = true
   endif
-
   assign max_columns_to_show = columns_mobile_int
   if columns_desktop_int > columns_mobile_int
     assign max_columns_to_show = columns_desktop_int
   endif
-
   assign show_desktop_slider = false
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
 -%}
-
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient overflow-hidden"
 >
@@ -91,7 +78,6 @@
         </div>
       {%- endif -%}
     </div>
-
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {% if show_desktop_slider or show_mobile_slider %}
         <!-- Slider main container -->
@@ -132,30 +118,27 @@
             // Optional parameters
             spaceBetween: 15,
             slidesPerGroup: 1,
-            slidesPerView: 1.5,
+            slidesPerView: 2,
             breakpoints: {
-              // when window width is >= 320px
               480: {
-                slidesPerView: 1.5,
-                spaceBetween: 15,
+                slidesPerView: 2.3,
+                spaceBetween: 14,
               },
-              // when window width is >= 480px
               750: {
-                slidesPerView: 2.5,
+                slidesPerView: 3.4,
                 spaceBetween: 20,
               },
-              // when window width is >= 640px
               990: {
-                slidesPerView: 3.5,
-                spaceBetween: 30,
+                slidesPerView: 4.4,
+                spaceBetween: 22,
               },
               1200: {
-                slidesPerView: 4.5,
-                spaceBetween: 30,
+                slidesPerView: 5.2,
+                spaceBetween: 24,
               },
               1500: {
-                slidesPerView: 4.5,
-                spaceBetween: 30,
+                slidesPerView: 6,
+                spaceBetween: 24,
               },
             },
             direction: 'horizontal',
@@ -171,7 +154,6 @@
               prevEl: '.swiper-button-prev',
             },
           });
-
           featuredcollectionswiper.on('slideChangeTransitionStart', function () {
             document.querySelectorAll('.swiper-{{ section.id }} .swiper-slide').forEach((slide) => {
               slide.classList.add('reset-animation-delay');
@@ -186,30 +168,27 @@
               // Optional parameters
               spaceBetween: 15,
               slidesPerGroup: 1,
-              slidesPerView: 1.5,
+              slidesPerView: 2,
               breakpoints: {
-                // when window width is >= 320px
                 480: {
-                  slidesPerView: 1.5,
-                  spaceBetween: 15,
+                  slidesPerView: 2.3,
+                  spaceBetween: 14,
                 },
-                // when window width is >= 480px
                 750: {
-                  slidesPerView: 2.5,
+                  slidesPerView: 3.4,
                   spaceBetween: 20,
                 },
-                // when window width is >= 640px
                 990: {
-                  slidesPerView: 3.5,
-                  spaceBetween: 30,
+                  slidesPerView: 4.4,
+                  spaceBetween: 22,
                 },
                 1200: {
-                  slidesPerView: 4.5,
-                  spaceBetween: 30,
+                  slidesPerView: 5.2,
+                  spaceBetween: 24,
                 },
                 1500: {
-                  slidesPerView: 4.5,
-                  spaceBetween: 30,
+                  slidesPerView: 6,
+                  spaceBetween: 24,
                 },
               },
               direction: 'horizontal',
@@ -240,7 +219,6 @@
           aria-label="{{ 'general.slider.name' | t }}"
         >
           {% assign skip_card_product_styles = false %}
-
           {%- if section.settings.collection.products.size > 0 -%}
             {% assign lazy_load = false %}
             {% paginate section.settings.collection.products by section.settings.products_to_show %}
@@ -338,7 +316,6 @@
         {%- endif -%}
       {% endcomment %}
     </slider-component>
-
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
@@ -357,31 +334,26 @@
 </div>
 {% style %}
 @media screen and (min-width: 750px) {
-
   #shopify-section-{{ section.id }} .card-wrapper > .card {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
-
   #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content {
     display: flex;
     flex-direction: column;
     flex: 1;
   }
-
   #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content .card__heading {
     min-height: 2.7em;
     line-height: 1.35;
   }
-
   #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content .card__heading a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-
   #shopify-section-{{ section.id }} .card-information > p.line-clamp-3 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -390,11 +362,9 @@
     min-height: 3em;
     line-height: 1.5;
   }
-
   #shopify-section-{{ section.id }} .card-wrapper > .card > .quick-add {
     margin-top: auto;
   }
-
 }
 {% endstyle %}
 {% schema %}
