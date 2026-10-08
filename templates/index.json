@@ -750,8 +750,8 @@
         "column_8Jbpdf"
       ],
       "custom_css": [
-        ".title-wrapper-with-link{margin-bottom:1px!important;}",
-        ".multicolumn-list{margin-top:0!important;}"
+        ".title-wrapper-with-link {margin-bottom: 1px !important;}",
+        ".multicolumn-list {margin-top: 0 !important;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -787,7 +787,12 @@
     "featured_blog_JqB7Pa": {
       "type": "featured-blog",
       "custom_css": [
-        ".blog__button {text-decoration: underline !important; text-decoration-thickness: 0.5px !important; text-underline-offset: 7px !important;}"
+        ".blog__button {text-decoration: underline !important; text-decoration-thickness: 0.5px !important; text-underline-offset: 7px !important;}",
+        ".title-wrapper-with-link {margin-bottom: 18px !important; padding-bottom: 0 !important;}",
+        ".blog__title {margin-bottom: 0 !important;}",
+        ".slider-mobile-gutter {margin-top: 0 !important;}",
+        ".article-card__excerpt {display: -webkit-box !important; -webkit-line-clamp: 3 !important; -webkit-box-orient: vertical !important; overflow: hidden !important;}",
+        ".blog__view-all {margin-top: -20px !important;}"
       ],
       "settings": {
         "blog": "journal",
