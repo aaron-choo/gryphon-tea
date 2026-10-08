@@ -799,7 +799,7 @@
         "filter_tag": "All",
         "post_limit": 4,
         "heading": "{{ section.settings.blog.title }}",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "show_slides": true,
         "columns_desktop": 3,
         "show_view_all": true,
