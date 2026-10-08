@@ -336,10 +336,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "custom_css": [
-        ".collection__view-all .button{color:#fff!important; background:#667457!important; border-color:#667457!important;}",
-        ".collection__view-all .button:hover{color:#fff!important; background:#b8c6aa!important; border-color:#b8c6aa!important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "collection": "best-sellers",
         "products_to_show": 12,
