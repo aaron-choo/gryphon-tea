@@ -74,7 +74,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 2px;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -118,6 +118,47 @@
   .gf-lower__socials, .gf-lower__socials .list-social { justify-content: center; }
   .gf-lower__socials .list-social { gap: 12px; }
   .gf-lower__legal { font-size: 10px; }
+}
+
+/* Keep the social icons in a compact group on desktop and mobile.
+   Override any width, spacing or alignment inherited from the theme snippet. */
+.gf-lower .gf-lower__socials {
+  display: flex !important;
+  justify-content: flex-start !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.gf-lower .gf-lower__socials .list-social {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 2px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.gf-lower .gf-lower__socials .list-social__item {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.gf-lower .gf-lower__socials .list-social__link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+@media screen and (max-width: 749px) {
+  .gf-lower .gf-lower__socials { justify-content: center !important; }
+  .gf-lower .gf-lower__socials .list-social {
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  .gf-lower .gf-lower__socials .list-social__link { padding: 2px !important; }
 }
 </style>
 
