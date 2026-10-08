@@ -106,6 +106,15 @@
 
 }
 
+/* Force the two navigation headings to match FAQ, overriding theme h3 rules. */
+.gf-lower .gf-lower__grid > div.gf-lower__desktop > h3.gf-lower__heading {
+  font-weight: 800 !important;
+  font-family: var(--font-body-family) !important;
+  font-synthesis: weight;
+}
+@media (max-width: 749px) {
+  .gf-lower details.gf-lower__mobile > summary { font-weight: 700 !important; }
+}
 </style>
 
 <div class="footer-group gryphon-footer-group">
