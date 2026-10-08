@@ -161,38 +161,53 @@
   .gf-lower .gf-lower__socials .list-social__link { padding: 2px !important; }
 }
 
-/* ===== GRYPHON NEWSLETTER: compact responsive layout =====
-   Newsletter only; lower footer is deliberately untouched. */
+/* ===== GRYPHON NEWSLETTER (DESKTOP + MOBILE) =====
+   Scoped exclusively to the newsletter, not the lower footer. */
 .gryphon-footer-group .footer-block__newsletter {
   position: relative;
   isolation: isolate;
   overflow: hidden;
 }
-.gryphon-footer-group .footer-block__newsletter > .page-width {
-  position: relative;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  box-sizing: border-box;
-  min-height: 365px;
-  padding: 38px 48px !important;
-}
-/* The circle is decorative: it cannot add to newsletter height. */
+
+/* The decorative glow is removed from normal layout flow. */
 .gryphon-footer-group .footer-block__newsletter .footer-block__motif {
   position: absolute !important;
   z-index: 0;
-  display: block;
+  left: -1%;
+  right: auto !important;
+  top: auto !important;
+  bottom: -190px;
   width: min(43vw, 560px) !important;
   height: auto !important;
   max-width: none !important;
-  left: 5%;
-  bottom: -260px;
-  top: auto;
-  right: auto;
   margin: 0 !important;
-  transform: none !important;
   pointer-events: none;
+  transform: none !important;
 }
+
+/* Explicit desktop two-column grid prevents theme !grid utilities
+   from leaving newsletter copy in the left column. */
+@media screen and (min-width: 750px) {
+  .gryphon-footer-group .footer-block__newsletter > .page-width {
+    position: relative;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: center !important;
+    min-height: 310px !important;
+    padding: 28px 48px !important;
+    box-sizing: border-box;
+  }
+  .gryphon-footer-group .gryphon-newsletter-content {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 !important;
+    justify-self: stretch !important;
+    align-self: center !important;
+    width: 100% !important;
+    max-width: 600px;
+    margin: 0 auto !important;
+  }
+}
+
 .gryphon-footer-group .gryphon-newsletter-content {
   position: relative;
   z-index: 1;
@@ -200,102 +215,121 @@
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  flex: 0 1 53%;
-  width: 53%;
-  max-width: 660px;
-  margin-left: auto;
+  gap: 12px !important;
   padding: 0 !important;
-  gap: 14px !important;
   text-align: center !important;
 }
-.gryphon-footer-group .gryphon-newsletter-content > h2 {
-  font-size: clamp(30px, 3vw, 46px) !important;
+
+/* The theme's !text-5xl / lg:!text-6xl classes must not set
+   a giant heading in the compact newsletter. */
+.gryphon-footer-group .gryphon-newsletter-content > h2,
+.gryphon-footer-group .gryphon-newsletter-content > h2 p,
+.gryphon-footer-group .gryphon-newsletter-content > h2 span {
+  font-size: clamp(32px, 3vw, 42px) !important;
   font-weight: 300 !important;
-  line-height: 1.15 !important;
-  letter-spacing: 0.012em;
+  line-height: 1.16 !important;
+  letter-spacing: 0.01em;
   text-align: center !important;
   margin: 0 !important;
 }
-.gryphon-footer-group .gryphon-newsletter-content > h2 p { margin: 0 !important; }
 .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
   width: 100%;
-  font-size: 16px !important;
+  margin: 0 !important;
+  font-size: 15px !important;
   line-height: 1.4 !important;
   text-align: center !important;
-  margin: 0 !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p {
-  margin: 0 !important;
-  line-height: inherit !important;
   font-size: inherit !important;
+  line-height: inherit !important;
+  margin: 0 !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p + p {
-  margin-top: 7px !important;
+  margin-top: 6px !important;
 }
 .gryphon-footer-group .gryphon-newsletter-content > .newsletter-form {
-  width: 100%;
+  width: 100% !important;
   max-width: 570px;
-  margin: 12px 0 0 !important;
+  margin: 10px 0 0 !important;
 }
+.gryphon-footer-group .footer-block__newsletter .newsletter-form__field-wrapper,
 .gryphon-footer-group .footer-block__newsletter .dotted-field {
   width: 100%;
+  max-width: 100%;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* Keep existing dotted lines, but remove the filled rectangle
+   behind the text and arrow in all interaction states. */
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input,
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input:focus,
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input:not(:placeholder-shown),
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__label,
+.gryphon-footer-group .footer-block__newsletter .dotted-field .newsletter-form__button {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input {
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
 }
 .gryphon-footer-group .footer-block__newsletter .dotted-field .field__label {
-  font-size: 16px !important;
+  color: #fff !important;
+  font-size: 15px !important;
 }
+.gryphon-footer-group .footer-block__newsletter .dotted-field .field__input::placeholder {
+  color: transparent;
+}
+
 @media screen and (max-width: 749px) {
   .gryphon-footer-group .footer-block__newsletter > .page-width {
-    min-height: 355px;
+    position: relative;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    padding: 35px 24px 42px !important;
+    justify-content: center !important;
+    grid-template-columns: none !important;
+    min-height: 330px !important;
+    padding: 27px 24px 34px !important;
+    box-sizing: border-box;
   }
   .gryphon-footer-group .footer-block__newsletter .footer-block__motif {
-    width: min(140vw, 570px) !important;
-    height: auto !important;
+    width: min(130vw, 550px) !important;
     left: 50% !important;
     right: auto !important;
-    bottom: -265px !important;
-    margin: 0 !important;
+    bottom: -270px !important;
     transform: translateX(-50%) !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content {
-    width: 100%;
-    max-width: 420px;
-    flex: 0 0 auto;
-    margin: 0 auto;
-    gap: 15px !important;
-    text-align: center !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 440px;
+    margin: 0 auto !important;
+    gap: 13px !important;
   }
-  .gryphon-footer-group .gryphon-newsletter-content > h2 {
-    font-size: clamp(22px, 5.7vw, 29px) !important;
+  .gryphon-footer-group .gryphon-newsletter-content > h2,
+  .gryphon-footer-group .gryphon-newsletter-content > h2 p,
+  .gryphon-footer-group .gryphon-newsletter-content > h2 span {
+    font-size: 24px !important;
     line-height: 1.2 !important;
-    text-align: center !important;
-    white-space: normal;
+    white-space: normal !important;
     text-wrap: balance;
   }
   .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
-    font-size: 14px !important;
+    font-size: 13px !important;
     line-height: 1.4 !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal p + p {
-    margin-top: 9px !important;
+    margin-top: 7px !important;
   }
   .gryphon-footer-group .gryphon-newsletter-content > .newsletter-form {
-    margin-top: 18px !important;
     max-width: 100%;
+    margin-top: 13px !important;
   }
   .gryphon-footer-group .footer-block__newsletter .dotted-field .field__label {
-    font-size: 15px !important;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1050px) {
-  .gryphon-footer-group .gryphon-newsletter-content > h2 {
-    font-size: clamp(27px, 3.2vw, 35px) !important;
-  }
-  .gryphon-footer-group .gryphon-newsletter-content > .footer-block__legal {
     font-size: 14px !important;
   }
 }
