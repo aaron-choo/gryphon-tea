@@ -344,14 +344,19 @@
     flex-direction: column;
     flex: 1;
   }
-  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content .card__heading {
-    min-height: 2.7em;
-    line-height: 1.35;
+  /* Reserve enough room for two full title lines, including long names. */
+  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content > .card__information > .card__heading {
+    height: auto !important;
+    min-height: 3.3em !important;
+    max-height: none !important;
+    line-height: 1.45 !important;
+    overflow: visible !important;
   }
-  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content .card__heading a {
+  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content > .card__information > .card__heading a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-height: 1.45 !important;
     overflow: hidden;
   }
   #shopify-section-{{ section.id }} .card-information > p.line-clamp-3 {
