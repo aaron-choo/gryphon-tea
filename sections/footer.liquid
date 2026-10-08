@@ -309,9 +309,21 @@
   color: transparent !important;
   opacity: 0 !important;
 }
+/* No rectangular focus outline: the dotted rules serve as the focus indicator. */
 .gryphon-footer-group .gf-newsletter-field:focus-within {
-  outline: 1px solid rgba(255,255,255,.85);
-  outline-offset: 3px;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.gryphon-footer-group .gf-newsletter-input:focus,
+.gryphon-footer-group .gf-newsletter-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.gryphon-footer-group .gf-newsletter-field:focus-within::before,
+.gryphon-footer-group .gf-newsletter-field:focus-within::after {
+  background: radial-gradient(circle, #fff 1.8px, transparent 2.1px) left center / 16px 4px repeat-x;
 }
 .gryphon-footer-group .gf-newsletter-submit {
   display: inline-flex !important;
