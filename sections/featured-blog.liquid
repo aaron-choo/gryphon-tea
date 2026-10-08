@@ -116,31 +116,30 @@
 
   @media screen and (max-width: 749px) {
 
+    /* MOBILE: keep Swiper slide width stable and prevent text overlap */
+    #shopify-section-{{ section.id }} .swiper-slide {
+      min-width: 0 !important;
+      overflow: hidden;
+    }
 
+    #shopify-section-{{ section.id }} .article-card .card__information {
+      min-width: 0;
+      overflow: hidden;
+    }
 
-#shopify-section-{{ section.id }} .article-card .card__heading {
+    #shopify-section-{{ section.id }} .article-card .card__heading {
+      min-width: 0;
+      overflow: hidden !important;
+    }
 
-  overflow: hidden !important;
-
-}
-
-
-
-#shopify-section-{{ section.id }} .article-card .card__heading a {
-
-  display: block !important;
-
-  max-width: 100% !important;
-
-  white-space: nowrap !important;
-
-  overflow: hidden !important;
-
-  text-overflow: ellipsis !important;
-
-}
-
-
+    #shopify-section-{{ section.id }} .article-card .card__heading a {
+      display: block !important;
+      min-width: 0;
+      max-width: 100%;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
 
 #shopify-section-{{ section.id }} .blog__title {
 
