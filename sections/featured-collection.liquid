@@ -355,7 +355,48 @@
     {%- endif -%}
   </div>
 </div>
+{% style %}
+@media screen and (min-width: 750px) {
 
+  #shopify-section-{{ section.id }} .card-wrapper > .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content .card__heading {
+    min-height: 2.7em;
+    line-height: 1.35;
+  }
+
+  #shopify-section-{{ section.id }} .card-wrapper > .card > .card__content .card__heading a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .card-information > p.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    min-height: 3em;
+    line-height: 1.5;
+  }
+
+  #shopify-section-{{ section.id }} .card-wrapper > .card > .quick-add {
+    margin-top: auto;
+  }
+
+}
+{% endstyle %}
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
