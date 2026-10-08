@@ -20,15 +20,15 @@
 .gf-lower__links{list-style:none;padding:0;margin:0;display:grid;gap:6px}.gf-lower__links li{list-style:none}.gf-lower__links li a{color:#9eb091}
 .gf-lower details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .gf-lower details summary::-webkit-details-marker{display:none}
-.gf-lower details summary:after {
-  content: '↓';
-  font-size: 18px;
+.gf-lower details summary::after {
+  content: '⌄' !important;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1;
 }
 
-.gf-lower details[open] summary:after {
-  content: '↑';
+.gf-lower details[open] summary::after {
+  content: '⌃' !important;
 }
 .gf-lower details .gf-lower__links{padding-top:10px}
 .gf-lower details.gf-lower__desktop{padding:0;margin:0;min-width:0}.gf-lower details.gf-lower__desktop summary.gf-lower__heading{margin:0 0 10px;padding:0 0 11px;min-height:0;line-height:1.45;border-bottom:1px solid #c9d3c2;display:flex;align-items:center;min-height:30px}
