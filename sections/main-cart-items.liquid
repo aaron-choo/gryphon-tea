@@ -152,7 +152,11 @@
                                       {{ property.last | split: '/' | last }}
                                     </a>
                                   {%- else -%}
-                                    {{ property.last }}
+                                    {%- if item.product.handle == 'copy-of-create-your-own-treasures' and property.first == 'Included Products' -%}
+  <span class="gryphon-bundle-contents">{{ property.last }}</span>
+{%- else -%}
+  {{ property.last }}
+{%- endif -%}
                                   {%- endif -%}
                                 </dd>
                               </div>
@@ -452,6 +456,40 @@
     </form>
   </div>
 </cart-items>
+<script>
+(function () {
+  function cleanBundlePrices() {
+    document.querySelectorAll('.gryphon-bundle-contents').forEach(function (element) {
+      const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT
+      );
+
+      let node;
+      while ((node = walker.nextNode())) {
+        node.nodeValue = node.nodeValue.replace(
+          /\s*\[\+\s*(?:S\$|SGD\s*|\$|Rs\.?\s*|₹)\s*[\d,.]+\s*\]/gi,
+          ''
+        );
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cleanBundlePrices);
+  } else {
+    cleanBundlePrices();
+  }
+
+  document.addEventListener('shopify:section:load', cleanBundlePrices);
+
+  const observer = new MutationObserver(cleanBundlePrices);
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
 
 {% schema %}
 {
