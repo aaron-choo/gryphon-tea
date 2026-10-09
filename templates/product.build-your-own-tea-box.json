@@ -31,12 +31,19 @@
           "type": "title",
           "settings": {}
         },
+        "custom_liquid_mXepYQ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"gryphon-box-price\">\n  {{ product.price | money_with_currency }}\n</div>\n\n<style>\n.gryphon-box-price {\n  color: #5e6b47;\n  font-family: inherit;\n  font-size: 20px;\n  font-weight: 400;\n  line-height: 1.5;\n  letter-spacing: 0.04em;\n  margin: 4px 0 12px;\n}\n</style>"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "pc_product_options_product_page_customizer_9A7mMi": {
@@ -270,6 +277,7 @@
         "custom_liquid_7Ei3DA",
         "vendor",
         "title",
+        "custom_liquid_mXepYQ",
         "description",
         "price",
         "pc_product_options_product_page_customizer_9A7mMi",
@@ -297,6 +305,7 @@
         "sleek_social_sharing_share_button_9DW3WL",
         "pc_product_options_product_page_customizer_PdqaKF"
       ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
