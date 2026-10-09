@@ -1,0 +1,439 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_liquid_7Ei3DA": {
+          "type": "custom_liquid",
+          "source": "{{ product.metafields.custom.brand.value }}",
+          "settings": {
+            "custom_liquid": "<a href=\"{{product.metafields.custom.brand.value.link}}\"><div class=\"product__text inline-richtext caption-with-letter-spacing\"><p>{{product.metafields.custom.brand.value.name}}</p></div></a>"
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.brand.value.name.value }}</p>",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "pc_product_options_product_page_customizer_9A7mMi": {
+          "type": "shopify://apps/pc-product-options/blocks/product-page-customizer/6857ca6c-35eb-4b6f-9d58-a039f31d9406",
+          "settings": {
+            "pc_container_size": 100,
+            "pc_show_options_total": "initial",
+            "pc_customizations_total_text": "Customizations Total:",
+            "pc_show_preloader": "hide",
+            "pc_preloader_color": "",
+            "pc_ignore_redirect_command": true,
+            "pc_basic_label_text_color": "#000000",
+            "pc_basic_label_font_size": 14,
+            "pc_basic_label_bolden": "unset",
+            "pc_basic_label_space_above": 0,
+            "pc_basic_option_background_color": "#ffffff",
+            "pc_basic_option_text_color": "#000000",
+            "pc_basic_option_border_color": "#000000",
+            "pc_basic_option_border_style": "solid",
+            "pc_basic_option_border_width": 1,
+            "pc_basic_option_curve_the_corners": "none",
+            "pc_basic_option_font_size": 14,
+            "pc_basic_option_bolden": "none",
+            "pc_basic_option_width": 100,
+            "pc_basic_option_space_above": 0,
+            "pc_basic_option_space_below": 0,
+            "pc_basic_option_space_inside": 10,
+            "pc_advanced_custom_css": "",
+            "pc_advanced_custom_js": "",
+            "pc_show_image_swatch_preview": false
+          }
+        },
+        "rivo_loyalty_rewards_referrals_potential_points_tfBDBM": {
+          "type": "shopify://apps/rivo-loyalty-rewards-referrals/blocks/potential-points/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+          "disabled": true,
+          "settings": {
+            "panel_color": "#ffffff",
+            "panel_padding": 0,
+            "title": "Order and get [potential_points] reward points",
+            "subtext": "Earn points by signing up for our rewards program",
+            "show_icon": false,
+            "logged_out_only": false,
+            "custom_css": "#potential-points-text h3,\n#potential-points-text p {\nfont-family: Taro, sans-serif;\nfont-size: 1.2rem;\ncolor: #C17B46;\nopacity: 0.5;\n}"
+          }
+        },
+        "rating_kdCQTq": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_Neci44": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "text_wbkft3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are pledging 1% of our revenue towards environmental impact by giving to non-profits working hard to protect our planet</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "text_emQzJP": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Ingredients</strong> </p><p>{{ product.metafields.custom.ingredients | metafield_text }}</p>",
+            "text_style": "body"
+          }
+        },
+        "text_qXzBUb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tea Category</strong></p>{{ product.metafields.custom.tea_category | metafield_tag }}",
+            "text_style": "body"
+          }
+        },
+        "collapsible_tab_36EpY3": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_hJKTwa": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Tea Category",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.tea_category | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VAtLak": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Serving Suggestion",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.serving_suggestion | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_hbM8rt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Tasting Notes",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.tasting_notes | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_RJQRNP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pairing Information",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.pairing_information | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_cqDnR4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Allergen Information",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.allergen_information | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "text_LpceNQ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Serving Suggestion</strong></p><p>{{ product.metafields.custom.serving_suggestion | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
+        "text_phxNRf": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Tasting Notes</strong></p><p>{{ product.metafields.custom.tasting_notes | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
+        "text_6NCT99": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Pairing Information</strong></p><p>{{ product.metafields.custom.pairing_information | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
+        "text_9yE9tp": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Allergen Information</strong></p><p>{{ product.metafields.custom.allergen_information | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        },
+        "wishlist_krBCag": {
+          "type": "wishlist",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "sleek_social_sharing_share_button_9DW3WL": {
+          "type": "shopify://apps/sleek-social-sharing/blocks/share_button/5db01bc3-c590-40f6-be34-5072c106e3f4",
+          "settings": {}
+        },
+        "pc_product_options_product_page_customizer_PdqaKF": {
+          "type": "shopify://apps/pc-product-options/blocks/product-page-customizer/6857ca6c-35eb-4b6f-9d58-a039f31d9406",
+          "settings": {
+            "pc_container_size": 100,
+            "pc_show_options_total": "initial",
+            "pc_customizations_total_text": "Customizations Total:",
+            "pc_show_preloader": "hide",
+            "pc_preloader_color": "",
+            "pc_ignore_redirect_command": true,
+            "pc_basic_label_text_color": "#000000",
+            "pc_basic_label_font_size": 14,
+            "pc_basic_label_bolden": "unset",
+            "pc_basic_label_space_above": 0,
+            "pc_basic_option_background_color": "#ffffff",
+            "pc_basic_option_text_color": "#000000",
+            "pc_basic_option_border_color": "#000000",
+            "pc_basic_option_border_style": "solid",
+            "pc_basic_option_border_width": 1,
+            "pc_basic_option_curve_the_corners": "none",
+            "pc_basic_option_font_size": 14,
+            "pc_basic_option_bolden": "none",
+            "pc_basic_option_width": 100,
+            "pc_basic_option_space_above": 0,
+            "pc_basic_option_space_below": 0,
+            "pc_basic_option_space_inside": 10,
+            "pc_advanced_custom_css": "",
+            "pc_advanced_custom_js": "",
+            "pc_show_image_swatch_preview": false
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_7Ei3DA",
+        "vendor",
+        "title",
+        "description",
+        "price",
+        "pc_product_options_product_page_customizer_9A7mMi",
+        "rivo_loyalty_rewards_referrals_potential_points_tfBDBM",
+        "rating_kdCQTq",
+        "judge_me_reviews_preview_badge_Neci44",
+        "text_wbkft3",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "text_emQzJP",
+        "text_qXzBUb",
+        "collapsible_tab_36EpY3",
+        "collapsible_tab_hJKTwa",
+        "collapsible_tab_VAtLak",
+        "collapsible_tab_hbM8rt",
+        "collapsible_tab_RJQRNP",
+        "collapsible_tab_cqDnR4",
+        "text_LpceNQ",
+        "text_phxNRf",
+        "text_6NCT99",
+        "text_9yE9tp",
+        "wishlist_krBCag",
+        "share",
+        "sleek_social_sharing_share_button_9DW3WL",
+        "pc_product_options_product_page_customizer_PdqaKF"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "17446015108cdafac0": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_9wrKC8": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_9wrKC8"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_banner_YnXPU3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_aqfwxi": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.brand.value.name.value }}",
+            "heading_size": "h1",
+            "heading_size_mobile": "none"
+          }
+        },
+        "text_mNecA9": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.brand.value.description.value }}",
+            "text_style": "body"
+          }
+        },
+        "buttons_BxGP4h": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop {{ product.metafields.custom.brand.value.name.value }}",
+            "button_link_1": "{{ product.metafields.custom.brand.value.link.value }}",
+            "button_style_secondary_1": true,
+            "button_label_2": "Learn more",
+            "button_link_2": "{{ product.metafields.custom.brand.value.system.url }}",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_aqfwxi",
+        "text_mNecA9",
+        "buttons_BxGP4h"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.brand.value.image.value }}",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "is_hero_banner": false,
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "text_color_override": "rgba(0,0,0,0)",
+        "custom_positioning": false,
+        "heading_custom_position": "top-right",
+        "subheading_custom_position": "top-right",
+        "text_custom_position": "top-left",
+        "button_custom_position": "bottom-left",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "mobile_content_vertical_alignment": "middle",
+        "show_text_below": false
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "featured_blog_ar37ri": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "journal",
+        "filter_tag": "Recipes",
+        "post_limit": 3,
+        "heading": "Recipes",
+        "heading_size": "h1",
+        "show_slides": true,
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_blog_title": true,
+        "show_date": false,
+        "show_author": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17446015108cdafac0",
+    "image_banner_YnXPU3",
+    "related-products",
+    "featured_blog_ar37ri"
+  ]
+}
