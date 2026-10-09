@@ -41,6 +41,7 @@
         },
         "pc_product_options_product_page_customizer_9A7mMi": {
           "type": "shopify://apps/pc-product-options/blocks/product-page-customizer/6857ca6c-35eb-4b6f-9d58-a039f31d9406",
+          "disabled": true,
           "settings": {
             "pc_container_size": 100,
             "pc_show_options_total": "initial",
