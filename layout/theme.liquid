@@ -848,5 +848,46 @@
     {% render 'gryphon-tea-spirit' %}
 
     {% render 'samita-custom' %}
+    <script>
+(function () {
+  // Only run on Gryphon's Build Your Own Tea Box page.
+  if (window.location.pathname !== '/products/copy-of-create-your-own-treasures') {
+    return;
+  }
+
+  function hideBundleTotal() {
+    const pattern = /^Total\s*(?:(?:S\$|SGD\s*\$?|\$|₹|Rs\.?\s*)\s*[\d,.]+)$/i;
+
+    document.querySelectorAll('body *').forEach(function (element) {
+      if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(element.tagName)) return;
+
+      const text = element.textContent.trim();
+      if (!pattern.test(text)) return;
+
+      // Select the smallest element containing only this total.
+      const matchingChild = Array.from(element.children).some(function (child) {
+        return pattern.test(child.textContent.trim());
+      });
+
+      if (!matchingChild) {
+        element.style.setProperty('display', 'none', 'important');
+      }
+    });
+  }
+
+  hideBundleTotal();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hideBundleTotal);
+  }
+
+  const observer = new MutationObserver(hideBundleTotal);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+})();
+</script>
   </body>
 </html>
