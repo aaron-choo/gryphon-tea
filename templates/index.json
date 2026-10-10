@@ -337,11 +337,11 @@
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
-        ".collection__view-all .button{background:#5e6b47!important;color:#fff!important;border:0}",
-        ".collection__view-all .button:hover{background:#9eb091!important}",
-        ".gryphon-featured-card .card__heading{height:auto!important;min-height:0!important;margin-bottom:0!important}",
-        ".gryphon-featured-card .card-information{margin-top:0!important}",
-        ".gryphon-featured-card .gryphon-featured-description{margin-top:0!important}"
+        ".collection__view-all .button {background: #5e6b47 !important; color: #fff !important; border: 0;}",
+        ".collection__view-all .button:hover {background: #9eb091 !important;}",
+        ".gryphon-featured-card .card__heading {height: auto !important; min-height: 0 !important; margin-bottom: 0 !important;}",
+        ".gryphon-featured-card .card-information {margin-top: 0 !important;}",
+        ".gryphon-featured-card .gryphon-featured-description {margin-top: 0 !important;}"
       ],
       "settings": {
         "collection": "best-sellers",
@@ -784,13 +784,13 @@
         "border": false,
         "full_button": false,
         "horizontal_carousel": false,
-        "carousel_auto_scroll": true,
+        "carousel_auto_scroll": false,
         "carousel_speed": 30,
         "carousel_gap": 60,
-        "carousel_gap_mobile": 28,
+        "carousel_gap_mobile": 12,
         "carousel_logo_height": 75,
         "carousel_logo_height_mobile": 55,
-        "carousel_pause_hover": true,
+        "carousel_pause_hover": false,
         "columns_mobile": "1",
         "mobile_single_row": true,
         "mobile_single_row_logo_height": 65,
