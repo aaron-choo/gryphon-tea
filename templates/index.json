@@ -774,7 +774,7 @@
         "title": "Our Accolades",
         "heading_size": "h2",
         "image_width": "third",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
